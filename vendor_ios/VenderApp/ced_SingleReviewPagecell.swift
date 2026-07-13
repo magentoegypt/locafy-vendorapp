@@ -291,6 +291,12 @@ class ced_SingleReviewPagecell: UITableViewCell {
                 guard let json = try? JSON(data: data) else {return}
                 print(json)
                 self.parent?.view.makeToast(json[0]["vendor_data"]["message"].stringValue, duration: 2.0, position: .center)
+                if json[0]["vendor_data"]["status"].stringValue == "true" {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "managereviews") as! ced_ManageReviews
+                        self.parent?.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
             }
         }
         task.resume()
