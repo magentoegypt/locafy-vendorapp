@@ -1,0 +1,100 @@
+name: Build APK & IPA
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Android — builds a debug APK (no signing secrets required).
+  # For a signed release APK, wire a signingConfig in app/build.gradle and add
+  # the keystore + passwords as GitHub secrets, then run :app:assembleRelease.
+  # ---------------------------------------------------------------------------
+  android:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vendror_android
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install required SDK packages
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Build debug APK
+        run: ./gradlew :app:assembleDebug --stacktrace --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: vendror_android/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+
+  # ---------------------------------------------------------------------------
+  # iOS — builds an UNSIGNED .ipa (no Apple signing secrets required).
+  # The artifact is for inspection/CI verification; it is NOT installable on a
+  # device as-is. To produce a signed, distributable IPA:
+  #   1. Add secrets: distribution certificate (.p12 + password) and a
+  #      provisioning profile.
+  #   2. Import them into a temporary keychain in a step here.
+  #   3. Replace the unsigned archive/package steps with a signed
+  #      `xcodebuild archive` + `xcodebuild -exportArchive` using an
+  #      ExportOptions.plist.
+  # ---------------------------------------------------------------------------
+  ios:
+    name: Build iOS IPA (unsigned)
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: vendor_ios
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install CocoaPods dependencies
+        run: pod install --repo-update
+
+      - name: Build unsigned archive
+        run: |
+          xcodebuild \
+            -workspace LocafyApp.xcworkspace \
+            -scheme VenderApp \
+            -configuration Release \
+            -sdk iphoneos \
+            -archivePath "$RUNNER_TEMP/LocafyApp.xcarchive" \
+            archive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            PROVISIONING_PROFILE_SPECIFIER=""
+
+      - name: Package unsigned IPA
+        run: |
+          APP=$(ls -d "$RUNNER_TEMP"/LocafyApp.xcarchive/Products/Applications/*.app | head -1)
+          echo "Packaging: $APP"
+          mkdir -p "$RUNNER_TEMP/Payload"
+          cp -R "$APP" "$RUNNER_TEMP/Payload/"
+          (cd "$RUNNER_TEMP" && zip -qry LocafyApp-unsigned.ipa Payload)
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: LocafyApp-unsigned-ipa
+          path: ${{ runner.temp }}/LocafyApp-unsigned.ipa
+          if-no-files-found: error
