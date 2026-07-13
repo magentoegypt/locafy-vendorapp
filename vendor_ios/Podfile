@@ -21,12 +21,12 @@ target 'LocafyApp' do
   pod 'Firebase/Messaging'
   pod 'libPhoneNumber-iOS', '~> 0.9.15'
 
-  target 'VenderAppTests' do
+  target 'LocafyAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'VenderAppUITests' do
+  target 'LocafyAppUITests' do
     inherit! :search_paths
     # Pods for testing
   end
