@@ -45,7 +45,6 @@ class cedRequestedTransactions: ced_VendorBaseClass, UITableViewDataSource, UITa
         let hashKey    = userData["hashKey"] as! String
         let postString = "vendor_id=" + vendorId + "&hashkey="+hashKey;
         if(Ced_CommonVendor().checkModule("Ced_VAdvTransactionApi")){
-       //https://amazestorz.com/vadvtransactionapi/transaction/view/page/1
             self.sendRequest(url: "vadvtransactionapi/transaction/view/page/\(page)", parameters: postString)
         }else{
              self.sendRequest(url: "vendorapi/vtransaction/paymentrequest/page/\(page)", parameters: postString)

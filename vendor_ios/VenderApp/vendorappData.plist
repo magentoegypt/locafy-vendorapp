@@ -17,6 +17,6 @@
 	<key>requestheader</key>
 	<string>mobiconnectsecrethash</string>
 	<key>baseUrl</key>
-	<string>https://demo2.cedcommerce.com/magento/client/hassan/pub/</string>
+	<string>https://vendors.magento2.click/</string>
 </dict>
 </plist>

@@ -403,8 +403,7 @@ extension ced_QuotationViewController:UITableViewDelegate,UITableViewDataSource{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc func SaveBtnTapped(_ sender:UIButton){
-        //  https://amazestorz.com/rest/V1/vpoapi/saveQuote
-        
+
         let userData = defaults.object(forKey: "userInfoDict") as! NSDictionary
         let vendorId = userData["vendorId"] as! String
         let cell1 = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as! ced_NegotiationViewTC

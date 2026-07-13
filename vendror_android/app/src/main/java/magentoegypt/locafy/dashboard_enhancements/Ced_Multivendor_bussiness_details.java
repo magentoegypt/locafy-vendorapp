@@ -130,9 +130,6 @@ public class Ced_Multivendor_bussiness_details extends Ced_MultiVendor_Navigatio
             map_info.put("vendor_id", session.getVendorid());
             map_info.put("hashkey", session.getHahkey());
 
-            /*url ="http://192.168.0.217/training/m2_2/vendorapi/additional/fields";
-            UpdateUrl="http://192.168.0.217/training/m2_2/vendorapi/index/update";*/
-
             url = session.getBase_Url() + "/vendorapi/additional/fields";
             UpdateUrl = session.getBase_Url() + "/vendorapi/index/update";
             // infoUrl = session.getBase_Url() + "/vendorapi/index/info";

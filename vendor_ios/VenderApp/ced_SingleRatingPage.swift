@@ -50,7 +50,7 @@ class ced_SingleRatingPage: ced_VendorBaseClass, UITableViewDelegate, UITableVie
             sessionConfig.timeoutIntervalForRequest = timeoutIntervalForRequest
             sessionConfig.timeoutIntervalForResource = timeoutIntervalForResource
             let session = URLSession(configuration: sessionConfig)
-            let url = URL(string: "https://duueasy.com.br/rest/V1/vproductreviewapi/viewRating")!
+            let url = URL(string: settings.baseUrl + "rest/V1/vproductreviewapi/viewRating")!
         print(url)
         print(param)
             var request = URLRequest(url: url)

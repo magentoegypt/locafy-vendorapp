@@ -98,7 +98,7 @@ class ced_SingleReviewPagecell: UITableViewCell {
         
          
         savebttn.addTarget(self, action: #selector(savebuttonpressed(_:)), for: .touchUpInside)
-        Deletebttn.addTarget(self, action: #selector(savebuttonpressed(_:)), for: .touchUpInside)
+        Deletebttn.addTarget(self, action: #selector(deletebttnpressed(_:)), for: .touchUpInside)
     }
     var y = 0
     var stackheight = CGFloat()
@@ -207,7 +207,6 @@ class ced_SingleReviewPagecell: UITableViewCell {
             print("data not encoded")
             return
         }
-       // ced_VendorBaseClass().sendurlrequest(url: "rest/V1/vproductreviewapi/saveReview", para: param)
         let sessionConfig = URLSessionConfiguration.default
 //        sessionConfig.httpAdditionalHeaders = [
 //            "Authorization": "Basic \(Ced_CommonVendor.getAuthData())",
@@ -215,7 +214,7 @@ class ced_SingleReviewPagecell: UITableViewCell {
         sessionConfig.timeoutIntervalForRequest = timeoutIntervalForRequest
         sessionConfig.timeoutIntervalForResource = timeoutIntervalForResource
         let session = URLSession(configuration: sessionConfig)
-        let url = URL(string: "rest/V1/vproductreviewapi/saveReview")!
+        let url = URL(string: settings.baseUrl + "rest/V1/vproductreviewapi/saveReview")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -261,7 +260,40 @@ class ced_SingleReviewPagecell: UITableViewCell {
         let vendorId = userData["vendorId"] as! String
         let reviewid = jsondata[0]["vendor_data"]["review_info"]["summary_rating"]["review_id"].stringValue
         let param =  ["review_id":reviewid,"vendor_id" : vendorId ]
-       // ced_VendorBaseClass().sendurlrequest(url: "https://duueasy.com.br/rest/V1/vproductreviewapi/saveReview", para: param)
+        print(param)
+        guard let jsondata = try? JSONEncoder().encode(param) else{
+            print("data not encoded")
+            return
+        }
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = timeoutIntervalForRequest
+        sessionConfig.timeoutIntervalForResource = timeoutIntervalForResource
+        let session = URLSession(configuration: sessionConfig)
+        let url = URL(string: settings.baseUrl + "rest/V1/vproductreviewapi/deleteReview")!
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsondata
+        request.httpMethod = "POST"
+        let task = session.dataTask(with: request) { (data, urlresponse, error) in
+            if error != nil {
+                print("error in error" ,error?.localizedDescription)
+                return
+            }
+            guard let response = urlresponse as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
+                print("Error: HTTP request failed \(urlresponse)")
+                return
+            }
+            guard let data = data else {
+                print("data not recived")
+                return
+            }
+            DispatchQueue.main.async {
+                guard let json = try? JSON(data: data) else {return}
+                print(json)
+                self.parent?.view.makeToast(json[0]["vendor_data"]["message"].stringValue, duration: 2.0, position: .center)
+            }
+        }
+        task.resume()
     }
     
     

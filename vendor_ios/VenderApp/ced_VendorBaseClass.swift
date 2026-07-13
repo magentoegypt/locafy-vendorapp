@@ -151,7 +151,6 @@ class ced_VendorBaseClass: UIViewController {
         var baseUrl = settings.baseUrl
         baseUrl += url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let urls = URL(string: baseUrl)!
-//        "https://duueasy.com.br/rest/V1/vproductreviewapi/getReviewList"
         print(url)
         print(param)
             var request = URLRequest(url: urls)
@@ -738,7 +737,7 @@ class ced_VendorBaseClass: UIViewController {
     }
     @objc func sendRequest(url:String,params:Dictionary<String,String>?){
        
-        let httpUrl = settings.baseUrl + "rest/V1/"//"https://www.zeomarket.com/rest/V1/"
+        let httpUrl = settings.baseUrl + "rest/V1/"
         
         let reqUrl = httpUrl+url
         
@@ -963,7 +962,7 @@ class ced_VendorBaseClass: UIViewController {
     
     @objc func sendANyRequest(url:String,params:[String:Any]){
        
-        let httpUrl = settings.baseUrl + "rest/V1/"// Ced_CommonVendor.getInfoPlist("baseUrl") as! String + "rest/V1/"//"https://www.zeomarket.com/rest/V1/"
+        let httpUrl = settings.baseUrl + "rest/V1/"
         
         let reqUrl = httpUrl+url
         

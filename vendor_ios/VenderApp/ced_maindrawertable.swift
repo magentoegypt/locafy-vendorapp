@@ -2061,11 +2061,6 @@ class ced_maindrawertable: UIViewController, UIImagePickerControllerDelegate, UI
             self.sideDrawerViewController?.toggleDrawer()
             let viewControl = storyboard?.instantiateViewController(withIdentifier: "dashRootView") as! UINavigationController
             self.sideDrawerViewController?.transitionFromMainViewController(viewControl, duration: 1, options: UIView.AnimationOptions.transitionFlipFromTop, animations: nil, completion: nil)
-        }else if(navData == "Seller Guide"){
-            self.sideDrawerViewController?.toggleDrawer()
-            let viewControl = storyboard?.instantiateViewController(withIdentifier: "ced_WebView") as! ced_WebView
-            viewControl.pageUrl = "https://seller.zeomarket.com/sellers_guide.pdf";
-            navigation.pushViewController(viewControl, animated: true)
         }else if(navData == "Table Rate Shipping"){
             let stoy = UIStoryboard(name: "Main", bundle: nil)
             self.sideDrawerViewController?.toggleDrawer()

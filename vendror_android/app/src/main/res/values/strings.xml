@@ -26,11 +26,7 @@
     <string name="facebook_app_id" translatable="false">4575198272598318</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb4575198272598318</string>
 
-    <string name="base_url" translatable="false">https://locafy.market/</string>
-    <!--    <string name="base_url" translatable="false">https://brassandwood.org/</string>-->
-
-
-    <!--    <string name="base_url" translatable="false">https://demo2.cedcommerce.com/magento/client/hassan/pub/</string>-->
+    <string name="base_url" translatable="false">https://vendors.magento2.click/</string>
 
     <string name="app_name">Locafy Seller</string>
     <string name="alert_name">Locafy Seller</string>

@@ -221,7 +221,6 @@ class CatalogPriceRules: ced_VendorBaseClass,UITableViewDelegate,UITableViewData
     //    MARK: all Request Responce Functions
     @objc func loadData(){
         Alert_File.addLoadingIndicator(self, msg: "Loading Please Wait...")
-//        192.168.0.217/training/m2_2/vpromotionapi/promotionrules/listing
         var baseUrl = ""
         if ShoppingCartPriceRules == false
         {

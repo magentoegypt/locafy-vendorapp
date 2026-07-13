@@ -334,11 +334,10 @@ public class Ced_MultiVendor_VendorSessionManagement {
     }
 
     public String getBase_Url() {
-       // return  "https://locafy.market/";
         if (getStoreLocale() != null){
-            return  "https://locafy.market/"+getStoreLocale()+"/";
+            return  "https://vendors.magento2.click/"+getStoreLocale()+"/";
         }else{
-            return  "https://locafy.market/eg/";
+            return  "https://vendors.magento2.click/eg/";
         }
       //  return pref.getString(Base_Url, con.getResources().getString(R.string.base_url));
     }

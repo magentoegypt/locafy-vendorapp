@@ -157,7 +157,7 @@ class ced_SingleRatingPagecell: UITableViewCell {
             sessionConfig.timeoutIntervalForRequest = timeoutIntervalForRequest
             sessionConfig.timeoutIntervalForResource = timeoutIntervalForResource
             let session = URLSession(configuration: sessionConfig)
-            let url = URL(string: "https://duueasy.com.br/rest/V1/vproductreviewapi/saveRating")!
+            let url = URL(string: settings.baseUrl + "rest/V1/vproductreviewapi/saveRating")!
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             

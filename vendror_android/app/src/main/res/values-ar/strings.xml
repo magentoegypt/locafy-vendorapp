@@ -130,9 +130,6 @@
     </string-array>
 
 
-    <!--
-            <string name="base_url">http://dev-marketplace.btech.com/</string>
-         -->
     <string name="dashboard">الصفحة الرئيسية</string>
     <string name="VendorProfile">ملف البائع</string>
     <string name = "Products"> المنتجات  </string>

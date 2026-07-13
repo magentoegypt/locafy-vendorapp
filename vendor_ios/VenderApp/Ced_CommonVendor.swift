@@ -518,10 +518,8 @@ class Ced_CommonVendor: NSObject {
     
     
     @objc func loadModules(){
-        // let  moduleurl = "http://192.168.0.217/training/m2_2/vendorapi/index/getmoduleList"
-        let  moduleurl = "https://www.zeomarket.com/vendorapi/index/getmoduleList"
+        let  moduleurl = settings.baseUrl + "vendorapi/index/getmoduleList"
         let request = NSMutableURLRequest(url: URL(string:moduleurl)!)
-        print("http://192.168.0.217/training/m2_2/vendorapi/index/getmoduleList")
         let sessionConfig = URLSessionConfiguration.default
 //        sessionConfig.httpAdditionalHeaders = [
 //            "Authorization": "Basic \(Ced_CommonVendor.getAuthData())",

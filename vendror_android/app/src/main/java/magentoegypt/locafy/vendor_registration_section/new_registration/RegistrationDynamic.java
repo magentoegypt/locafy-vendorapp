@@ -160,7 +160,7 @@ public class RegistrationDynamic extends AppCompatActivity {
         GalleryActivity.limitImage = 0;
         viewContainer = findViewById(R.id.viewContainer);
         findViewById(R.id.weblink).setOnClickListener(view -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://locafy.market/global/create-vendor-account"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vendors.magento2.click/global/create-vendor-account"));
             startActivity(browserIntent);
         });
         registrationParams = new JSONObject();

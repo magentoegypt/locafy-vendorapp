@@ -140,8 +140,6 @@ public class Ced_Multivendor_bank_detials extends Ced_MultiVendor_NavigationActi
             address_Proof = new HashMap<>();
             address_proof_spinner_data = new ArrayList<>();
             selected_values = new ArrayList<>();
-       /*     url ="http://192.168.0.217/training/m2_2/vendorapi/additional/fields";
-            UpdateUrl="http://192.168.0.217/training/m2_2/vendorapi/index/update";*/
 
             url = session.getBase_Url() + "/vendorapi/additional/fields";
             UpdateUrl = session.getBase_Url() + "/vendorapi/index/update";

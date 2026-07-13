@@ -4,7 +4,6 @@
 //
 //  Created by cedcoss on 15/09/21.
 //  Copyright © 2021 CEDCOSS Technologies Private Limited. All rights reserved.
-//https://omaneorder.com/en/vmembershipapi/onepage/index/cart_id/2431/store_id/21/check/true
 
 import UIKit
 import WebKit

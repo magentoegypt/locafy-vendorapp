@@ -79,7 +79,7 @@ class ced_vendorRegistration: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func createAccounbtntpd(_ sender: Any) {
-        if let url = URL(string: "https://locafy.market/create-vendor-account") {
+        if let url = URL(string: "https://vendors.magento2.click/create-vendor-account") {
             UIApplication.shared.open(url)
         }
     }
@@ -2249,7 +2249,3 @@ extension UIStackView {
         removedSubviews.forEach({ $0.removeFromSuperview() })
     }
 }
-
-//https://brassandwood.org/en/vmultistepregapi/index/save?vendor_id={{vendor_id}}&hashkey={{vtoken}}
-//https://brassandwood.org/en/vmultistepregapi/index/registrationFields
-//https://locafy.market/eg-en/vmultistepregapi/index/registrationFields
