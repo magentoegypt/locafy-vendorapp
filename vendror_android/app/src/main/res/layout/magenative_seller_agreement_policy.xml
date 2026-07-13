@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:layout_marginEnd="@dimen/pad_10dp"
+            android:text="@string/sellerpolicy"
+            android:textColor="@color/AppTheme"
+            android:textSize="@dimen/txt_20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:layout_marginEnd="@dimen/pad_10dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:layout_marginEnd="@dimen/pad_10dp"
+            android:text="@string/sellerpolicyterms"
+            android:textSize="@dimen/txt_20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:layout_marginEnd="@dimen/pad_10dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:layout_marginEnd="@dimen/pad_10dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:layout_marginEnd="@dimen/pad_10dp"
+            android:layout_marginBottom="@dimen/pad_5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/confirmation_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:theme="@style/WhiteCheck" />
+
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".3"
+                android:text="@string/finish" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

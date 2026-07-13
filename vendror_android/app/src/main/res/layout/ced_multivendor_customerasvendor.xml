@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginback">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/loginback">
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@+id/MultiVendor_vendorcreateaccounttag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:imeOptions="actionNext"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/Vendorcreateaccount"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/MultiVendor_linebelowvendorcreateaccounttag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/MultiVendor_vendorcreateaccounttag"
+                    android:background="@color/ebebebe"
+                    android:imeOptions="actionNext"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/MultiVendor_vendorinfosection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_vendorcreateaccounttag"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    card_view:cardUseCompatPadding="true"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/MultiVendor_vendorinfotag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:text="@string/vendorinfo"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/MultiVendor_linebelowvendorinfotag"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/MultiVendor_vendorinfotag"
+                            android:background="@color/ebebebe"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/MultiVendor_vendor_publicnametag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MultiVendor_linebelowvendorinfotag"
+                            android:layout_marginStart="15dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:text="@string/publicname"
+                            android:textSize="15sp"
+
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_vendor_publicname"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_vendor_publicnametag"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/curve"
+                            android:imeOptions="actionNext"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/MultiVendor_vendor_shopurltag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MultiVendor_vendor_publicname"
+                            android:layout_marginStart="15dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:text="@string/shopurl"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_vendor_shopurl"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_vendor_shopurltag"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/curve"
+                            android:imeOptions="actionNext"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_vendor_shopurl"
+                            android:layout_marginStart="15dp"
+                            android:hint="@string/shopurlhint"
+                            android:textColor="@color/black"
+
+                            android:textColorHint="@color/TextHintColor"
+
+
+                            />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/MultiVendor_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_vendorinfosection"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_style"
+                    android:text="@string/submittext"
+                    android:textColor="@color/primary_material_light"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
+

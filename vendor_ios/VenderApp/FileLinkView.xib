@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FileLinkView" customModule="Magenative_Vendor_App_M2" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="jHD-ZK-N9I" id="G2B-3Q-ALo"/>
+                <outlet property="titleLabel" destination="UhT-Tj-ybk" id="RYE-6z-hSY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhT-Tj-ybk">
+                    <rect key="frame" x="10" y="5" width="150" height="40"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZq-6b-Lx3">
+                    <rect key="frame" x="165" y="5" width="5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="5" id="bCC-yV-waG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHD-ZK-N9I">
+                    <rect key="frame" x="180" y="5" width="190" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Download"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="jHD-ZK-N9I" firstAttribute="top" secondItem="UhT-Tj-ybk" secondAttribute="top" id="5yQ-i2-NW1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hZq-6b-Lx3" secondAttribute="bottom" constant="5" id="9gt-iP-rEM"/>
+                <constraint firstItem="hZq-6b-Lx3" firstAttribute="leading" secondItem="UhT-Tj-ybk" secondAttribute="trailing" constant="5" id="KfQ-da-HMr"/>
+                <constraint firstItem="UhT-Tj-ybk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="Kfq-GS-9RF"/>
+                <constraint firstItem="jHD-ZK-N9I" firstAttribute="bottom" secondItem="UhT-Tj-ybk" secondAttribute="bottom" id="YW6-tF-5Hf"/>
+                <constraint firstItem="jHD-ZK-N9I" firstAttribute="leading" secondItem="hZq-6b-Lx3" secondAttribute="trailing" constant="10" id="h0b-oD-zds"/>
+                <constraint firstItem="hZq-6b-Lx3" firstAttribute="centerY" secondItem="UhT-Tj-ybk" secondAttribute="centerY" id="iW8-nT-gOW"/>
+                <constraint firstItem="hZq-6b-Lx3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="ina-rf-nzt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="UhT-Tj-ybk" secondAttribute="bottom" constant="5" id="lt3-Ji-7Sj"/>
+                <constraint firstItem="UhT-Tj-ybk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mQW-4g-S6r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jHD-ZK-N9I" secondAttribute="trailing" constant="5" id="usn-XN-o7y"/>
+                <constraint firstItem="UhT-Tj-ybk" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.4" id="xKx-l4-0FL"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="52" y="133.13343328335833"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    tools:context="magentoegypt.locafy.addons.advance_transactions.Ced_MultiVendor_TransactionView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        card_view:cardUseCompatPadding="true"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/MultiVendor_vendortransactionsection"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TRANSACTIONDETAILS"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/MultiVendor_vendortransactionsection"
+                android:background="@color/ebebebe"
+                android:id="@+id/MultiVendor_linebelowtranstag"/>
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                card_view:cardUseCompatPadding="true"
+                android:background="@color/white"
+                android:layout_below="@+id/MultiVendor_linebelowtranstag"
+                android:id="@+id/MultiVendor_besectioncard"
+                card_view:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/MultiVendor_benefsectiontag"
+                        android:background="@color/AppTheme">
+                        <TextView
+                            android:paddingLeft="@dimen/pad_10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="@string/BeneficiaryDetails"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:layout_margin="5dp"
+                            android:gravity="center_vertical"
+                            android:textAllCaps="true" />
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/MultiVendor_benefsectiontag"
+                        android:background="@color/ebebebe" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/MultiVendor_benefsectiontag"
+                        android:layout_margin="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="Vendor Name"
+
+                                />
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_vendorname"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:layout_weight="1.5"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="Payment Method Beneficiary Details" />
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_beneficiarydetail"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:layout_weight="1.5"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                card_view:cardUseCompatPadding="true"
+                android:background="@color/white"
+                android:layout_below="@+id/MultiVendor_besectioncard"
+                android:id="@+id/MultiVendor_transactiondetailcard"
+                card_view:cardBackgroundColor="@color/white"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/MultiVendor_transactiondetailtexttag"
+                        android:background="@color/AppTheme">
+
+                        <TextView
+                            android:paddingLeft="@dimen/pad_10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="@string/TRANSACTIONDETAILS"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:layout_margin="5dp"
+                            android:gravity="center_vertical"
+                            android:textAllCaps="true" />
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/MultiVendor_transactiondetailtexttag"
+                        android:background="@color/ebebebe"
+                        android:id="@+id/MultiVendor_linebelowtransactioninfotext"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/MultiVendor_linebelowtransactioninfotext"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_margin="2dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/TransactionId"
+                                android:layout_weight="1.5"
+
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_Transactionid"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:layout_weight="1.5"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/TransactionDate"
+                                android:layout_weight="1.5"
+
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_transactiondate"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:layout_weight="1.5"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/TransactionMode"
+                                android:layout_weight="1.5"
+
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+                                />
+
+                            <TextView
+                                android:id="@+id/MultiVendor_transactionmode"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_weight="1.5"
+                                android:text="@string/TransactionType"
+
+
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_transactiontype"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="Total Shipping Amount"
+                                />
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_shippingamount"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/Amount"
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_amount"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/AdjustmentAmount"
+
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_adjustmentamount"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/NetAmount"
+
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_netamount"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4"
+                            >
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/Notes"
+
+                                />
+                            <TextView
+
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text=":"
+
+                                />
+                            <TextView
+                                android:id="@+id/MultiVendor_notes"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                card_view:cardUseCompatPadding="true"
+                android:background="@color/white"
+                android:layout_below="@+id/MultiVendor_transactiondetailcard"
+                card_view:cardBackgroundColor="@color/white"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/MultiVendor_orderdetailstexttag"
+                        android:background="@color/AppTheme">
+
+                        <TextView
+                            android:paddingLeft="@dimen/pad_10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="@string/ORDERDETAILS"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textColor="@color/white"
+                            android:layout_margin="5dp"
+                            android:gravity="center_vertical"
+
+                            android:textAllCaps="true"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/MultiVendor_orderdetailstexttag"
+                        android:background="@color/ebebebe"
+                        android:id="@+id/MultiVendor_linebeloworderdetailsinfotext"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/MultiVendor_linebeloworderdetailsinfotext"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_margin="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:weightSum="4">
+
+                           <androidx.recyclerview.widget.RecyclerView
+                               android:id="@+id/MultiVendor_orderdetails_recyclerview"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+                           </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

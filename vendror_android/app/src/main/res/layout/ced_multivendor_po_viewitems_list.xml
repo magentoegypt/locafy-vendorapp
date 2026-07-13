@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MultiVendor_view6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/whitebackground"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/prod_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MultiVendor_prod_name_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:text="@string/Product"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/MultiVendor_prod_name"
+                app:layout_constraintEnd_toStartOf="@id/MultiVendor_prod_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/MultiVendor_prod_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MultiVendor_prod_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/MultiVendor_prod_name_head"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MultiVendor_prod_sku_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:text="@string/SKU"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/MultiVendor_prod_sku"
+                app:layout_constraintEnd_toStartOf="@id/MultiVendor_prod_sku"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/MultiVendor_prod_sku" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MultiVendor_prod_sku"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/MultiVendor_prod_sku_head"
+                app:layout_constraintTop_toBottomOf="@+id/MultiVendor_prod_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/requested_qty_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:text="@string/requested_qty"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/requested_qty"
+                app:layout_constraintEnd_toStartOf="@id/requested_qty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/requested_qty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/requested_qty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/requested_qty_txt"
+                app:layout_constraintTop_toBottomOf="@+id/MultiVendor_prod_sku" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/requested_unit_price_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:text="@string/requested_price"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/requested_unit_price"
+                app:layout_constraintEnd_toStartOf="@id/requested_unit_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/requested_unit_price" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/requested_unit_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/requested_unit_price_txt"
+                app:layout_constraintTop_toBottomOf="@+id/requested_qty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/proposed_qty_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:text="@string/proposed_qty"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/proposed_qty"
+                app:layout_constraintEnd_toStartOf="@id/proposed_qty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/proposed_qty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/proposed_qty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:padding="0dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/proposed_qty_txt"
+                app:layout_constraintTop_toBottomOf="@+id/requested_unit_price" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/remaining_qty_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:text="@string/RemainingQty"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/RemainingQty"
+                app:layout_constraintEnd_toStartOf="@id/RemainingQty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/RemainingQty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/RemainingQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/remaining_qty_txt"
+                app:layout_constraintTop_toBottomOf="@+id/proposed_qty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MultiVendor_RowTotal_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:text="@string/RowTotal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/MultiVendor_RowTotal"
+                app:layout_constraintEnd_toStartOf="@id/MultiVendor_RowTotal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/MultiVendor_RowTotal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/MultiVendor_RowTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/MultiVendor_RowTotal_head"
+                app:layout_constraintTop_toBottomOf="@+id/RemainingQty" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/AppTheme">
+
+    <TextView
+        android:id="@+id/MultiVendor_selector"
+        android:layout_width="5dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/MultiVendor_identity"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/desc_list_item_icon"
+        android:gravity="center_vertical"
+        android:tint="@color/white"
+        app:tint="@color/white"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/MultiVendor_lblListHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingStart="40dp"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/MultiVendor_icon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/desc_list_item_icon"
+        android:gravity="center_vertical"
+        app:tint="@color/white"
+        android:src="@drawable/expandarrow" />
+
+</RelativeLayout>

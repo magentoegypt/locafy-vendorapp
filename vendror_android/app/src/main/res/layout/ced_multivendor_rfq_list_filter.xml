@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitebackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitebackground">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MultiVendor_txt_QuoteIncrementId"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/pad_2dp"
+            android:gravity="center_vertical"
+            android:text="@string/QuoteIncrementId"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/MultiVendor_edt_QuoteIncrementId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/MultiVendor_edt_QuoteIncrementId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_2dp"
+            android:background="@drawable/editext_border"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:minHeight="30dp"
+            android:padding="@dimen/pad_5dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MultiVendor_txt_QuoteIncrementId"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MultiVendor_txt_CustomerEmail"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/pad_2dp"
+            android:gravity="center_vertical"
+            android:text="@string/CustomerEmail"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/MultiVendor_edt_CustomerEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_QuoteIncrementId" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/MultiVendor_edt_CustomerEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_2dp"
+            android:background="@drawable/editext_border"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:inputType="textEmailAddress"
+            android:minHeight="30dp"
+            android:padding="@dimen/pad_5dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MultiVendor_txt_CustomerEmail"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_QuoteIncrementId" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MultiVendor_txt_CreatedAt"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/pad_2dp"
+            android:gravity="center_vertical"
+            android:text="@string/CreatedAt"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/MultiVendor_edt_CreatedAt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_CustomerEmail" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/MultiVendor_edt_CreatedAt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_2dp"
+            android:background="@drawable/editext_border"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="@string/from"
+            android:minHeight="30dp"
+            android:padding="@dimen/pad_5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/MultiVendor_edt_CreatedAtTo"
+            app:layout_constraintStart_toEndOf="@+id/MultiVendor_txt_CreatedAt"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_CustomerEmail" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/MultiVendor_edt_CreatedAtTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_2dp"
+            android:background="@drawable/editext_border"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="@string/to"
+            android:minHeight="30dp"
+            android:padding="@dimen/pad_5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MultiVendor_edt_CreatedAt"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_CustomerEmail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/MultiVendor_txt_invoicestatus"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/pad_2dp"
+            android:gravity="center_vertical"
+            android:text="@string/invoice_status"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/MultiVendor_edt_rfq_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_CreatedAt" />
+
+        <Spinner
+            android:id="@+id/MultiVendor_edt_rfq_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_2dp"
+            android:background="@drawable/backgroundg_spinner"
+            android:ellipsize="end"
+            android:entries="@array/rfq_status"
+            android:gravity="center_vertical"
+            android:minHeight="30dp"
+            android:padding="@dimen/pad_5dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MultiVendor_txt_invoicestatus"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_CreatedAt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/MultiVendor_unsetfilter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/pad_2dp"
+            android:background="@drawable/button_style"
+            android:gravity="center"
+            android:text="@string/Reset_filter"
+            android:textColor="@color/TextColor"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/MultiVendor_setfilter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_txt_invoicestatus" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/MultiVendor_setfilter"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/pad_2dp"
+            android:background="@drawable/button_style"
+            android:gravity="center"
+            android:text="@string/Filter"
+            android:textColor="@color/TextColor"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MultiVendor_unsetfilter"
+            app:layout_constraintTop_toBottomOf="@+id/MultiVendor_edt_rfq_status" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

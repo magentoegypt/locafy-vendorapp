@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pullToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--    <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:id="@+id/MultiVendor_view6"
+                app:cardUseCompatPadding="true"
+                android:login_background="@color/white"
+                >-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_2dp">
+
+                <TextView
+                    android:id="@+id/MultiVendor_Count_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/MultiVendor_text_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/MultiVendor_product_report_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </LinearLayout>
+
+        <!--</androidx.cardview.widget.CardView>-->
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

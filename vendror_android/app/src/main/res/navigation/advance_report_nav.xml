@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/advance_report_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="magentoegypt.locafy.addons.advance_Report.HomeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_vendorSalesReport2"
+            app:destination="@id/vendorSalesReport2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_vendorPaymentReport"
+            app:destination="@id/vendorPaymentReport"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_outOfStockProducts"
+            app:destination="@id/outOfStockProducts"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_soldProducts"
+            app:destination="@id/soldProducts"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_productViews"
+            app:destination="@id/productViews"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_returnReport"
+            app:destination="@id/returnReport"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/vendorSalesReport2"
+        android:name="magentoegypt.locafy.addons.advance_Report.VendorSalesReport"
+        android:label="@string/vendor_sales_report"
+        tools:layout="@layout/fragment_vendor_sales_report">
+        <action
+            android:id="@+id/action_vendorSalesReport2_to_filterBottomScreen"
+            app:destination="@id/filterBottomScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterBottomScreen"
+        android:name="magentoegypt.locafy.addons.advance_Report.FilterBottomScreen"
+        android:label="@string/filter"
+        tools:layout="@layout/fragment_filter_bottom_screen" />
+    <dialog
+        android:id="@+id/apiFaliureScreen"
+        android:name="magentoegypt.locafy.addons.advance_Report.ApiFailureScreen"
+        android:label="Error"
+        tools:layout="@layout/fragment_api_faliure_screen" />
+    <fragment
+        android:id="@+id/vendorPaymentReport"
+        android:name="magentoegypt.locafy.addons.advance_Report.VendorPaymentReport"
+        android:label="@string/payment_report"
+        tools:layout="@layout/fragment_vendor_payment_report">
+        <action
+            android:id="@+id/action_vendorPaymentReport_to_filterBottomScreen"
+            app:destination="@id/filterBottomScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/outOfStockProducts"
+        android:name="magentoegypt.locafy.addons.advance_Report.OutOfStockProducts"
+        android:label="@string/out_of_stock_products"
+        tools:layout="@layout/fragment_out_of_stock_products">
+        <action
+            android:id="@+id/action_outOfStockProducts_to_filterBottomScreen"
+            app:destination="@id/filterBottomScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/soldProducts"
+        android:name="magentoegypt.locafy.addons.advance_Report.SoldProducts"
+        android:label="@string/sold_products"
+        tools:layout="@layout/fragment_sold_products" >
+        <action
+            android:id="@+id/action_soldProducts_to_filterBottomScreen"
+            app:destination="@id/filterBottomScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/productViews"
+        android:name="magentoegypt.locafy.addons.advance_Report.ProductViews"
+        android:label="@string/product_views"
+        tools:layout="@layout/fragment_product_views" >
+        <action
+            android:id="@+id/action_productViews_to_filterBottomScreen"
+            app:destination="@id/filterBottomScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnReport"
+        android:name="magentoegypt.locafy.addons.advance_Report.ReturnReport"
+        android:label="@string/return_report"
+        tools:layout="@layout/fragment_return_report" >
+        <action
+            android:id="@+id/action_returnReport_to_filterBottomScreen"
+            app:destination="@id/filterBottomScreen"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>

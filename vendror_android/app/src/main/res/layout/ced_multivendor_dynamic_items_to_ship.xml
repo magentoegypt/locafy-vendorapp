@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardUseCompatPadding="true"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/pad_5dp"
+                android:weightSum="1.0"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/Product"
+                    android:textSize="@dimen/txt_13sp"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:id="@+id/MultiVendor_prod_name_head"
+
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:textSize="@dimen/txt_11sp"
+                    android:id="@+id/MultiVendor_prod_name"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/pad_5dp"
+                android:weightSum="1.0"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/prod_SKU"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:id="@+id/MultiVendor_prod_sku_head"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:id="@+id/MultiVendor_prod_sku"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_11sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+                android:layout_margin="@dimen/pad_5dp"
+
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/QuantityOrdered"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:id="@+id/MultiVendor_QuantityOrdered"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_11sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+                android:layout_margin="@dimen/pad_5dp"
+
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:id="@+id/MultiVendor_prod_qty_head"
+                    android:layout_weight="0.5"
+                    android:text="@string/QuantitytoShip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+                    />
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:id="@+id/MultiVendor_prod_qty_ship"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_11sp"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    />
+            </LinearLayout>
+
+
+            <CheckBox android:theme="@style/WhiteCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                android:visibility="gone"
+                android:id="@+id/MultiVendor_returntostock"
+                android:text="@string/ReturnToStock"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:textSize="@dimen/txt_13sp"
+                android:visibility="gone"
+                android:id="@+id/MultiVendor_updateQuantity"
+                android:text="@string/UpdateQuantity"
+                android:background="@color/AppTheme"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/MultiVendor_item_id"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/MultiVendor_order_id"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/remaining_quantity"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/product_filter_dialog_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/filter_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/AppTheme"
+            android:padding="12dp"
+            android:text="@string/Filter"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/product_id_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filter_header"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/product_id_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight=".4"
+                android:text="@string/product_id" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/product_id_edt"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight=".6"
+                android:background="@drawable/editext_border"
+                android:inputType="number"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product_name_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_id_linear"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/product_name_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight=".4"
+                android:text="@string/product_name" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/product_name_edt"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight=".6"
+                android:background="@drawable/editext_border"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product_price_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name_linear"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/product_price_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight=".4"
+                android:text="@string/pricefrom" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/product_price_edt"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight=".6"
+                android:background="@drawable/editext_border"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product_qty_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_price_linear"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/product_qty_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight=".4"
+                android:text="@string/qty" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/quantity_edt"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight=".6"
+                android:background="@drawable/editext_border"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product_status_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_qty_linear"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight=".4"
+                android:text="@string/Type" />
+
+            <Spinner
+                android:id="@+id/product_type_spinner"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight=".6"
+                android:background="@drawable/backgroundg_spinner"
+                android:entries="@array/type" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_status_linear"
+            android:layout_margin="5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/status_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight=".4"
+                android:text="@string/status" />
+
+            <Spinner
+                android:id="@+id/status_spinner"
+                style="@style/spinner_style"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight=".6"
+                android:background="@drawable/backgroundg_spinner"
+                android:entries="@array/pro_status" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/status_linear"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/dialog_reset_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/border_button_apptheme"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:text="@string/Reset_filter"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/dialog_apply_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/border_button_apptheme"
+                android:backgroundTint="@color/secondary_color"
+                android:padding="8dp"
+                android:text="@string/Filter"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:datePickerMode="spinner"
+        android:visibility="gone" />
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

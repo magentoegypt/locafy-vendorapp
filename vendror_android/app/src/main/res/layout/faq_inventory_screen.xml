@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/pad_5dp">
+
+    <TextView
+        android:id="@+id/filter_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/AppTheme"
+        android:padding="12dp"
+        android:text="@string/Filter"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:gravity="start|center"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/Quantity"
+        app:layout_constraintEnd_toStartOf="@+id/id_edt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_header"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <EditText
+        android:id="@+id/id_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/dialog_border_lightgrey"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id"
+        app:layout_constraintTop_toBottomOf="@+id/filter_header"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:gravity="start|center"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_edt"
+        app:layout_constraintWidth_percent="0.4" />
+
+
+    <Spinner
+        android:id="@+id/assesment_edt"
+        style="@style/spinner_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:minHeight="@dimen/pad_30dp"
+        android:popupBackground="@color/white"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_edt"
+        app:layout_constraintWidth_percent="0.6" />
+
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assesment_edt"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <EditText
+        android:id="@+id/title_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/dialog_border_lightgrey"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assesment_edt"
+        app:layout_constraintWidth_percent="0.6" />
+
+
+    <!--  //Created At-->
+    <TextView
+        android:id="@+id/createdAt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customerEmail"
+        app:layout_constraintWidth_percent="0.4" />
+
+
+    <EditText
+        android:id="@+id/createdAt_edt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_border_lightgrey"
+        android:hint="min price"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/createdAt"
+        app:layout_constraintTop_toTopOf="@+id/createdAt"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <EditText
+        android:id="@+id/createdAt_to_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_border_lightgrey"
+        android:hint="max price"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/createdAt_edt"
+        app:layout_constraintEnd_toEndOf="@+id/customer_email_edt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/createdAt_edt"
+        app:layout_constraintTop_toTopOf="@+id/createdAt_edt"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/customerEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="#Product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <EditText
+        android:id="@+id/customer_email_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/dialog_border_lightgrey"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <!--  <EditText
+          android:id="@+id/isactive_edt"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:minHeight="@dimen/pad_30dp"
+          android:background="@drawable/dialog_border_lightgrey"
+          android:editable="false"
+          android:paddingStart="10dp"
+          android:textSize="12sp"
+          app:layout_constraintWidth_percent="0.5"
+          android:layout_marginTop="@dimen/pad_5dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/order_edt" />-->
+
+
+    <TextView
+        android:id="@+id/dialog_reset_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/corner"
+        android:padding="10dp"
+        android:text="@string/Reset_filter"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createdAt"
+        app:layout_constraintWidth_percent="0.49" />
+
+    <TextView
+        android:id="@+id/dialog_apply_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_apptheme"
+        android:padding="10dp"
+        android:text="@string/applyfilter"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_reset_btn"
+        app:layout_constraintWidth_percent="0.49" />
+</androidx.constraintlayout.widget.ConstraintLayout>

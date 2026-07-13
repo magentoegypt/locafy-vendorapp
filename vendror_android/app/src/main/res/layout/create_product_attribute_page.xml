@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+<layout>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_5dp"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_head_Admin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/default_label"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/MultiVendor_edt_Admin"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/editext_border" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/MultiVendor_ValuesRequired_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_ValuesRequired_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/ValuesRequired"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/MultiVendor_ValuesRequired"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_CatalogInputType_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/CatalogInputType"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/MultiVendor_CatalogInputType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/attributeSetSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/includeinattributeset"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/attributeSetLinear"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.0"
+                android:layout_margin="5dp"
+                android:id="@+id/sortOrderLayout">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/sortOrder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/sortOrderEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/editext_border" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_margin="5dp"
+                android:id="@+id/manageOptionsLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:textStyle="bold"
+                    android:text="@string/MangeOptions"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <LinearLayout
+                    android:id="@+id/MultiVendor_Add_button_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="3dp">
+
+                    <LinearLayout
+                        android:id="@+id/MultiVendor_dynamic_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_5dp"
+                        android:orientation="vertical" />
+
+                    <Button
+                        android:id="@+id/MultiVendor_AddOptions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:background="@drawable/corner_grey"
+                        android:text="@string/AddOption"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner"
+                        android:gravity="start|center"
+                        android:padding="@dimen/pad_10dp"
+                        android:text="@string/AdvancedAttributeProperties"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_15sp" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_Atributecode_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/AttributeCode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/MultiVendor_edt_AttributeCode"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/editext_border" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/scope"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/scopeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.0"
+                android:visibility="gone"
+                android:layout_margin="5dp"
+                android:id="@+id/defaultTextSection">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/DefaultValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/defaultTextAttributeValue"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:visibility="visible"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/editext_border" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/defaultTextAreaAttributeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:gravity="start"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/editext_border" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/defaultDateAttributeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:gravity="start"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:drawableEnd="@drawable/calendar"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/editext_border" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/defaultBooleanAttributeSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/DefaultValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/defaultBooleanAttribute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/MultiVendor_Unique_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_UniqueValue_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/UniqueValue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/MultiVendor_UniqueValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_5dp"
+                android:gravity="end|top"
+                android:text="@string/uniquekey"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/MultiVendor_InputValidation_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_InputValidation_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="@string/InputValidation"
+                    android:textColor="@color/black"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/MultiVendor_InputValidation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/backgroundg_spinner"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <Button
+                        android:id="@+id/MultiVendor_Manage_Labels"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner"
+                        android:gravity="start|center"
+                        android:padding="@dimen/pad_10dp"
+                        android:text="@string/MangeLabels"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_15sp" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/MultiVendor_Note_manage_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_5dp"
+                android:text="@string/Note_manage_label"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_13sp"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/MultiVendor_Manage_Labels_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/store_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:cardUseCompatPadding="true">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/corner"
+                        android:gravity="start|center"
+                        android:padding="@dimen/pad_10dp"
+                        android:text="@string/StorefrontProperties"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_15sp" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/use_in_search"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/useInSearchYesNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/comparable_on_storefront"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/comparableOnStorefront"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/use_for_promo_rule_conditions"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/useforPromoRule"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/allow_html_tags_on_storefront"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/allowHTMLTags"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/visible_on_catalog_pages_on_storefront"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/visibleonCatalogPages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/used_in_product_listing"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/usedinProductListing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/used_for_sorting_in_product_listing"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <Spinner
+                    android:id="@+id/UsedforSorting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/pad_5dp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/backgroundg_spinner" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/MultiVendor_SaveAttribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_style"
+                android:text="@string/save"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

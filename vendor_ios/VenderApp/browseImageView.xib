@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="browseImageView" customModule="Locafy_Marketplace" customModuleProvider="target">
+            <connections>
+                <outlet property="browseButton" destination="vgC-HP-fEd" id="ld4-gx-88T"/>
+                <outlet property="browseImage" destination="h6a-tX-byg" id="vGE-gG-2b2"/>
+                <outlet property="fileAttachedLabel" destination="37d-4V-2px" id="XIU-6F-GJx"/>
+                <outlet property="nameLabel" destination="kUt-7S-YW8" id="REo-2Y-WQX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-HP-fEd">
+                    <rect key="frame" x="0.0" y="13" width="179.5" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="2Wp-TU-Tvf"/>
+                    </constraints>
+                    <state key="normal" title="Browse...">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="h6a-tX-byg">
+                    <rect key="frame" x="289" y="20" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="HbP-0R-zqY"/>
+                        <constraint firstAttribute="height" constant="40" id="xAo-Iu-Lz7"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUt-7S-YW8">
+                    <rect key="frame" x="189.5" y="13" width="179.5" height="35"/>
+                    <state key="normal" title="Download File"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37d-4V-2px">
+                    <rect key="frame" x="189.5" y="25" width="179.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="h6a-tX-byg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-10" id="CFe-nz-G8E"/>
+                <constraint firstItem="h6a-tX-byg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="GgR-3E-XBX"/>
+                <constraint firstItem="kUt-7S-YW8" firstAttribute="bottom" secondItem="vgC-HP-fEd" secondAttribute="bottom" id="ZHY-EP-ZPQ"/>
+                <constraint firstItem="kUt-7S-YW8" firstAttribute="width" secondItem="vgC-HP-fEd" secondAttribute="width" id="dt7-tq-79e"/>
+                <constraint firstItem="37d-4V-2px" firstAttribute="trailing" secondItem="kUt-7S-YW8" secondAttribute="trailing" id="fMi-Jh-II4"/>
+                <constraint firstItem="kUt-7S-YW8" firstAttribute="width" secondItem="vgC-HP-fEd" secondAttribute="width" id="fZx-g9-vuC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vgC-HP-fEd" secondAttribute="bottom" id="guf-x1-Ipx"/>
+                <constraint firstItem="vgC-HP-fEd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hyZ-Ie-tYZ"/>
+                <constraint firstItem="kUt-7S-YW8" firstAttribute="leading" secondItem="vgC-HP-fEd" secondAttribute="trailing" constant="10" id="iz6-ai-q2l"/>
+                <constraint firstItem="37d-4V-2px" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="mX1-3V-UPR"/>
+                <constraint firstItem="37d-4V-2px" firstAttribute="leading" secondItem="vgC-HP-fEd" secondAttribute="trailing" constant="10" id="mtX-do-RwD"/>
+                <constraint firstItem="kUt-7S-YW8" firstAttribute="top" secondItem="vgC-HP-fEd" secondAttribute="top" id="s1S-5U-l8N"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kUt-7S-YW8" secondAttribute="trailing" constant="10" id="tYQ-yM-ihl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="28.5" y="-257"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="header" width="833" height="142"/>
+    </resources>
+</document>

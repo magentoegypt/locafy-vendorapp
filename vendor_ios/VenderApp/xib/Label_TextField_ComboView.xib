@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Label_TextFieldComboView" customModule="Master_Piece_Seller" customModuleProvider="target">
+            <connections>
+                <outlet property="headingLabel" destination="UEt-b4-xh4" id="85J-ki-aXH"/>
+                <outlet property="textLabel" destination="54y-xd-LVt" id="7Ws-y7-1dL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54y-xd-LVt">
+                    <rect key="frame" x="5" y="35" width="365" height="30"/>
+                    <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="NP4-Ud-Fu8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEt-b4-xh4">
+                    <rect key="frame" x="5" y="9.5" width="365" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="54y-xd-LVt" firstAttribute="top" secondItem="UEt-b4-xh4" secondAttribute="bottom" constant="5" id="7q2-l1-FWf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="54y-xd-LVt" secondAttribute="trailing" constant="5" id="Xrl-6b-mkD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UEt-b4-xh4" secondAttribute="trailing" constant="5" id="hax-Iu-Eje"/>
+                <constraint firstItem="54y-xd-LVt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="k9I-VB-0cJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="54y-xd-LVt" secondAttribute="bottom" constant="5" id="lQx-8P-cjh"/>
+                <constraint firstItem="UEt-b4-xh4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="rSa-fs-zsb"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="142" y="155"/>
+        </view>
+    </objects>
+</document>

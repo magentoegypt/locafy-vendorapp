@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="mobileSignupFieldPopup" customModule="Master_Piece_Seller" customModuleProvider="target">
+            <connections>
+                <outlet property="continueBtn" destination="c6q-0A-9y2" id="KUM-0D-BqN"/>
+                <outlet property="mobileField" destination="mFD-zT-nMG" id="mnc-pJ-n8O"/>
+                <outlet property="topHeading" destination="dLJ-hC-iSD" id="MqG-Tr-HAC"/>
+                <outlet property="verifyphoneNumberView" destination="hBD-DX-MX9" id="l7j-qj-5zf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="204"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fae-Pw-sYc">
+                    <rect key="frame" x="0.0" y="0.0" width="437" height="204"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendor Mobile Signup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLJ-hC-iSD">
+                            <rect key="frame" x="8" y="8" width="421" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="v1m-Ly-Ots"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your mobile number to complete registration" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXT-Cc-UKb">
+                            <rect key="frame" x="8" y="60" width="421" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="phone_numberPopUp"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mFD-zT-nMG">
+                            <rect key="frame" x="12" y="91.5" width="413" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Kxs-aJ-VoE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBD-DX-MX9" customClass="JNPhoneNumberView" customModule="Master_Piece_Seller" customModuleProvider="target">
+                            <rect key="frame" x="12" y="91.5" width="413" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6q-0A-9y2">
+                            <rect key="frame" x="8" y="143.5" width="421" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="K61-TM-gCa"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localeKey" value="Continue"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hBD-DX-MX9" firstAttribute="trailing" secondItem="mFD-zT-nMG" secondAttribute="trailing" id="Chr-Gf-WJF"/>
+                        <constraint firstItem="hBD-DX-MX9" firstAttribute="top" secondItem="mFD-zT-nMG" secondAttribute="top" id="Ck2-WB-HR6"/>
+                        <constraint firstAttribute="trailing" secondItem="c6q-0A-9y2" secondAttribute="trailing" constant="8" id="Hec-lC-GLM"/>
+                        <constraint firstItem="hBD-DX-MX9" firstAttribute="bottom" secondItem="mFD-zT-nMG" secondAttribute="bottom" id="KdB-l5-ZeG"/>
+                        <constraint firstAttribute="trailing" secondItem="IXT-Cc-UKb" secondAttribute="trailing" constant="8" id="OAZ-mR-ehy"/>
+                        <constraint firstItem="IXT-Cc-UKb" firstAttribute="top" secondItem="dLJ-hC-iSD" secondAttribute="bottom" constant="12" id="Ohh-Ic-LaB"/>
+                        <constraint firstItem="c6q-0A-9y2" firstAttribute="top" secondItem="mFD-zT-nMG" secondAttribute="bottom" constant="12" id="RPc-vd-dqq"/>
+                        <constraint firstItem="dLJ-hC-iSD" firstAttribute="leading" secondItem="fae-Pw-sYc" secondAttribute="leading" constant="8" id="T14-EW-ytu"/>
+                        <constraint firstItem="hBD-DX-MX9" firstAttribute="leading" secondItem="mFD-zT-nMG" secondAttribute="leading" id="TOE-Yn-b8j"/>
+                        <constraint firstItem="mFD-zT-nMG" firstAttribute="leading" secondItem="fae-Pw-sYc" secondAttribute="leading" constant="12" id="V4f-xk-kJS"/>
+                        <constraint firstItem="IXT-Cc-UKb" firstAttribute="leading" secondItem="fae-Pw-sYc" secondAttribute="leading" constant="8" id="c5S-Zf-cqp"/>
+                        <constraint firstItem="c6q-0A-9y2" firstAttribute="leading" secondItem="fae-Pw-sYc" secondAttribute="leading" constant="8" id="h8j-su-nTX"/>
+                        <constraint firstAttribute="trailing" secondItem="dLJ-hC-iSD" secondAttribute="trailing" constant="8" id="oPS-kb-ahG"/>
+                        <constraint firstItem="dLJ-hC-iSD" firstAttribute="top" secondItem="fae-Pw-sYc" secondAttribute="top" constant="8" id="sxV-UB-jGm"/>
+                        <constraint firstAttribute="trailing" secondItem="mFD-zT-nMG" secondAttribute="trailing" constant="12" id="tuO-dc-lP8"/>
+                        <constraint firstItem="mFD-zT-nMG" firstAttribute="top" secondItem="IXT-Cc-UKb" secondAttribute="bottom" constant="12" id="xEd-4k-Oxp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fae-Pw-sYc" secondAttribute="bottom" id="4Qc-ld-0gg"/>
+                <constraint firstItem="fae-Pw-sYc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5gq-KJ-txm"/>
+                <constraint firstItem="fae-Pw-sYc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gt8-hW-k3a"/>
+                <constraint firstAttribute="trailing" secondItem="fae-Pw-sYc" secondAttribute="trailing" id="uUU-k0-MF0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="186.23188405797103" y="-170.08928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

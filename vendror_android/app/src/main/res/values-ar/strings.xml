@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~				* @Translation http://b2bmarketplace.com developer team < developer@b2bbuyer.com >
+  ~
+  ~
+  -->
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Locafy Seller</string>
+
+    <string name="alert_name">تطبيق البائع</string>
+    <string name="no_location_data_provided">لا يوجد مزود موقع</string>
+    <string name="please_provide_store_address">يرجى تقديم عنوان المتجر</string>
+
+    <string name="auction">مزاد علني</string>
+    <string name="addauction">أضف مزاد</string>
+    <string name="listauction">قائمة المزاد</string>
+    <string name="bid_price">سعر العرض</string>
+    <string name="bid_date">تاريخ العطاء</string>
+    <string name="bid_time">وقت المزايدة</string>
+    <string name="winner">الفائز</string>
+    <string name="save_bid">حفظ العطاء</string>
+    <string name="maxprice">أقصى سعر</string>
+    <string name="editetxtauction">تحرير المزاد</string>
+    <string name="viewbid">مشاهدة العطاء</string>
+    <string name="product_type">نوع المنتج</string>
+    <string name="add_auction">أضف مزاد</string>
+    <string name="startingPrice">السعر المبدئي</string>
+    <string name="vendorauctionproductstaus">همز المزاد. حالة</string>
+    <string name="tap_to_select_date_from_calendar">انقر لتحديد التاريخ من التقويم</string>
+    <string name="auctin_lisitng">قائمة المزاد</string>
+    <string-array name="auction_sellprod">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="auction_edt_status">
+        <item>Select</item>
+        <item>Processing</item>
+        <item>Cancelled</item>
+        <item>Completed</item>
+        <item>Bid Closed</item>
+        <item>Not Started</item>
+    </string-array>
+    <string-array name="auction_vendor_status">
+        <item>Select</item>
+        <item>Approved</item>
+        <item>Disapproved</item>
+    </string-array>
+    <string-array name="auction_status">
+        <item>Select</item>
+        <item>Processing</item>
+        <item>Canceled</item>
+        <item>Completed</item>
+        <item>Bid Closed</item>
+    </string-array>
+    <string name="Viewbid">مشاهدة العطاء</string>
+    <string name="customer_id">هوية الزبون</string>
+    <string name="dateformat">YYYY-MM-DD</string>
+    <string name="auction_price">سعر المزاد</string>
+    <string name="winning_price">السعر الفائز</string>
+    <string name="binding_date">تاريخ ملزم</string>
+    <string name="manageauction">إدارة المزاد</string>
+    <string name="auctionwinners">الفائزون بالمزاد</string>
+    <string name="auction_product_list">قائمة منتجات المزاد</string>
+    <string name="Originalproductprice">سعر المنتج الأصلي</string>
+    <string name="edit">يحرر</string>
+    <string name="view">رأي</string>
+    <string name="rating_empty_msg">الرجاء تحديد واحد من كل تصنيف.</string>
+    <string name="faq">الاسئلة الشائعة حول منتج</string>
+    <string name="vendor_inventory">جرد البائع</string>
+    <string name="inventory_manage">إدارة المخزون</string>
+    <string name="out_of_stock">المنتج غير متوفر</string>
+    <string name="out_of_stocktxt">منتجات غير متوفرة في المخزون</string>
+    <string name="low_stock_product">المنتجات منخفضة المخزون</string>
+    <string name="add_faq_product">أضف التعليمات</string>
+    <string name="vendor_advance_report">تقرير مقدم البائع</string>
+    <string name="vendor_sales_report">تقرير المبيعات</string>
+    <string name="product_views">مشاهدات المنتجات</string>
+    <string name="product_views_txt">مشاهدات المنتج</string>
+    <string name="payment_report">تقرير الدفع</string>
+    <string name="out_of_stock_products">منتجات محددة كغير متوفرة</string>
+    <string name="return_report">تقرير طلبات الاسترجاع</string>
+    <string name="sold_products">المنتجات المباعة</string>
+    <string name="mobile_number">رقم الواتس اب</string>
+    <string-array name="auction_view_bid_status">
+        <item>يختار</item>
+        <item>وافق</item>
+        <item>مرفوض</item>
+    </string-array>
+    <!--    auction string value end-->
+
+
+    <string name="other">آخر</string>
+    <string name="change_number">تغيير رقم</string>
+    <string name="enter_otp">ادخل كود التحقق</string>
+    <string name="re_send_otp">Re send OTP</string>
+    <string name="submit_otp">تحقق</string>
+    <string name="sending_otp">جار ارسال كود التحقق ...</string>
+    <string name="mobile_number_is_empty">رقم الجوال فارغ !!</string>
+    <string name="Login">تسجيل الدخول</string>
+    <string name="simple">بسيط</string>
+    <string name="virtual">افتراضية</string>
+    <string name="grouped">مجمعة</string>
+    <string name="bundle">حزمة</string>
+    <string name="configurble">شكلي</string>
+    <string name="one">واحد</string>
+    <string name="two">إثنان</string>
+    <string-array name="store_name">
+        <item>English</item>
+        <item>عربي</item>
+    </string-array>
+
+
+    <!--
+            <string name="base_url">http://dev-marketplace.btech.com/</string>
+         -->
+    <string name="dashboard">الصفحة الرئيسية</string>
+    <string name="VendorProfile">ملف البائع</string>
+    <string name = "Products"> المنتجات  </string>
+    <string name="NewProduct">منتج جديد</string>
+    <string name="ManageProducts">إدارة المنتجات</string>
+    <string name="productattribute">سمة المنتج</string>
+    <string name="ManageTickets">إدارة التذاكر</string>
+    <string name="ManageAttribute">إدارةالسمة</string>
+    <string name="ManageAttributeSet">إدارة مجموعة السمات</string>
+    <string name="manageorders">الطلبات</string>
+    <string name="ManageOrders">إدارة الطلبات</string>
+    <string name="CancelOrders">إدارة الطلبات الملغاه</string>
+    <string name="ManageInvoice">إدارة الفواتير</string>
+    <string name="ManageShipment">إدارة الشحنات</string>
+    <string name="ManageCreditMemo">إدارة المرتجعات</string>
+    <string name="messaging">المراسلة</string>
+    <string name="vendoradmin">مدير البائع</string>
+    <string name="vendorcustomer">زبائن البائع</string>
+    <string name="vendordeals">عروض البائع</string>
+    <string name="dealsettings">إعدادات العروض</string>
+    <string name="Transactions">المعاملات المالية</string>
+    <string name="Transactions_title">معاملات مالية</string>
+    <string name="RequestPayments">طلب الدفعات</string>
+    <string name="RequestPaymentsMenu">المعاملات المطلوبة</string>
+    <string name="ViewTransactaions">عرض المعاملات</string>
+    <string name="Reports">التقارير</string>
+    <string name="OrderReports">تقارير الطلبات</string>
+    <string name="ProductReports">تقارير المنتجات</string>
+    <string name="Settings">الإعدادات</string>
+    <string name="TransactaionSettings">البيانات البنكية</string>
+    <string name="ShippingSettings">إعدادات الشحن</string>
+    <string name="ShippingMethods">خيارات الشحن</string>
+    <string name="storepickup">الإستلام من المتجر</string>
+    <string name="viewstores">عرض المتجر</string>
+    <string name="advancereport">تقرير متقدم</string>
+    <string-array name="array_name">
+        <item>اليوم</item>
+        <item>أسبوع</item>
+        <item>شهر</item>
+        <item>عام</item>
+    </string-array>
+    <string-array name="gender">
+        <item>أنثى</item>
+        <item>ذكر</item>
+    </string-array>
+    <string-array name="types">
+        <item>متغير</item>
+        <item>ثابت</item>
+    </string-array>
+    <string-array name="pricetypes">
+        <item>ثابت</item>
+        <item>نسبة</item>
+    </string-array>
+    <string-array name="price_type">
+        <item>ثابت</item>
+        <item>نسبة</item>
+    </string-array>
+    <string-array name="required">
+        <item>لا</item>
+        <item>نعم</item>
+    </string-array>
+    <string-array name="sort">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="shipping_zone_type">
+        <item>ثابت</item>
+        <item>لكل / متر</item>
+    </string-array>
+    <string-array name="type">
+        <item>أختر</item>
+        <item>بسيط</item>
+        <item>إفتراضي</item>
+        <item>قابل للتحميل</item>
+        <item>مجموعة</item>
+        <item>حزمة</item>
+        <item>قابل للتعديل</item>
+    </string-array>
+    <string-array name="status">
+        <item>إختر الحالة</item>
+        <item>موافق عليه (مفعل)</item>
+        <item>قيد الإنتظار (غير مفعل)</item>
+        <item>مرفوض</item>
+    </string-array>
+    <string-array name="pro_status">
+        <item>إختر الحالة</item>
+        <item>مفعل</item>
+        <item>غير مفعل</item>
+    </string-array>
+    <string-array name="status_list_rr">
+        <item>إختر الحالة</item>
+        <item>مفعل</item>
+        <item>غير مفعل</item>
+    </string-array>
+    <string-array name="spinner_item">
+        <item>يوم</item>
+        <item>شهر</item>
+        <item>سنة</item>
+    </string-array>
+    <string-array name="selection">
+        <item>إختر</item>
+        <item>نعم</item>
+        <item>لا</item>
+    </string-array>
+    <string-array name="scope">
+        <item>إختر</item>
+        <item>عرض المتجر</item>
+        <item>الموقع</item>
+        <item>عام</item>
+    </string-array>
+    <string-array name="layered">
+        <item>إختر</item>
+        <item>قابل للتصفية(مع النتائج)</item>
+        <item>قابل للتصفية(بدون نتائج)</item>
+        <item>لا</item>
+    </string-array>
+    <string-array name="catalog_input_type">
+        <item>حقل النص</item>
+        <item>منطقة النص</item>
+        <item>التاريخ</item>
+        <item>نعم/لا</item>
+        <item>إختيار متعدد</item>
+        <item>منسدل</item>
+        <item>السعر</item>
+        <item>صورة الوسائط</item>
+    </string-array>
+    <string-array name="apply_to">
+        <item>جميع أنواع المنتجات</item>
+        <item>أنواع المنتجات المختارة</item>
+    </string-array>
+    <string-array name="ShipBundle_Items">
+        <item>معاً</item>
+        <item>منفصل</item>
+    </string-array>
+    <string-array name="inventoryarray">
+        <item>في المخزن</item>
+        <item>نفذ</item>
+    </string-array>
+    <string-array name="input_validation">
+        <item>لا شي</item>
+        <item>رقم عشري</item>
+        <item>رقم صحيح</item>
+        <item>إيميل</item>
+        <item>URL</item>
+        <item>حروف</item>
+        <item tools:ignore="TypographyDashes">حروف(a-z,A-Z) or أرقام(0-9)</item>
+    </string-array>
+
+    <!--****************************Array text***************************************************-->
+
+
+    <string-array name="invoice_status">
+        <item>إختر</item>
+        <item>قيد المراجعة</item>
+        <item>مدفوع</item>
+        <item>ملغي</item>
+        <!--  <item>Partially Paid</item> -->
+    </string-array>
+    <string-array name="payment_status">
+        <item>الكل</item>
+        <item>قيد المراجعة</item>
+        <item>مدفوع</item>
+        <item>تم الاسترجاع</item>
+        <item>تم الالغاء</item>
+    </string-array>
+    <string-array name="creditmemo_status">
+        <item>إختر</item>
+        <item>قيد المراجعة</item>
+        <item>تم الاسترجاع</item>
+        <item>تم الالغاء</item>
+    </string-array>
+    <string-array name="return_order_status">
+        <item>إختر</item>
+        <item>قيد المراجعة</item>
+        <item>تمت الموافقة</item>
+        <item>مكتمل</item>
+        <item>تم الالغاء</item>
+    </string-array>
+    <string-array name="inputtypesbundle">
+        <item>منسدل</item>
+        <item>أزرار الراديو</item>
+        <item>خانة اختيار</item>
+        <item>إختيار متعدد</item>
+    </string-array>
+    <string name="title_activity_vendor_registration">تسجيل البائع</string>
+    <string name="VendorLogin">دخول البائع</string>
+    <string name="vendorlogintext">الرجاء تسجيل الدخول إذا كان لديك حساب بائع</string>
+    <string name="emailhint">البريد الإلكتروني</string>
+    <string name="Password">الرقم السري</string>
+    <string name="logintext">تسجيل الدخول</string>
+    <string name="forgotpass">نسيت كلمة المرور؟</string>
+    <string name="Vendorcreateaccount">إنشيء حسابك هنا</string>
+    <string name="Persobalinfo">معلومات شخصية *</string>
+    <string name="firstname">الأسم الأول</string>
+    <string name="lastname">الأسم الأخير</string>
+    <string name="news">إشترك في النشرة البريدية</string>
+    <string name="vendorinfo">معلومات البائع *</string>
+    <string name="publicname">الأسم العام *</string>
+    <string name="shopurl">رابط المتجر *</string>
+    <string name="shopurlhint">الرجاء إدخال رابط المتجر باللغة الإنجليزية.مثال my-shop-url </string>
+    <string name="vendorlogininfo">معلومات الدخول *</string>
+    <string name="confirmPassword">تأكيد كلمة المرور</string>
+    <string name="submittext">إرسال</string>
+    <string name="empty">الرجاء إدخال قيمة !</string>
+    <string name="invalidemail">البريد الالكتروني غير صالح</string>
+    <string name="requiredemail">الرجاء تعبئة جميع الحقول المطلوبة :البريد الالكتروني</string>
+    <string name="shortpass">
+الرجاء إدخال كلمة مرور لا تقل عن 8 رموز
+        <!-- ,يحتوي على رقم، حرف كبير ، حرف صغير، ورمز خاص!@ -->
+</string>
+    <string name="passnotmatch">كلمة المرور غير متطابقة</string>
+    <string name="VendorStatus">الحالة</string>
+    <string name="vendorapplication">طلبك قيد الإنتظار</string>
+    <string name="hellovendortext">أهلا بك</string>
+    <string name="approvaltext">حسابك قيد الموافقة</string>
+    <string name="refresh">تحديث</string>
+    <string name="SignOut">تسجيل الخروج</string>
+    <string name="noti">إشعار</string>
+    <string name="approved">تمت الموافقة</string>
+    <string name="forgotpas">نسيت كلمة المرور؟</string>
+    <string name="retrieve">إستعادة كلمة المرور؟</string>
+    <string name="emailretievetag">الرجاء إدخال البريد الالكتروني أدناه وسوف يتم إرسال كلمة المرور لك..</string>
+    <string name="dashboardtag">لوحة التحكم</string>
+    <string name="pendingamounttag">اجمالي المبلغ  قيد الطلب</string>
+    <string name="earnedamounttag">مبيعاتي</string>
+    <string name="eorderplacedtag">إجمالي عدد الطلبات</string>
+    <string name="salestag">تحليل المبيعات</string>
+    <string name="producttag">حالة المنتجات</string>
+    <string name="viewdetails">التفاصيل</string>
+    <string name="latestordertag">الطلبات الأخيرة</string>
+    <string name="orderdid">رقم الطلب</string>
+    <string name="purchasedon">تم شراءه في</string>
+    <string name="nerearned">صافي الدخل</string>
+    <string name="orderstattus">حالة الطلب</string>
+    <string name="CountryWiseOrders">الطلبات حسب الدول</string>
+    <string name="editetxt">تعديل</string>
+    <string name="VendorProfileView">ملف البائع</string>
+    <string name="generalinfotext">معلومات عامة</string>
+    <string name="Created">أنشىء في</string>
+    <string name="Status">الحالة</string>
+    <string name="PublicName">الأسم العام</string>
+    <string name="Name">الأسم</string>
+    <string name="Email">البريد الإلكتروني</string>
+    <string name="totalproductsold">المنتجات المباعة</string>
+    <string name="addresstag">العنوان</string>
+    <string name="City">الولاية</string>
+    <string name="ZipPostalCode">الرمز البريدي وصندوق البريد</string>
+    <string name="Country">الدولة</string>
+    <string name="comapnylogotag">شعار الشركة</string>
+    <string name="companybabbertag">لائحة الشركة</string>
+    <string name="Gender">الجنس</string>
+    <string name="ContactNumber">رقم التواصل</string>
+    <string name="CompanyNametag">أسم الشركة/ المتجر</string>
+    <string name="Abouttag">عن</string>
+    <string name="supportnumbertag">رقم الدعم</string>
+    <string name="supportemailtag">البريد الإلكتروني للمساعدة</string>
+    <string name="metakeywordtag">الكلمات الدلالية</string>
+    <string name="MetaDescriptiontag">الوصف</string>
+    <string name="OrderList">قائمة الطلبات</string>
+    <string name="Order_id">رقم الطلب#</string>
+    <string name="grandTotal">المبلغ الإجمالي:</string>
+    <string name="grandTotalorder">المبلغ الاجمالي شامل الضريبة:</string>
+    <string name="commission">العمولة:</string>
+    <string name="netearned">صافي الربح:</string>
+    <string name="orderpaymentstatus">حالة الطلب</string>
+    <string name="vendorpaymentstatus">فاتورتي</string>
+    <string name="vendor_price">السعر</string>
+
+    <string name="Filter">تطبيق</string>
+    <string name="Reset_filter">اعادة ضبط</string>
+    <string name="OrderInformation">معلومات الطلب</string>
+    <string name="OrderDate">تاريخ الطلب</string>
+    <string name="OrderStatus">حالة الطلب</string>
+    <string name="PurchasedFrom">تم الشراء من</string>
+    <string name="ShippingAddress">عنوان الشحن</string>
+    <string name="BillingAddress">عنوان الفاتورة</string>
+    <string name="ShippingMethod">طريقة الشحن</string>
+    <string name="PaymentMethod">طريقة الدفع</string>
+    <string name="Subtotal">الإجمالي</string>
+    <string name="GrandTotal">إجمالي المبلغ</string>
+    <string name="GrandTotalEarned">إجمالي المبلغ</string>
+    <string name="CommissionFee">العمولة</string>
+    <string name="NetEarned">صافي الربح</string>
+    <string name="Discount">التخفيض</string>
+    <string name="TaxAmount">الضريبة</string>
+    <string name="CreditCardType">نوع بطاقة الدفع:</string>
+    <string name="CreditCardNumber">رقم بطاقة الدفع:</string>
+    <string name="NameontheCard">الاسم على البطاقة</string>
+    <string name="ProductInfo">معلومات المنتج</string>
+    <string name="Paymentinfo">معلومات الدفع</string>
+    <string name="PAYMENTSSTATISTICS">المدفوعات</string>
+    <string name="TotalPendingAmount">اجمالي المبلغ  قيد الطلب</string>
+    <string name="TotalPendingAmountTag">رصيدي</string>
+    <string name="TotalRequestedAmount">إجمالي المبلغ المطلوب</string>
+    <string name="PENDINGAMOUNT">المبالغ قيد الإنتظار</string>
+    <string name="TotalEarnedAmount">مبيعاتي</string>
+    <string name="TRANSACTIONSSTATISTICS">إحصائيات المعاملات</string>
+    <string name="PendingTransfers">عدد التحويلات قيد الانتظار</string>
+    <string name="CreatedAt">أنشىء في</string>
+    <string name="PaymentMode">طريقة الدفع</string>
+    <string name="SinglePaymentMode">نظام الدفع</string>
+    <string name="TransactionId">رقم المعاملة</string>
+    <string name="Amount">السعر</string>
+    <string name="AdjustmentAmount">مبلغ التعديل</string>
+    <string name="NetAmount">صافي السعر</string>
+    <string name="BenificiaryDetails">تفاصيل المستفيد</string>
+    <string name="VendorName">اسم البائع</string>
+    <string name="ORDERDETAILS">تفاصيل الطلب</string>
+    <string name="EditProfileInformation">تعديل الملف</string>
+    <string name="profilepictag">صورة الملف</string>
+    <string name="browse">إستعراض</string>
+    <string name="Location">الموقع:</string>
+    <string name="finfusonfb">حسابنا في الفيسبوك</string>
+    <string name="finfusontwitter">تابعنا على تويتر</string>
+    <string name="changepass">تعديل كلمة المرور:</string>
+    <string name="currentpasstag">كلمة المرور الحالية:</string>
+    <string name="newpasstag">كلمة المرور الجديدة:</string>
+    <string name="newpro">+ إضافة منتج جديد</string>
+    <string name="from">من</string>
+    <string name="productname">اسم المنتج</string>
+    <string name="price">السعر</string>
+    <string name="qty">الكمية</string>
+    <string name="producttype">النوع:</string>
+    <string name="product_id">رقم المنتج *</string>
+    <string name="Type">النوع</string>
+    <string name="proName">اسم المنتج</string>
+    <string name="productStatus">حالة المنتج</string>
+    <string name="Delete">حذف</string>
+    <string name="selectproducttype">إختر نوع المنتج</string>
+    <string name="Continue">متابعة</string>
+    <string name="websites">الدولة التي تريد ترويج منتجك فيها</string>
+    <string name="skutag">كود المنتج</string>
+    <string name="back">السابق</string>
+    <string name="ProductCreation">إضافة منتج</string>
+    <string name="Description">وصف المنتج</string>
+    <string name="ShortDescription">وصف قصير</string>
+    <string name="Stockavailability">التوافر في المخزن</string>
+    <string name="Stock">التوافر في المخزن</string>
+    <string name="taxclasstag">الشريحة الضريبية</string>
+    <string name="RegularPrice">السعر</string>
+    <string name="specialpricetag">سعر خاص</string>
+    <string name="Category">أرغب في عرض منتجي تحت أحد (مجموعة الأصناف التاليه</string>
+    <string name="weighttag">الوزن</string>
+    <string name="ADD">إضافة صور المنتج</string>
+    <string name="TransactionID">رقم المعاملة</string>
+    <string name="TRANSACTIONDETAILS">تفاصيل المعاملة</string>
+    <string name="TransactionDate">تاريخ المعاملة</string>
+    <string name="TransactionMode">طريقة المعاملة</string>
+    <string name="TransactionType">نوع المعاملة</string>
+    <string name="Notes">الملاحظات</string>
+    <string name="BeneficiaryDetails">تفاصيل المستفيد</string>
+    <string name="Period">التاريخ:</string>
+    <string name="PendingAmount">السعر قيد الإنتظار</string>
+    <string name="ShowReport">إظهار التقرير</string>
+    <string name="StartDate">تاريخ البدء</string>
+    <string name="EndDate">تاريخ الإنتهاء</string>
+    <string name="SalesItems">الكمية المباعة</string>
+    <string name="ReportSalesItems">عدد المنتجات</string>
+    <string name="TotalSales">إجمالي المبيعات</string>
+    <string name="TotalCommission">إجمالي العمولة</string>
+    <string name="NetSales">صافي المبيعات</string>
+    <string name="product_name">اسم المنتج*</string>
+    <string name="Quantity">الكمية</string>
+    <string name="Product">المنتج</string>
+    <string name="paymentmethodtags">تفاصيل طريقة الدفع</string>
+    <string name="yourprofile">حالة ملفك</string>
+    <string name="taptoselect">أنقر لإختيار الدولة</string>
+    <string name="taptoselectstate">أنقر لإختيار الولاية</string>
+    <string name="selectstate">الولاية</string>
+    <string name="NoTransactionsAvailable">لا توجد معاملات</string>
+    <string name="NoOrdersToList">لا توجد بيانات</string>
+    <string name="NoReortatinthisperiod">لا توجد تقارير خلال هذة الفترة</string>
+    <string name="to">إلى</string>
+    <string name="vendordisapprovedtext">تم إيقاف عضويتك من قبل إدارة منصة عُمان للطلب الإلكتروني</string>
+    <string name="AttributeCode">رمز السمة</string>
+    <string name="Required">مطلوب</string>
+    <string name="System">النظام</string>
+    <string name="Visible">مرئي</string>
+    <string name="scope">نطاق</string>
+    <string name="Searchable">قابل للبحث</string>
+    <string name="Comparable">قابل للمقارنة</string>
+    <string name="AttributeList">قائمة السمات</string>
+    <string name="CatalogInputType">نوع الإدخال لمالك المتجر</string>
+    <string name="DefaultValue">القيمة الإفتراضية</string>
+    <string name="UniqueValue">قيمة مميزة</string>
+    <string name="ValuesRequired">قيم مطلوبة</string>
+    <string name="InputValidation">التحقق من صحة الإدخال لمالك المتجر</string>
+    <string name="QuickSearch">يستخدم في البحث السريع</string>
+    <string name="AdvancedSearch">يستخدم في البحث المتقدم</string>
+    <string name="Front_end">قابل للمقارنة في الواجهة</string>
+    <string name="SimpleProduct">منتج بسيط</string>
+    <string name="GroupedProduct">مجموعة منتجات</string>
+    <string name="ConfigurableProduct">منتج قابل للتعديل</string>
+    <string name="VirtualProduct">منتج إفتراضي</string>
+    <string name="BundleProduct">حزمة منتجات</string>
+    <string name="DownloadableProduct">منتج قابل للتحميل</string>
+    <string name="AddOption">+ إضافة خيار</string>
+    <string name="Admin">القيمة الإفتراضية</string>
+    <string name="Default">الصوره الاساسيه</string>
+    <string name="Pleasefillvalue">الرجاء إدخال بعض القيم</string>
+    <string name="default_value_can_be_one">لا يمكن تكرار القيمة الإفتراضية</string>
+    <string name="UsetoCreateConfig">يستخدم لإضافة منتج قابل للتعديل</string>
+    <string name="purchasedFrom">تم الشراء من :</string>
+    <string name="title_activity_shipping_setting">إعدادات الشحن</string>
+    <string name="originaddressdetails">تفاصيل عنوان المنشأ</string>
+    <string name="invoice_date">تاريخ الفاتورة</string>
+    <string name="orderdate">تاريخ الطلب :</string>
+    <string name="Invoice_id">رقم الفاتورة:</string>
+    <string name="status">الحالة:</string>
+    <string name="amount">السعر:</string>
+    <string name="Shipment_id">رقم الشحنة:</string>
+    <string name="shipment_date">تاريخ الشحن:</string>
+    <string name="CreditMemo_id">رقم مذكرة الائتمان:</string>
+    <string name="CreditMemo_date">أنشئت في:</string>
+    <string name="Refund">تم استرجاع:</string>
+    <string name="AccountInformation">معلومات الحساب</string>
+    <string name="CustomerName">اسم المشتري</string>
+    <string name="CustomerGroup">مجموعة المشتري</string>
+    <string name="PaymentInformation">معلومات الدفع</string>
+    <string name="CreditMemoTotals">إجمالي مذكرة الائتمان</string>
+    <string name="InvoiceList">قائمة الفواتير</string>
+    <string name="noInvoicetolist">لا يوجد فواتير</string>
+    <string name="ShipmentList">قائمة الشحنات</string>
+    <string name="CreditMemoList">قائمة مذكرات الائتمان</string>
+    <string name="Invoice_date">تاريخ الفاتورة</string>
+    <string name="ordered_date">تاريخ الطلب</string>
+    <string name="Invoiceid">رقم الفاتورة#</string>
+    <string name="invoice_status">الحالة</string>
+    <string name="PleaseSelectdesiredFilter">إختر نوع التصفية </string>
+    <string name="CreditMemoid">رقم مذكرة الائتمان</string>
+    <string name="Refunded">تم الاسترجاع</string>
+    <string name="Shipmentid">رقم الشحنة#</string>
+    <string name="shipmntdate_date">تاريخ الشحن</string>
+    <string name="shippingName">اسم الشحنة</string>
+    <string name="ItemsInvoiced">عناصر الفاتورة</string>
+    <string name="InvoiceTotals">اجمالي الفاتورة</string>
+    <string name="NotifyCustomerbyEmail">تم إبلاغ المشتري عبر البريد الإلكتروني</string>
+    <string name="VisibleonFrontend">مرئي في الواجهة</string>
+    <string name="SubmitComment">إرسال الملاحظات</string>
+    <string name="plsentercomment">الرجاء كتابة الملاحظات قبل الإرسال</string>
+    <string name="Comments">تاريخ الملاحظة</string>
+    <string name="Date">التاريخ</string>
+    <string name="Notified">تم الإشعار</string>
+    <string name="Comment">تعليق/ملاحظة</string>
+    <string name="ItemsShipped">المنتجات المشحونة/المرسلة</string>
+    <string name="ItemsRefunded">المنتجات المستردة/المسترجعة</string>
+    <string name="ShippingInformation">معلومات الشحن</string>
+    <string name="add">أضف</string>
+    <string name="TrackingNocannotbeEmpty">لا يمكن أن يكون رقم التتبع فارغاً</string>
+    <string name="Carrier">الناقل</string>
+    <string name="title">عنوان</string>
+    <string name="Number">رقم</string>
+    <string name="Information">معلومات</string>
+    <string name="Invoices">فواتير</string>
+    <string name="Invoicestitle">فاتورة</string>
+    <string name="CreditMemo">مرتجعات</string>
+    <string name="Shipments">الشحنات</string>
+    <string name="CommentHistory">سجل الملاحظات/التعليقات</string>
+    <string name="qty_invoiced">الكمية المفوترة</string>
+    <string name="qty_shipped">الكمية المشحونة</string>
+    <string name="qty_refunded">الكمية المستردة/المسترجعة</string>
+    <string name="qty_canceled">الكمية الملغية</string>
+    <string name="ItemsOrdered">العناصر المطلوبة</string>
+    <string name="plsselectstatus">الرجاء تحديد الحالة</string>
+    <string name="RefundShipping">استرداد الشحن</string>
+    <string name="AdjustmentRefund">استرداد التسوية</string>
+    <string name="AdjustmentFee">رسوم التعديل</string>
+    <string name="AppendComments">إلحاق التعديلات</string>
+    <string name="emailcopyofcedit">إرسال نسخة من مذكرة الائتمان إلى البريد الإلكتروني</string>
+    <string name="QuantitytoRefund">الكمية المستردة</string>
+    <string name="ReturnToStock">مسترجع إلى المخزون</string>
+    <string name="UpdateQuantity">تحديث الكمية</string>
+    <string name="OrderTotal">إجمالي الطلب</string>
+    <string name="ItemstoRefund">العناصر المراد استردادها</string>
+    <string name="RefundTotal">إجمالي الاسترداد</string>
+    <string name="plsfillqtyforreturn">يرجى ملء الكمية المراد إرجاعها</string>
+    <string name="SubmitInvoice">إرسال الفاتورة</string>
+    <string name="SubmitShipment">إرسال الشحنة</string>
+    <string name="createshippinglabel">أنشئ بطاقة شحن</string>
+    <string name="ItemstoShip">العناصر المراد شحنها</string>
+    <string name="ShippingComments">تعليقات الشحن</string>
+    <string name="add_tracking_no">إضافة رقم التتبع</string>
+    <string name="QuantityOrdered">الكمية المطلوبة</string>
+    <string name="QuantitytoShip">الكمية المراد شحنها</string>
+    <string name="CreateShipment">إنشاء شحنة</string>
+    <string name="qty_ordered">الكمية المطلوبة</string>
+    <string name="attributeset">الصنف:</string>
+    <string name="tittle">العنوان</string>
+    <string name="inputtype">نوع الإدخال</string>
+    <string name="isRequired">مطلوب</string>
+    <string name="Price">السعر</string>
+    <string name="price_type">نوع السعر</string>
+    <string name="maxchar">عدد الرموز المسموح بها</string>
+    <string name="allowfiletype">السماح بنوع الملف</string>
+    <string name="maximagesizes">أقصى حجم للصورة</string>
+    <string name="addOption">إضافة خيارات</string>
+    <string name="deleteoptions">حذف</string>
+    <string name="Related_Products">منتجات ذات صله</string>
+    <string name="defaultQauntuty">الكمية الافتراضية</string>
+    <string name="inventory">المخزون</string>
+    <string name="ShipBundleItems">عناصر حزمة الشحن</string>
+    <string name="priceType">نوع السعر</string>
+    <string name="weightType">نوع الوزن</string>
+    <string name="userDef">تحديد الكمية</string>
+    <string name="emailcopyofinvoice">إرسال نسخة من الفاتورة إلى البريد الإلكتروني</string>
+    <string name="emailcopyofshipment">إرسال معلومات الشحن إلى البريد الإلكتروني</string>
+    <string name="ItemstoInvoice">عناصر على الفاتورة</string>
+    <string name="InvoiceTotal">إجمالي الفاتورة</string>
+    <string name="Enable_Log">نعم</string>
+    <string name="AttributeSet_list">مجموعة السمات</string>
+    <string name="NoAttributeSetAvailable">لا تتوفر مجموعة السمات</string>
+    <string name="BasedOn">مرتكز على</string>
+    <string name="Add_to_column">أضف إلى عمود الخيارات</string>
+    <string name="DefaultStoreView">المتجر الإفتراضي</string>
+    <string name="QuantitytoInvoice">كمية الفاتورة</string>
+    <string name="confirm_first">هل أنت متأكد من عملية الحذف؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="yes">نعم</string>
+    <string name="UrlKey">Url مفتاح</string>
+    <string name="specialpricetagFrom">السعر الخاص من:</string>
+    <string name="specialpricetagTo">السعر الخاص إلى:</string>
+    <string name="DOB">تاريخ الميلاد</string>
+    <string name="taxvat">الرقم الضريبي</string>
+    <string name="Male">ذكر</string>
+    <string name="Female">أنثي</string>
+    <string name="MiddleName">الاسم الأوسط</string>
+    <string name="cantconnet">حدث خطأ في الاتصال. الرجاء التأكد من توصيل الشبكة.</string>
+    <string name="pleaseTryagain">الرجاء المحاولة مرة أخرى</string>
+    <string name="Orders">طلبات</string>
+    <string name="toalOrders">عدد الطلبات</string>
+    <string name="startdate">تاريخ البدء</string>
+    <string name="disapprove">مرفوض</string>
+    <string name="Message">رسالة</string>
+    <string name="Send">إرسال</string>
+    <string name="createdat">أنشىء في</string>
+    <string name="completelocation">الموقع الكامل</string>
+    <string name="website">موقع</string>
+    <string name="SellProduct">بيع المنتج</string>
+    <string name="id">رقم</string>
+    <string name="product_price">سعر المنتح</string>
+    <string name="product_qunatity">كمية المنتج</string>
+    <string name="ChatInformation">معلومات المحادثة</string>
+    <string name="sendmessage">إرسال الرسالة</string>
+    <string name="ChatHistoryInformation">سجل المحادثة</string>
+    <string name="ActivityInformation">معلومات الأنشطة</string>
+    <string name="EditReturnRequest">تعديل طلب الاسترجاع</string>
+    <string name="seeall">عرض الكل</string>
+    <string name="Storagepermissionallow">يرجى السماح بالوصول إلى الذاكرة الداخلية من إعدادات التطبيق. </string>
+    <string name="Reason">السبب</string>
+    <string name="CustomerInformation">معلومات الزبون</string>
+    <string name="CustomerEmail">البريد الإلكتروني للزبون</string>
+    <string name="CustomerAddress">عنوان الزبون</string>
+    <string name="ItemInformation">معلومات المنتج</string>
+    <string name="ManageReturnRequest">إدارة طلبات الاسترجاع</string>
+    <string name="customer_name">اسم الزبون</string>
+    <string name="customeremail">البريد الإلكتروني للزبون</string>
+    <string name="updatedat">تم تحديثه في</string>
+    <string name="applyfilter">تطبيق</string>
+    <string name="admin_status">تمت الموافقة</string>
+    <string name="pricefrom">السعر</string>
+    <string name="customer_email">البريد الإلكتروني للزبون</string>
+    <string name="title_msg">يرجى تأكيد الطلب</string>
+    <string name="fromm">من</string>
+    <string name="empty_field">حقل فارغ!!</string>
+    <string name="dateinvalid">الرجاء إدخال تاريخ بداية العرض</string>
+    <string name="update_deal">تحديث العرض</string>
+    <string name="dealstatus">حالة العرض*</string>
+    <string name="deal_from">العرض من*</string>
+    <string name="deal_to">العرض إلى*</string>
+    <string name="deal_price">سعر العرض*</string>
+    <string name="end_date">تاريخ الإنتهاء</string>
+    <string name="deal_id">رمز العرض</string>
+    <string name="edit_deal">تعديل العرض</string>
+    <string name="submit">إرسال</string>
+    <string name="end_on">ينتهي في</string>
+    <string name="Viewtransactiondetails">عرض تفاصيل المعاملة</string>
+    <string name="vendor">البائع</string>
+    <string name="shippingfee">رسوم الشحن للطلب</string>
+    <string name="Orderfeedetail">تفاصيل الرسوم</string>
+    <string name="shippingamount">كمية الشحن</string>
+    <string name="fixedfee">رسوم ثابتة</string>
+    <string name="collectionfee">رسوم التحصيل</string>
+    <string name="servicetax">ضريبة الخدمة</string>
+    <string name="totalamount">المبلغ الإجمالي</string>
+    <string name="sent">تم الإرسال</string>
+    <string name="isactive">نشط</string>
+    <string name="pagelayout">تخطيط</string>
+    <string name="creationtime">أنشئت </string>
+    <string name="updationtime">آخر تعديل</string>
+    <string name="setasvendorhome">تعيين كصفحة البائع الرئيسية</string>
+    <string name="design">تصميم</string>
+    <string name="layout">تخطيط*</string>
+    <string name="keywords">كلمات دلالية</string>
+    <string name="inbox">الوارد</string>
+    <string name="composenewmessage">أكتب رسالة جديدة</string>
+    <string name="storemanageremail">مدير البريد الإلكتروني</string>
+    <string name="storemanname">اسم المدير</string>
+    <string name="url_not_found">لم يتم العثور على الرابط URL</string>
+    <string name="pageid">معرف الصفحة</string>
+    <string name="emailadmin">إرسال عبر البريد إلى admin</string>
+    <string name="emailvendor">إرسال هذه الرسالة عبر البريد الإلكتروني إلى البائع</string>
+    <string name="readmail">أقرأ البريد</string>
+    <string name="subject">الموضوع</string>
+    <string name="message">رسالة</string>
+    <string name="Start">أبدأ</string>
+    <string name="end">نهاية</string>
+    <string name="interval">فترة</string>
+    <string name="reset">إعادة ضبط</string>
+    <string name="storebasicinfo">معلومات المتجر الرئيسية</string>
+    <string name="storehourinfo">معلومات ساعات العمل</string>
+    <string name="storepickupinfo">معلومات الاستلام من المتجر</string>
+    <string name="storename">اسم المتجر</string>
+    <string name="storeaddress">عنوان المتجر</string>
+    <string name="picklocation">أنقر هنا لعرض موقع المتجر على الخارطة</string>
+    <!--  <string name="latitude">Store Latitude</string>
+        <string name="longitude">Store Longitude</string> -->
+    <string name="postalCode">الرمز البريدي/صندوق البريد</string>
+    <string name="shippingprice">سعر الشحن</string>
+    <string name="storehour">ساعات العمل</string>
+    <string name="totalPayment">إجمالي الدفع</string>
+    <string name="identifier">المعرف</string>
+    <string name="storeview">عرض المتجر</string>
+    <string name="content">المحتوى</string>
+    <string name="savepage">حفظ</string>
+    <string name="pageinfo">معلومات الصفحة</string>
+    <string name="pagetitle">عنوان الصفحة</string>
+    <string name="emptymessage">لا يمكن ترك الرسالة فارغة!!</string>
+    <string name="emptysubject">لا يمكن ترك الموضوع فارغاً!!</string>
+    <string name="updated_at">تم تحديثه في</string>
+    <string name="deak_status">حالة العرض</string>
+    <string name="phone_numberhint">رقم الهاتف</string>
+    <string name="send">إرسال OTP</string>
+    <string name="resend">إعادة ارسال كود التحقق</string>
+    <string name="verify">تحقق من OTP</string>
+    <string name="otphint">OTP</string>
+    <string name="sellerpolicy">سياسات البائع</string>
+    <string name="finish">إنتهى</string>
+    <string name="nodatafound">لا توجد بيانات</string>
+    <string name="brand_namee">اسم العلامة التجارية*</string>
+    <string name="url_key">URL مفتاح</string>
+    <string name="image">صورة</string>
+    <string name="creationDate">تاريخ الإنشاء</string>
+    <string name="brand_name">أسم العلامة التجارية</string>
+    <string name="brand_logo">شعار العلامة التجارية</string>
+    <string name="brand_creation">تاريخ إنشاء العلامة التجارية</string>
+    <string name="business_details">تفاصيل العمل</string>
+    <string name="bank_details">تفاصيل البنك</string>
+    <string name="store_details">تفاصيل المتجر</string>
+    <string name="datetovalid">الرجاء إدخال تاريخ العرض</string>
+    <string name="pleaseselectbothdates">الرجاء إختيار التواريخ</string>
+    <string name="empty_price">الرجاء كتابة السعر !</string>
+    <string name="empty_product_name">الرجاء كتابة اسم المنتج !</string>
+    <string name="empty_desc">الرجاء كتابة الوصف..</string>
+    <string name="empty_sdesc">الرجاء كتابة وصف قصير..</string>
+    <string name="empty_stock">الرجاء توفير المخزون..</string>
+    <string name="X">[ X ]</string>
+    <string name="pleaseentervalidemail">الرجاء إدخال بريد إلكتروني صحيح.</string>
+    <string name="pleaseprovideemail">الرجاء إدخال بريدك الإلكتروني</string>
+    <string name="pleaseenterpassword">الرجاء إدخال كلمة المرور.</string>
+    <string name="passworddontmatch">كلمة المرور غير متطابقة..</string>
+    <string name="pleaseprovidefirstname">الرجاء كتابة الاسم الأول</string>
+    <string name="pleaseprovidelastname">الرجاء كتابة الاسم الأخير</string>
+    <string name="pleaseprovidepublicname">الرجاء كتابة الاسم العام او اسم النشاط التجاري</string>
+    <string name="pleaseprovideshopurl">الرجاء كتابة رابط المتجر URL</string>
+    <string name="validate_mobile">تحقق</string>
+    <string name="emptyweight">الرجاء إدخال قيمة في الوزن</string>
+    <string name="productnameastrik">اسم المنتج*</string>
+    <string name="Descriptionastrik">وصف المنتج*</string>
+    <string name="ShortDescriptionastrik">وصف قصير للمنتج*</string>
+    <string name="startsellingonzeo">ابدأ البيع على Brass and Wood</string>
+    <string name="signup">سجل الآن</string>
+    <string name="specialpricetagFromm">سعر خاص من</string>
+    <string name="specialpricetagToo">سعر خاص إلى</string>
+    <string-array name="stock_availability">
+        <item>إختر</item>
+        <item>متوفر في المخزن</item>
+        <item>غير متوفر في المخزن</item>
+    </string-array>
+    <string-array name="prod_status">
+        <item>تفعيل</item>
+        <item>تعطيل</item>
+    </string-array>
+    <string-array name="deal_status">
+        <item>إختر</item>
+        <item>تفعيل</item>
+        <item>تعطيل</item>
+        <item>منتهي</item>
+    </string-array>
+    <string-array name="vendor_deal_status">
+        <item>إختر</item>
+        <item>تفعيل</item>
+        <item>تعطيل</item>
+        <item>منتهي</item>
+    </string-array>
+    <string-array name="vendor_deal_statuss">
+        <item>تفعيل</item>
+        <item>تعطيل</item>
+    </string-array>
+    <string-array name="enable_disable">
+        <item>--إختر--</item>
+        <item>معطل</item>
+        <item>مفعل</item>
+    </string-array>
+    <string-array name="yesno">
+        <item>--إختر--</item>
+        <item>لا</item>
+        <item>نعم</item>
+    </string-array>
+    <string-array name="shipyesno">
+        <item>لا</item>
+        <item>نعم</item>
+    </string-array>
+    <string-array name="store_enabledis">
+        <item>غير مفعل</item>
+        <item>مفعل</item>
+    </string-array>
+    <string-array name="spinnertime">
+        <item>00:00</item>
+        <item>00:15</item>
+        <item>00:30</item>
+        <item>00:45</item>
+        <item>01:00</item>
+        <item>01:15</item>
+        <item>01:30</item>
+        <item>01:45</item>
+        <item>02:00</item>
+        <item>02:15</item>
+        <item>02:30</item>
+        <item>02:45</item>
+        <item>03:00</item>
+        <item>03:15</item>
+        <item>03:30</item>
+        <item>03:45</item>
+        <item>04:00</item>
+        <item>04:15</item>
+        <item>04:30</item>
+        <item>04:45</item>
+        <item>05:00</item>
+        <item>05:15</item>
+        <item>05:30</item>
+        <item>05:45</item>
+        <item>06:00</item>
+        <item>06:00</item>
+        <item>06:15</item>
+        <item>06:30</item>
+        <item>06:45</item>
+        <item>07:00</item>
+        <item>07:15</item>
+        <item>07:30</item>
+        <item>07:45</item>
+        <item>08:15</item>
+        <item>08:30</item>
+        <item>08:45</item>
+        <item>09:00</item>
+        <item>09:15</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:15</item>
+        <item>10:30</item>
+        <item>10:45</item>
+        <item>11:00</item>
+        <item>11:15</item>
+        <item>11:30</item>
+        <item>11:45</item>
+        <item>12:00</item>
+        <item>12:15</item>
+        <item>12:30</item>
+        <item>12:45</item>
+        <item>13:00</item>
+        <item>13:15</item>
+        <item>13:30</item>
+        <item>13:45</item>
+        <item>14:00</item>
+        <item>14:15</item>
+        <item>14:30</item>
+        <item>14:45</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>15:45</item>
+        <item>16:00</item>
+        <item>17:15</item>
+        <item>17:30</item>
+        <item>17:45</item>
+        <item>18:00</item>
+        <item>18:15</item>
+        <item>18:30</item>
+        <item>18:45</item>
+        <item>19:00</item>
+        <item>19:15</item>
+        <item>19:30</item>
+        <item>19:45</item>
+        <item>20:00</item>
+        <item>20:15</item>
+        <item>20:30</item>
+        <item>20:45</item>
+        <item>21:00</item>
+        <item>21:15</item>
+        <item>21:30</item>
+        <item>21:45</item>
+        <item>22:00</item>
+        <item>22:15</item>
+        <item>22:30</item>
+        <item>22:45</item>
+        <item>23:00</item>
+        <item>23:15</item>
+        <item>23:30</item>
+        <item>23:45</item>
+        <item>24:00"</item>
+    </string-array>
+    <string-array name="intervaltime">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+    <string name="crash_toast_text">حدث خطأ في التطبيق</string>
+    <string name="emaillogin_validation">الرجاء كتابة بريدك الإلكتروني أو رقم هاتفك</string>
+    <string name="terms_condition_text">عند التسجيل تكون موافق على </string>
+    <string name="terms_txt"> شروط إستخدام منصة عُمان للطلب الإلكتروني</string>
+    <string name="policy_txt">و سياسة الخصوصية</string>
+    <string name="status_txt">الحالة</string>
+    <string name="deal_price_validation">الرجاء إدخال سعر العرض</string>
+    <string name="save">حفظ</string>
+    <string name="delete">حذف</string>
+    <string name="required_field_validation">الرجاء تعبئة جميع الحقول المطلوبة</string>
+    <string name="please_enter_mobile_num_validation">الرجاء إدخال رقم الهاتف</string>
+    <string name="requested_amount">المبلغ المطلوب</string>
+    <string name="pending_amount">المبلغ قيد الإنتظار</string>
+    <string name="cancelled_amount">المبلغ الملغي</string>
+    <string name="password_strength_weak">ضعيف</string>
+    <string name="password_strength_medium">متوسط</string>
+    <string name="password_strength_strong">قوي</string>
+    <string name="password_strength_very_strong">قوي جداً</string>
+    <string name="email_mobile_number">البريد الإلكتروني/ رقم الهاتف</string>
+    <string name="row_total">الإجمالي</string>
+    <string name="current_location">موقعك الحالي</string>
+    <string name="current_location_message">هل تود عرض موقعك الحالي؟</string>
+    <string name="price_astrik">السعر*</string>
+    <string name="Stock_astrik">المخزن *</string>
+    <string name="updatefreeshipping">تحديث الشحن المجاني</string>
+    <string name="select_product">إختر المنتجات للشحن المجاني</string>
+    <string name="no_orders_available">الطلبات غير متوفرة</string>
+    <string name="no_products_uploaded">يرجى إنشاء منتجات لعرض التحليلات</string>
+    <string name="provideurlkey">الرجاء توفير مفتاح URL</string>
+    <string name="ChoosePickupAddress">عنوانك لإستلام الشحن</string>
+    <string name="pincode">الرمز السري</string>
+    <string name="streetAddress">عنوان الشارع</string>
+    <string name="AccountHolderName">اسم صاحب الحساب</string>
+    <string name="AccountNumber">رقم الحساب</string>
+    <string name="BankName">اسم البنك</string>
+    <string name="BankBranch">فرع البنك</string>
+    <string name="min_char_account_number">رقم الحساب لا يقل عن 7 أرقام</string>
+    <string name="min_char_account_holdername">مطلوب بحد أدني 4 رموز</string>
+    <string name="min_char_account_bankname">مطلوب بحد أدني 5 رموز</string>
+    <string name="invalidpincode">الرمز السري غير صالح</string>
+    <string name="SelectCategory">إختر الفئة</string>
+    <string name="empty_address">الرجاء كتابة عنوان الشارع</string>
+    <string name="pleaseselectacity">الرجاء إختيار الولاية</string>
+    <string name="pleaseselectcategory">الرجاء إختيار الفئة</string>
+    <string name="pleaseenteAccountHolderName">الرجاء كتابة اسم صاحب الحساب</string>
+    <string name="pleaseenteAccountNumber">الرجاء كتابة رقم الحساب</string>
+    <string name="pleaseenterBankName">الرجاء كتابة اسم البنك.</string>
+    <string name="pleaseenterBankBranch">الرجاء كتابة فرع البنك.</string>
+    <string name="Chat">دردشة</string>
+    <string name="createtime">وقت الإنشاء</string>
+    <string name="ticketid">معرف التذكرة</string>
+    <string name="Department">قسم</string>
+    <string name="numberofmessage">عدد الرسائل</string>
+    <string name="order">الطلب</string>
+    <string name="priority">أولوية</string>
+    <string name="reply">رد</string>
+    <string name="new_ticket">تذكرة جديدة</string>
+    <string name="general_information">المعلومات العامة</string>
+    <string name="Subject">الموضوع</string>
+    <string name="nameisrequired">الاسم مطلوب</string>
+    <string name="emailisrequired">البريد الإلكتروني مطلوب</string>
+    <string name="convesation">محادثة</string>
+    <string name="ticket_created_at">التذكرة إنشئت في</string>
+    <string name="apply_signature">تطبيق التوقيع</string>
+    <string name="Choosefile">إختر الملف</string>
+    <string name="permissiondenied">التصريح مرفوض</string>
+    <string name="messagecant">لا يمكن إرسال الرسالة</string>
+    <string name="replymessage">الرد على الرسالة</string>
+    <string name="sender">المرسل</string>
+    <string name="reciever">المستلم</string>
+    <string name="Newmessage">رسالة جديدة</string>
+    <string name="nomoredata">لا توجد بيانات إضافية</string>
+    <string name="transaction_summary">ملخص المعاملات</string>
+    <string name="signupforgoogle">جوجل</string>
+    <string name="signupforfacebook">فيسبوك</string>
+    <string name="loginattemptcancled">تم إلغاء محاولة تسجيل الدخول.</string>
+    <string name="addproduct">إضافة منتج</string>
+    <string name="productlist">قائمة المنتجات</string>
+    <string name="invoice_comments">ملاحظات الفاتورة</string>
+    <string name="takephoto">إلتقط صورة</string>
+    <string name="can_ship">يمكن أن السفينة</string>
+    <string name="can_cod">يمكن سمك القد</string>
+    <string name="assigned_pincode">الرمز السري المعين</string>
+    <string name="manage_pincode">إدارة الرمز السري</string>
+    <string name="edit_review">تحرير المراجعة</string>
+    <string name="add_new_store">إضافة متجر جديد</string>
+    <string name="deallist">قائمة الصفقة</string>
+    <string name="approval_pending">في انتظار الموافقة</string>
+    <string name="dealPrice">سعر الصفقة</string>
+    <string name="expired">منتهي الصلاحية</string>
+    <!--     translated here -->
+    <string name="customerinbox">علبة الوارد العميل</string>
+    <string name="CustomerCompose">يؤلف العميل</string>
+    <string name="AdminInbox">المسؤول الوارد</string>
+    <string name="Admincompose">المشرف يؤلف</string>
+    <string name="notifyrecieverbyemail">إخطار Reciever عبر البريد الإلكتروني.</string>
+    <string name="RefundOffline">استرداد غير متصل</string>
+    <string name="sortorder">امر ترتيب</string>
+    <string name="Cross_Sells">تبيع الصليب</string>
+    <string name="Productattributeset">مجموعة السمة</string>
+    <string name="skutype">نوع SKU</string>
+    <string name="goback" tools:ignore="TypographyDashes"><![CDATA[  العودة للحفظ ]]>
+</string>
+    <string name="Use_to_filter">استخدم في خيارات التصفية</string>
+    <string name="latitude">خط العرض</string>
+    <string name="longitude">خط الطول</string>
+    <string name="SelectNSellProd">حدد N بيع المنتجات</string>
+    <string name="ItemSKU">كود المنتج</string>
+    <string name="QtyforRMA">الكمية المسترجعة</string>
+    <string name="Providepermission">تقديم إذن</string>
+    <string name="PackageCondition">حالة الطرد/المنتج</string>
+    <string name="ResolutionRequested">طلب القرار</string>
+    <string name="purchasedpoint">الفاصلة المشتراة</string>
+    <string name="rmaid">رقم طلب الاسترجاع</string>
+    <string name="resolutionrequested">طلب القرار</string>
+    <string name="adminstatus">حالة المشرف</string>
+    <string name="deal_message">رسالة الصفقة</string>
+    <string name="verify_pincode">التحقق</string>
+    <string name="sellerpolicyterms"><![CDATA[ شروط البائع والسياسة ]]></string>
+    <string name="membershipplans">خطط العضوية</string>
+    <string name="promotions">الترقيات</string>
+    <string name="createdeals">إنشاء صفقات</string>
+    <string name="listdeals">عروض القائمة</string>
+    <string name="rma">طلبات الاسترجاع</string>
+    <string name="rmatxt">طلب استرجاع</string>
+    <string name="managermarequest">إدارة طلبات الاسترجاع</string>
+    <string name="vendorcms">البائع CMS.</string>
+    <string name="managevendorcms">إدارة البائع CMS.</string>
+    <string name="managestaticblocks">إدارة كتل ثابتة</string>
+    <string name="selectandsell">حدد وبيع</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="desc_list_item_icon">أيقونة البند</string>
+    <string name="billingname">اسم الفواتير</string>
+    <string name="StateTag">ولاية</string>
+    <string name="Representative">وكيل</string>
+    <string name="SKU">كود المنتج</string>
+    <string name="Vendor_SKU">كود المنتج</string>
+    <string name="RowTotal">مجموع الصف</string>
+    <string name="prod_SKU">كود المنتج</string>
+    <string name="MassRequestPayment">طلب الكتلة الدفع</string>
+    <string name="prod_sku">كود المنتج</string>
+    <string name="AttributeLabel">اسم السمة</string>
+    <string name="UseInLayeredNavigation">استخدام في الملاحة الطبقات</string>
+    <string name="ApplyTo">تنطبق على</string>
+    <string name="FrontendProperties">خصائص الواجهة الأمامية</string>
+    <string name="LayeredNavigation">استخدام في الملاحة الطبقات</string>
+    <string name="SearchResultsLayeredNavigation">استخدام نتائج البحث الطبقات</string>
+    <string name="PromoRule">استخدام لظروف قاعدة الترويجي</string>
+    <string name="Position">موقع</string>
+    <string name="HTML_tag">السماح علامات HTML على الواجهة الأمامية</string>
+    <string name="AttributeSet">تشمل في مجموعة السمة</string>
+    <string name="ProductviewPage">مرئية على صفحة عرض المنتج على الواجهة الأمامية</string>
+    <string name="ProductListing">المستخدمة في قائمة المنتجات</string>
+    <string name="Sorting_ProductListing">تستخدم للفرز في قائمة المنتجات</string>
+    <string name="WYSIWYG">تمكين WYSIWYG.</string>
+    <string name="MangeLabels">إدارة التسمية</string>
+    <string name="MangeOptions">إدارة  الخيارات</string>
+    <string name="emptyAttrvalues">كل من رمز السمة والتسمية الافتراضية مطلوبة feilds.</string>
+    <string name="ShippingAndHandling">
+<![CDATA[ الشحن والمناولة ]]>
+</string>
+    <string name="layoutxml">تخطيط تحديث XML</string>
+    <string name="storecity">متجر مدينة</string>
+    <string name="createnewblock">إنشاء كتلة جديدة</string>
+    <string name="blocktitle">كتلة العنوان</string>
+    <string name="newcmspage">إنشاء صفحة CMS جديدة</string>
+    <string name="fashion_group">مجموعة العلامة التجارية *</string>
+    <string name="thumbnail">ظفري</string>
+    <string name="brand_thumbnail">الصورة المصغرة العلامة المصغرة.</string>
+    <string name="empty_sku">يرجى تقديم SKU.</string>
+    <string name="opps">وجه الفتاة!!</string>
+    <string name="providebrand">يرجى تقديم اسم العلامة التجارية.</string>
+    <string name="skutagastrik">كود المنتج *</string>
+    <string name="default_label">التسمية الافتراضية</string>
+    <string name="permission_granted">تم تأمين التصريح</string>
+    <string name="PAN">مقلاة</string>
+    <string name="pleaseselectastate">يرجى اختيار الدولة</string>
+    <string name="pleaseenterGSTIN">الرجاء إدخال تفاصيل Gstin</string>
+    <string name="pleaseenterPAN">الرجاء إدخال تفاصيل PAN</string>
+    <string name="pleaseenterIFSC">الرجاء إدخال رمز IFSC</string>
+    <string name="selectwebstore">حدد متجرك:</string>
+    <string name="change_store">إعدادات اللغة</string>
+    <string name="CreateDeals">إنشاء صفقات</string>
+    <string name="VendorProductAttribute">سمة المنتج البائع</string>
+    <string name="completed">٪ مكتمل</string>
+    <string name="Action">عمل</string>
+    <string name="you_have_txt">لديك</string>
+    <string name="shipment_txt">شحنة</string>
+    <string name="request_txt">طلبات</string>
+    <string name="order_in_this_period_txt">تقارير في هذه الفتره</string>
+    <string name="prod_order_during_this_period">تقارير منتجات خلال هذه الفترة</string>
+    <string name="original_price">السعر الأصلي</string>
+    <string name="item_status">حالة المنتج</string>
+    <string name="tax_percent">نسبة الضريبة</string>
+    <string name="igst_rate">معدل IGST.</string>
+    <string name="shipping_qty">كمية الشحنة</string>
+    <string name="showing_txt">عرض</string>
+    <string name="products_txt">منتجات</string>
+    <string name="bundle_items">عناصر حزمة</string>
+    <string name="total_products">مجموع المنتجات</string>
+    <string name="select_txt">--يختار--</string>
+    <string name="commentHistory">تعليق التاريخ</string>
+    <string name="month_txt">شهر</string>
+    <string name="week_txt">أسبوع</string>
+    <string name="today_week">اليوم</string>
+    <string name="year_txt">عام</string>
+    <string name="total_pending_requested_amount">استحقاقاتي</string>
+    <string name="total_paid_amount">مبيعاتي</string>
+    <string name="requested_transaction">المعاملة المطلوبة</string>
+    <string name="last_modified">آخر تعديل</string>
+    <string name="pending">قيد الانتظار</string>
+    <string name="disabled">غير مفعل</string>
+    <string name="enabled">مفعل</string>
+    <string name="updatecmsPage">تحديث صفحة CMS.</string>
+    <string name="update_txt">تحديث</string>
+    <string name="meta_data_txt">البيانات الوصفية</string>
+    <string name="update_cms_block">تحديث CMS Block.</string>
+    <string name="nickname">اسم الشهرة</string>
+    <string name="review">إعادة النظر</string>
+    <string name="Assessment">تقدير</string>
+    <string name="ManageRating">إدارة التقييم</string>
+    <string name="score_visibility">درجة الرؤية</string>
+    <string name="default_value">القيمة الافتراضية*</string>
+    <string name="visiblity">الظهور</string>
+    <string name="author">مؤلف</string>
+    <string name="summary_rating">ملخص التقييم</string>
+    <string name="detailclassification">تصنيف التفاصيل</string>
+    <string name="summary">ملخص</string>
+    <string name="active_txt">نشيط</string>
+    <string name="ManageReview">إدارة المراجعات والتقييمات</string>
+    <string name="pincodeChecker">المدقق الرمزي</string>
+    <string name="zipcode">الرمز البريدي</string>
+    <string name="days_to_deliver">أيام لتقديم</string>
+    <string name="no">لا</string>
+    <string name="termsconditions">
+<![CDATA[ الشروط والأحكام ]]>
+</string>
+    <string name="shipping_zone_txt">منطقة الشحن</string>
+    <string name="already_subscribed">مشترك بالفعل</string>
+    <string name="addtocart">أضف إلى السلة</string>
+    <string name="items_txt">العناصر)</string>
+    <string name="subscribe_this_one">اشترك هذا واحد</string>
+    <string name="allowed_category">الفئة المسموح بها</string>
+    <string name="allowed_no_of_products">عدد المنتجات المسموح بها</string>
+    <string name="duration_of_package">مدة الحزمة</string>
+    <string name="membership_details">تفاصيل العضوية</string>
+    <string name="vendor_membership_plans">خطط عضوية البائع</string>
+    <string name="runningplan">البائع تشغيل الخطط</string>
+    <string name="vendorresources">موارد البائع</string>
+    <string name="productlimit">حد المنتج:</string>
+    <string name="remainingprod">المنتج المتبقي:</string>
+    <string name="subscriptionhistory">تاريخ الاشتراك البائع</string>
+    <string name="yoursubscriptionhistory">تاريخ الاشتراك الخاص بك</string>
+    <string name="member_ship_plans">خطط العضوية</string>
+    <string name="member_ship_plan">خطة العضوية</string>
+    <string name="membershipplan">خطة العضوية</string>
+    <string name="planhistory">خطط التاريخ</string>
+
+
+    <string name="app_title">تقرير مسبق</string>
+    <string name="filter">منقي</string>
+    <string name="Note_manage_label">إذا لم تحدد قيمة خيار لطريقة عرض متجر معينة ، فسيتم استخدام القيمة الافتراضية (المسؤول).</string>
+    <string name="storestate">حالة المتجر</string>
+    <string name="brand_id">Brand_id</string>
+    <string name="SKUastrik">كود المنتج *</string>
+    <string name="GSTIN">GSTIN</string>
+    <string name="IFSCCode">IFSC Code</string>
+    <string name="igst">IGST</string>
+    <string name="cgst">CGST</string>
+    <string name="sgst">SGST</string>
+    <string name="choose_action_txt"><![CDATA[<font color=\'#000000\'>اختر خيارا </font>]]></string>
+    <string name="ProductRatingandreview"><![CDATA[مراجعة المنتج وتقييمه]]></string>
+
+
+
+    <!--RFQ-->
+    <string name="CreatePO">Create PO</string>
+    <string name="SubmitPO">Submit PO</string>
+    <string name="TotalDue">Total Due</string>
+    <string name="ManageQuotes">Manage Quotes</string>
+    <string name="ViewPo">View PO</string>
+    <string name="POIncrementId">PO Increment Id</string>
+    <string name="CustomerId">Customer Id</string>
+    <string name="POPrice">PO Price</string>
+    <string name="POQty">PO Qty</string>
+    <string name="PODate">PO Date</string>
+    <string name="POStatus">PO Status</string>
+    <string name="RemainingQty">Remaining Qty</string>
+    <string name="PORowTotal">PO Row Total</string>
+    <string name="POLIst">PO List</string>
+    <string name="VendorQuoteManagement">Seller Quote Management</string>
+
+    <string name="QuoteIncrementId">QuoteIncrement Id</string>
+    <string name="QuoteRequestedQty">Quote Requested Qty</string>
+    <string name="QuoteUpdatedQty">Quote Updated Qty</string>
+    <string name="QuoteShippingAmount">Quote Shipping Amount</string>
+    <string name="QuoteUpdatedPrice">Quote Updated Price</string>
+    <string name="QuotePrice">Quote Price</string>
+    <string name="QuoteAccountInformation"><![CDATA[Quote & Account Information]]></string>
+    <string name="TotalQuantity">Quoted Total Quantity</string>
+    <string name="QuoteCreatedFrom">Quote Created From</string>
+    <string name="QuotedTotalPrice">Quoted Total Price</string>
+    <string name="ActualPrice">Actual Price</string>
+    <string name="QuotedPrice">Quoted Price</string>
+    <string name="UpdatedUnitPrice">Updated Unit Price</string>
+    <string name="QuotedQty">Quoted Qty</string>
+    <string name="QuantitytoPO">Quantity to PO</string>
+    <string name="QuantityAlreadyPOed">Quantity Already POed</string>
+    <string name="UpdatedQuoteQty">Updated Quote Qty</string>
+    <string name="ItemStock">Item Stock</string>
+    <string name="requested_unit_price">Requested Unit Price</string>
+    <string name="proposed_qty">Proposed Qty</string>
+    <string name="proposal_created_for_qty">Proposal Created For Qty</string>
+    <string name="proposed_unit_price">Proposed Unit Price</string>
+    <string name="sender_txt">Sender</string>
+    <string name="proposal_total">Proposal Total</string>
+    <string name="rfq_setting">RFQ Setting</string>
+    <string name="manage_proposal">Manage Proposal</string>
+    <string name="quoted_items">Quote Items</string>
+    <string name="quotedate">Quote Date</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+    <string name="assigned_categories">Assigned Categories</string>
+    <string name="requested_product_name">Requested Product Name</string>
+    <string name="category_id">Category ID</string>
+    <string name="estimated_budget_per_quantity">Estimated Budget Per Qty</string>
+    <string name="approved_estimated_budget_per_quantity">Approved Estimated Budget Per Quantity</string>
+    <string name="approved_quantity">Approved Qty</string>
+    <string name="documents_file">Documents File</string>
+    <string name="no_conversations_has_been_done_yet">No Conversation has been done Yet..</string>
+    <string name="category_list">Category List</string>
+
+    <string name="message_validation">Please enter message</string>
+    <string name="adressinfotext">Address Information</string>
+    <string name="enter_your_message_here">Enter Your message here</string>
+    <string name="quotes_total_label">Total Quotes</string>
+    <string name="SaveQuote">Save Quotes</string>
+
+    <string name="requested_qty">Requested Qty</string>
+    <string name="requested_price">Requested Price</string>
+
+
+    <string name = "select_status"> حدد الحالة  </string>
+    <string name = "service_tax"> ضريبة الخدمة  </string>
+    <string name = "market_fee"> رسوم السوق  </string>
+    <string name = "blockid"> معرف الحظر  </string>
+    <string name = "trans_date"> تاريخ المعاملة  </string>
+    <string name = "vendorpayment">صافي الربح للبائع</string>
+    <string name = "vendorpaymentorder">صافي الربح للبائع:</string>
+    <string name = "prod_views"> طرق العرض  </string>
+    <string name = "totalamt"> المبلغ الإجمالي  </string>
+    <string name = "courier_name"> اسم شركة النقل  </string>
+    <string name = "tracking_num"> رقم التتبع  </string>
+    <string name = "store_url"> عنوان URL للمتجر  </string>
+    <string name = "item_url"> عنوان URL للعنصر  </string>
+    <string name = "offer_status"> حالة العرض  </string>
+    <string name = "invoicestatus"> حالة الفاتورة  </string>
+    <string name = "quotation_details"> تفاصيل عرض الأسعار  </string>
+    <string name = "send_ur_quotation"> أرسل عرض الأسعار الخاص بك  </string>
+    <string name = "ur_quotation"> الاقتباس الخاص بك  </string>
+    <string name = "unitprice"> سعر الوحدة  </string>
+    <string name = "negotia_section"> قسم التفاوض  </string>
+    <string name = "invoice_form_detail"> تفاصيل نموذج الفاتورة  </string>
+    <string name = "value_of_invoice"> أدخل قيمة الفاتورة  </string>
+    <string name = "origin"> الأصل  </string>
+    <string name = "quality"> الجودة  </string>
+    <string name = "packing"> التعبئة  </string>
+    <string name = "validity"> الصلاحية  </string>
+    <string name = "remark"> ملاحظة  </string>
+    <string name = "favouriteseller"> البائع المفضل  </string>
+    <string name = "send_email_to_followers"> إرسال بريد إلكتروني إلى المتابعين  </string>
+    <string name = "select_followers_first"> حدد المتابعين أولاً  </string>
+    <string name = "requestforquote"> طلب عرض أسعار  </string>
+    <string name = "managequotes"> إدارة عروض الأسعار  </string>
+    <string name = "viewpo"> عرض PO </string>
+    <string name = "companyinfo"> معلومات الشركة  </string>
+    <string name = "Shop"> عنوان URL للتسوق  </string>
+    <string name = "fbtag"> معرف Facebook </string>
+    <string name = "twittertag"> معرف Twitter </string>
+    <string name = "Vendor"> مجموعة البائعين  </string>
+    <string name = "supportinfo"> معلومات الدعم  </string>
+    <string name = "seoinfo"> معلومات تحسين محركات البحث  </string>
+    <string name = "chooser_title"> فتح ملف PDF باستخدام  </string>
+    <string name = "quoted_comment"> تعليق مقتبس  </string>
+    <string name = "purchase_order_total"> إجمالي طلب الشراء  </string>
+
+
+    <string name = "customoptions"> خيارات مخصصة  </string>
+    <string name = "updsell"> UpSells </string>
+    <string name = "associatedproducts"> المنتجات المرتبطة  </string>
+    <string name = "Relatedproducts"> منتجات ذات صلة  </string>
+    <string name = "Addproduct"> إضافة منتج  </string>
+
+    <string name="add_new_cms">إضافة CMS جديدة</string>
+    <string name="add_new_block">إضافة قالب جديد</string>
+
+    <string-array name="rfq_status">
+        <item>إختر</item>
+        <item>قيد الإنتظار</item>
+        <item>تمت الموافقة</item>
+        <item>ملغي</item>
+        <item>أكتمل</item>
+
+    </string-array>
+
+    <string-array name="po_status">
+        <item>إختر</item>
+        <item>قيد الإنتظار</item>
+        <item>مؤكد</item>
+        <item>رفض</item>
+        <item>طُلب</item>
+    </string-array>
+    <string name="createproductattribute">إنشاء سمة المنتج</string>
+
+    <string name = "number"> الرقم  </string>
+    <string name = "shipment"> رقم الشحنة  </string>
+    <string name = "creditmemo">مذكرة الائتمان #</string>
+    <string name = "contentheading"> عنوان المحتوى  </string>
+    <string name = "orderTotalExclusiveTaxLayout"> الإجمالي الكلي (باستثناء الضرائب)  </string>
+    <string name = "orderTotalInclTaxLayout"> الإجمالي الكلي (شامل الضرائب)  </string>
+    <string name = "subTotalInclTaxLayout"> الإجمالي الفرعي (شامل الضريبة)  </string>
+    <string name = "subTotalExclusiveTaxLayout"> الإجمالي الفرعي (باستثناء الضرائب)  </string>
+    <string name = "LatestProducts"> أحدث المنتجات  </string>
+    <string name = "ProductId"> رقم المنتج </string>
+    <string name = "Productname"> اسم المنتج  </string>
+    <string name = "TopsellingProducts"> المنتجات الأكثر مبيعًا  </string>
+    <string name = "LatestTransaction"> أحدث معاملة  </string>
+    <string name = "paymentid"> رقم الدفع </string>
+    <string name="login_with_otp">تسجيل الدخول باستخدام كود التحقق</string>
+    <string name="login_with_password">تسجيل الدخول باستخدام كلمة المرور</string>
+    <string name="vendor_payment">صافي الربح للبائع</string>
+    <string name="inventory_minimum_products">الحد الأدنى من مخزون المنتجات</string>
+    <string name="enter_minimum_numbers">أدخل الحد الأدنى من الأرقام</string>
+    <string name="onlyoneimagecanbeselected">فقط صورة واحدة يمكن ان تكون افتراضية</string>
+    <string name="min_price">الحد الأدني للسعر</string>
+    <string name="max_price">الحد الأقصي للسعر</string>
+    <string name="amount_description">وصف المبلغ</string>
+    <string name="transaction_pdf">المعاملة pdf</string>
+    <string name="view_document">عرض المستند</string>
+    <string name="from_date">من تاريخ</string>
+    <string name="to_date">إلي تاريخ</string>
+    <string name="from_price">من سعر</string>
+    <string name="to_price">إلي سعر</string>
+    <string name="credit_amount">المبلغ</string>
+    <string name="order_description">تفاصيل الطلب</string>
+    <string name="from_amount">من مبلغ</string>
+    <string name="to_amount">إلي مبلغ</string>
+    <string name="from_quantity">من الكمية</string>
+    <string name="to_quantity">إلي الكمية</string>
+    <string name="select_date">حدد تاريخ</string>
+    <string name="go">ذهاب</string>
+    <string name="update_faq_product">تحديث الأسئلة الشائعة</string>
+    <string name="activity_notification">إشعار النشاط</string>
+    <string name="sun">الأحد</string>
+    <string name="mon">الأثنين</string>
+    <string name="tue">الثلاثاء</string>
+    <string name="wed">الأربعاء</string>
+    <string name="thu">الخميس</string>
+    <string name="fri">الجمعة</string>
+    <string name="sat">السبت</string>
+    <string name="please_fill_both_dates">حدد تاريخ البدء أولا</string>
+    <string name="enter_your_mobile_number_and_verify">أدخل رقم هاتفك المحمول وتحقق</string>
+    <string name="otp_is_wrong">كود التحقق خاطئ</string>
+    <string name="_1234567890">1234567890</string>
+    <string name="enter_a_valid_shop_url_example_my_shop_url"> يرجي ادخال الاسم مكون من حروف انجليزية صغيرة بدون مسافات أو حروف خاصة مثل </string>
+    <string name="ok">حسنا</string>
+    <string name="list_of_canceled_orders">قائمة الطلبات الملغاه</string>
+    <string name="your_password_must_be_at_least_8_characters_with_at_least_1_number_and_1_special_character">كلمة المرور الخاصة بك يجب أن تكون على الأقل 8 أحرف، وتحتوي على رقم واحد وحرف خاص واحد على الأقل</string>
+    <string name="alert">تنبيه</string>
+    <string name="do_you_really_want_to_delete_this">هل تريد حقا حذف هذا؟</string>
+    <string name="deleting">تم الحذف</string>
+    <string name="faq_id">رقم السؤال الشائع</string>
+    <string name="question_number">رقم السؤال</string>
+    <string name="evaluation_number">رقم التقييم</string>
+    <string name="please_check_these_fields_are_empty">"يرجى التحقق من أن هذه الحقول فارغة "</string>
+    <string name="camera">التقط صورة</string>
+    <string name="you_cannot_select_categories_more_than_3">الحد الاقصى 3 تصنيفات</string>
+    <string name="do_you_want_to_logout">هل تريد تسجيل الخروج؟</string>
+    <string name="how_to_create_a_merchant_account">كيفية انشاء حساب تاجر</string>
+    <string name="you_can_not_select_more_than_10_images_please_deselect_another_image_before_tring_to_select_again">الحد الاقصي 10 صور لا يتعدي حجم الصورة  10 ميجا بايت</string>
+    <string name="image_should_be_less_than_10_mb">حدد سجل تجاري / بطاقة ضريبية / صورة بطاقة شخصية</string>
+    <string name="gallery">معرض الصور</string>
+    <string name="done">تم</string>
+    <string name="you_don_t_have_an_account">ليس لديك حساب؟!</string>
+    <string name="please_enter_the_number_without_0">يرجي إدخال الرقم بدون 0</string>
+    <string name="jan">يناير</string>
+    <string name="feb">فبراير</string>
+    <string name="mar">مارس</string>
+    <string name="apr">أبريل</string>
+    <string name="may">مايو</string>
+    <string name="jun">يونيه</string>
+    <string name="jul">يوليو</string>
+    <string name="aug">أغسطس</string>
+    <string name="sep">سبتمبر</string>
+    <string name="oct">أكتوبر</string>
+    <string name="nov">نوفمبر</string>
+    <string name="dec">ديسمبر</string>
+    <string name="the_total_amount_due_but_not_yet_paid">المبلغ الإجمالي المستحق والذي لم يُدفع بعد.</string>
+    <string name="the_total_amount_you_ordered_is_still_waiting_for_payment">المبلغ الإجمالي الذي طلبته وما زال قيد الانتظار للدفع.</string>
+    <string name="the_total_amount_received_for_sales">المبلغ الإجمالي الذي تم استلامه مقابل المبيعات</string>
+    <string name="the_payment_request_has_been_canceled_due_to_returned_requests_please_submit_a_new_payment_request">تم الغاء طلب الدفع لوجود طلبات مرتجعة, الرجاء تقديم طلب دفع جديد</string>
+    <string name="default_category">صنف المنتج</string>
+    <string name="please_enter_mobile_number">يرجي ادخال الرقم بدون 0.</string>
+    <string name="mobile_number_validation">يرجي ادخال الرقم</string>
+    <string name="delete_account">حذف الحساب</string>
+    <string name="do_you_want_to_delete_account">هل تريد حذف الحساب؟</string>
+    <string name="please_enter_the_valid_number">رقم هاتف غير صالح</string>
+    <string name="remove_product">إزالة المنتج</string>
+    <string name="attributes">الصفات</string>
+    <string name="images">صور</string>
+    <string name="apply_single_set_of_images_to_all_skus">تطبيق مجموعة صور واحدة لجميع (SKUS)</string>
+    <string name="apply_unique_images_by_attribute_to_each_sku">تطبيق صور فريدة حسب السمة لكل  (SKU)</string>
+    <string name="skip_image_uploading_at_this_time">تخطي رفع الصور في الوقت الحالي</string>
+    <string name="select_attribute">حدد السمة</string>
+    <string name="apply_single_price_to_all_skus">تطبيق سعر واحد لجميع (SKUS)</string>
+    <string name="apply_unique_prices_by_attribute_to_each_sku">تطبيق أسعار فريدة حسب السمة لكل (SKU)</string>
+    <string name="skip_price_at_this_time">تخطي السعر في الوقت الحالي</string>
+    <string name="apply_single_quantity_to_each_skus">تطبيق كمية واحدة لجميع (SKUS)</string>
+    <string name="apply_unique_quantity_by_attribute_to_each_sku">تطبيق كميات فريدة حسب السمة لكل  (SKU)</string>
+    <string name="skip_quantity_at_this_time">تخطي الكمية في الوقت الحالي</string>
+    <string name="please_select_attribute_first">يرجى اختيار السمة أولاً!</string>
+    <string name="step_1_select_attributes">الخطوة 1: اختر السمات</string>
+    <string name="step_2">الخطوة 2: قيم السمة\nحدد القيم من كل سمة لتدرج في هذا المنتج. كل تركيبة فريدة من نوعها للقيم تنشئ SKU للمنتج.</string>
+    <string name="step_3">الخطوة 3: الصور والسعر والكمية\nاستناداً إلى التحديدات الخاصة بك سيتم إنشاء منتجات جديدة 1. استخدم هذه الخطوة لتخصيص الصور والأسعار للمنتجات الجديدة الخاصة بك.</string>
+    <string name="step_4_summary">الخطوة 4: موجز</string>
+    <string name="create_new_value">إنشاء قيمة جديدة</string>
+    <string name="select_all">اختيار الكل</string>
+    <string name="deselect_all">إلغاء تحديد الكل</string>
+    <string name="please_enter_the_new_value">الرجاء إدخال القيمة الجديدة.</string>
+    <string name="new_attribute_value">قيمة السمة الجديدة</string>
+    <string name="configurations">الضبط</string>
+    <string name="ConfigLabel">المنتجات القابلة للتخصيص تسمح للعملاء بتخصيص المنتج (مثلاً: لون القميص). تحتاج لإنشاء منتج بسيط لكل تخصيص (مثلاً: منتج لكل لون من ألوان القميص).</string>
+    <string name="do_you_want_to_delete_this_image">هل تريد حذف هذه الصورة؟</string>
+    <string name="next">التالي</string>
+    <string name="backbtn">رجوع</string>
+    <string name="select">حدد</string>
+    <string name="select_store">حدد متجرك</string>
+    <string name="the_full_name_is_incorrect">الاسم الكامل غير صحيح</string>
+</resources>

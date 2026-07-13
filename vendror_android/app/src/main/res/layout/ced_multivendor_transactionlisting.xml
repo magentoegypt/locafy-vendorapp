@@ -1,0 +1,221 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/darker_gray"
+    tools:context="magentoegypt.locafy.addons.advance_transactions.Ced_MultiVendor_TransactionListing"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/MultiVendor_transaction_statistics_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            app:cardUseCompatPadding="true"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="@string/TRANSACTIONSSTATISTICS"
+                    android:id="@+id/MultiVendor_Transaction_statistics_head"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/pad_10dp"
+                    android:textColor="@color/white"
+                    android:gravity="start|center"
+                    android:textSize="@dimen/txt_13sp"
+                    android:background="@color/AppTheme"
+                    android:layout_below="@+id/MultiVendor_linearLayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3.0"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1.0"
+                            android:layout_margin="@dimen/pad_2dp"
+                            >
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:text="@string/TotalEarnedAmount"
+                                android:id="@+id/MultiVendor_TotalEarnedAmount_head"
+                                android:textStyle="bold"
+                                android:paddingStart="@dimen/pad_10dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textSize="@dimen/txt_11sp"
+                                android:padding="@dimen/pad_2dp"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:background="@color/AppTheme"
+                                android:layout_below="@+id/MultiVendor_linearLayout"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MultiVendor_TotalEarnedAmount"
+                                android:textColor="@color/black"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:textSize="@dimen/txt_11sp"
+                                android:layout_gravity="center"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1.0"
+                            android:layout_margin="@dimen/pad_2dp"
+
+                            >
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:text="@string/TotalPendingAmount"
+                                android:id="@+id/MultiVendor_TotalPendingAmount_head"
+                                android:textStyle="bold"
+                                android:paddingStart="@dimen/pad_10dp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textSize="@dimen/txt_11sp"
+                                android:padding="@dimen/pad_2dp"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:background="@color/AppTheme"
+                                android:layout_below="@+id/MultiVendor_linearLayout"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MultiVendor_TotalPendingAmount"
+                                android:textColor="@color/black"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:layout_gravity="center"
+                                android:textSize="@dimen/txt_11sp"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1.0"
+                            android:layout_margin="@dimen/pad_2dp"
+
+                            >
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:text="@string/PendingTransfers"
+                                android:id="@+id/MultiVendor_PendingTransfers_head"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/txt_11sp"
+                                android:padding="@dimen/pad_2dp"
+                                android:textColor="@color/white"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:background="@color/AppTheme"
+                                android:layout_below="@+id/MultiVendor_linearLayout"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:gravity="center" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/MultiVendor_PendingTransfers"
+                                android:textColor="@color/black"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:textSize="@dimen/txt_11sp"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/MultiVendor_transaction_statistics_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+            app:cardUseCompatPadding="true"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Transactions List"
+                android:id="@+id/MultiVendor_Transactionslist_head"
+                android:textStyle="bold"
+                android:paddingStart="@dimen/pad_10dp"
+                android:textColor="@color/white"
+                android:gravity="start|center"
+                android:background="@color/AppTheme"
+                android:textSize="@dimen/txt_15sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/pad_5dp"
+                android:layout_marginTop="@dimen/pad_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MultiVendor_transaction_recyclerlist">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+</RelativeLayout>

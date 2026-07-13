@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PriceAdditionView" customModule="Sell_on_Pushmycart" customModuleProvider="target">
+            <connections>
+                <outlet property="attributePrice" destination="6X7-Rn-hBd" id="BuI-aK-upZ"/>
+                <outlet property="attributeTermlabel" destination="UcL-W9-9tU" id="Zxq-E4-H1A"/>
+                <outlet property="priceType" destination="dG9-vh-YUl" id="J0S-na-aWY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dG9-vh-YUl">
+                    <rect key="frame" x="271.5" y="0.0" width="123.5" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Button" backgroundImage="dropdown">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcL-W9-9tU">
+                    <rect key="frame" x="5" y="0.0" width="123.5" height="35"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="cssfs" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-Rn-hBd">
+                    <rect key="frame" x="138" y="0.0" width="124" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UcL-W9-9tU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2Kd-uf-v9Y"/>
+                <constraint firstAttribute="bottom" secondItem="dG9-vh-YUl" secondAttribute="bottom" id="2cN-qj-snl"/>
+                <constraint firstItem="6X7-Rn-hBd" firstAttribute="leading" secondItem="UcL-W9-9tU" secondAttribute="trailing" constant="10" id="3X4-hb-SaI"/>
+                <constraint firstItem="dG9-vh-YUl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DrA-ZA-ifa"/>
+                <constraint firstItem="6X7-Rn-hBd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Eu7-Hs-tPR"/>
+                <constraint firstAttribute="bottom" secondItem="6X7-Rn-hBd" secondAttribute="bottom" id="Mxw-Pz-Bop"/>
+                <constraint firstAttribute="bottom" secondItem="UcL-W9-9tU" secondAttribute="bottom" id="OO3-dB-OgR"/>
+                <constraint firstAttribute="trailing" secondItem="dG9-vh-YUl" secondAttribute="trailing" constant="5" id="Qot-31-W0z"/>
+                <constraint firstItem="UcL-W9-9tU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="Yom-ca-d3m"/>
+                <constraint firstItem="6X7-Rn-hBd" firstAttribute="width" secondItem="UcL-W9-9tU" secondAttribute="width" id="YtM-g4-fJ5"/>
+                <constraint firstItem="dG9-vh-YUl" firstAttribute="leading" secondItem="6X7-Rn-hBd" secondAttribute="trailing" constant="10" id="jIp-8Z-9xg"/>
+                <constraint firstItem="dG9-vh-YUl" firstAttribute="width" secondItem="UcL-W9-9tU" secondAttribute="width" id="lPP-HU-c83"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="315" y="177"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dropdown" width="539" height="77"/>
+    </resources>
+</document>

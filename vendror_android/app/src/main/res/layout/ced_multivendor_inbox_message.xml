@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardUseCompatPadding="true"
+    android:background="@color/darker_gray"
+    >
+
+
+<LinearLayout
+    android:padding="@dimen/pad_10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:id="@+id/MultiVendor_inboxitem_layout">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_30dp"
+            android:text="@string/Email"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/MultiVendor_inbox_email"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_30dp"
+            android:text="@string/Email"
+            android:textSize="13dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_30dp"
+            android:text="Subject"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/MultiVendor_inbox_subject"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_30dp"
+            android:text="Subject"
+            android:textSize="13dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/pad_30dp"
+            android:text="Message"
+            android:textSize="13dp"
+            />
+    <TextView
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:id="@+id/MultiVendor_inbox_message"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pad_30dp"
+        android:text="Message"
+        android:textSize="13dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pad_30dp"
+            android:text="Date &amp; time"
+            android:textSize="13dp"
+            />
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/MultiVendor_inbox_date"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/pad_30dp"
+                android:text="Date"
+                android:textSize="13dp" />
+            <TextView
+                android:layout_marginLeft="@dimen/pad_5dp"
+                android:layout_toRightOf="@+id/MultiVendor_inbox_date"
+                android:id="@+id/MultiVendor_inbox_time"
+                android:layout_height="@dimen/pad_30dp"
+                android:layout_width="wrap_content"
+                android:text="Time"
+                android:textSize="13dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>

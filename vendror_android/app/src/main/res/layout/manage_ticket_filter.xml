@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_300sdp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border2"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/id_from"
+        app:layout_constraintBottom_toBottomOf="@+id/id_from"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/id_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint=" from "
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguideline2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/id_to"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="   to   "
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/reciever"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ticket_id_value"
+        app:layout_constraintTop_toTopOf="@+id/ticket_id_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ticket_id_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/id_to" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/created_at_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/createtime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ticket_id_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/created_at_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint=" from "
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/verticalguideline2"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/ticket_id_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/created_at_to"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="   to   "
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline2"
+        app:layout_constraintTop_toBottomOf="@id/ticket_id_value" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/customer_name_title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/customer_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/customer_name_value"
+        app:layout_constraintTop_toTopOf="@+id/customer_name_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/customer_name_value"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/created_at_to" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:visibility="gone"
+        android:id="@+id/customer_email_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/customer_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/customer_email_value"
+        app:layout_constraintTop_toTopOf="@+id/customer_email_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/customer_email_value"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/customer_name_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/department_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/Department"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/department_value"
+        app:layout_constraintTop_toTopOf="@+id/department_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/department_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/customer_email_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subject_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/Subject"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/subject_value"
+        app:layout_constraintTop_toTopOf="@+id/subject_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/subject_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/department_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/num_of_message_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/numberofmessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/num_of_message"
+        app:layout_constraintTop_toTopOf="@+id/num_of_message"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/num_of_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/subject_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/order_value"
+        app:layout_constraintTop_toTopOf="@+id/order_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/order_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/num_of_message" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/priority_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/priority"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/priority_value"
+        app:layout_constraintTop_toTopOf="@+id/priority_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/priority_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/order_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/transaction_id_value"
+        app:layout_constraintTop_toTopOf="@+id/transaction_id_value"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/transaction_id_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/priority_value" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red_republichub"
+        android:text="@string/Reset_filter"
+        android:textColor="@color/whitebackground"
+        app:layout_constraintEnd_toEndOf="@id/verticalguideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transaction_id_value"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/applyfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red_republichub"
+        android:text="@string/applyfilter"
+        android:textColor="@color/whitebackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@+id/transaction_id_value"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

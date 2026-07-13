@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:id="@+id/MultiVendor_filtersection">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_margin="1dp"
+
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/id"
+                        android:id="@+id/MultiVendor_txt_id"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+
+
+                        />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_edt_id"
+                        android:layout_marginStart="4dp"
+                        android:phoneNumber="true"
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_margin="1dp"
+
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_id"
+                        android:id="@+id/MultiVendor_txt_product_id"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+
+
+                        />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_edt_product_id"
+                        android:layout_marginStart="4dp"
+                        android:phoneNumber="true"
+
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_margin="1dp"
+
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_name"
+                        android:id="@+id/MultiVendor_txt_product_name"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+
+
+                        />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_edt_product_name"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_margin="1dp"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_type"
+                        android:id="@+id/MultiVendor_txt_product_type"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+
+
+                        />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_edt_producttype"
+                        android:layout_marginStart="4dp"
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:layout_margin="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_margin="1dp"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_txt_price"
+                        android:text="@string/price"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_edt_price"
+                        android:layout_marginStart="2dp"
+                        android:phoneNumber="true"
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    android:layout_margin="1dp"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_txt_qty"
+                        android:text="@string/qty"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/MultiVendor_edt_qty"
+                        android:layout_marginStart="2dp"
+                        android:phoneNumber="true"
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:weightSum="5"
+            android:layout_below="@+id/MultiVendor_filtersection"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:textColor="@color/white"
+                android:id="@+id/MultiVendor_unsetfilter"
+                android:text="@string/Reset_filter"
+                android:background="@drawable/button_style"
+                android:layout_marginStart="2dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_margin="@dimen/pad_5dp"
+
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:textColor="@color/white"
+                android:text="@string/Filter"
+                android:background="@drawable/button_style"
+                android:id="@+id/MultiVendor_setfilter"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_margin="@dimen/pad_5dp"
+
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout></ScrollView>

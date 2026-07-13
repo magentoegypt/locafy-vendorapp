@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Checkbox -->
+    <CheckBox
+        android:id="@+id/checkboxOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option Label" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <!-- Edit Icon -->
+    <ImageView
+        android:id="@+id/iconEdit"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Edit"
+        app:tint="@color/secondary_color"
+        android:src="@android:drawable/ic_menu_edit" />
+
+    <!-- Delete Icon -->
+    <ImageView
+        android:id="@+id/iconDelete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Delete"
+        app:tint="@color/secondary_color"
+        android:src="@android:drawable/ic_menu_delete" />
+
+</LinearLayout>

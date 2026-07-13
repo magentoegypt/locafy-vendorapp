@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@id/pickup_address_heading_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/ChoosePickupAddress"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/MultiVendor_linebelowvendorcreateaccounttag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/pickup_address_heading_txt"
+                    android:background="@color/ebebebe"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/MultiVendor_personalinfosection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_linebelowvendorcreateaccounttag"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/MultiVendor_linebelowpersonalinfotag"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/ebebebe"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/verifyotp_section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1">
+
+                            <EditText
+                                android:id="@+id/MultiVendor_zipcode"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="15dp"
+                                android:layout_weight=".6"
+                                android:background="@drawable/spinner_border"
+                                android:hint="@string/pincode"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/TextHintColor" />
+
+                            <Button
+                                android:id="@+id/btn_verify_number"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="15dp"
+                                android:layout_weight=".4"
+                                android:background="@drawable/corner"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:text="@string/verify_pincode"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/MultiVendor_message_output"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/verifyotp_section"
+                            android:layout_margin="15dp"
+                            android:padding="10dp"
+                            android:paddingStart="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_vendor_street"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_below="@+id/MultiVendor_message_output"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/streetAddress"
+                            android:imeOptions="actionNext"
+                            android:inputType="textLongMessage"
+                            android:lines="10"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_country_spnr"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_vendor_street"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:editable="false"
+                            android:padding="10dp"
+                            android:paddingStart="5dp"
+                            android:spinnerMode="dropdown"
+                            android:text="India" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_state_spnr"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_country_spnr"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/StateTag"
+                            android:padding="10dp"
+                            android:paddingStart="5dp"
+                            android:spinnerMode="dialog" />
+
+                        <!--<Spinner
+                            android:id="@+id/MultiVendor_city_spnr"
+                            style="@style/spinner_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_state_spnr"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:padding="10dp"
+                            android:paddingStart="5dp"
+                            android:prompt="@string/City"
+                            android:spinnerMode="dialog" />-->
+
+                        <!--Updated Spinner-->
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/MultiVendor_city_spn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MultiVendor_state_spnr"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/edittext_bg">
+
+                            <Spinner
+                                android:id="@+id/MultiVendor_city_spnr"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:backgroundTint="@color/AppTheme"
+                                android:padding="10dp"
+                                android:prompt="@string/City"
+                                android:spinnerMode="dropdown" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:id="@+id/MultiVendor_catgory_spnr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MultiVendor_city_spn"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="15dp"
+                            android:text="@string/SelectCategory" />
+
+                        <LinearLayout
+                            android:id="@+id/category_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/MultiVendor_catgory_spnr"
+                            android:orientation="vertical" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_GSTIN"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/category_layout"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/GSTIN"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_PAN"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_GSTIN"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/PAN"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_AccountHolderName"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_PAN"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/AccountHolderName"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_AccountNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_AccountHolderName"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/AccountNumber"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_IFSCCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_AccountNumber"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/IFSCCode"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_BankName"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_IFSCCode"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/BankName"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <EditText
+                            android:id="@+id/MultiVendor_BankBranch"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/MultiVendor_BankName"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/spinner_border"
+                            android:hint="@string/BankBranch"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/TextHintColor" />
+
+                        <Button
+                            android:id="@+id/btn_submit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/MultiVendor_BankBranch"
+                            android:layout_alignEnd="@+id/MultiVendor_BankBranch"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="15dp"
+                            android:layout_marginEnd="204dp"
+                            android:background="@drawable/corner"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:text="@string/submit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

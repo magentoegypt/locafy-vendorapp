@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="pincodeFilterView" customModule="Multivendor_Vendor_App_For_Magento_2" customModuleProvider="target">
+            <connections>
+                <outlet property="Cod" destination="D8R-t1-tQg" id="HU9-yK-47g"/>
+                <outlet property="applybttn" destination="ygL-Dt-etJ" id="oiR-j5-VE1"/>
+                <outlet property="canShip" destination="StF-Lr-J9m" id="2Hn-AP-lo7"/>
+                <outlet property="delivery" destination="eQP-mt-wmF" id="ftv-Bd-H42"/>
+                <outlet property="lblCanCod" destination="LtR-LP-X8S" id="fCp-wL-7J1"/>
+                <outlet property="lblZipcode" destination="2yP-5l-0Nm" id="4eU-Dx-DFd"/>
+                <outlet property="lblcanship" destination="K5M-dK-Uud" id="gp7-Q6-Evb"/>
+                <outlet property="lbldelivery" destination="Dc9-YD-mc4" id="T9a-By-SRx"/>
+                <outlet property="resetbttn" destination="hBB-W5-b1v" id="Xyz-hE-NFU"/>
+                <outlet property="zipcode" destination="hv4-oW-Wf1" id="nnN-Pu-VLz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="552" height="313"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzB-wd-FG4">
+                    <rect key="frame" x="8" y="8" width="536" height="297"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="elk-4u-bej">
+                            <rect key="frame" x="0.0" y="0.0" width="536" height="297"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8oH-Zk-XLA">
+                                    <rect key="frame" x="0.0" y="0.0" width="536" height="59.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ZipCode " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yP-5l-0Nm">
+                                            <rect key="frame" x="0.0" y="0.0" width="268" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hv4-oW-Wf1">
+                                            <rect key="frame" x="268" y="0.0" width="268" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lmv-aG-MDm">
+                                    <rect key="frame" x="0.0" y="59.5" width="536" height="59.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Can Ship " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5M-dK-Uud">
+                                            <rect key="frame" x="0.0" y="0.0" width="268" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StF-Lr-J9m">
+                                            <rect key="frame" x="268" y="0.0" width="268" height="59.5"/>
+                                            <state key="normal" title="----Select----">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zk3-9N-Yog">
+                                    <rect key="frame" x="0.0" y="119" width="536" height="59"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Can COD " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtR-LP-X8S">
+                                            <rect key="frame" x="0.0" y="0.0" width="268" height="59"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8R-t1-tQg">
+                                            <rect key="frame" x="268" y="0.0" width="268" height="59"/>
+                                            <state key="normal" title="----Select----">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hXG-al-hDS">
+                                    <rect key="frame" x="0.0" y="178" width="536" height="59.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Day To Deliver  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc9-YD-mc4">
+                                            <rect key="frame" x="0.0" y="0.0" width="268" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eQP-mt-wmF">
+                                            <rect key="frame" x="268" y="0.0" width="268" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0eP-Qr-kLR">
+                                    <rect key="frame" x="0.0" y="237.5" width="536" height="59.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygL-Dt-etJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="263" height="59.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="Filter">
+                                                <color key="titleColor" systemColor="linkColor"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBB-W5-b1v">
+                                            <rect key="frame" x="273" y="0.0" width="263" height="59.5"/>
+                                            <state key="normal" title="Reset"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="elk-4u-bej" secondAttribute="trailing" id="0mD-0H-M3S"/>
+                        <constraint firstAttribute="bottom" secondItem="elk-4u-bej" secondAttribute="bottom" id="ENZ-Xx-dRj"/>
+                        <constraint firstItem="elk-4u-bej" firstAttribute="leading" secondItem="fzB-wd-FG4" secondAttribute="leading" id="OWi-hf-u1W"/>
+                        <constraint firstItem="elk-4u-bej" firstAttribute="top" secondItem="fzB-wd-FG4" secondAttribute="top" id="qpn-MV-2IB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fzB-wd-FG4" secondAttribute="bottom" constant="8" id="DF1-Iq-vBw"/>
+                <constraint firstItem="fzB-wd-FG4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="XlB-BP-PY4"/>
+                <constraint firstItem="fzB-wd-FG4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="uLL-jJ-qBu"/>
+                <constraint firstAttribute="trailing" secondItem="fzB-wd-FG4" secondAttribute="trailing" constant="8" id="usx-YY-bYM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="192.75362318840581" y="260.82589285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

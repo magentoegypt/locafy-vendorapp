@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MultiSelectCollectionViewCell" id="gTV-IL-0wX" customClass="MultiSelectCollectionViewCell" customModule="Master_Piece_Seller" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="279" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbe-po-6TQ" customClass="CheckboxButtonView" customModule="Master_Piece_Seller" customModuleProvider="target">
+                        <rect key="frame" x="3" y="3" width="273" height="106"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xbe-po-6TQ" secondAttribute="bottom" constant="3" id="J7h-Uq-jTh"/>
+                <constraint firstItem="xbe-po-6TQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="Oag-kg-W5B"/>
+                <constraint firstItem="xbe-po-6TQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="TK3-99-n1r"/>
+                <constraint firstAttribute="trailing" secondItem="xbe-po-6TQ" secondAttribute="trailing" constant="3" id="xwE-iu-Evq"/>
+            </constraints>
+            <size key="customSize" width="279" height="112"/>
+            <connections>
+                <outlet property="checkBoxButtonView" destination="xbe-po-6TQ" id="bYm-9P-dxg"/>
+            </connections>
+            <point key="canvasLocation" x="224.80000000000001" y="81.859070464767626"/>
+        </collectionViewCell>
+    </objects>
+</document>

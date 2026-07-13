@@ -1,0 +1,149 @@
+<!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MultiVendor_mainvendorscroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_below="@+id/MultiVendor_view"
+    android:background="@color/white">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/MultiVendor_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@color/darker_gray"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/MultiVendor_save"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_toStartOf="@+id/MultiVendor_savecontinue"
+                        android:layout_toLeftOf="@+id/MultiVendor_savecontinue"
+                        android:layout_weight="2"
+                        android:background="@drawable/round_corner_red"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/save"
+                        android:textColor="@color/primary_material_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/MultiVendor_addcustomoptions"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/addnewproimage" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/MultiVendor_savecontinue"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="2"
+                        android:background="@drawable/button_save_style"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/Continue"
+                        android:textColor="@color/primary_material_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MultiVendor_view"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/MultiVendor_customoptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MultiVendor_addproducttagsection"
+                android:layout_margin="10dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/customOptionsNotProvided"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom Options are not provided for bundle products."
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+</ScrollView>

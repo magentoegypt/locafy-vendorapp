@@ -1,0 +1,90 @@
+//
+//  orderDetailViewLabel.swift
+//  VenderApp
+//
+//  Created by Saumya Kashyap on 24/01/18.
+//  Copyright © 2018 CEDCOSS Technologies Private Limited. All rights reserved.
+//
+
+import UIKit
+
+class orderDetailViewLabel: UIView {
+
+    @IBOutlet weak var orderIDTitle: UILabel!
+    @IBOutlet weak var grandTotalTitle: UILabel!
+    @IBOutlet weak var commissionFeeTitle: UILabel!
+    @IBOutlet weak var paymodeTitle: UILabel!
+    @IBOutlet weak var totalTitle: UILabel!
+    @IBOutlet weak var wrapperView: UIView!
+    
+    @IBOutlet weak var orderIDButton: UIButton!
+    
+    @IBOutlet weak var grandTotal: UILabel!
+    
+    
+    @IBOutlet weak var commissionFee: UILabel!
+    
+    @IBOutlet weak var paymentMode: UILabel!
+    
+    @IBOutlet weak var totalPayment: UILabel!
+    
+    
+    var view: UIView!
+    override init(frame: CGRect)
+    {
+        // 1. setup any properties here
+        
+        // 2. call super.init(frame:)
+        super.init(frame: frame)
+        
+        // 3. Setup view from .xib file
+        xibSetup()
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        // 1. setup any properties here
+        
+        // 2. call super.init(coder:)
+        super.init(coder: aDecoder)
+        
+        // 3. Setup view from .xib file
+        xibSetup()
+    }
+    
+    @objc func xibSetup()
+    {
+        view = loadViewFromNib()
+        
+        // use bounds not frame or it'll be offset
+        view.frame = bounds
+        
+        // Make the view stretch with containing view
+        view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
+        //let colorString = Ced_CommonVendor.getInfoPlist("themecolor") as? String
+        //let color = Ced_CommonVendor.UIColorFromRGB(colorString!)
+        addSubview(view)
+        orderIDTitle.text=" Order ID".localized
+        grandTotalTitle.text=" Grand Total".localized
+      //  commissionFeeTitle.text=" Commission Fee".localized
+        paymodeTitle.text=" Payment Mode".localized
+        totalTitle.text=" Total Payment".localized
+    }
+    
+    @objc func loadViewFromNib() -> UIView
+    {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "orderDetailViewLabel", bundle: bundle)
+        // Assumes UIView is top level and only object in CustomView.xib file
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        return view
+    }
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+
+}

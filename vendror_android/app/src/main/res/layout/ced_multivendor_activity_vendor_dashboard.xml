@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pullToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/MultiVendor_mainscrolldashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/MultiVendor_cardslider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:visibility="invisible"
+                    android:background="@color/AppTheme" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/MultiVendor_category_bannerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp" />
+
+                <magentoegypt.locafy.vendor_dashboard.Ced_MultiVendor_CirclePageIndicator
+                    android:id="@+id/MultiVendor_category_bannerindicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_category_bannerList"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:alpha="0.7"
+                    android:padding="10dp" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MultiVendor_salessectionsection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MultiVendor_cardslider"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/MultiVendor_saleslinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/AppTheme"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/salesanaa" />
+
+                        <TextView
+                            android:id="@+id/MultiVendor_salestag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.4"
+                            android:text="@string/salestag"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0" />
+                        <!--Updated Spinner-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/corner">
+
+                            <Spinner
+                                android:id="@+id/MultiVendor_spinneraction"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="@color/white"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/MultiVendor_saleslinear">
+
+                        <view
+                            android:id="@+id/MultiVendor_line_view"
+                            class="magentoegypt.locafy.base_app.Ced_MultiVendor_LineView"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp" />
+                    </HorizontalScrollView>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MultiVendor_productsection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MultiVendor_salessectionsection"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/AppTheme"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/pie">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/MultiVendor_producttag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="6dp"
+                            android:text="@string/producttag"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_margin="5dp"
+                                android:background="@color/approved" />
+
+                            <TextView
+                                android:id="@+id/MultiVendor_approvedproduct"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/approved"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_margin="5dp"
+                                android:background="@color/pending" />
+
+                            <TextView
+                                android:id="@+id/MultiVendor_pendingproduct"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/pending"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_margin="5dp"
+
+                                android:background="@color/disapproved" />
+
+                            <TextView
+                                android:id="@+id/MultiVendor_disapprovedproduct"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/disapproved"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/no_products_uploaded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_13ssp"
+                        android:visibility="gone" />
+
+                    <magentoegypt.locafy.base_app.Ced_MultiVendor_VendorPiechart
+                        xmlns:pacpie="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/MultiVendor_vendorpiechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:padding="10dp"
+                        pacpie:activate_rotation="true"
+                        pacpie:lineAntiAlias="true"
+                        pacpie:lineDefaultColor="@color/default_line_color"
+                        pacpie:lineStrokeWidth="3.0"
+                        pacpie:sliceAntiAlias="true"
+                        pacpie:sliceDefaultColor="@color/default_slice_color"
+                        pacpie:sliceStrokeWidth="0.0" />
+
+                    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/MultiVendor_viewdetailscard"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:stateListAnimator="@anim/ced_multivendor_cardbackclick"
+                        card_view:cardBackgroundColor="@color/secondary_color"
+                        card_view:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:id="@+id/MultiVendor_viewdetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:text="@string/viewdetails"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MultiVendor_latestordersection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MultiVendor_productsection"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:id="@+id/MultiVendor_latestlinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/AppTheme"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/shopcart">
+
+                        </ImageView>
+                        <TextView
+                            android:id="@+id/MultiVendor_latestordertag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:text="@string/latestordertag"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/MultiVendor_latestlinear">
+
+                        <TextView
+                            android:id="@+id/no_orders_available"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:textSize="@dimen/_13ssp"
+                            android:visibility="gone" />
+
+                        <magentoegypt.locafy_constant.CustomAutoscrollViewPager
+                            android:id="@+id/MultiVendor_orderlists"
+                            android:layout_width="match_parent"
+                            android:layout_height="145dp"/>
+
+                        <magentoegypt.locafy.vendor_dashboard.Ced_MultiVendor_CirclePageIndicator
+                            android:id="@+id/MultiVendor_orderlistindicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MultiVendor_orderlists"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:alpha="0.7"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MultiVendor_countrywiseorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MultiVendor_latestordersection"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:stateListAnimator="@anim/ced_multivendor_cardbackclick"
+                card_view:cardBackgroundColor="@color/approved"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center"
+                    android:background="@color/secondary_color"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/MultiVendor_countrywiseordertag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/CountryWiseOrders"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/latestProductsCard"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MultiVendor_countrywiseorder"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/AppTheme"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/manage_products">
+
+                        </ImageView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:text="@string/LatestProducts"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/no_latestProduct_available"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:textSize="@dimen/_13ssp"
+                            android:text="@string/nodatafound"
+                            android:visibility="gone" />
+
+                        <magentoegypt.locafy_constant.CustomAutoscrollViewPager
+                            android:id="@+id/latestProductsPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+
+                        <magentoegypt.locafy.vendor_dashboard.Ced_MultiVendor_CirclePageIndicator
+                            android:id="@+id/latestProductIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/latestProductsPager"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:alpha="0.7"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/topSellingCard"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/latestProductsCard"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/AppTheme"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/selectandsell">
+
+                        </ImageView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:text="@string/TopsellingProducts"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/no_topSelling_available"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:textSize="@dimen/_13ssp"
+                            android:text="@string/nodatafound"
+                            android:visibility="gone" />
+
+                        <magentoegypt.locafy_constant.CustomAutoscrollViewPager
+                            android:id="@+id/toptellingPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"/>
+
+                        <magentoegypt.locafy.vendor_dashboard.Ced_MultiVendor_CirclePageIndicator
+                            android:id="@+id/topsellingIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/toptellingPager"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:alpha="0.7"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/transactionsCard"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topSellingCard"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/AppTheme"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/transaction">
+
+                        </ImageView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:text="@string/LatestTransaction"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/no_transaction_available"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:textSize="@dimen/_13ssp"
+                            android:text="@string/nodatafound"
+                            android:visibility="gone" />
+
+                        <magentoegypt.locafy_constant.CustomAutoscrollViewPager
+                            android:id="@+id/transactionPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"/>
+
+                        <magentoegypt.locafy.vendor_dashboard.Ced_MultiVendor_CirclePageIndicator
+                            android:id="@+id/transactionIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/transactionPager"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:alpha="0.7"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

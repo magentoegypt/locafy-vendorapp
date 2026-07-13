@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    card_view:cardUseCompatPadding="true"
+    android:background="@color/white"
+    card_view:cardBackgroundColor="@color/white"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MultiVendor_images"
+            android:text="Images"
+            android:textSize="11sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            />
+        <CheckBox android:theme="@style/WhiteCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/MultiVendor_defaultimage"
+            android:text="default"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@+id/MultiVendor_images"
+            android:padding="5dp"
+
+            />
+        <Button
+            android:id="@+id/MultiVendor_browse"
+            android:text="@string/browse"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:layout_width="70dp"
+            android:layout_height="27dp"
+            android:background="@drawable/button_shape"
+            android:shadowColor="#112FA8"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="25"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/MultiVendor_browse"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/MultiVendor_cancel"
+            android:src="@drawable/close"
+           android:layout_alignParentEnd="true"
+
+
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

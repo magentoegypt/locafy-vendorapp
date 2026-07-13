@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Label_ImageView_Combo_View" customModule="Magenative_Vendor_App_M2" customModuleProvider="target">
+            <connections>
+                <outlet property="browseButton" destination="ZtX-kt-I1l" id="qQN-ZN-0Zj"/>
+                <outlet property="downloadButton" destination="VFP-jF-7fN" id="9fu-c9-UKP"/>
+                <outlet property="entityNameLabel" destination="FqH-oB-3au" id="XaB-CO-ueI"/>
+                <outlet property="fileName" destination="bmb-py-k1i" id="Hgw-eK-4mP"/>
+                <outlet property="imgView" destination="1E6-J5-d4R" id="C3m-MS-3Ms"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Zx6-qa-gUF">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqH-oB-3au">
+                    <rect key="frame" x="5" y="0.0" width="396" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Pcn-Ru-ETh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1E6-J5-d4R">
+                    <rect key="frame" x="5" y="28" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0BL-P8-NVh"/>
+                        <constraint firstAttribute="width" constant="60" id="Hrj-Mc-uqZ"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtX-kt-I1l">
+                    <rect key="frame" x="115" y="43" width="90" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="Qn4-6q-2SX"/>
+                        <constraint firstAttribute="height" constant="30" id="ltB-Lj-4o5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Browse">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmb-py-k1i">
+                    <rect key="frame" x="5" y="47.5" width="105" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFP-jF-7fN">
+                    <rect key="frame" x="5" y="43" width="102" height="30"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                    <state key="normal" title="Download"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="FqH-oB-3au" firstAttribute="leading" secondItem="Zx6-qa-gUF" secondAttribute="leading" constant="5" id="9Hy-RB-iaP"/>
+                <constraint firstItem="ZtX-kt-I1l" firstAttribute="centerY" secondItem="1E6-J5-d4R" secondAttribute="centerY" id="CpD-6L-ZyE"/>
+                <constraint firstItem="VFP-jF-7fN" firstAttribute="leading" secondItem="FqH-oB-3au" secondAttribute="leading" id="H1I-dA-74S"/>
+                <constraint firstItem="bmb-py-k1i" firstAttribute="leading" secondItem="Zx6-qa-gUF" secondAttribute="leading" constant="5" id="T96-ll-q15"/>
+                <constraint firstItem="ZtX-kt-I1l" firstAttribute="leading" secondItem="bmb-py-k1i" secondAttribute="trailing" constant="5" id="VRb-bQ-jlA"/>
+                <constraint firstItem="ZtX-kt-I1l" firstAttribute="leading" secondItem="VFP-jF-7fN" secondAttribute="trailing" constant="8" id="Xtn-pY-m8j"/>
+                <constraint firstItem="1E6-J5-d4R" firstAttribute="leading" secondItem="FqH-oB-3au" secondAttribute="leading" id="ZZD-v8-V1v"/>
+                <constraint firstItem="VFP-jF-7fN" firstAttribute="top" secondItem="FqH-oB-3au" secondAttribute="bottom" constant="18" id="fiA-Kv-JSN"/>
+                <constraint firstItem="FqH-oB-3au" firstAttribute="top" secondItem="Zx6-qa-gUF" secondAttribute="top" id="gZx-Li-DUK"/>
+                <constraint firstItem="bmb-py-k1i" firstAttribute="centerY" secondItem="ZtX-kt-I1l" secondAttribute="centerY" id="pNT-PV-MeF"/>
+                <constraint firstItem="ZtX-kt-I1l" firstAttribute="leading" secondItem="1E6-J5-d4R" secondAttribute="trailing" constant="50" id="xFO-Ud-g4E"/>
+                <constraint firstAttribute="trailing" secondItem="FqH-oB-3au" secondAttribute="trailing" id="zOX-RO-GqD"/>
+                <constraint firstItem="1E6-J5-d4R" firstAttribute="top" secondItem="FqH-oB-3au" secondAttribute="bottom" constant="3" id="zwi-0O-a7U"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="439.19999999999999" y="146.62668665667167"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="placeholder" width="300" height="300"/>
+    </resources>
+</document>

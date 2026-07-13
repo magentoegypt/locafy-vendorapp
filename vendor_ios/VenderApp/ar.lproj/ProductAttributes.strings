@@ -1,0 +1,300 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "01O-jN-Wgm"; */
+"01O-jN-Wgm.text" = "Label";
+
+/* Class = "UILabel"; text = "Unique Value"; ObjectID = "0Rp-00-d4s"; */
+"0Rp-00-d4s.text" = "Unique Value";
+
+/* Class = "UILabel"; text = "Used for Sorting in Product Listing"; ObjectID = "0VX-ho-iBD"; */
+"0VX-ho-iBD.text" = "Used for Sorting in Product Listing";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "17o-vC-CYp"; */
+"17o-vC-CYp.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "2Vk-KV-14O"; */
+"2Vk-KV-14O.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Based On"; ObjectID = "3gA-rP-ick"; */
+"3gA-rP-ick.text" = "Based On";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Cb-I9-hrI"; */
+"4Cb-I9-hrI.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "4b1-Zp-UyO"; */
+"4b1-Zp-UyO.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "4g1-mv-JXJ"; */
+"4g1-mv-JXJ.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Scope"; ObjectID = "57v-Hk-Zoq"; */
+"57v-Hk-Zoq.text" = "Scope";
+
+/* Class = "UILabel"; text = "Searchable"; ObjectID = "74U-jL-ZO8"; */
+"74U-jL-ZO8.text" = "Searchable";
+
+/* Class = "UILabel"; text = "Position"; ObjectID = "81R-Wq-gYA"; */
+"81R-Wq-gYA.text" = "Position";
+
+/* Class = "UILabel"; text = "Default Value"; ObjectID = "8EB-ke-1rG"; */
+"8EB-ke-1rG.text" = "Default Value";
+
+/* Class = "UILabel"; text = "Use for Promo Rule Conditions"; ObjectID = "8tJ-vB-uZ6"; */
+"8tJ-vB-uZ6.text" = "Use for Promo Rule Conditions";
+
+/* Class = "UILabel"; text = "Unique Value"; ObjectID = "9CD-H5-5Lb"; */
+"9CD-H5-5Lb.text" = "Unique Value";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AfI-my-MmK"; */
+"AfI-my-MmK.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "AzG-2Q-GOf"; */
+"AzG-2Q-GOf.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Use in Filter Options"; ObjectID = "CgI-0M-92M"; */
+"CgI-0M-92M.text" = "Use in Filter Options";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "FHg-Qj-ds7"; */
+"FHg-Qj-ds7.normalTitle" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Gff-vC-9ic"; */
+"Gff-vC-9ic.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Gxw-8g-fbh"; */
+"Gxw-8g-fbh.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Visible"; ObjectID = "H2n-2O-uIr"; */
+"H2n-2O-uIr.text" = "Visible";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "H4e-z2-leo"; */
+"H4e-z2-leo.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Use in Quick Search"; ObjectID = "HJx-A0-GN7"; */
+"HJx-A0-GN7.text" = "Use in Quick Search";
+
+/* Class = "UILabel"; text = "Comparable on Front-end"; ObjectID = "HMd-1U-t3v"; */
+"HMd-1U-t3v.text" = "Comparable on Front-end";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HZ2-we-zWe"; */
+"HZ2-we-zWe.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Use in Filter Options"; ObjectID = "Hm8-1e-dIE"; */
+"Hm8-1e-dIE.text" = "Use in Filter Options";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "Hrz-O1-CmM"; */
+"Hrz-O1-CmM.normalTitle" = "Continue";
+
+/* Class = "UILabel"; text = "Add to Column Options"; ObjectID = "Hxo-ch-kgk"; */
+"Hxo-ch-kgk.text" = "Add to Column Options";
+
+/* Class = "UILabel"; text = "Default Value"; ObjectID = "JHs-nt-RDo"; */
+"JHs-nt-RDo.text" = "Default Value";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Jlr-0v-BC9"; */
+"Jlr-0v-BC9.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "KGH-Nc-cHa"; */
+"KGH-Nc-cHa.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Include in Attribute Set"; ObjectID = "M8g-zV-JZY"; */
+"M8g-zV-JZY.text" = "Include in Attribute Set";
+
+/* Class = "UIButton"; normalTitle = "AddOptions +"; ObjectID = "OPm-vF-VhN"; */
+"OPm-vF-VhN.normalTitle" = "AddOptions +";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Ofb-le-Y1s"; */
+"Ofb-le-Y1s.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Allow HTML Tags on Frontend"; ObjectID = "PWS-Hy-FCa"; */
+"PWS-Hy-FCa.text" = "Allow HTML Tags on Frontend";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Qdx-8c-D79"; */
+"Qdx-8c-D79.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Use To Create Configurable Product"; ObjectID = "Qtl-8s-yq9"; */
+"Qtl-8s-yq9.text" = "Use To Create Configurable Product";
+
+/* Class = "UILabel"; text = "Attribute Code"; ObjectID = "RGN-tK-Qfa"; */
+"RGN-tK-Qfa.text" = "Attribute Code";
+
+/* Class = "UILabel"; text = "Use To Create Configurable Product"; ObjectID = "SXn-tr-O21"; */
+"SXn-tr-O21.text" = "Use To Create Configurable Product";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TAF-v5-QfI"; */
+"TAF-v5-QfI.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Ti0-RJ-S8a"; */
+"Ti0-RJ-S8a.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Values Required"; ObjectID = "UZW-Mt-gJH"; */
+"UZW-Mt-gJH.text" = "Values Required";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "UfF-i3-64T"; */
+"UfF-i3-64T.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "V0B-x1-8Dv"; */
+"V0B-x1-8Dv.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Use in Layered Navigation"; ObjectID = "V0R-6e-atG"; */
+"V0R-6e-atG.text" = "Use in Layered Navigation";
+
+/* Class = "UILabel"; text = "Admin"; ObjectID = "V2k-2v-BK0"; */
+"V2k-2v-BK0.text" = "Admin";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "W4B-RE-V2J"; */
+"W4B-RE-V2J.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "If you do not specify an option value for a specific store view then the default (Admin) Value will be used."; ObjectID = "WgJ-35-PBn"; */
+"WgJ-35-PBn.text" = "If you do not specify an option value for a specific store view then the default (Admin) Value will be used.";
+
+/* Class = "UILabel"; text = "System"; ObjectID = "X52-mb-EAD"; */
+"X52-mb-EAD.text" = "System";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Xfh-uN-R4i"; */
+"Xfh-uN-R4i.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Y3l-qO-lyV"; */
+"Y3l-qO-lyV.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "Input Validation for Store Owner"; ObjectID = "YIz-ht-Fgi"; */
+"YIz-ht-Fgi.text" = "Input Validation for Store Owner";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "Z3K-O3-MVl"; */
+"Z3K-O3-MVl.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZLC-3z-CGX"; */
+"ZLC-3z-CGX.text" = "Label";
+
+/* Class = "UILabel"; text = "Attribute Label"; ObjectID = "ZTg-Bb-55f"; */
+"ZTg-Bb-55f.text" = "Attribute Label";
+
+/* Class = "UILabel"; text = "Scope"; ObjectID = "ZeR-47-beh"; */
+"ZeR-47-beh.text" = "Scope";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "a1D-qv-4Or"; */
+"a1D-qv-4Or.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Comparable"; ObjectID = "aWA-Eq-Ag7"; */
+"aWA-Eq-Ag7.text" = "Comparable";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "an2-s8-5Gl"; */
+"an2-s8-5Gl.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Required"; ObjectID = "b73-PA-7Uy"; */
+"b73-PA-7Uy.text" = "Required";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "bAn-bo-AyK"; */
+"bAn-bo-AyK.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Catalog Input Type for Store Owner"; ObjectID = "bYA-73-hma"; */
+"bYA-73-hma.text" = "Catalog Input Type for Store Owner";
+
+/* Class = "UILabel"; text = "Use In Layered Navigation"; ObjectID = "bbg-zj-Ahv"; */
+"bbg-zj-Ahv.text" = "Use In Layered Navigation";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "cM4-ot-Wz0"; */
+"cM4-ot-Wz0.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "   Attribute List"; ObjectID = "cYX-3P-phQ"; */
+"cYX-3P-phQ.text" = "   Attribute List";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "d7H-Gt-hEK"; */
+"d7H-Gt-hEK.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "dx2-Ed-f0x"; */
+"dx2-Ed-f0x.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Use in Advanced Search"; ObjectID = "eDj-Y4-gUC"; */
+"eDj-Y4-gUC.text" = "Use in Advanced Search";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "ecL-qd-p2Z"; */
+"ecL-qd-p2Z.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Visible on Product View Page on Front-end"; ObjectID = "f1n-Jp-DyD"; */
+"f1n-Jp-DyD.text" = "Visible on Product View Page on Front-end";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fbv-VL-EFp"; */
+"fbv-VL-EFp.text" = "Label";
+
+/* Class = "UILabel"; text = "Attribute Code"; ObjectID = "fm8-8m-mZF"; */
+"fm8-8m-mZF.text" = "Attribute Code";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "gSS-Jh-Oq4"; */
+"gSS-Jh-Oq4.text" = "Name";
+
+/* Class = "UILabel"; text = "Create Attribute Set"; ObjectID = "hGn-nJ-tuy"; */
+"hGn-nJ-tuy.text" = "Create Attribute Set";
+
+/* Class = "UILabel"; text = "Used in Product Listing"; ObjectID = "i7t-Ji-2Md"; */
+"i7t-Ji-2Md.text" = "Used in Product Listing";
+
+/* Class = "UILabel"; text = "Use In Search Results Layered Navigation"; ObjectID = "k9m-wN-zMy"; */
+"k9m-wN-zMy.text" = "Use In Search Results Layered Navigation";
+
+/* Class = "UILabel"; text = "Use To Create Configurable Product"; ObjectID = "kxT-Ha-dgs"; */
+"kxT-Ha-dgs.text" = "Use To Create Configurable Product";
+
+/* Class = "UILabel"; text = "Enable WYSIWYG"; ObjectID = "kyi-Nc-zlw"; */
+"kyi-Nc-zlw.text" = "Enable WYSIWYG";
+
+/* Class = "UILabel"; text = "Input Validation for Store Owner"; ObjectID = "lG9-Er-oga"; */
+"lG9-Er-oga.text" = "Input Validation for Store Owner";
+
+/* Class = "UILabel"; text = "Catalog Input Type for Store Owner"; ObjectID = "lsF-vr-h20"; */
+"lsF-vr-h20.text" = "Catalog Input Type for Store Owner";
+
+/* Class = "UILabel"; text = "Values Required"; ObjectID = "m8Y-kM-5lO"; */
+"m8Y-kM-5lO.text" = "Values Required";
+
+/* Class = "UILabel"; text = "Scope"; ObjectID = "nCM-zH-Lcg"; */
+"nCM-zH-Lcg.text" = "Scope";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nU2-QX-s1z"; */
+"nU2-QX-s1z.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nmf-6O-Urt"; */
+"nmf-6O-Urt.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "oCe-Eb-toD"; */
+"oCe-Eb-toD.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "osR-oq-naR"; */
+"osR-oq-naR.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Default Store View"; ObjectID = "pGN-13-Ltr"; */
+"pGN-13-Ltr.text" = "Default Store View";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "pJa-XJ-Gqn"; */
+"pJa-XJ-Gqn.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "quk-tX-F8u"; */
+"quk-tX-F8u.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "rlG-vW-EZH"; */
+"rlG-vW-EZH.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Attribute Code"; ObjectID = "t3c-Z2-WQP"; */
+"t3c-Z2-WQP.text" = "Attribute Code";
+
+/* Class = "UIButton"; normalTitle = "Save Attribute"; ObjectID = "vf9-oA-f59"; */
+"vf9-oA-f59.normalTitle" = "Save Attribute";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "vgJ-s4-PaV"; */
+"vgJ-s4-PaV.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Continue"; ObjectID = "w8T-my-uCr"; */
+"w8T-my-uCr.normalTitle" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "wEX-RK-1yk"; */
+"wEX-RK-1yk.normalTitle" = "Select";
+
+/* Class = "UILabel"; text = "Add to Column Options"; ObjectID = "wUr-Cj-XXV"; */
+"wUr-Cj-XXV.text" = "Add to Column Options";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "xx7-mC-66l"; */
+"xx7-mC-66l.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "yGB-Na-woC"; */
+"yGB-Na-woC.normalTitle" = "Select";
+
+/* Class = "UIButton"; normalTitle = "Select"; ObjectID = "zLK-Wz-Uep"; */
+"zLK-Wz-Uep.normalTitle" = "Select";

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_2dp"
+                android:orientation="horizontal"
+                android:weightSum="6.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_oder_date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/pad_2dp"
+
+                    android:layout_weight="2.0"
+                    android:text="@string/OrderDate" />
+
+                <EditText
+                    android:id="@+id/MultiVendor_from_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/editext_border"
+                    android:editable="false"
+                    android:hint="@string/from"
+                    android:padding="@dimen/pad_5dp" />
+
+                <EditText
+                    android:id="@+id/MultiVendor_to_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/editext_border"
+                    android:editable="false"
+                    android:hint="@string/to"
+                    android:padding="@dimen/pad_5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_2dp"
+                android:orientation="horizontal"
+                android:weightSum="6.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_Pending_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:text="@string/PendingAmount" />
+
+                <EditText
+                    android:id="@+id/MultiVendor_from_pending_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/editext_border"
+                    android:hint="@string/from"
+                    android:padding="@dimen/pad_5dp" />
+
+                <EditText
+                    android:id="@+id/MultiVendor_to_pending_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/editext_border"
+                    android:hint="@string/to"
+                    android:padding="@dimen/pad_5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_2dp"
+                android:orientation="horizontal"
+                android:weightSum="6.0">
+
+                <TextView
+                    android:id="@+id/MultiVendor_increment_id"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:text="@string/Order_id" />
+                />
+
+                <EditText
+                    android:id="@+id/MultiVendor_Order_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="4.0"
+                    android:background="@drawable/editext_border"
+                    android:padding="@dimen/pad_5dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_2dp"
+                android:orientation="horizontal"
+                android:weightSum="4.0">
+
+                <Button
+                    android:id="@+id/MultiVendor_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/button_style"
+                    android:text="@string/Filter"
+                    android:textColor="@color/white" />
+                />
+
+                <Button
+                    android:id="@+id/MultiVendor_reset_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:layout_weight="2.0"
+                    android:background="@drawable/button_style"
+                    android:text="@string/Reset_filter"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

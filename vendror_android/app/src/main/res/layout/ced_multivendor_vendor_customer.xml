@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="magentoegypt.locafy.addons.messaging.VendorAdmin.Ced_MultiVendor_Admin">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardUseCompatPadding="true"
+        android:background="@color/white"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:background="@color/AppTheme"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_15sp"
+            android:id="@+id/tabMultiVendor_customercompose"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Compose"></TextView>
+
+        <TextView
+            android:textSize="@dimen/txt_15sp"
+            android:id="@+id/tabMultiVendor_customerinbox"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Inbox"></TextView>
+
+        <TextView
+            android:textSize="@dimen/txt_15sp"
+            android:id="@+id/tabMultiVendor_customersent"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Sent"></TextView>
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardUseCompatPadding="true"
+        android:background="@color/white"
+        >
+
+    <LinearLayout
+        android:id="@+id/MultiVendor_customercompose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:textAllCaps="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:text="@string/composenewmessage"
+            android:textSize="@dimen/txt_15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:id="@+id/MultiVendor_customername"
+            android:layout_width="match_parent"
+           />
+
+
+
+
+        <EditText
+            android:id="@+id/MultiVendor_message_subject"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:background="@drawable/curve"
+            android:hint="SUBJECT"
+            android:padding="@dimen/pad_5dp"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/MultiVendor_message_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:background="@drawable/curve"
+            android:hint="MESSAGE"
+            android:padding="@dimen/pad_5dp"
+            android:textSize="12dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp">
+
+            <CheckBox android:theme="@style/WhiteCheck"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:id="@+id/MultiVendor_messagecheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/pad_30dp"
+                android:text="@string/emailvendor"/>
+
+            <Button
+                android:background="@drawable/button_save_style"
+                android:textColor="@color/primary_material_light"
+                android:id="@+id/MultiVendor_messagesent"
+                android:layout_width="70dp"
+                android:layout_height="@dimen/pad_30dp"
+                android:layout_alignParentEnd="true"
+                android:text="SEND"
+                android:textSize="12dp"
+                android:layout_marginBottom="@dimen/pad_10dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/MultiVendor_customerinbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textAllCaps="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:text="@string/inbox"
+            android:textSize="@dimen/txt_15sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:id="@+id/MultiVendor_customerinbox_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/MultiVendor_customersent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textAllCaps="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:text="@string/sent"
+            android:textSize="@dimen/txt_15sp"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:id="@+id/MultiVendor_customersent_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>

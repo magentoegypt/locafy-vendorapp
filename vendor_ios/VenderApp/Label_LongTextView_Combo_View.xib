@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Label_LongTextView_Combo_View" customModule="ZeoMarket_Hub" customModuleProvider="target">
+            <connections>
+                <outlet property="entityNameLabel" destination="vLp-3D-sJV" id="9Zu-hX-WjA"/>
+                <outlet property="entityValueTxtField" destination="rSo-jv-RzH" id="DVG-zG-lru"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="k8H-Fv-L4V">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLp-3D-sJV">
+                    <rect key="frame" x="5" y="5" width="396" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="SGF-0q-dSJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rSo-jv-RzH">
+                    <rect key="frame" x="5" y="35" width="391" height="85"/>
+                    <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rSo-jv-RzH" secondAttribute="bottom" id="8lN-cL-8zg"/>
+                <constraint firstItem="rSo-jv-RzH" firstAttribute="leading" secondItem="k8H-Fv-L4V" secondAttribute="leading" constant="5" id="9SY-gr-oVf"/>
+                <constraint firstAttribute="trailing" secondItem="vLp-3D-sJV" secondAttribute="trailing" id="LQV-TO-g9c"/>
+                <constraint firstItem="vLp-3D-sJV" firstAttribute="leading" secondItem="k8H-Fv-L4V" secondAttribute="leading" constant="5" id="V3D-7J-17B"/>
+                <constraint firstAttribute="trailing" secondItem="rSo-jv-RzH" secondAttribute="trailing" constant="5" id="WRT-Gc-eyJ"/>
+                <constraint firstItem="vLp-3D-sJV" firstAttribute="top" secondItem="k8H-Fv-L4V" secondAttribute="top" constant="5" id="a2E-rn-nun"/>
+                <constraint firstItem="rSo-jv-RzH" firstAttribute="top" secondItem="vLp-3D-sJV" secondAttribute="bottom" constant="5" id="pPx-oO-V2C"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="224.5" y="-71"/>
+        </view>
+    </objects>
+</document>

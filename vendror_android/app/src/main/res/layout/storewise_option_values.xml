@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2.2"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/storeOptionLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/Admin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_15sp" />
+
+        <EditText
+            android:id="@+id/storeOptionValue"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="@dimen/pad_5dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/editext_border"
+            android:padding="@dimen/pad_5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_11sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

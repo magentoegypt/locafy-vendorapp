@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/MultiVendor_mainvendoreditprofilescroll">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            card_view:cardUseCompatPadding="true"
+            android:background="@color/white"
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/MultiVendor_addproducttagsection"
+                    android:layout_margin="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/addnewproimage"
+                        android:id="@+id/MultiVendor_addnewproimage"
+                        android:layout_centerVertical="true"
+                        >
+
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ProductCreation"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/MultiVendor_addnewproimage"
+                        android:layout_toRightOf="@+id/MultiVendor_addnewproimage"
+                        android:layout_marginStart="2dp"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/MultiVendor_save"
+                        android:text="@string/save"
+                        android:textSize="13sp"
+                        android:background="@drawable/button_save_style"
+                        android:textColor="@color/primary_material_light"
+                        android:textStyle="bold"
+                        android:layout_toLeftOf="@+id/MultiVendor_savecontinue"
+                        android:layout_toStartOf="@+id/MultiVendor_savecontinue"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+
+
+
+                        />
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/MultiVendor_savecontinue"
+                        android:text="@string/Continue"
+                        android:textSize="13sp"
+                        android:background="@drawable/button_save_style"
+                        android:textColor="@color/primary_material_light"
+                        android:textStyle="bold"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+
+
+
+                        />
+
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/MultiVendor_addproducttagsection"
+                    android:background="@color/ebebebe"
+                    android:id="@+id/MultiVendor_linebelowvendortag"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_linebelowvendortag"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:orientation="vertical"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_margin="2dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_ProductNametag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/productname"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_product_name"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/curve"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_SkuTag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/skutag"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_product_sku"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/curve"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_DesTag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/Description"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_description"
+                                android:layout_height="150dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/curve"
+                                android:gravity="start"
+
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_shortdesTag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/ShortDescription"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_shortdescription"
+                                android:layout_height="120dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:background="@drawable/curve"
+                                android:gravity="start"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_stockavailtag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/Stockavailability"
+
+                                />
+                            <Spinner
+
+                                android:id="@+id/MultiVendor_stockavail"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                style="@style/spinner_style"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_Stocktag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/Stock"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_stock"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:phoneNumber="true"
+                                android:textColor="@color/black"
+                                android:background="@drawable/curve"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_taxclasstag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/taxclasstag"
+
+                                />
+                            <Spinner
+
+                                android:id="@+id/MultiVendor_taxclass"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                style="@style/spinner_style"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_regularpricetag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/RegularPrice"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_price"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:phoneNumber="true"
+                                android:background="@drawable/curve"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_specialpricetag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/specialpricetag"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_specialprice"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:phoneNumber="true"
+                                android:background="@drawable/curve"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:id="@+id/MultiVendor_weightsection"
+                            android:visibility="gone"
+                            >
+                            <TextView
+                                android:id="@+id/MultiVendor_weighttag"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:text="@string/weighttag"
+
+                                />
+                            <EditText
+                                android:id="@+id/MultiVendor_weight"
+                                android:layout_height="40dp"
+                                android:layout_width="match_parent"
+                                android:textSize="11sp"
+                                android:textColor="@color/black"
+                                android:phoneNumber="true"
+                                android:background="@drawable/curve"
+
+                                />
+                        </LinearLayout>
+                        <androidx.cardview.widget.CardView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginTop="2dp"
+                            card_view:cardUseCompatPadding="true"
+                            android:background="@color/white"
+
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <CheckBox android:theme="@style/WhiteCheck"
+                                    android:id="@+id/MultiVendor_website"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:text="@string/websites"
+
+                                    />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_margin="5dp"
+                                    android:id="@+id/MultiVendor_websiteselection"
+                                    android:animateLayoutChanges="true"
+                                    android:visibility="gone"
+                                    >
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginTop="2dp"
+                            card_view:cardUseCompatPadding="true"
+                            android:background="@color/white"
+
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <CheckBox android:theme="@style/WhiteCheck"
+                                    android:id="@+id/MultiVendor_categorytag"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:text="@string/Category"
+
+                                    />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_margin="5dp"
+                                    android:id="@+id/MultiVendor_categoryselection"
+                                    android:animateLayoutChanges="true"
+                                    android:visibility="gone"
+                                    >
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginTop="2dp"
+                            card_view:cardUseCompatPadding="true"
+                            android:background="@color/white"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_margin="5dp"
+                                    android:animateLayoutChanges="true"
+                                    android:id="@+id/MultiVendor_imageselection"
+                                    >
+
+                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/MultiVendor_addimagees"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:textSize="13sp"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:text="@string/ADD"
+                                    android:background="@drawable/button_style"
+                                    android:padding="10dp"
+                                    />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>

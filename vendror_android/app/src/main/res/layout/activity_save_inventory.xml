@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_7sdp"
+    tools:context="magentoegypt.locafy.addons.inventory.SaveInventory">
+
+    <Button
+        android:id="@+id/saveInventary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="2dp"
+        android:background="@color/AppTheme"
+        android:gravity="center"
+        android:paddingStart="@dimen/pad_10dp"
+        android:paddingEnd="@dimen/pad_10dp"
+        android:text="@string/inventory_minimum_products"
+        android:textAllCaps="false"
+        android:textColor="@color/TextColor"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etInventoryNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_minimum_numbers"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSaveInventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/AppTheme"
+        android:text="@string/save"
+        android:textColor="@color/white" />
+
+</LinearLayout>

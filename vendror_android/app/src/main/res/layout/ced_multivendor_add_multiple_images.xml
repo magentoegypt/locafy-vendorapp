@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multiple_images_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <ImageView
+        android:id="@+id/MultiVendor_productimage"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:src="@drawable/placeholder" />
+
+    <Button
+        android:id="@+id/MultiVendor_browseproductimage"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="@dimen/pad_30dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#112FA8"
+        android:shadowDx="20"
+        android:shadowDy="20"
+        android:shadowRadius="25"
+        android:text="@string/browse"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp" />
+
+    <CheckBox
+        android:id="@+id/default_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:text="Default"
+        android:theme="@style/WhiteCheck" />
+
+    <ImageView
+        android:id="@+id/remove_image"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.3"
+        android:src="@drawable/remove" />
+
+    <TextView
+        android:id="@+id/layout_id"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.3"
+        android:visibility="gone" />
+</LinearLayout>

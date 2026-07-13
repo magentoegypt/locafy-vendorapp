@@ -1,0 +1,120 @@
+
+/* Class = "UILabel"; text = "Hello"; ObjectID = "2h1-JO-0cg"; */
+"2h1-JO-0cg.text" = "Hello";
+
+/* Class = "UILabel"; text = "Your vendor account is under admin approval."; ObjectID = "2iH-pX-IjW"; */
+"2iH-pX-IjW.text" = "Your vendor account is under admin approval.";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "5dc-vH-8iv"; */
+"5dc-vH-8iv.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Login Information"; ObjectID = "7pD-Fu-ZKl"; */
+"7pD-Fu-ZKl.text" = "Login Information";
+
+/* Class = "UITextField"; placeholder = "Enter mobile number"; ObjectID = "9WB-9P-sqh"; */
+"9WB-9P-sqh.placeholder" = "Enter mobile number";
+
+/* Class = "UILabel"; text = "Shop Url *"; ObjectID = "Ax9-PQ-BEK"; */
+"Ax9-PQ-BEK.text" = "Shop Url *";
+
+/* Class = "UILabel"; text = "Retrieve your password here"; ObjectID = "DDW-Qc-Ddo"; */
+"DDW-Qc-Ddo.text" = "Retrieve your password here";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "EEQ-1B-6th"; */
+"EEQ-1B-6th.placeholder" = "Confirm Password";
+
+/* Class = "UILabel"; text = "If you have a vendor account with us, please log in"; ObjectID = "I40-8n-CLt"; */
+"I40-8n-CLt.text" = "If you have a vendor account with us, please log in";
+
+/* Class = "UILabel"; text = "Please enter your email below and we wil send you a new password."; ObjectID = "IKc-d1-RYp"; */
+"IKc-d1-RYp.text" = "Please enter your email below and we wil send you a new password.";
+
+/* Class = "UILabel"; text = "Forgot Your Password?"; ObjectID = "J0A-1y-PFM"; */
+"J0A-1y-PFM.text" = "Forgot Your Password?";
+
+/* Class = "UIButton"; normalTitle = "Create An Account"; ObjectID = "Jz7-YL-Hk1"; */
+"Jz7-YL-Hk1.normalTitle" = "Create An Account";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "Lto-7J-JZ5"; */
+"Lto-7J-JZ5.placeholder" = "First Name";
+
+/* Class = "UIViewController"; title = "Forgot Password"; ObjectID = "Nss-Jw-43e"; */
+"Nss-Jw-43e.title" = "Forgot Password";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "Pab-4W-6iA"; */
+"Pab-4W-6iA.placeholder" = "Email Address";
+
+/* Class = "UILabel"; text = "Public Name *"; ObjectID = "SHx-KE-9DV"; */
+"SHx-KE-9DV.text" = "Public Name *";
+
+/* Class = "UILabel"; text = "Vendor Information"; ObjectID = "V6Y-wF-QSN"; */
+"V6Y-wF-QSN.text" = "Vendor Information";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "V8S-Di-0xL"; */
+"V8S-Di-0xL.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "Create a seller Account"; ObjectID = "Wmw-Sf-qXF"; */
+"Wmw-Sf-qXF.text" = "Create a seller Account";
+
+/* Class = "UILabel"; text = "Vendor Login"; ObjectID = "XGG-y3-sPi"; */
+"XGG-y3-sPi.text" = "Vendor Login";
+
+/* Class = "UILabel"; text = "Vendor Status"; ObjectID = "XWP-SX-Gsk"; */
+"XWP-SX-Gsk.text" = "Vendor Status";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Y9D-Aj-6Mz"; */
+"Y9D-Aj-6Mz.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Your Vendor Application has been pending. Thank you for registering with english store.                                            "; ObjectID = "ZcF-kN-Amr"; */
+"ZcF-kN-Amr.text" = "Your Vendor Application has been pending. Thank you for registering with english store.                                            ";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "ZeY-tp-iev"; */
+"ZeY-tp-iev.normalTitle" = "SUBMIT";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "bB5-IN-SDG"; */
+"bB5-IN-SDG.placeholder" = "Email Address";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "bbO-30-654"; */
+"bbO-30-654.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Personal Information"; ObjectID = "cJ6-aM-hgA"; */
+"cJ6-aM-hgA.text" = "Personal Information";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "dBU-Ob-Pnr"; */
+"dBU-Ob-Pnr.normalTitle" = "SUBMIT";
+
+/* Class = "UILabel"; text = "Seller Information *"; ObjectID = "efl-aI-3pZ"; */
+"efl-aI-3pZ.text" = "Seller Information *";
+
+/* Class = "UILabel"; text = "Shop Url *"; ObjectID = "gUx-Lq-wqY"; */
+"gUx-Lq-wqY.text" = "Shop Url *";
+
+/* Class = "UILabel"; text = "Please enter your Shop URL Key. For example \"my-shop-url\""; ObjectID = "jKp-Rk-ttR"; */
+"jKp-Rk-ttR.text" = "Please enter your Shop URL Key. For example \"my-shop-url\"";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "jSi-pM-gns"; */
+"jSi-pM-gns.placeholder" = "Username";
+
+/* Class = "UINavigationItem"; title = "Vendor Login"; ObjectID = "lYi-Ng-FWA"; */
+"lYi-Ng-FWA.title" = "Vendor Login";
+
+/* Class = "UILabel"; text = "Public Name *"; ObjectID = "pRM-fz-A4G"; */
+"pRM-fz-A4G.text" = "Public Name *";
+
+/* Class = "UIButton"; normalTitle = "Sign Up for Newsletter"; ObjectID = "pZc-fX-Gs3"; */
+"pZc-fX-Gs3.normalTitle" = "Sign Up for Newsletter";
+
+/* Class = "UILabel"; text = "Please enter your Shop URL Key. For example \"my-shop-url\""; ObjectID = "qic-je-vMx"; */
+"qic-je-vMx.text" = "Please enter your Shop URL Key. For example \"my-shop-url\"";
+
+/* Class = "UIButton"; normalTitle = "Forgot Your Password?"; ObjectID = "rgb-pV-BAW"; */
+"rgb-pV-BAW.normalTitle" = "Forgot Your Password?";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "sYQ-9B-IMx"; */
+"sYQ-9B-IMx.normalTitle" = "SUBMIT";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "unf-IV-Dsl"; */
+"unf-IV-Dsl.placeholder" = "Last Name";
+
+/* Class = "UIViewController"; title = "Create Account"; ObjectID = "vTq-7J-5Td"; */
+"vTq-7J-5Td.title" = "Create Account";

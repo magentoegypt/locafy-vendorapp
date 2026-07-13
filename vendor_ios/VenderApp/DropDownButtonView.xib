@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DropDownButtonView" customModule="ZeoMarket_Hub" customModuleProvider="target">
+            <connections>
+                <outlet property="dropDownButton" destination="Jj3-Su-2W6" id="8EH-U9-w4W"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="wuO-FT-TOu">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj3-Su-2W6">
+                    <rect key="frame" x="0.0" y="0.0" width="407" height="40"/>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="--Please Select--" backgroundImage="dropdown">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Jj3-Su-2W6" firstAttribute="leading" secondItem="wuO-FT-TOu" secondAttribute="leading" id="8YS-k0-EYx"/>
+                <constraint firstAttribute="trailing" secondItem="Jj3-Su-2W6" secondAttribute="trailing" id="fdl-QZ-wtI"/>
+                <constraint firstAttribute="bottom" secondItem="Jj3-Su-2W6" secondAttribute="bottom" id="kgu-DI-tDQ"/>
+                <constraint firstItem="Jj3-Su-2W6" firstAttribute="top" secondItem="wuO-FT-TOu" secondAttribute="top" id="por-m9-ugd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-548" y="-65"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dropdown" width="539" height="77"/>
+    </resources>
+</document>

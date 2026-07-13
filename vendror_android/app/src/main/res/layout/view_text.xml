@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pad_5dp"
+        android:tag="text_title"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/countryCodelin"
+            android:layoutDirection="ltr"
+            android:layout_margin="@dimen/pad_5dp"
+            android:background="@drawable/spinner_border"
+            >
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:ccp_autoDetectCountry="true"
+                android:gravity="center"
+                app:ccp_showFlag="true"
+                app:ccp_showNameCode="false"
+                app:ccp_showFullName="false"/>
+            <EditText
+                android:id="@+id/edtUserNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="@string/_1234567890"
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/TextHintColor" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/pad_5dp"
+            android:background="@drawable/editext_border"
+            android:gravity="center_vertical"
+            android:padding="@dimen/pad_5dp"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </FrameLayout>
+
+</LinearLayout>

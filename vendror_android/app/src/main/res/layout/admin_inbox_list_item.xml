@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:background="@drawable/border2"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.486618" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sender_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/sender"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@+id/verticalguideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/reciever_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/reciever"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sender_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/reciever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/sender" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/created_at_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/CreatedAt"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reciever_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/created_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/reciever" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/updated_at_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/updatedat"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/created_at_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/updated_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/created_at" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subject_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/Subject"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updated_at_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/updated_at" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/Newmessage"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subject_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/newmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@+id/verticalguideline"
+        app:layout_constraintTop_toBottomOf="@id/subject" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/action_view"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/border_button_apptheme"
+        android:backgroundTint="@color/secondary_color"
+        android:gravity="center"
+        android:text="@string/viewdetails"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newmessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

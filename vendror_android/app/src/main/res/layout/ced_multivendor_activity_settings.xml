@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pullToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/MultiVendor_mainscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+
+            <RelativeLayout
+                android:id="@+id/MultiVendor_transactionsettingstagsection"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/MultiVendor_settingsimage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/settingsimage"/>
+
+                <TextView
+                    android:id="@+id/MultiVendor_transactionsettingstag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/MultiVendor_settingsimage"
+                    android:layout_toRightOf="@+id/MultiVendor_settingsimage"
+                    android:text="@string/TransactaionSettings"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/MultiVendor_save"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_save_style"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/primary_material_light"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/MultiVendor_linebelowtransactionsettingstagsection"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/MultiVendor_transactionsettingstagsection"
+                android:background="@color/AppTheme"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/MultiVendor_paymentmethodtagsrelative"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/MultiVendor_linebelowtransactionsettingstagsection"
+                android:layout_margin="15dp"
+                android:background="@drawable/corner">
+
+                <TextView
+                    android:id="@+id/MultiVendor_paymentmethodtags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/paymentmethodtags"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/MultiVendor_forpaymentmethoods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MultiVendor_paymentmethodtagsrelative"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"/>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

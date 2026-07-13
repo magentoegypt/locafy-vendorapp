@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LAYOUT_DEBUG</key>
+	<string>false</string>
+	<key>APP_DEBUG</key>
+	<string>true</string>
+	<key>countryArray</key>
+	<string></string>
+	<key>bodyColor</key>
+	<string>#f1f1f1</string>
+	<key>subthemecolor</key>
+	<string>#002f63</string>
+	<key>themecolor</key>
+	<string>#002f63</string>
+	<key>requestheader</key>
+	<string>mobiconnectsecrethash</string>
+	<key>baseUrl</key>
+	<string>https://demo2.cedcommerce.com/magento/client/hassan/pub/</string>
+</dict>
+</plist>

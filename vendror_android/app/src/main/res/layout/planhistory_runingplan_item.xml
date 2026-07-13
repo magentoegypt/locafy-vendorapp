@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="6dp"
+        tools:context=".Ced_Multivendor_MemberShipPlans.Ced_Multivendor_Membership_View">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/head"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:text="@string/membership_details"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/membership_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/secondary_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/head"
+            app:textAllCaps="true" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/membership"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/membership_name"
+            app:srcCompat="@drawable/placeholder" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/duration_txt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:text="@string/duration_of_package"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/duration"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/membership" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/duration"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/duration_txt"
+            app:layout_constraintTop_toBottomOf="@id/membership" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/order_id_txt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:text="@string/allowed_no_of_products"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/order_id_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/duration_txt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/order_id_value"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/order_id_txt"
+            app:layout_constraintTop_toBottomOf="@id/duration" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/payment_method_txt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:text="@string/Price"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/payment_method_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/order_id_txt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/payment_method_value"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/payment_method_txt"
+            app:layout_constraintTop_toBottomOf="@id/order_id_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specialPrice_txt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:text="@string/specialpricetag"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/specialPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/payment_method_txt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/specialPrice"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/specialPrice_txt"
+            app:layout_constraintTop_toBottomOf="@id/payment_method_value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/allowedCategories_txt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:text="@string/allowed_category"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/specialPrice_txt" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/dyn_allowedCategories"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/allowedCategories_txt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subscribe_txt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="start|center"
+            android:padding="5dp"
+            android:text="@string/subscribe_this_one"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/addToCart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dyn_allowedCategories" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addToCart"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/corner"
+            android:text="@string/addtocart"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/subscribe_txt"
+            app:layout_constraintTop_toBottomOf="@id/dyn_allowedCategories" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

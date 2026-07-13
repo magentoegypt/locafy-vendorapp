@@ -1,0 +1,404 @@
+/*-------categorytreeviewcontroller---------*/
+"Categories" = "Categories";
+
+/*-------ced_BrandViewController----------*/
+"Edit" = "Edit";
+"Delete" = "Delete";
+"Confirmation" = "Confirmation";
+"Operation can't be undone !" = "Operation can't be undone !";
+"Ok" = "Ok";
+"Cancel" = "Cancel";
+"Loading Please Wait..." = "Loading Please Wait...";
+"Filter" = "Filter";
+"Reset" = "Reset";
+"Brand Name" = "Brand Name";
+"Creation Date" = "Creation Date";
+"Brand Id" = "Brand Id";
+"Information" = "Information";
+"Enter Proper Email" = "Enter Proper Email";
+"Please Enter Albhabets" = "Please Enter Albhabets";
+"Please Enter Number" = "Please Enter Number";
+"Use Alphabets" = "Use Alphabets";
+"UseNumbers" = "UseNumbers";
+
+/*-------ced_AddBrandViewController----------*/
+"Brand Group" = "Brand Group";
+"Save" = "Save";
+"Please select" = "Please select";
+"Option to select" = "Option to select";
+"Cancel" = "Cancel";
+"upload image" = "upload image";
+" All fields are Required." = " All fields are Required.";
+"--Please Select--" = "--Please Select--";
+
+/*----------ced_PlanHistoryViewController--------*/
+"Plan History" = "Plan History";
+" items" = " items";
+
+/*---------ced_MemberShipPlansController---------*/
+"MemberShip Plans" = "MemberShip Plans";
+
+/*-------cedsubVendorView--------*/
+"Save" = "Save";
+"Select Resource" = "Select Resource";
+"Custom" = "Custom";
+"All" = "All";
+
+/*-------TreeViewController-------*/
+"Shop By Categories" = "Shop By Categories";
+"Please Select Start date" = "Please Select Start date";
+"Please fill all required fields." = "Please fill all required fields.";
+
+/*-------subVendorListingViewController--------*/
+"Pending" = "Pending";
+"Approved" = "Approved";
+"Disapproved" = "Disapproved";
+
+/*-------addAuctionViewController--------*/
+"Select Date" = "Select Date";
+"Please Select Start date" = "Please Select Start date";
+"Processing" = "Processing";
+"NotStarted" = "NotStarted";
+"Cancelled" = "Cancelled";
+"Completed" = "Completed";
+"BidClosed" = "BidClosed";
+
+/*-------bidViewController--------------------*/
+"Select Date" = "Select Date";
+
+/*-------cedOutOfStockListing----------------*/
+"Simple" = "Simple";
+"Virtual" = "Virtual";
+"Grouped" = "Grouped";
+"Bundle" = "Bundle";
+"Configurable" = "Configurable";
+"Filter" = "Filter";
+"SKU" = "SKU";
+"Product Name" = "Product Name";
+"Product Type" = "Product Type";
+"Quantity" = "Quantity";
+"Reset" = "Reset";
+
+/*---------cedSalesReport-------------------*/
+"Please provide range for order date" = "Please provide range for order date";
+
+/*--------cedPaymentListing--------------*/
+"Please provide range for amount" = "Please provide range for amount";
+"Download Complete" = "Download Complete";
+" Download Complete." = " Download Complete.";
+"Downloading..." = "Downloading...";
+"Required fields are blank" = "Required fields are blank";
+
+/*----cedCreateDeal-----*/
+"Enabled" = "Enabled";
+"Disabled" = "Disabled";
+"Expired" = "Expired";
+"-----Select-----" = "-----Select-----";
+"Please Select From date first" = "Please Select From date first";
+
+/*-------------cedDealListing-----------*/
+"Approved" = "Approved";
+"Disapproved" = "Disapproved";
+"Approval Pending" = "Approval Pending";
+
+/*------------cedDealProducts--------*/
+"Downloadable" = "Downloadable";
+"Updatedto Feild Required" = "Updatedto Feild Required";
+"UpdatedFrom Feild Required" = "UpdatedFrom Feild Required";
+"From Field  is less than To field" = "From Field  is less than To field";
+" Quote # " = " Quote # ";
+
+/*--------ced_Quote&AccountInformation_RFQ--------*/
+"Total Shipping Charges :" = "Total Shipping Charges :";
+"Shippment Method Selected:" = "Shippment Method Selected:";
+"NO Chat History" = "NO Chat History";
+"Chat History" = "Chat History";
+
+/*---------ced_ViewPo--------------*/
+"Problem in loading Data" = "Problem in loading Data";
+
+/*---------ced_CreatePoView--------*/
+"TEl: " = "TEl: ";
+"Submit Purchase Order" = "Submit Purchase Order";
+
+/*---------CatalogPriceRules-----------*/
+"Shopping Cart Price Rules" = "Shopping Cart Price Rules";
+"Active" = "Active";
+"Inactive" = "Inactive";
+"select status" = "select status";
+
+/*--------ced_RmaDetailsView-----------*/
+"Activity Information" = "Activity Information";
+"No Activity Notification" = "No Activity Notification";
+"Activity Notification" = "Activity Notification";
+"The file you have choosed is not in correct format" = "The file you have choosed is not in correct format";
+"FIELD REQUIRED" = "FIELD REQUIRED";
+"Error" = "Error";
+"Select" = "Select";
+"Cant Download Download in Process" = "Cant Download Download in Process";
+
+/*--------ced_AddCmsPageViewController----------*/
+"  Edit Cms Page" = "  Edit Cms Page";
+"Set As Vendor Home Page *" = "Set As Vendor Home Page *";
+"Status *" = "Status *";
+"No" = "No";
+"Yes" = "Yes";
+"Enable" = "Enable"
+"Disable" = "Disable";
+"Layout*" = "Layout*";
+
+/*-------ced_BlockCmsViewController-------*/
+"Continue" = "Continue";
+"Add Cms Page" = "Add Cms Page";
+"Add Cms Block" = "Add Cms Block";
+"Approved" = "Approved";
+"Pending" = "Pending";
+"Product Id" = "Product Id";
+"Last Modified" = "Last Modified";
+"Created" = "Created";
+"Product Title" = "Product Title";
+"Url Key" = "Url Key";
+"Product Status" = "Product Status";
+"Layout" = "Layout";
+"SELECT DATE" = "SELECT DATE";
+"Please Select the  limit of the date" = "Please Select the  limit of the date";
+
+/*--------Ced_ShippingMethodViewController-------*/
+"Save" = "Save";
+"SHIPPING METHOD" = "SHIPPING METHOD";
+
+/*--------ced_NewStoreViewController----------*/
+"Status*" = "Status*";
+"Country*" = "Country*";
+"--Select--" = "--Select--";
+"Store Basic Information" = "Store Basic Information";
+"Store View " = "Store View ";
+"Store Hour Information" = "Store Hour Information";
+"Hour of operation" = "Hour of operation"; 
+"Start" = "Start";
+"End" = "End";
+"Interval" = "Interval";
+"Get Location Longitude and Latitudes" = "Get Location Longitude and Latitudes";
+"Please select country." = "Please select country.";
+"All Fields are Required." = "All Fields are Required.";
+"Invalid Email." = "Invalid Email.";
+"Please enter correct Pin Code." = "Please enter correct Pin Code.";
+"Please enter correct Contact Number." = "Please enter correct Contact Number.";
+"Please enter correct Price." = "Please enter correct Price.";
+
+/*-------------ced_StoreViewController----------*/
+"Add New Store" = "Add New Store";
+
+/*------------ced_MsgContentViewController------------*/
+"Reply" = "Reply";
+
+/*------------ced_MessageViewController-------------*/
+"Email this message to Vendor" = "Email this message to Vendor";
+"Back" = "Back";
+"Send" = "Send";
+"Compose" = "Compose";
+"Inbox" = "Inbox";
+"Sent" = "Sent";
+"Description can't be Empty" = "Description can't be Empty";
+"Subject can't be Empty" = "Subject can't be Empty";
+"There are no messages for you by the admin." = "There are no messages for you by the admin.";
+"Sender's Mail" = "Sender's Mail";
+"There are no messages sent to you by the admin." = "There are no messages sent to you by the admin.";
+"Receiver Name" = "Receiver Name";
+
+/*-----------------cedVendorSelectAddProduct-----------*/
+"Select and Sell Products" = "Select and Sell Products";
+"Main Website" = "Main Website";
+"Default website" = "Default website";
+
+/*--------------cedVendorSelectProductList-----------*/
+"Select and Sell Product List" = "Select and Sell Product List";
+"Are you sure want to delete this product?" = "Are you sure want to delete this product?";
+"Alert" = "Alert";
+"Approved(Enabled)" = "Approved(Enabled)";
+"Approved(Disabled)" = "Approved(Disabled)";
+
+/*--------------cedSelectSellAssignProduct------------*/
+"Assign Product-" = "Assign Product-";
+"instock" = "instock";
+"InStock" = "InStock";
+"Out of Stock" = "Out of Stock";
+
+/*--------------ProfileStatusViewController-----------*/
+"Your Profile Is" = "Your Profile Is";
+"Profile Status" = "Profile Status";
+
+/*--------------EditProfileViewController------------*/
+"Edit Profile" = "Edit Profile";
+"Change Password :" = "Change Password :";
+"Current Password" = "Current Password";
+"New Password" = "New Password";
+"Representative" = "Representative";
+"Gender" = "Gender";
+"Male" = "Male";
+"Female" = "Female";
+"Company Name" = "Company Name";
+"About" = "About";
+"Company Logo" = "Company Logo";
+"Company Banner" = "Company Banner";
+"Company Address" = "Company Address";
+"Support Number" = "Support Number";
+"Support Email" = "Support Email";
+"Meta Keywords" = "Meta Keywords";
+"Meta Description" = "Meta Description";
+"Find Us On Facebook" = "Find Us On Facebook";
+"Find Us On Twitter" = "Find Us On Twitter";
+"Address" = "Address";
+"City" = "City";
+"Location" = "Location";
+"Please Select" = "Please Select";
+"Zip/Postal Code" = "Zip/Postal Code";
+"Complete Location" = "Complete Location";
+"Latitude" = "Latitude";
+"Longitude" = "Longitude";
+"Country" = "Country";
+"State" = "State";
+"Profile Updated Successfully." = "Profile Updated Successfully.";
+
+/*------------VendorProfileViewController---------*/
+"Vendor Profile" = "Vendor Profile";
+"   your badges" = "   your badges";
+"sales" = "sales";
+"Vendor Profile" = "Vendor Profile";
+"Hello," = "Hello,";
+"GENERAL INFORMATION" = "GENERAL INFORMATION";
+"Created At : " = "Created At : ";
+"Contact Number : " = "Contact Number : ";
+"Vendor Group : " = "Vendor Group : ";
+"Public Name : " = "Public Name : ";
+"Shop URL : " = "Shop URL : ";
+"Name : " = "Name : ";
+"Gender : " = "Gender : ";
+"Female" = "Female";
+"Male" = "Male";
+"Email : " = "Email : ";
+"Status : " = "Status : ";
+"City : " = "City : ";
+"Location : " = "Location : ";
+"Cin Number : " = "Cin Number : ";
+"Account Number : " = "Account Number : ";
+"Account Holder Name : " = "Account Holder Name : ";
+"Bank Name: " = "Bank Name: ";
+"Bank Branch: " = "Bank Branch: ";
+"ADDRESS INFORMATION" = "ADDRESS INFORMATION";
+"Zip/Postal Code : " = "Zip/Postal Code : ";
+"Address : " = "Address : ";
+"Country : " = "Country : ";
+"State : " = "State : ";
+"COMPANY INFORMATION" = "COMPANY INFORMATION";
+"Company Name : " = "Company Name : ";
+"Company Address : " = "Company Address : ";
+"Company Logo : " = "Company Logo : ";
+"Company Banner : " = "Company Banner : ";
+"About : " = "About : ";
+"SUPPORT INFORMATION" = "SUPPORT INFORMATION";
+"Support Number : " = "Support Number : ";
+"Support Email : " = "Support Email : ";
+"Facebook Id : " = "Facebook Id : ";
+"Twitter Id : " = "Twitter Id : ";
+"SEO INFORMATION" = "SEO INFORMATION";
+"Meta Keywords : " = "Meta Keywords : ";
+"Meta Description : " = "Meta Description : ";
+
+/*-----------ReportTimeSelectorViewController--------*/
+"ORDERS REPORT" = "ORDERS REPORT";
+"Period : " = "Period : ";
+"Vendor Payment Status : " = "Vendor Payment Status : ";
+"All" = "All";
+"Start Date : " = "Start Date : ";
+"End Date : " = "End Date : ";
+"Paid" = "Paid";
+"Please Select Date Range" = "Please Select Date Range";
+
+/*-----------ProductReportRangeViewController---------*/
+"Product Report" = "Product Report";
+
+/*-----------ced_viewOrdersReports--------------*/
+"Orders : " = "Orders : ";
+"Sales Items : " = "Sales Items : ";
+"Total Sales : " = "Total Sales : ";
+"Total Commission : " = "Total Commission : ";
+"Net Sales : " = "Net Sales : ";
+"Nothing Found" = "Nothing Found";
+"No Data Available" = "No Data Available";
+
+/*------------ced_viewProductReports---------*/
+"Product Reports" = "Product Reports";
+"Product : " = "Product : ";
+"SKU : " = "SKU : ";
+
+
+/*------------ced_addAttr---------*/
+"Properties" = "Properties";
+"Text Field" = "Text Field";
+"Text Area" = "Text Area";
+"Date" = "Date";
+"Yes/No" = "Yes/No";
+"Multiple Select" = "Multiple Select";
+"Dropdown" = "Dropdown";
+"Price" = "Price";
+"Media Image" = "Media Image";
+"All Product Types" = "All Product Types";
+"Selected Product Types" = "Selected Product Types";
+"Attribute Code Is Required." = "Attribute Code Is Required.";
+
+/*----------ced_frontendproperty----------*/
+"Frontend Properties" = "Frontend Properties";
+"Select Attribute Set" = "Select Attribute Set";
+
+/*----------ced_manageLabelsAttr------------*/
+"Manage Label/Options" = "Manage Label/Options";
+"You Can Have Only One DefaultValue." = "You Can Have Only One DefaultValue.";
+"Please Enter Some Text." = "Please Enter Some Text.";
+"You Can Have Only One DefaultValue." = "You Can Have Only One DefaultValue.";
+"Admin Label Is Required." = "Admin Label Is Required.";
+
+/*--------------ced_attrfilterView-----------*/
+"Use in layered navigation" = "Use in layered navigation";
+"Filterable(with results) = "Filterable(with results);
+"Filterable(no results)" = "Filterable(no results)";
+"Store View" = "Store View";
+"Website" = "Website";
+"Global" = "Global";
+
+/*--------------ced_maindrawertable-------------*/
+"Create Deals" = "Create Deals";
+"List Deals" = "List Deals";
+"Deals Setting" = "Deals Setting";
+"Out Of Stock Products" = "Out Of Stock Products";
+"Sold Products" = "Sold Products";
+"Product Views" = "Product Views";
+"Product Sales" = "Product Sales";
+"Payment Report" = "Payment Report";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

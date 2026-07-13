@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToggleWrapperView" customModule="Sell_on_Pushmycart" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="QTu-is-o1g">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bw-SS-Svv">
+                    <rect key="frame" x="0.0" y="0.0" width="401" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8Bw-SS-Svv" secondAttribute="trailing" id="3MW-Gm-FdL"/>
+                <constraint firstItem="8Bw-SS-Svv" firstAttribute="top" secondItem="QTu-is-o1g" secondAttribute="top" id="4Wf-G7-ClG"/>
+                <constraint firstItem="8Bw-SS-Svv" firstAttribute="leading" secondItem="QTu-is-o1g" secondAttribute="leading" id="LoR-qt-kn4"/>
+                <constraint firstAttribute="bottom" secondItem="8Bw-SS-Svv" secondAttribute="bottom" id="jtr-6P-Jfs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="284.5" y="153"/>
+        </view>
+    </objects>
+</document>

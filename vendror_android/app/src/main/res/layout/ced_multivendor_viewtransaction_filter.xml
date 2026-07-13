@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@color/white"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="6.0">
+
+                    <TextView
+                        android:id="@+id/MultiVendor_createdAt_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:text="@string/CreatedAt"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_fromdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:editable="false"
+                        android:hint="@string/from"
+                        android:padding="@dimen/pad_5dp"
+
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_todate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:editable="false"
+                        android:hint="@string/to"
+                        android:padding="@dimen/pad_5dp"
+
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="6.0">
+
+                    <TextView
+                        android:id="@+id/MultiVendor_payment_mode_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:text="@string/PaymentMode"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_payment_modes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="4.0"
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="6.0">
+
+                    <TextView
+                        android:id="@+id/MultiVendor_TransactionId_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:text="@string/TransactionId"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_TransactionId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="4.0"
+                        android:background="@drawable/editext_border"
+                        android:padding="@dimen/pad_5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="6.0">
+
+                    <TextView
+                        android:id="@+id/MultiVendor_Amount_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:text="@string/Amount"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_Amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:hint="@string/from"
+                        android:inputType="number"
+                        android:padding="@dimen/pad_5dp" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_to_Amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:hint="@string/to"
+                        android:inputType="number"
+                        android:padding="@dimen/pad_5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="6.0">
+
+                    <TextView
+                        android:id="@+id/MultiVendor_AdjustmentAmount_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:text="@string/AdjustmentAmount"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_AdjustmentAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:hint="@string/from"
+                        android:inputType="number"
+                        android:padding="@dimen/pad_5dp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_to_AdjustmentAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:hint="@string/to"
+                        android:inputType="number"
+                        android:padding="@dimen/pad_5dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="@color/black"
+                    android:weightSum="6.0">
+
+                    <TextView
+                        android:id="@+id/MultiVendor_NetAmount_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:text="@string/NetAmount"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_from_NetAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:hint="@string/from"
+                        android:inputType="number"
+                        android:padding="@dimen/pad_5dp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/MultiVendor_to_NetAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/editext_border"
+                        android:hint="@string/to"
+                        android:inputType="number"
+                        android:padding="@dimen/pad_5dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pad_2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4.0">
+
+                    <Button
+                        android:id="@+id/MultiVendor_filter"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/button_style"
+                        android:text="@string/Filter"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/MultiVendor_reset_filter"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_margin="@dimen/pad_2dp"
+                        android:layout_weight="2.0"
+                        android:background="@drawable/corner"
+                        android:text="@string/Reset_filter"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

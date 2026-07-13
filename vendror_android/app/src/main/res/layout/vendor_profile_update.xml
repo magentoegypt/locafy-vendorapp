@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/edit_profile_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/white"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/MultiVendor_vendorprofileedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:id="@+id/MultiVendor_profileimage"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/editprofileimage">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/MultiVendor_profileimage"
+                        android:layout_toRightOf="@+id/MultiVendor_profileimage"
+                        android:text="@string/EditProfileInformation"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/MultiVendor_save"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/button_save_style"
+                        android:gravity="center"
+                        android:text="@string/save"
+                        android:textColor="@color/primary_material_light"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/MultiVendor_linebelowvendortag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/MultiVendor_vendorprofileedit"
+                    android:background="@color/ebebebe"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/profilefields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_linebelowvendortag"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profilefields"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/change_password_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/secondary_color"
+                        android:text="@string/changepass"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:theme="@style/WhiteCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/change_password_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/pad_5dp"
+                            android:text="@string/currentpasstag"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/current_pass"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:background="@drawable/editext_border"
+                                android:inputType="textWebPassword|textPassword"
+                                android:padding="@dimen/pad_5dp"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+
+                            <ImageView
+                                android:id="@+id/maskcurrent_pass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/_7sdp"
+                                android:backgroundTint="@color/AppTheme"
+                                android:src="@drawable/hide_eye"
+                                android:visibility="visible"
+                                app:tint="@color/AppTheme" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/pad_5dp"
+                            android:text="@string/newpasstag"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/new_pass"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:background="@drawable/editext_border"
+                                android:inputType="textWebPassword|textPassword"
+                                android:padding="@dimen/pad_5dp"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+
+                            <ImageView
+                                android:id="@+id/masknew_pass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/_7sdp"
+                                android:backgroundTint="@color/AppTheme"
+                                android:src="@drawable/hide_eye"
+                                android:visibility="visible"
+                                app:tint="@color/AppTheme" />
+
+                        </FrameLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/pad_5dp"
+                            android:text="@string/confirmPassword"
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/confirm_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:background="@drawable/editext_border"
+                                android:inputType="textWebPassword|textPassword"
+                                android:padding="@dimen/pad_5dp"
+                                android:textColor="@color/black"
+                                android:textSize="11sp" />
+
+                            <ImageView
+                                android:id="@+id/maskconfirm_password"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/_7sdp"
+                                android:backgroundTint="@color/AppTheme"
+                                android:src="@drawable/hide_eye"
+                                android:visibility="visible"
+                                app:tint="@color/AppTheme" />
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/strenth_lyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:indeterminate="false"
+                            android:maxHeight="20dip"
+                            android:minHeight="20dip"
+                            android:progress="0" />
+
+                        <TextView
+                            android:id="@+id/password_strength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Weak" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/login_instructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/your_password_must_be_at_least_8_characters_with_at_least_1_number_and_1_special_character"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</ScrollView>

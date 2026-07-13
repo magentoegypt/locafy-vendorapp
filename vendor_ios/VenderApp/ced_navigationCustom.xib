@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ced_NavView" customModule="ZeoMarket_Hub" customModuleProvider="target">
+            <connections>
+                <outlet property="Logout" destination="Zbj-vN-dGx" id="115-n7-pUN"/>
+                <outlet property="hampMenu" destination="7a0-Vf-8hv" id="jdR-Zx-D9X"/>
+                <outlet property="profile" destination="gti-J4-wi5" id="SAg-gU-8pU"/>
+                <outlet property="showNotification" destination="Hzb-NM-ewg" id="e2A-d0-DwG"/>
+                <outlet property="titleView" destination="yyM-Kq-ofr" id="KL4-Y3-cR3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="yyM-Kq-ofr">
+                    <rect key="frame" x="42" y="0.0" width="431" height="40"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzb-NM-ewg" customClass="MKButton" customModule="ZeoMarket_Hub" customModuleProvider="target">
+                    <rect key="frame" x="475" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="cYZ-jz-eG8"/>
+                    </constraints>
+                    <state key="normal" image="ic_action_name"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbj-vN-dGx" customClass="MKButton" customModule="ZeoMarket_Hub" customModuleProvider="target">
+                    <rect key="frame" x="560" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="mIr-ht-Qkc"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="logout-64">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gti-J4-wi5" customClass="MKButton" customModule="ZeoMarket_Hub" customModuleProvider="target">
+                    <rect key="frame" x="518" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="pdZ-Kn-Ovt"/>
+                    </constraints>
+                    <state key="normal" image="profilemenuicon"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a0-Vf-8hv" customClass="MKButton" customModule="ZeoMarket_Hub" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Lfh-R9-c2F"/>
+                    </constraints>
+                    <state key="normal" image="ham_menu-1"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="rippleEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="backgroundAnimationEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="7a0-Vf-8hv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7Sg-z5-XZA"/>
+                <constraint firstAttribute="bottom" secondItem="Zbj-vN-dGx" secondAttribute="bottom" constant="10" id="ACq-5J-dbC"/>
+                <constraint firstItem="7a0-Vf-8hv" firstAttribute="bottom" secondItem="yyM-Kq-ofr" secondAttribute="bottom" id="BvO-qM-0Z2"/>
+                <constraint firstAttribute="trailing" secondItem="Zbj-vN-dGx" secondAttribute="trailing" id="F4m-UX-chm"/>
+                <constraint firstItem="yyM-Kq-ofr" firstAttribute="top" secondItem="Hzb-NM-ewg" secondAttribute="top" id="HHh-F4-4Vg"/>
+                <constraint firstItem="gti-J4-wi5" firstAttribute="leading" secondItem="Hzb-NM-ewg" secondAttribute="trailing" constant="3" id="J3F-ZI-rwm"/>
+                <constraint firstItem="gti-J4-wi5" firstAttribute="firstBaseline" secondItem="Hzb-NM-ewg" secondAttribute="firstBaseline" id="KCQ-or-eKK"/>
+                <constraint firstItem="7a0-Vf-8hv" firstAttribute="top" secondItem="yyM-Kq-ofr" secondAttribute="top" id="P47-dD-iMg"/>
+                <constraint firstItem="gti-J4-wi5" firstAttribute="top" secondItem="Hzb-NM-ewg" secondAttribute="top" id="Q9T-7y-eIH"/>
+                <constraint firstItem="Zbj-vN-dGx" firstAttribute="top" secondItem="gti-J4-wi5" secondAttribute="top" id="QcP-NW-XE2"/>
+                <constraint firstItem="Hzb-NM-ewg" firstAttribute="leading" secondItem="yyM-Kq-ofr" secondAttribute="trailing" constant="2" id="cdT-tS-KGM"/>
+                <constraint firstItem="Zbj-vN-dGx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dGR-Dd-PF1"/>
+                <constraint firstItem="Hzb-NM-ewg" firstAttribute="bottom" secondItem="yyM-Kq-ofr" secondAttribute="bottom" id="f9R-rz-0Gd"/>
+                <constraint firstItem="gti-J4-wi5" firstAttribute="baseline" secondItem="Hzb-NM-ewg" secondAttribute="baseline" id="iXL-ro-dnl"/>
+                <constraint firstItem="Zbj-vN-dGx" firstAttribute="leading" secondItem="gti-J4-wi5" secondAttribute="trailing" constant="2" id="rjM-Vw-roV"/>
+                <constraint firstItem="gti-J4-wi5" firstAttribute="bottom" secondItem="Zbj-vN-dGx" secondAttribute="bottom" id="suX-dS-gKh"/>
+                <constraint firstItem="yyM-Kq-ofr" firstAttribute="leading" secondItem="7a0-Vf-8hv" secondAttribute="trailing" constant="2" id="vhG-ii-s7L"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="227" y="246"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ham_menu-1" width="25" height="25"/>
+        <image name="ic_action_name" width="48" height="48"/>
+        <image name="logout-64" width="32" height="32"/>
+        <image name="profilemenuicon" width="48" height="48"/>
+    </resources>
+</document>

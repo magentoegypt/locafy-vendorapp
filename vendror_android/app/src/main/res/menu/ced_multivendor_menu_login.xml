@@ -1,0 +1,56 @@
+<!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl">
+
+    <item
+        android:id="@+id/MultiVendor_notification"
+        android:actionLayout="@layout/ced_multivendor_feed_update_count"
+        android:orderInCategory="1"
+        android:title="@string/noti"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/MultiVendor_profile"
+        android:visible="false"
+        android:actionLayout="@layout/ced_multivendor_profilestatus"
+        android:orderInCategory="2"
+        android:title="@string/profile"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/MultiVendor_action_signout"
+        android:orderInCategory="100"
+        android:icon="@drawable/logout"
+        android:title="@string/SignOut"
+        app:showAsAction="always" />
+
+    <!-- <item
+         android:id="@+id/MultiVendor_action_search"
+         android:title="@string/action_search"
+         android:orderInCategory="1"
+         android:icon="@drawable/search"
+         app:showAsAction="always" />-->
+</menu>

@@ -1,0 +1,981 @@
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "0e2-le-us2"; */
+"0e2-le-us2.text" = "Status";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "0qa-bO-Onr"; */
+"0qa-bO-Onr.text" = "Amount";
+
+/* Class = "UILabel"; text = " Label"; ObjectID = "0sx-eo-MM4"; */
+"0sx-eo-MM4.text" = " Label";
+
+/* Class = "UILabel"; text = " Product SKU"; ObjectID = "0zA-vE-SMR"; */
+"0zA-vE-SMR.text" = " Product SKU";
+
+/* Class = "UILabel"; text = " Order #"; ObjectID = "10e-zI-fVh"; */
+"10e-zI-fVh.text" = " Order #";
+
+/* Class = "UILabel"; text = " Email"; ObjectID = "1IF-8E-cN9"; */
+"1IF-8E-cN9.text" = " Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1i7-Mc-hO5"; */
+"1i7-Mc-hO5.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1kw-kr-1GI"; */
+"1kw-kr-1GI.text" = "Label";
+
+/* Class = "UILabel"; text = "Order Date"; ObjectID = "1qv-WW-rDg"; */
+"1qv-WW-rDg.text" = "Order Date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2TQ-9G-oEJ"; */
+"2TQ-9G-oEJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Billing Name"; ObjectID = "2bU-8R-rA2"; */
+"2bU-8R-rA2.text" = "Billing Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2kw-F2-20o"; */
+"2kw-F2-20o.text" = "Label";
+
+/* Class = "UIViewController"; title = "Invoice View"; ObjectID = "36W-kG-tlm"; */
+"36W-kG-tlm.title" = "Invoice View";
+
+/* Class = "UILabel"; text = " Customer Group"; ObjectID = "3DQ-K9-g3l"; */
+"3DQ-K9-g3l.text" = " Customer Group";
+
+/* Class = "UILabel"; text = " Order Status "; ObjectID = "3EJ-dm-L2M"; */
+"3EJ-dm-L2M.text" = " Order Status ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3a5-7h-ltc"; */
+"3a5-7h-ltc.text" = "Label";
+
+/* Class = "UILabel"; text = " Order Information"; ObjectID = "3kS-h6-uD3"; */
+"3kS-h6-uD3.text" = " Order Information";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3kb-JK-jDu"; */
+"3kb-JK-jDu.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3rN-ap-2j6"; */
+"3rN-ap-2j6.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = " SKU"; ObjectID = "3xG-OU-5Bq"; */
+"3xG-OU-5Bq.text" = " SKU";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "41u-v3-e9A"; */
+"41u-v3-e9A.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4Zc-wn-ibl"; */
+"4Zc-wn-ibl.text" = "Label";
+
+/* Class = "UILabel"; text = " Order Date"; ObjectID = "4eH-H1-cjn"; */
+"4eH-H1-cjn.text" = " Order Date";
+
+/* Class = "UILabel"; text = " ORDER INFORMATION"; ObjectID = "55f-OF-EnE"; */
+"55f-OF-EnE.text" = " ORDER INFORMATION";
+
+/* Class = "UILabel"; text = " User Notified"; ObjectID = "5NK-2c-nIq"; */
+"5NK-2c-nIq.text" = " User Notified";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "5Qk-hM-sjC"; */
+"5Qk-hM-sjC.text" = "Email";
+
+/* Class = "UILabel"; text = " Discount"; ObjectID = "5rU-Ne-CxL"; */
+"5rU-Ne-CxL.text" = " Discount";
+
+/* Class = "UILabel"; text = " Price"; ObjectID = "6LD-Fw-1tM"; */
+"6LD-Fw-1tM.text" = " Price";
+
+/* Class = "UILabel"; text = "Tax Amount"; ObjectID = "6Rq-Kw-5g3"; */
+"6Rq-Kw-5g3.text" = "Tax Amount";
+
+/* Class = "UILabel"; text = " Customer Group"; ObjectID = "6x9-dP-xy8"; */
+"6x9-dP-xy8.text" = " Customer Group";
+
+/* Class = "UILabel"; text = " Email"; ObjectID = "6xC-CT-LDF"; */
+"6xC-CT-LDF.text" = " Email";
+
+/* Class = "UILabel"; text = "Invoice List"; ObjectID = "79z-yJ-tKA"; */
+"79z-yJ-tKA.text" = "Invoice List";
+
+/* Class = "UILabel"; text = "Customer Name"; ObjectID = "7Jk-Kx-PWX"; */
+"7Jk-Kx-PWX.text" = "Customer Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7LR-vv-VTa"; */
+"7LR-vv-VTa.text" = "Label";
+
+/* Class = "UILabel"; text = "Date Shipped"; ObjectID = "7Lf-Mk-lWl"; */
+"7Lf-Mk-lWl.text" = "Date Shipped";
+
+/* Class = "UILabel"; text = " Original Price"; ObjectID = "7WG-wX-Qye"; */
+"7WG-wX-Qye.text" = " Original Price";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7ab-cm-8eD"; */
+"7ab-cm-8eD.text" = "Label";
+
+/* Class = "UILabel"; text = " Order Date"; ObjectID = "7ac-cx-2s4"; */
+"7ac-cx-2s4.text" = " Order Date";
+
+/* Class = "UILabel"; text = " Customer Name"; ObjectID = "7tC-jq-C0O"; */
+"7tC-jq-C0O.text" = " Customer Name";
+
+/* Class = "UILabel"; text = "Comment Date"; ObjectID = "7vA-h5-bfA"; */
+"7vA-h5-bfA.text" = "Comment Date";
+
+/* Class = "UILabel"; text = " Comment Date"; ObjectID = "8XK-Im-SpY"; */
+"8XK-Im-SpY.text" = " Comment Date";
+
+/* Class = "UILabel"; text = "Customer Name"; ObjectID = "8aN-gu-aUj"; */
+"8aN-gu-aUj.text" = "Customer Name";
+
+/* Class = "UILabel"; text = " Discount Amount"; ObjectID = "8jS-bQ-LDt"; */
+"8jS-bQ-LDt.text" = " Discount Amount";
+
+/* Class = "UILabel"; text = "Order Date"; ObjectID = "8ke-uq-XvD"; */
+"8ke-uq-XvD.text" = "Order Date";
+
+/* Class = "UILabel"; text = " Price"; ObjectID = "8sJ-Up-iz8"; */
+"8sJ-Up-iz8.text" = " Price";
+
+/* Class = "UILabel"; text = "Cash On Delivery"; ObjectID = "9M3-bc-6j3"; */
+"9M3-bc-6j3.text" = "Cash On Delivery";
+
+/* Class = "UILabel"; text = " IGST"; ObjectID = "9db-IB-Mye"; */
+"9db-IB-Mye.text" = " IGST";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9hD-Fi-jsx"; */
+"9hD-Fi-jsx.text" = "Label";
+
+/* Class = "UILabel"; text = " SubTotal"; ObjectID = "9n1-zA-Pvf"; */
+"9n1-zA-Pvf.text" = " SubTotal";
+
+/* Class = "UILabel"; text = " Order Date"; ObjectID = "9n8-ea-b8E"; */
+"9n8-ea-b8E.text" = " Order Date";
+
+/* Class = "UILabel"; text = "Add Comments"; ObjectID = "9r6-He-bsR"; */
+"9r6-He-bsR.text" = "Add Comments";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9rP-2a-fUe"; */
+"9rP-2a-fUe.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Append Comments"; ObjectID = "AE7-aA-O3d"; */
+"AE7-aA-O3d.normalTitle" = "Append Comments";
+
+/* Class = "UIButton"; normalTitle = "Return To Stock"; ObjectID = "AFD-DP-3uD"; */
+"AFD-DP-3uD.normalTitle" = "Return To Stock";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AxT-lQ-gaE"; */
+"AxT-lQ-gaE.text" = "Label";
+
+/* Class = "UILabel"; text = " Comment"; ObjectID = "Axc-N9-V8H"; */
+"Axc-N9-V8H.text" = " Comment";
+
+/* Class = "UILabel"; text = " Shipping & Handling"; ObjectID = "Az3-Le-jcW"; */
+"Az3-Le-jcW.text" = " Shipping & Handling";
+
+/* Class = "UILabel"; text = " ACCOUNT INFORMATION"; ObjectID = "Azd-rI-m7w"; */
+"Azd-rI-m7w.text" = " ACCOUNT INFORMATION";
+
+/* Class = "UILabel"; text = " Account Information"; ObjectID = "BC8-cF-viC"; */
+"BC8-cF-viC.text" = " Account Information";
+
+/* Class = "UILabel"; text = "Shipment Date"; ObjectID = "BCm-Wd-kRA"; */
+"BCm-Wd-kRA.text" = "Shipment Date";
+
+/* Class = "UILabel"; text = " Quantity to Refund"; ObjectID = "BNm-D2-WOk"; */
+"BNm-D2-WOk.text" = " Quantity to Refund";
+
+/* Class = "UILabel"; text = "Credit Memo Date"; ObjectID = "BVI-o9-tDw"; */
+"BVI-o9-tDw.text" = "Credit Memo Date";
+
+/* Class = "UIButton"; normalTitle = "Notify Customer by Email"; ObjectID = "BWD-EF-Tz1"; */
+"BWD-EF-Tz1.normalTitle" = "Notify Customer by Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BcH-ck-CNO"; */
+"BcH-ck-CNO.text" = "Label";
+
+/* Class = "UILabel"; text = " Comment"; ObjectID = "Bca-Xm-KXe"; */
+"Bca-Xm-KXe.text" = " Comment";
+
+/* Class = "UILabel"; text = " Ordered Quantity"; ObjectID = "CBq-sF-de1"; */
+"CBq-sF-de1.text" = " Ordered Quantity";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CDO-wA-eqa"; */
+"CDO-wA-eqa.text" = "Label";
+
+/* Class = "UILabel"; text = " Adjustment Refund"; ObjectID = "Cfo-DX-ZtU"; */
+"Cfo-DX-ZtU.text" = " Adjustment Refund";
+
+/* Class = "UILabel"; text = "Created At"; ObjectID = "Cht-5T-UGT"; */
+"Cht-5T-UGT.text" = "Created At";
+
+/* Class = "UILabel"; text = " Commission Fee"; ObjectID = "Cze-iC-kgO"; */
+"Cze-iC-kgO.text" = " Commission Fee";
+
+/* Class = "UILabel"; text = " IGST"; ObjectID = "D0B-Xh-Rgo"; */
+"D0B-Xh-Rgo.text" = " IGST";
+
+/* Class = "UIButton"; normalTitle = "Email Copy of Invoice"; ObjectID = "D2r-hV-KBl"; */
+"D2r-hV-KBl.normalTitle" = "Email Copy of Invoice";
+
+/* Class = "UILabel"; text = "Credit Memo List "; ObjectID = "DRA-nG-DYn"; */
+"DRA-nG-DYn.text" = "Credit Memo List ";
+
+/* Class = "UILabel"; text = " SGST"; ObjectID = "DaK-5y-Uex"; */
+"DaK-5y-Uex.text" = " SGST";
+
+/* Class = "UILabel"; text = " Order Date"; ObjectID = "DkB-lC-hei"; */
+"DkB-lC-hei.text" = " Order Date";
+
+/* Class = "UIButton"; normalTitle = "Create Shipment "; ObjectID = "DkN-9q-b6u"; */
+"DkN-9q-b6u.normalTitle" = "Create Shipment ";
+
+/* Class = "UILabel"; text = "Number"; ObjectID = "Dkb-w1-cFY"; */
+"Dkb-w1-cFY.text" = "Number";
+
+/* Class = "UIButton"; normalTitle = "Append Comments"; ObjectID = "DxB-o5-nZK"; */
+"DxB-o5-nZK.normalTitle" = "Append Comments";
+
+/* Class = "UILabel"; text = " STGST"; ObjectID = "Dy3-Vn-Dtf"; */
+"Dy3-Vn-Dtf.text" = " STGST";
+
+/* Class = "UILabel"; text = "Cash On Delivery"; ObjectID = "E1W-Yf-9vV"; */
+"E1W-Yf-9vV.text" = "Cash On Delivery";
+
+/* Class = "UILabel"; text = "Number"; ObjectID = "E52-V1-wN4"; */
+"E52-V1-wN4.text" = "Number";
+
+/* Class = "UILabel"; text = "Order Date"; ObjectID = "ELL-pg-yVQ"; */
+"ELL-pg-yVQ.text" = "Order Date";
+
+/* Class = "UILabel"; text = "Comment"; ObjectID = "Ecw-1D-GWe"; */
+"Ecw-1D-GWe.text" = "Comment";
+
+/* Class = "UILabel"; text = " Discount Amount"; ObjectID = "EgE-Qg-AI0"; */
+"EgE-Qg-AI0.text" = " Discount Amount";
+
+/* Class = "UILabel"; text = " ORDER INFORMATION"; ObjectID = "Exj-no-WV7"; */
+"Exj-no-WV7.text" = " ORDER INFORMATION";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FIC-Zy-RlM"; */
+"FIC-Zy-RlM.text" = "Label";
+
+/* Class = "UILabel"; text = " Discount Amount"; ObjectID = "FJO-ap-cus"; */
+"FJO-ap-cus.text" = " Discount Amount";
+
+/* Class = "UILabel"; text = "Subtotal"; ObjectID = "FJo-a3-8Zm"; */
+"FJo-a3-8Zm.text" = "Subtotal";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "FVK-uf-S5J"; */
+"FVK-uf-S5J.normalTitle" = "Save";
+
+/* Class = "UIViewController"; title = "Add Comments"; ObjectID = "FXL-cX-Ue4"; */
+"FXL-cX-Ue4.title" = "Add Comments";
+
+/* Class = "UILabel"; text = " Customer Name"; ObjectID = "Fgc-qJ-q9i"; */
+"Fgc-qJ-q9i.text" = " Customer Name";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "Fyc-2B-gtq"; */
+"Fyc-2B-gtq.text" = "Price";
+
+/* Class = "UILabel"; text = "Invoice Date"; ObjectID = "GRg-qX-AlB"; */
+"GRg-qX-AlB.text" = "Invoice Date";
+
+/* Class = "UILabel"; text = " SGST"; ObjectID = "GbB-r0-GSQ"; */
+"GbB-r0-GSQ.text" = " SGST";
+
+/* Class = "UILabel"; text = "Purchased From"; ObjectID = "H2y-vK-5AG"; */
+"H2y-vK-5AG.text" = "Purchased From";
+
+/* Class = "UILabel"; text = "Order Tax"; ObjectID = "HX5-i5-zqe"; */
+"HX5-i5-zqe.text" = "Order Tax";
+
+/* Class = "UILabel"; text = " Tax Amount"; ObjectID = "Hgj-0I-00W"; */
+"Hgj-0I-00W.text" = " Tax Amount";
+
+/* Class = "UILabel"; text = " Discount Amount"; ObjectID = "Hub-Ve-1Uv"; */
+"Hub-Ve-1Uv.text" = " Discount Amount";
+
+/* Class = "UILabel"; text = " SubTotal"; ObjectID = "I03-5x-tN7"; */
+"I03-5x-tN7.text" = " SubTotal";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "I8y-Lg-25t"; */
+"I8y-Lg-25t.text" = "Label";
+
+/* Class = "UILabel"; text = "SKU"; ObjectID = "IIU-3V-Qqr"; */
+"IIU-3V-Qqr.text" = "SKU";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IiG-GF-ItS"; */
+"IiG-GF-ItS.text" = "Label";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "Ixt-yr-D6f"; */
+"Ixt-yr-D6f.text" = "Qty";
+
+/* Class = "UILabel"; text = " Adjustment Fee"; ObjectID = "J6o-mp-nqw"; */
+"J6o-mp-nqw.text" = " Adjustment Fee";
+
+/* Class = "UILabel"; text = "Order Date"; ObjectID = "J8w-F3-UVO"; */
+"J8w-F3-UVO.text" = "Order Date";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "JCg-lx-ERz"; */
+"JCg-lx-ERz.text" = "Product";
+
+/* Class = "UILabel"; text = " Order Information"; ObjectID = "JDT-8X-qJe"; */
+"JDT-8X-qJe.text" = " Order Information";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JQi-of-8Rc"; */
+"JQi-of-8Rc.text" = "Label";
+
+/* Class = "UILabel"; text = " Status"; ObjectID = "JbM-0z-F2R"; */
+"JbM-0z-F2R.text" = " Status";
+
+/* Class = "UILabel"; text = " Purchased From"; ObjectID = "Jjy-bP-dWX"; */
+"Jjy-bP-dWX.text" = " Purchased From";
+
+/* Class = "UILabel"; text = " Product"; ObjectID = "JrM-wo-xoh"; */
+"JrM-wo-xoh.text" = " Product";
+
+/* Class = "UILabel"; text = "Purchased From"; ObjectID = "Juv-Lh-fbD"; */
+"Juv-Lh-fbD.text" = "Purchased From";
+
+/* Class = "UIViewController"; title = "Credit Memo View"; ObjectID = "KTU-94-kE2"; */
+"KTU-94-kE2.title" = "Credit Memo View";
+
+/* Class = "UILabel"; text = " Quantity"; ObjectID = "Km0-KG-EVy"; */
+"Km0-KG-EVy.text" = " Quantity";
+
+/* Class = "UILabel"; text = "Total Qty"; ObjectID = "KqX-OO-tww"; */
+"KqX-OO-tww.text" = "Total Qty";
+
+/* Class = "UILabel"; text = "Adjustment Fee"; ObjectID = "L0v-Uc-31R"; */
+"L0v-Uc-31R.text" = "Adjustment Fee";
+
+/* Class = "UILabel"; text = " Product"; ObjectID = "LH6-M3-2Ag"; */
+"LH6-M3-2Ag.text" = " Product";
+
+/* Class = "UIViewController"; title = "Shipment View"; ObjectID = "LTC-hp-E6a"; */
+"LTC-hp-E6a.title" = "Shipment View";
+
+/* Class = "UILabel"; text = "Billing Name"; ObjectID = "Lev-ip-fG4"; */
+"Lev-ip-fG4.text" = "Billing Name";
+
+/* Class = "UILabel"; text = " Customer Group"; ObjectID = "LhA-fk-nwn"; */
+"LhA-fk-nwn.text" = " Customer Group";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M3p-fw-QU1"; */
+"M3p-fw-QU1.text" = "Label";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "MH4-eB-O00"; */
+"MH4-eB-O00.text" = "Email";
+
+/* Class = "UILabel"; text = " IGST"; ObjectID = "MQq-Gi-cd9"; */
+"MQq-Gi-cd9.text" = " IGST";
+
+/* Class = "UILabel"; text = " Tax Amount"; ObjectID = "MYK-xP-HnH"; */
+"MYK-xP-HnH.text" = " Tax Amount";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "MhL-eD-Bb2"; */
+"MhL-eD-Bb2.text" = "Title";
+
+/* Class = "UILabel"; text = "Customer Group"; ObjectID = "NRZ-MT-MPM"; */
+"NRZ-MT-MPM.text" = "Customer Group";
+
+/* Class = "UILabel"; text = " Price"; ObjectID = "NWv-HS-obD"; */
+"NWv-HS-obD.text" = " Price";
+
+/* Class = "UIButton"; normalTitle = "Email Copy of Invoice"; ObjectID = "NZt-ew-9Gw"; */
+"NZt-ew-9Gw.normalTitle" = "Email Copy of Invoice";
+
+/* Class = "UILabel"; text = " Purchased From"; ObjectID = "OEk-tb-vTk"; */
+"OEk-tb-vTk.text" = " Purchased From";
+
+/* Class = "UIButton"; normalTitle = "Add Tracking Number"; ObjectID = "OOh-bd-PEV"; */
+"OOh-bd-PEV.normalTitle" = "Add Tracking Number";
+
+/* Class = "UILabel"; text = "Customer Group"; ObjectID = "ORC-Ty-Dzt"; */
+"ORC-Ty-Dzt.text" = "Customer Group";
+
+/* Class = "UILabel"; text = "Shipping Information"; ObjectID = "OTL-N1-ySk"; */
+"OTL-N1-ySk.text" = "Shipping Information";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OmR-KS-1uj"; */
+"OmR-KS-1uj.text" = "Label";
+
+/* Class = "UILabel"; text = "Account Information"; ObjectID = "Ov9-fS-gcy"; */
+"Ov9-fS-gcy.text" = "Account Information";
+
+/* Class = "UILabel"; text = "Invoice List"; ObjectID = "PI1-66-9ZR"; */
+"PI1-66-9ZR.text" = "Invoice List";
+
+/* Class = "UILabel"; text = "Qty"; ObjectID = "POW-VG-geF"; */
+"POW-VG-geF.text" = "Qty";
+
+/* Class = "UILabel"; text = "Carrier"; ObjectID = "Pog-co-TFl"; */
+"Pog-co-TFl.text" = "Carrier";
+
+/* Class = "UILabel"; text = " Shipping & Handling"; ObjectID = "QJL-52-tIJ"; */
+"QJL-52-tIJ.text" = " Shipping & Handling";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QJi-GL-Hf0"; */
+"QJi-GL-Hf0.text" = "Label";
+
+/* Class = "UILabel"; text = "Carrier"; ObjectID = "QUi-KM-RAS"; */
+"QUi-KM-RAS.text" = "Carrier";
+
+/* Class = "UILabel"; text = " Qty"; ObjectID = "QbD-Ll-r2K"; */
+"QbD-Ll-r2K.text" = " Qty";
+
+/* Class = "UILabel"; text = " Subtotal"; ObjectID = "Qca-0J-yDj"; */
+"Qca-0J-yDj.text" = " Subtotal";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Qjq-dj-TEx"; */
+"Qjq-dj-TEx.text" = "Label";
+
+/* Class = "UILabel"; text = "Comment"; ObjectID = "Qot-Jc-OSn"; */
+"Qot-Jc-OSn.text" = "Comment";
+
+/* Class = "UIViewController"; title = "Credit Memo List"; ObjectID = "QvM-3d-eWM"; */
+"QvM-3d-eWM.title" = "Credit Memo List";
+
+/* Class = "UILabel"; text = "Discount Amount"; ObjectID = "RMH-Bp-Pu4"; */
+"RMH-Bp-Pu4.text" = "Discount Amount";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RRw-ph-BSw"; */
+"RRw-ph-BSw.text" = "Label";
+
+/* Class = "UILabel"; text = " Tax Percentage"; ObjectID = "RT9-uV-RgT"; */
+"RT9-uV-RgT.text" = " Tax Percentage";
+
+/* Class = "UILabel"; text = "Cash On Delivery"; ObjectID = "RcC-bG-xdw"; */
+"RcC-bG-xdw.text" = "Cash On Delivery";
+
+/* Class = "UILabel"; text = " Customer Name"; ObjectID = "Rkc-WB-kDE"; */
+"Rkc-WB-kDE.text" = " Customer Name";
+
+/* Class = "UILabel"; text = " Product SKU"; ObjectID = "RoE-rn-KBY"; */
+"RoE-rn-KBY.text" = " Product SKU";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "S2C-gT-0eC"; */
+"S2C-gT-0eC.text" = "Label";
+
+/* Class = "UILabel"; text = " Order Information"; ObjectID = "So7-aF-hGX"; */
+"So7-aF-hGX.text" = " Order Information";
+
+/* Class = "UIButton"; normalTitle = "Append Comments"; ObjectID = "Spm-6q-fTD"; */
+"Spm-6q-fTD.normalTitle" = "Append Comments";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T4p-Ch-T9w"; */
+"T4p-Ch-T9w.text" = "Label";
+
+/* Class = "UILabel"; text = "Cash On Delivery"; ObjectID = "TB6-MP-uB4"; */
+"TB6-MP-uB4.text" = "Cash On Delivery";
+
+/* Class = "UILabel"; text = "Ship Qty"; ObjectID = "THr-6S-O97"; */
+"THr-6S-O97.text" = "Ship Qty";
+
+/* Class = "UILabel"; text = " Row Total"; ObjectID = "TIP-BI-H2F"; */
+"TIP-BI-H2F.text" = " Row Total";
+
+/* Class = "UILabel"; text = "Customer Name"; ObjectID = "Tn5-MD-afr"; */
+"Tn5-MD-afr.text" = "Customer Name";
+
+/* Class = "UILabel"; text = "Refunded"; ObjectID = "TzJ-Ri-TMt"; */
+"TzJ-Ri-TMt.text" = "Refunded";
+
+/* Class = "UILabel"; text = " Label"; ObjectID = "UFz-Tt-u39"; */
+"UFz-Tt-u39.text" = " Label";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "UNN-BF-LA9"; */
+"UNN-BF-LA9.normalTitle" = "Delete";
+
+/* Class = "UIViewController"; title = "CreditMemo Listing"; ObjectID = "UVU-rC-591"; */
+"UVU-rC-591.title" = "CreditMemo Listing";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UbT-Oe-r30"; */
+"UbT-Oe-r30.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ufq-GB-jKo"; */
+"Ufq-GB-jKo.text" = "Label";
+
+/* Class = "UILabel"; text = "Row Total"; ObjectID = "Uy7-kI-128"; */
+"Uy7-kI-128.text" = "Row Total";
+
+/* Class = "UILabel"; text = " Subtotal"; ObjectID = "V2t-aa-of2"; */
+"V2t-aa-of2.text" = " Subtotal";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "V5B-J3-sQe"; */
+"V5B-J3-sQe.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = " Comment Date"; ObjectID = "VWm-wc-Rv7"; */
+"VWm-wc-Rv7.text" = " Comment Date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vap-zh-nBQ"; */
+"Vap-zh-nBQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vci-sp-Irv"; */
+"Vci-sp-Irv.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VdB-au-cgn"; */
+"VdB-au-cgn.text" = "Label";
+
+/* Class = "UILabel"; text = " Grand Total Earned"; ObjectID = "W14-M1-DpK"; */
+"W14-M1-DpK.text" = " Grand Total Earned";
+
+/* Class = "UILabel"; text = "Product"; ObjectID = "WN6-TM-piP"; */
+"WN6-TM-piP.text" = "Product";
+
+/* Class = "UILabel"; text = " Product"; ObjectID = "WWq-jl-MrL"; */
+"WWq-jl-MrL.text" = " Product";
+
+/* Class = "UILabel"; text = " User Notified"; ObjectID = "WXa-bs-jco"; */
+"WXa-bs-jco.text" = " User Notified";
+
+/* Class = "UILabel"; text = " Qty"; ObjectID = "WzU-2p-mhJ"; */
+"WzU-2p-mhJ.text" = " Qty";
+
+/* Class = "UILabel"; text = "Shipment Id"; ObjectID = "X4e-KL-kTR"; */
+"X4e-KL-kTR.text" = "Shipment Id";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "X5z-HG-2DO"; */
+"X5z-HG-2DO.text" = "Label";
+
+/* Class = "UILabel"; text = "Order Status "; ObjectID = "XBf-p4-WX0"; */
+"XBf-p4-WX0.text" = "Order Status ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XMf-tY-G5L"; */
+"XMf-tY-G5L.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xwu-Go-vgd"; */
+"Xwu-Go-vgd.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y53-Vh-zZZ"; */
+"Y53-Vh-zZZ.text" = "Label";
+
+/* Class = "UILabel"; text = " Tax Amount"; ObjectID = "YHI-Ga-n0k"; */
+"YHI-Ga-n0k.text" = " Tax Amount";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Ydf-oR-zMx"; */
+"Ydf-oR-zMx.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = " SubTotal"; ObjectID = "Ylu-qm-yVd"; */
+"Ylu-qm-yVd.text" = " SubTotal";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZZZ-zX-VQb"; */
+"ZZZ-zX-VQb.text" = "Label";
+
+/* Class = "UIViewController"; title = "Invoice List"; ObjectID = "Zf8-Je-NLy"; */
+"Zf8-Je-NLy.title" = "Invoice List";
+
+/* Class = "UILabel"; text = " Account Information"; ObjectID = "Zlx-Sl-0yx"; */
+"Zlx-Sl-0yx.text" = " Account Information";
+
+/* Class = "UILabel"; text = " Order Status "; ObjectID = "aFR-hl-Zwa"; */
+"aFR-hl-Zwa.text" = " Order Status ";
+
+/* Class = "UILabel"; text = "SKU"; ObjectID = "aSq-qa-a91"; */
+"aSq-qa-a91.text" = "SKU";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ak8-i2-8pT"; */
+"ak8-i2-8pT.text" = "Label";
+
+/* Class = "UILabel"; text = "Invoice Id"; ObjectID = "atH-eA-aS8"; */
+"atH-eA-aS8.text" = "Invoice Id";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bfe-LZ-PeB"; */
+"bfe-LZ-PeB.text" = "Label";
+
+/* Class = "UILabel"; text = " Tax Amount"; ObjectID = "cSh-t8-jek"; */
+"cSh-t8-jek.text" = " Tax Amount";
+
+/* Class = "UILabel"; text = "Billing Name"; ObjectID = "cUF-c5-dGt"; */
+"cUF-c5-dGt.text" = "Billing Name";
+
+/* Class = "UILabel"; text = " Row Total"; ObjectID = "cor-e4-3U2"; */
+"cor-e4-3U2.text" = " Row Total";
+
+/* Class = "UILabel"; text = "Comment Date"; ObjectID = "crI-Eo-vP6"; */
+"crI-Eo-vP6.text" = "Comment Date";
+
+/* Class = "UILabel"; text = "Shipment List"; ObjectID = "dAS-pe-pOY"; */
+"dAS-pe-pOY.text" = "Shipment List";
+
+/* Class = "UILabel"; text = "Billing Name"; ObjectID = "dAr-Vs-eHx"; */
+"dAr-Vs-eHx.text" = "Billing Name";
+
+/* Class = "UILabel"; text = "Bill to Name"; ObjectID = "dDe-BG-I8r"; */
+"dDe-BG-I8r.text" = "Bill to Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dHH-Ib-glg"; */
+"dHH-Ib-glg.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dJS-EC-3fY"; */
+"dJS-EC-3fY.text" = "Label";
+
+/* Class = "UILabel"; text = "Credit Memo Id"; ObjectID = "dSs-IH-g3B"; */
+"dSs-IH-g3B.text" = "Credit Memo Id";
+
+/* Class = "UILabel"; text = " CGST"; ObjectID = "dab-Aj-MwL"; */
+"dab-Aj-MwL.text" = " CGST";
+
+/* Class = "UILabel"; text = " Order Information"; ObjectID = "dde-kx-2mY"; */
+"dde-kx-2mY.text" = " Order Information";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dpB-iO-kVL"; */
+"dpB-iO-kVL.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dsC-zA-UrK"; */
+"dsC-zA-UrK.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "e0Y-pd-Q6k"; */
+"e0Y-pd-Q6k.text" = "Label";
+
+/* Class = "UILabel"; text = " Credit Memo comments"; ObjectID = "e83-So-j5L"; */
+"e83-So-j5L.text" = " Credit Memo comments";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "eDZ-ZZ-tdv"; */
+"eDZ-ZZ-tdv.normalTitle" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Visible on Frontend"; ObjectID = "eIX-ns-aQl"; */
+"eIX-ns-aQl.normalTitle" = "Visible on Frontend";
+
+/* Class = "UILabel"; text = "Shipment Id"; ObjectID = "eK1-mC-YfQ"; */
+"eK1-mC-YfQ.text" = "Shipment Id";
+
+/* Class = "UILabel"; text = "Cash On Delivery"; ObjectID = "ee0-Ym-zgP"; */
+"ee0-Ym-zgP.text" = "Cash On Delivery";
+
+/* Class = "UILabel"; text = " ACCOUNT INFORMATION"; ObjectID = "f1U-Pk-0Eo"; */
+"f1U-Pk-0Eo.text" = " ACCOUNT INFORMATION";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fD3-hu-WOc"; */
+"fD3-hu-WOc.text" = "Label";
+
+/* Class = "UILabel"; text = "Adjustment Refund"; ObjectID = "fIG-wS-2HL"; */
+"fIG-wS-2HL.text" = "Adjustment Refund";
+
+/* Class = "UILabel"; text = " Credit Memo #"; ObjectID = "fg3-Ps-yLY"; */
+"fg3-Ps-yLY.text" = " Credit Memo #";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "flH-fM-kqn"; */
+"flH-fM-kqn.text" = "Label";
+
+/* Class = "UILabel"; text = "Subtotal"; ObjectID = "fwf-Z2-8Yl"; */
+"fwf-Z2-8Yl.text" = "Subtotal";
+
+/* Class = "UILabel"; text = " Purchased From"; ObjectID = "g2v-At-9Lq"; */
+"g2v-At-9Lq.text" = " Purchased From";
+
+/* Class = "UILabel"; text = " Quantity to ship"; ObjectID = "g86-uR-rqc"; */
+"g86-uR-rqc.text" = " Quantity to ship";
+
+/* Class = "UILabel"; text = " Net Earned"; ObjectID = "gQD-Hy-BTF"; */
+"gQD-Hy-BTF.text" = " Net Earned";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gj1-Bw-aFG"; */
+"gj1-Bw-aFG.text" = "Label";
+
+/* Class = "UILabel"; text = " Order Status "; ObjectID = "glP-jh-j2j"; */
+"glP-jh-j2j.text" = " Order Status ";
+
+/* Class = "UILabel"; text = " Account Information"; ObjectID = "glS-MF-VwQ"; */
+"glS-MF-VwQ.text" = " Account Information";
+
+/* Class = "UILabel"; text = "Billing Name"; ObjectID = "gn0-sR-eSQ"; */
+"gn0-sR-eSQ.text" = "Billing Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gnh-e4-xuP"; */
+"gnh-e4-xuP.text" = "Label";
+
+/* Class = "UILabel"; text = "Order #"; ObjectID = "h0m-c9-fFg"; */
+"h0m-c9-fFg.text" = "Order #";
+
+/* Class = "UILabel"; text = " Order Date"; ObjectID = "h4g-vb-vPM"; */
+"h4g-vb-vPM.text" = " Order Date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hW6-i9-rvL"; */
+"hW6-i9-rvL.text" = "Label";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "hf9-eT-0In"; */
+"hf9-eT-0In.text" = "Status";
+
+/* Class = "UILabel"; text = "Cash On Delivery"; ObjectID = "hr7-P1-O0r"; */
+"hr7-P1-O0r.text" = "Cash On Delivery";
+
+/* Class = "UIButton"; normalTitle = "Select Status"; ObjectID = "i5N-o6-8xp"; */
+"i5N-o6-8xp.normalTitle" = "Select Status";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "i9x-kq-Y4P"; */
+"i9x-kq-Y4P.text" = "Amount";
+
+/* Class = "UILabel"; text = " Customer Group"; ObjectID = "iFW-8x-IEj"; */
+"iFW-8x-IEj.text" = " Customer Group";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ibM-s7-Icv"; */
+"ibM-s7-Icv.text" = "Label";
+
+/* Class = "UILabel"; text = " Subtotal"; ObjectID = "iz2-tO-4wd"; */
+"iz2-tO-4wd.text" = " Subtotal";
+
+/* Class = "UILabel"; text = " Commission Fee"; ObjectID = "j1x-4b-Gux"; */
+"j1x-4b-Gux.text" = " Commission Fee";
+
+/* Class = "UILabel"; text = " Tax Amount"; ObjectID = "jOe-nS-GBr"; */
+"jOe-nS-GBr.text" = " Tax Amount";
+
+/* Class = "UILabel"; text = "Invoice Date"; ObjectID = "jlZ-Ne-jf4"; */
+"jlZ-Ne-jf4.text" = "Invoice Date";
+
+/* Class = "UILabel"; text = " Email"; ObjectID = "jsI-lD-1IV"; */
+"jsI-lD-1IV.text" = " Email";
+
+/* Class = "UILabel"; text = " Product"; ObjectID = "kB5-5m-qY3"; */
+"kB5-5m-qY3.text" = " Product";
+
+/* Class = "UILabel"; text = "Invoice #"; ObjectID = "kGK-y7-bbI"; */
+"kGK-y7-bbI.text" = "Invoice #";
+
+/* Class = "UIViewController"; title = "Order View"; ObjectID = "kSf-PA-hRd"; */
+"kSf-PA-hRd.title" = "Order View";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kSh-vO-lWY"; */
+"kSh-vO-lWY.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "khX-C9-ssO"; */
+"khX-C9-ssO.text" = "Label";
+
+/* Class = "UILabel"; text = " Net Earned"; ObjectID = "lLH-vl-dSX"; */
+"lLH-vl-dSX.text" = " Net Earned";
+
+/* Class = "UILabel"; text = "Billing Name"; ObjectID = "lTg-uT-7At"; */
+"lTg-uT-7At.text" = "Billing Name";
+
+/* Class = "UILabel"; text = "Qty to invoice"; ObjectID = "m0l-bt-78T"; */
+"m0l-bt-78T.text" = "Qty to invoice";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "mJK-xn-zRI"; */
+"mJK-xn-zRI.text" = "Status";
+
+/* Class = "UILabel"; text = " User Notified"; ObjectID = "mqA-r2-RM6"; */
+"mqA-r2-RM6.text" = " User Notified";
+
+/* Class = "UILabel"; text = " Tax Amount"; ObjectID = "mrg-v9-SvP"; */
+"mrg-v9-SvP.text" = " Tax Amount";
+
+/* Class = "UILabel"; text = " Grand Total Earned"; ObjectID = "nXT-d5-LfH"; */
+"nXT-d5-LfH.text" = " Grand Total Earned";
+
+/* Class = "UILabel"; text = "Order Date"; ObjectID = "ndb-aC-Q8g"; */
+"ndb-aC-Q8g.text" = "Order Date";
+
+/* Class = "UILabel"; text = "Order Status "; ObjectID = "nqj-fs-FYo"; */
+"nqj-fs-FYo.text" = "Order Status ";
+
+/* Class = "UILabel"; text = "Shipment Comment"; ObjectID = "o7t-oJ-bPR"; */
+"o7t-oJ-bPR.text" = "Shipment Comment";
+
+/* Class = "UILabel"; text = "Refund Shipping"; ObjectID = "oA2-fo-NE8"; */
+"oA2-fo-NE8.text" = "Refund Shipping";
+
+/* Class = "UILabel"; text = " Row Total"; ObjectID = "oLW-5I-4EA"; */
+"oLW-5I-4EA.text" = " Row Total";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ogx-DT-J5E"; */
+"ogx-DT-J5E.text" = "Label";
+
+/* Class = "UILabel"; text = "Purchased From"; ObjectID = "owK-58-51m"; */
+"owK-58-51m.text" = "Purchased From";
+
+/* Class = "UILabel"; text = " Product"; ObjectID = "p68-Q2-nHi"; */
+"p68-Q2-nHi.text" = " Product";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pE6-kr-hcx"; */
+"pE6-kr-hcx.text" = "Label";
+
+/* Class = "UILabel"; text = " Shipping Information"; ObjectID = "pPR-9G-ERQ"; */
+"pPR-9G-ERQ.text" = " Shipping Information";
+
+/* Class = "UILabel"; text = " CGST"; ObjectID = "pPy-bT-SwD"; */
+"pPy-bT-SwD.text" = " CGST";
+
+/* Class = "UILabel"; text = " Comment"; ObjectID = "pWE-bL-7M5"; */
+"pWE-bL-7M5.text" = " Comment";
+
+/* Class = "UILabel"; text = " Row Total"; ObjectID = "pfY-OT-JVY"; */
+"pfY-OT-JVY.text" = " Row Total";
+
+/* Class = "UILabel"; text = " Cash On Delivery"; ObjectID = "ppb-Ls-C3L"; */
+"ppb-Ls-C3L.text" = " Cash On Delivery";
+
+/* Class = "UIButton"; normalTitle = "Email Copy of Invoice"; ObjectID = "pz7-8p-UeH"; */
+"pz7-8p-UeH.normalTitle" = "Email Copy of Invoice";
+
+/* Class = "UILabel"; text = " Subtotal"; ObjectID = "qBx-Oc-Bat"; */
+"qBx-Oc-Bat.text" = " Subtotal";
+
+/* Class = "UILabel"; text = "  Account Information"; ObjectID = "qhY-u4-9O6"; */
+"qhY-u4-9O6.text" = "  Account Information";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qkQ-8U-NUg"; */
+"qkQ-8U-NUg.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qyK-9o-QCi"; */
+"qyK-9o-QCi.text" = "Label";
+
+/* Class = "UILabel"; text = " Ordered Quantity"; ObjectID = "r7z-TY-a0S"; */
+"r7z-TY-a0S.text" = " Ordered Quantity";
+
+/* Class = "UILabel"; text = " Created At"; ObjectID = "rDs-UY-bfT"; */
+"rDs-UY-bfT.text" = " Created At";
+
+/* Class = "UIViewController"; title = "Comment Listing"; ObjectID = "rEZ-ob-gpu"; */
+"rEZ-ob-gpu.title" = "Comment Listing";
+
+/* Class = "UILabel"; text = "Grand Total (Earned)"; ObjectID = "rnx-Og-Jx3"; */
+"rnx-Og-Jx3.text" = "Grand Total (Earned)";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ruK-j8-meS"; */
+"ruK-j8-meS.text" = "Label";
+
+/* Class = "UILabel"; text = "Shipping Name"; ObjectID = "sKT-Xw-Nko"; */
+"sKT-Xw-Nko.text" = "Shipping Name";
+
+/* Class = "UILabel"; text = "Customer Group"; ObjectID = "sT9-YM-06b"; */
+"sT9-YM-06b.text" = "Customer Group";
+
+/* Class = "UILabel"; text = " CGST"; ObjectID = "sj4-3V-gh3"; */
+"sj4-3V-gh3.text" = " CGST";
+
+/* Class = "UILabel"; text = " Shipping Information"; ObjectID = "slC-6b-x7s"; */
+"slC-6b-x7s.text" = " Shipping Information";
+
+/* Class = "UILabel"; text = "Notified"; ObjectID = "sr4-ZG-YfQ"; */
+"sr4-ZG-YfQ.text" = "Notified";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "stk-Xy-ZZr"; */
+"stk-Xy-ZZr.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "sw4-7P-Wed"; */
+"sw4-7P-Wed.text" = "Title";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "t9e-RN-zvU"; */
+"t9e-RN-zvU.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Add Tracking Number"; ObjectID = "tK5-wi-VZb"; */
+"tK5-wi-VZb.normalTitle" = "Add Tracking Number";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "tSs-Zj-V1M"; */
+"tSs-Zj-V1M.text" = "Label";
+
+/* Class = "UILabel"; text = "Bill to Name"; ObjectID = "tej-8z-FeV"; */
+"tej-8z-FeV.text" = "Bill to Name";
+
+/* Class = "UILabel"; text = " Label"; ObjectID = "tkx-Rc-hYQ"; */
+"tkx-Rc-hYQ.text" = " Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "uRK-Jz-ibR"; */
+"uRK-Jz-ibR.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uST-qb-rE8"; */
+"uST-qb-rE8.text" = "Label";
+
+/* Class = "UILabel"; text = " Quantity Invoiced"; ObjectID = "uTZ-IX-eZr"; */
+"uTZ-IX-eZr.text" = " Quantity Invoiced";
+
+/* Class = "UILabel"; text = "Ship To Name"; ObjectID = "udT-wr-tnx"; */
+"udT-wr-tnx.text" = "Ship To Name";
+
+/* Class = "UILabel"; text = " SKU"; ObjectID = "urK-r2-Mys"; */
+"urK-r2-Mys.text" = " SKU";
+
+/* Class = "UILabel"; text = "Billing Name"; ObjectID = "usS-PA-Q7R"; */
+"usS-PA-Q7R.text" = "Billing Name";
+
+/* Class = "UIViewController"; title = "Shipment Listing"; ObjectID = "v4u-Jt-2d9"; */
+"v4u-Jt-2d9.title" = "Shipment Listing";
+
+/* Class = "UILabel"; text = " Price"; ObjectID = "v7b-E6-nxm"; */
+"v7b-E6-nxm.text" = " Price";
+
+/* Class = "UIButton"; normalTitle = "Create Shipping Label"; ObjectID = "vAe-IA-6i3"; */
+"vAe-IA-6i3.normalTitle" = "Create Shipping Label";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "vTK-4c-ZiR"; */
+"vTK-4c-ZiR.normalTitle" = "Close";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vUv-Xw-hDx"; */
+"vUv-Xw-hDx.text" = "Label";
+
+/* Class = "UILabel"; text = " "; ObjectID = "vW6-h5-9Ky"; */
+"vW6-h5-9Ky.text" = " ";
+
+/* Class = "UILabel"; text = " SubTotal"; ObjectID = "vgf-uP-KXD"; */
+"vgf-uP-KXD.text" = " SubTotal";
+
+/* Class = "UILabel"; text = "User Notified"; ObjectID = "viY-Ak-TdI"; */
+"viY-Ak-TdI.text" = "User Notified";
+
+/* Class = "UILabel"; text = "Order Status "; ObjectID = "vpG-ul-RyV"; */
+"vpG-ul-RyV.text" = "Order Status ";
+
+/* Class = "UILabel"; text = " Item Status"; ObjectID = "vts-eM-I9S"; */
+"vts-eM-I9S.text" = " Item Status";
+
+/* Class = "UILabel"; text = "Purchased From"; ObjectID = "w4P-Yj-NYA"; */
+"w4P-Yj-NYA.text" = "Purchased From";
+
+/* Class = "UILabel"; text = " Comment Date"; ObjectID = "w5d-a9-p8k"; */
+"w5d-a9-p8k.text" = " Comment Date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wb3-qn-nWT"; */
+"wb3-qn-nWT.text" = "Label";
+
+/* Class = "UILabel"; text = " SKU"; ObjectID = "wkK-id-A4c"; */
+"wkK-id-A4c.text" = " SKU";
+
+/* Class = "UILabel"; text = " Shipping & Handling"; ObjectID = "wmH-x0-uLg"; */
+"wmH-x0-uLg.text" = " Shipping & Handling";
+
+/* Class = "UILabel"; text = " Email"; ObjectID = "woE-Lm-DSu"; */
+"woE-Lm-DSu.text" = " Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wsU-aG-4RH"; */
+"wsU-aG-4RH.text" = "Label";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "wvE-bp-TTQ"; */
+"wvE-bp-TTQ.text" = "Amount";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xDt-Zc-Caf"; */
+"xDt-Zc-Caf.text" = "Label";
+
+/* Class = "UILabel"; text = " Order Information"; ObjectID = "xbe-iX-efO"; */
+"xbe-iX-efO.text" = " Order Information";
+
+/* Class = "UILabel"; text = " Customer Name"; ObjectID = "yD6-Ku-H5w"; */
+"yD6-Ku-H5w.text" = " Customer Name";
+
+/* Class = "UILabel"; text = " Quantity Shipped"; ObjectID = "yMO-II-ZGr"; */
+"yMO-II-ZGr.text" = " Quantity Shipped";
+
+/* Class = "UILabel"; text = "Order #"; ObjectID = "yai-k7-phQ"; */
+"yai-k7-phQ.text" = "Order #";
+
+/* Class = "UILabel"; text = " Grand Total"; ObjectID = "ybe-bX-2fp"; */
+"ybe-bX-2fp.text" = " Grand Total";
+
+/* Class = "UILabel"; text = " Discount"; ObjectID = "ybu-tC-sVB"; */
+"ybu-tC-sVB.text" = " Discount";
+
+/* Class = "UIButton"; normalTitle = "Submit Shipment"; ObjectID = "ykS-Mc-Vov"; */
+"ykS-Mc-Vov.normalTitle" = "Submit Shipment";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zIM-O3-EYj"; */
+"zIM-O3-EYj.text" = "Label";
+
+/* Class = "UILabel"; text = " Order Status "; ObjectID = "zQK-5g-yaT"; */
+"zQK-5g-yaT.text" = " Order Status ";
+
+/* Class = "UILabel"; text = " Shipping & Handling"; ObjectID = "zUU-Be-Q7y"; */
+"zUU-Be-Q7y.text" = " Shipping & Handling";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zVQ-w7-ez7"; */
+"zVQ-w7-ez7.text" = "Label";
+
+/* Class = "UILabel"; text = " Grand Total"; ObjectID = "zkK-nh-bew"; */
+"zkK-nh-bew.text" = " Grand Total";

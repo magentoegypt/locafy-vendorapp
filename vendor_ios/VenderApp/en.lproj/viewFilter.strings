@@ -1,0 +1,51 @@
+
+/* Class = "UITextField"; placeholder = "To"; ObjectID = "2Qg-lJ-Nj2"; */
+"2Qg-lJ-Nj2.placeholder" = "To";
+
+/* Class = "UIButton"; normalTitle = "Reset Filters"; ObjectID = "2iw-2o-2tt"; */
+"2iw-2o-2tt.normalTitle" = "Reset Filters";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "5gJ-F0-yBt"; */
+"5gJ-F0-yBt.text" = "Amount";
+
+/* Class = "UILabel"; text = "Net Amount"; ObjectID = "7cm-y2-jZc"; */
+"7cm-y2-jZc.text" = "Net Amount";
+
+/* Class = "UITextField"; placeholder = "From"; ObjectID = "8qq-Fl-ch7"; */
+"8qq-Fl-ch7.placeholder" = "From";
+
+/* Class = "UILabel"; text = "Adjustment Amount"; ObjectID = "AWw-v3-tcM"; */
+"AWw-v3-tcM.text" = "Adjustment Amount";
+
+/* Class = "UIButton"; normalTitle = "Filters"; ObjectID = "DV7-ZJ-eCG"; */
+"DV7-ZJ-eCG.normalTitle" = "Filters";
+
+/* Class = "UITextField"; placeholder = "From"; ObjectID = "EHZ-2R-g65"; */
+"EHZ-2R-g65.placeholder" = "From";
+
+/* Class = "UITextField"; placeholder = "From"; ObjectID = "HWQ-Gd-tXG"; */
+"HWQ-Gd-tXG.placeholder" = "From";
+
+/* Class = "UILabel"; text = "Payment Mode"; ObjectID = "Hwd-cw-NkW"; */
+"Hwd-cw-NkW.text" = "Payment Mode";
+
+/* Class = "UITextField"; placeholder = "To"; ObjectID = "JEx-rj-sb4"; */
+"JEx-rj-sb4.placeholder" = "To";
+
+/* Class = "UITextField"; placeholder = "From"; ObjectID = "NgU-gK-dRy"; */
+"NgU-gK-dRy.placeholder" = "From";
+
+/* Class = "UILabel"; text = "Created At"; ObjectID = "PEf-Lr-lTS"; */
+"PEf-Lr-lTS.text" = "Created At";
+
+/* Class = "UILabel"; text = "TransactionId"; ObjectID = "cm9-3Q-SYj"; */
+"cm9-3Q-SYj.text" = "TransactionId";
+
+/* Class = "UITextField"; placeholder = "To"; ObjectID = "olc-5o-7mK"; */
+"olc-5o-7mK.placeholder" = "To";
+
+/* Class = "UITextField"; placeholder = "To"; ObjectID = "qM9-Kk-Gft"; */
+"qM9-Kk-Gft.placeholder" = "To";
+
+/* Class = "UILabel"; text = "Vendor App"; ObjectID = "wX2-Er-XEU"; */
+"wX2-Er-XEU.text" = "Vendor App";

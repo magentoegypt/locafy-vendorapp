@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pullToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/MultiVendor_viewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/MultiVendor_mainscroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/MultiVendor_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/MultiVendor_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        app:cardUseCompatPadding="true">
+
+                        <Button
+                            android:id="@+id/MultiVendor_order_increment_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/header_color"
+                            android:clickable="false"
+                            android:gravity="start|center"
+                            android:paddingStart="@dimen/pad_10dp"
+                            android:textSize="@dimen/txt_15sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@color/white"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/MultiVendor_order_info_head"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/MultiVendor_linearLayout"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/corner"
+                                    android:clickable="false"
+                                    android:gravity="start|center"
+                                    android:paddingStart="@dimen/pad_10dp"
+                                    android:text="@string/OrderInformation"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_13sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1.0">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_orderdate_head"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:text="@string/OrderDate"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_13sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_orderDate"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1.0">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_order_status_head"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:text="@string/OrderStatus"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_13sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_OrderStatuss"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1.0"
+
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_PurchasedFrom_head"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:text="@string/PurchasedFrom"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_13sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_PurchasedFrom"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                </LinearLayout>
+                                <!--<LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1.0"
+                                    android:layout_margin="@dimen/pad_5dp"
+
+
+                                    >
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:text="@string/LinktothePreviousOrder"
+                                        android:id="@+id/MultiVendor_LinkToOrderId_head"
+                                        android:textSize="@dimen/txt_13sp"
+                                        android:textColor="@color/black"
+
+                                        />
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:id="@+id/MultiVendor_LinkToOrderId"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                </LinearLayout>-->
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@color/white"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/MultiVendor_linearLayout"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/corner"
+                                    android:clickable="false"
+                                    android:gravity="start|center"
+                                    android:paddingStart="@dimen/pad_10dp"
+                                    android:text="@string/AccountInformation"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_13sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1.0">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CustomerName_head"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:text="@string/CustomerName"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_13sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CustomerName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1.0">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_Email_head"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:text="@string/Email"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_13sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_Email"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1.0"
+
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CustomerGroup_head"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:text="@string/CustomerGroup"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_13sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CustomerGroup"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/MultiVendor_account_info_dynamic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"></LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@color/white"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/MultiVendor_ShippingAddress_head"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/MultiVendor_linearLayout"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/corner"
+                                    android:clickable="false"
+                                    android:gravity="start|center"
+                                    android:paddingStart="@dimen/pad_10dp"
+                                    android:text="@string/BillingAddress"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_13sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_billing_ship_to"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_billing_street"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_billing_city"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_billing_state"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_billing_pincode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_billing_country"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_billing_mobile"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/MultiVendor_view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@color/white"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:id="@+id/Shipping_Address_linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/MultiVendor_BillingAddress_head"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/MultiVendor_linearLayout"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/corner"
+                                    android:clickable="false"
+                                    android:gravity="start|center"
+                                    android:paddingStart="@dimen/pad_10dp"
+                                    android:text="@string/ShippingAddress"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_13sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_ship_to"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_street"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_city"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_state"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_pincode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_country"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_phone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+
+
+                                        />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@color/white"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/MultiVendor_linearLayout"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/corner"
+                                    android:clickable="false"
+                                    android:gravity="start|center"
+                                    android:paddingStart="@dimen/pad_10dp"
+                                    android:text="@string/PaymentInformation"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_13sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_PaymentMethod"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CreditCardType_head"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:text="@string/CreditCardType"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CreditCardType"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CreditCardNumber_head"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:text="@string/CreditCardNumber"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_CreditCardNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_NameontheCard_head"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:text="@string/NameontheCard"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_NameontheCard"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_MessageAtLast"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp" />
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+
+                            android:id="@+id/MultiVendor_view11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@color/white"
+                            android:visibility="gone"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/corner"
+                                    android:clickable="false"
+                                    android:gravity="start|center"
+                                    android:paddingStart="@dimen/pad_10dp"
+                                    android:text="@string/ShippingInformation"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/txt_13sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_ShippingMethod"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp" />
+
+                                    <TextView
+                                        android:id="@+id/MultiVendor_shipping_amount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/pad_5dp"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_11sp" />
+
+                                    <LinearLayout
+                                        android:id="@+id/MultiVendor_add_shipment_carrier"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <LinearLayout
+                                            android:id="@+id/MultiVendor_shipment_trackings"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2.0">
+
+                                            <TextView
+                                                android:id="@+id/MultiVendor_Carrier_Head"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/pad_5dp"
+                                                android:layout_weight="1.0"
+                                                android:text="@string/Carrier"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/txt_11sp" />
+
+                                            <EditText
+                                                android:id="@+id/MultiVendor_Carrier"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/pad_5dp"
+                                                android:layout_weight="1.0"
+                                                android:editable="false"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/txt_11sp" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2.0">
+
+                                            <TextView
+                                                android:id="@+id/MultiVendor_Title_Head"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/pad_5dp"
+                                                android:layout_weight="1.0"
+                                                android:text="@string/title"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/txt_11sp" />
+
+                                            <EditText
+                                                android:id="@+id/MultiVendor_Title"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/pad_5dp"
+                                                android:layout_weight="1.0"
+                                                android:editable="false"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/txt_11sp" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2.0">
+
+                                            <TextView
+                                                android:id="@+id/MultiVendor_Number_Head"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/pad_5dp"
+                                                android:layout_weight="1.0"
+                                                android:text="@string/Number"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/txt_11sp" />
+
+                                            <EditText
+                                                android:id="@+id/MultiVendor_Number"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="@dimen/pad_5dp"
+                                                android:layout_weight="1.0"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/txt_11sp" />
+
+
+                                        </LinearLayout>
+
+                                        <Button
+                                            android:id="@+id/MultiVendor_add_tracking"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/corner"
+                                            android:text="@string/add"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white" />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/MultiVendor_ProductInfo_head"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/corner"
+                                android:clickable="false"
+                                android:gravity="start|center"
+                                android:paddingStart="@dimen/pad_10dp"
+                                android:text="@string/ItemsInvoiced"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_13sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/MultiVendor_invoice_view_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/MultiVendor_linearLayout"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/corner"
+                                android:clickable="false"
+                                android:gravity="start|center"
+                                android:paddingStart="@dimen/pad_10dp"
+                                android:text="@string/Comments"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_13sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/MultiVendor_dynamic_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+
+                        android:id="@+id/MultiVendor_view7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/white"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/MultiVendor_InvoiceTotals"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/MultiVendor_linearLayout"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/corner"
+                                android:clickable="false"
+                                android:gravity="start|center"
+                                android:paddingStart="@dimen/pad_10dp"
+                                android:text="@string/InvoiceTotals"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_13sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:visibility="visible"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0">
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_subtotal_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/Subtotal"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_Subtotal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0"
+                                android:visibility="gone"
+                                >
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_ShippingAndHandling_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/ShippingAndHandling"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_ShippingAndHandling"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp"
+
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0"
+                                android:visibility="visible"
+                                >
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_TaxAmount_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/TaxAmount"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp"
+
+                                    />
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_TaxAmount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp" />
+
+                            </LinearLayout>
+                            <!--<LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:weightSum="1.0"
+                                >
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/MultiVendor_grandtotal_head"
+                                    android:text="@string/GrandTotal"
+                                    android:textColor="@color/black"
+                                    android:layout_weight="0.5"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:textSize="@dimen/txt_13sp"
+                                    />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/MultiVendor_grandtotal"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:textSize="@dimen/txt_11sp"
+                                    />
+
+                            </LinearLayout>-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0"
+
+
+                                >
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_grandtotalearned_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/GrandTotalEarned"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp" />
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_grandtotalearned"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0">
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_CommissionFee_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/CommissionFee"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp" />
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_CommissionFee"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp" />
+
+                            </LinearLayout>
+
+
+                            <!--Service tax-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0">
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_ServiceTax_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/service_tax"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp" />
+
+                                <TextView
+                                    android:id="@+id/MultiVendorServiceTax"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp" />
+
+                            </LinearLayout>
+
+
+                            <!--Market Fee-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0">
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_MarketFee_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/market_fee"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp" />
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_MarketFee"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/pad_5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1.0">
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_NetEarned_head"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/vendor_payment"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_13sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/MultiVendor_NetEarned"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/pad_5dp"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/txt_11sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/pad_30dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/MultiVendor_fab"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="41dp"
+            android:clickable="true"
+            android:src="@drawable/add_comment"
+            app:backgroundTint="@color/AppTheme"
+            app:layout_anchor="@id/MultiVendor_viewA"
+            app:layout_anchorGravity="bottom|right|end"
+            app:rippleColor="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+

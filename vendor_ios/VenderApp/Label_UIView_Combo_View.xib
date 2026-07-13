@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Label_UIView_Combo_View" customModule="Sell_on_Pushmycart" customModuleProvider="target">
+            <connections>
+                <outlet property="entityNameLabel" destination="Vk7-bT-wwo" id="r2Y-zX-AKH"/>
+                <outlet property="mainView" destination="w9k-kS-P4B" id="uBn-nl-4wr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Smx-XA-ULa">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk7-bT-wwo">
+                    <rect key="frame" x="5" y="0.0" width="396" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Fm8-GZ-S37"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9k-kS-P4B">
+                    <rect key="frame" x="0.0" y="27" width="401" height="33"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vk7-bT-wwo" secondAttribute="trailing" id="DzY-Vh-9wU"/>
+                <constraint firstItem="w9k-kS-P4B" firstAttribute="top" secondItem="Vk7-bT-wwo" secondAttribute="bottom" constant="2" id="INc-X8-Cso"/>
+                <constraint firstItem="Vk7-bT-wwo" firstAttribute="leading" secondItem="Smx-XA-ULa" secondAttribute="leading" constant="5" id="Spo-WV-Ff5"/>
+                <constraint firstItem="w9k-kS-P4B" firstAttribute="leading" secondItem="Smx-XA-ULa" secondAttribute="leading" id="Vxe-fZ-er8"/>
+                <constraint firstAttribute="trailing" secondItem="w9k-kS-P4B" secondAttribute="trailing" id="raG-2t-k4b"/>
+                <constraint firstAttribute="bottom" secondItem="w9k-kS-P4B" secondAttribute="bottom" id="tVW-eu-HeH"/>
+                <constraint firstItem="Vk7-bT-wwo" firstAttribute="top" secondItem="Smx-XA-ULa" secondAttribute="top" id="yst-XF-DtW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="297.5" y="186"/>
+        </view>
+    </objects>
+</document>

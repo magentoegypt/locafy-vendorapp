@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="6dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/head"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner"
+        android:text="@string/runningplan"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/membership_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/secondary_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/head"
+        app:textAllCaps="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/membership"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/membership_name"
+        app:srcCompat="@drawable/placeholder"
+        tools:ignore="ImageContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/duration_txt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="start|center"
+        android:padding="5dp"
+        android:text="@string/duration_of_package"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/duration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/membership" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/duration"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/duration_txt"
+        app:layout_constraintTop_toBottomOf="@id/membership" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/order_id_txt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="start|center"
+        android:padding="5dp"
+        android:text="@string/orderdid"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/order_id_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/duration_txt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/order_id_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/order_id_txt"
+        app:layout_constraintTop_toBottomOf="@id/duration" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/payment_method_txt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="start|center"
+        android:padding="5dp"
+        android:text="@string/PaymentMethod"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/payment_method_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_id_txt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/payment_method_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/payment_method_txt"
+        app:layout_constraintTop_toBottomOf="@id/order_id_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/transaction_id_txt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="start|center"
+        android:padding="5dp"
+        android:text="@string/TransactionId"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/transaction_id_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/payment_method_txt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/transaction_id_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/transaction_id_txt"
+        app:layout_constraintTop_toBottomOf="@id/payment_method_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/status_txt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="start|center"
+        android:padding="5dp"
+        android:text="@string/Status"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/status_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transaction_id_txt" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/status_value"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/status_txt"
+        app:layout_constraintTop_toBottomOf="@id/transaction_id_value" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/MultiVendor_ItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="637dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--</ScrollView>-->

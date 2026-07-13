@@ -1,0 +1,22 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/filterBottomScreen"
+        android:contentDescription="content_description_favorite"
+        android:icon="@drawable/ic_baseline_filter_alt_24"
+        android:title="filter"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/search"
+        android:contentDescription="content_description_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="search"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

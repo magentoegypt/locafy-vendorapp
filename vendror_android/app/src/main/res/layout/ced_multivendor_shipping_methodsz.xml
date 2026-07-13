@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/MultiVendor_mainscroll"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/MultiVendor_shipping_methodstagsection"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/truck"
+                android:id="@+id/MultiVendor_methodimage"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                >
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipping Methods"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/MultiVendor_methodimage"
+                android:layout_toRightOf="@+id/MultiVendor_methodimage"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:id="@+id/MultiVendor_shipping_method_save"
+                android:text="@string/save"
+                android:textSize="13sp"
+                android:background="@drawable/button_save_style"
+                android:textColor="@color/primary_material_light"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            card_view:cardUseCompatPadding="true"
+            android:background="@color/white"
+            android:layout_below="@+id/MultiVendor_shipping_methodstagsection"
+            card_view:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_marginBottom="@dimen/pad_5dp"
+                    android:layout_marginLeft="@dimen/pad_30dp"
+                    android:layout_marginRight="@dimen/pad_30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/MultiVendor_shipping_method_texttag"
+                    android:background="@color/AppTheme">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/pad_30dp"
+                        android:layout_marginRight="@dimen/pad_30dp"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:background="@color/AppTheme"
+                        android:paddingBottom="@dimen/pad_5dp"
+                        android:paddingLeft="@dimen/pad_10dp"
+                        android:paddingTop="@dimen/pad_5dp"
+                        android:text="Shipping Methods"
+                        android:textColor="@color/primary_material_light"
+                        android:textSize="@dimen/txt_15sp"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_below="@+id/MultiVendor_shipping_method_texttag"
+                    android:layout_marginTop="@dimen/pad_5dp"
+                    android:layout_marginBottom="@dimen/pad_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/MultiVendor_store_pickuptag">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/pad_30dp"
+                        android:layout_marginTop="@dimen/pad_10dp"
+                        android:paddingBottom="@dimen/pad_5dp"
+                        android:paddingTop="@dimen/pad_5dp"
+                        android:text="Store Pickup"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_15sp"
+                        android:layout_margin="5dp"
+                        android:gravity="center_vertical"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_below="@+id/MultiVendor_store_pickuptag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:orientation="vertical"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_margin="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp"
+                        >
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Active"
+                            />
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/editext_border"
+                            >
+                            <Spinner
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/MultiVendor_store_active"
+                                android:background="@color/AppTheme"
+                            android:entries="@array/shipyesno"
+                            />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp"
+                        >
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Title"
+                            />
+
+                        <EditText
+                            android:paddingLeft="@dimen/pad_5dp"
+                            android:id="@+id/MultiVendor_store_title"
+                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/editext_border"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Method Name"
+                            />
+                        <EditText
+                            android:paddingLeft="@dimen/pad_5dp"
+                            android:id="@+id/MultiVendor_store_methodname"
+                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/editext_border"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Shipping Price" />
+
+                        <EditText
+                            android:paddingLeft="@dimen/pad_5dp"
+                            android:id="@+id/MultiVendor_store_shippingprice"
+                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            android:background="@drawable/editext_border"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Allowed Countries" />
+
+                        <CheckBox android:theme="@style/WhiteCheck"
+                            android:layout_marginTop="@dimen/pad_5dp"
+                            android:id="@+id/MultiVendor_countrytag"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textSize="13sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Select Countries"
+                            />
+
+                        <ScrollView
+                            android:layout_margin="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/MultiVendor_countryselection"
+                            android:animateLayoutChanges="true">
+                        </LinearLayout>
+                        </ScrollView>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

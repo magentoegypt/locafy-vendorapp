@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/pad_5dp"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/filter_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/AppTheme"
+        android:padding="12dp"
+        android:text="@string/Filter"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:gravity="start|center"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/evaluation_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_header"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/id_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:inputType="number"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filter_header"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/created_at"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:gravity="start|center"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/CreatedAt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/created_at_from"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:gravity="center|start"
+        android:hint="@string/from"
+        android:entries="@array/review_status"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/created_at_to"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:gravity="center|start"
+        android:hint="@string/to"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/created_at_from"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/Status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/created_at_to"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Spinner
+        android:id="@+id/condition_spn"
+        style="@style/spinner_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:minHeight="@dimen/pad_30dp"
+        android:popupBackground="@color/white"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/created_at_to"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:gravity="start|center"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_spn"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/qualification_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/condition_spn"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/nickname"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qualification_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/nickname_edt"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qualification_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/review"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/review_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/visibility"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/visiblity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Spinner
+        android:visibility="gone"
+        android:id="@+id/visibility_spn"
+        style="@style/spinner_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:minHeight="@dimen/pad_30dp"
+        android:popupBackground="@color/white"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/review_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visibility_spn"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Spinner
+        android:id="@+id/type_spn"
+        style="@style/spinner_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:minHeight="@dimen/pad_30dp"
+        android:popupBackground="@color/white"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visibility_spn"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:gravity="start|center"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/Product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_spn"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/product_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_spn"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/sku"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_weight=".3"
+        android:gravity="start|center"
+        android:minHeight="@dimen/pad_30dp"
+        android:padding="@dimen/pad_5dp"
+        android:text="@string/SKU"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <EditText
+        android:id="@+id/sku_edt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/editext_border"
+        android:minHeight="@dimen/pad_30dp"
+        android:paddingStart="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_edt"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/dialog_reset_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pad_5dp"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:background="@drawable/corner"
+        android:padding="10dp"
+        android:text="@string/Reset_filter"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sku_edt"
+        app:layout_constraintWidth_percent="0.48" />
+
+    <TextView
+        android:id="@+id/dialog_apply_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_marginEnd="@dimen/pad_5dp"
+        android:background="@drawable/border_button_apptheme"
+        android:padding="10dp"
+        android:text="@string/applyfilter"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sku_edt"
+        app:layout_constraintWidth_percent="0.48" />
+</androidx.constraintlayout.widget.ConstraintLayout>

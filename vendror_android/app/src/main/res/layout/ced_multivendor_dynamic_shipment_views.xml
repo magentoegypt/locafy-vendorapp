@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MultiVendor_view7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/MultiVendor_carrier_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/Carrier"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/MultiVendor_carrier_front"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_11sp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/MultiVendor_title_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/MultiVendor_title_front"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_11sp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/MultiVendor_number_head"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/Number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_13sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/MultiVendor_number_front"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_11sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/MultiVendor_delete_shipment_carrier"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/button_style"
+                android:text="@string/Delete"
+                android:layout_gravity="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/MultiVendor_track_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_11sp"
+                android:visibility="gone"
+
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

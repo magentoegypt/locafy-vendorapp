@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/MultiVendor_commentstatus_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2.0">
+
+        <TextView
+            android:id="@+id/MultiVendor_status_head"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/Status"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_15sp" />
+<!--Updated Spinner-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/pad_10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/spinner_border">
+
+            <Spinner
+                android:id="@+id/MultiVendor_status_edt"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/AppTheme"
+                android:layout_height="match_parent"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!--<Spinner
+            android:id="@+id/MultiVendor_status_edt"
+            style="@style/spinner_style"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:padding="@dimen/pad_5dp"
+            android:visibility="gone" />-->
+        <!--   <EditText
+               android:id="@+id/MultiVendor_status_edt"
+               android:layout_width="0dp"
+               android:layout_height="@dimen/_40sdp"
+               style="@style/spinner_style"
+               android:layout_margin="@dimen/pad_10dp"
+               android:layout_weight="1.0"
+               android:text="Please select status"
+               android:padding="@dimen/_10sdp"
+               android:editable="false"
+               android:textColor="@color/black"
+               android:textSize="@dimen/txt_13sp" />-->
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/MultiVendor_comment_txt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/pad_10dp"
+        android:layout_marginEnd="@dimen/pad_10dp"
+        android:background="@drawable/spinner_border"
+        android:gravity="top"
+        android:lines="1"
+        android:padding="@dimen/_10sdp"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="true"
+        android:singleLine="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_13sp" />
+
+    <CheckBox
+        android:id="@+id/MultiVendor_NotifyCustomerbyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pad_10dp"
+        android:layout_marginEnd="@dimen/pad_10dp"
+        android:text="@string/NotifyCustomerbyEmail"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_15sp"
+        android:theme="@style/WhiteCheck" />
+
+    <CheckBox
+        android:id="@+id/MultiVendor_VisibleonFrontend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pad_10dp"
+        android:layout_marginEnd="@dimen/pad_10dp"
+        android:text="@string/VisibleonFrontend"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_15sp"
+        android:theme="@style/WhiteCheck" />
+
+    <Button
+        android:id="@+id/MultiVendor_submit_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pad_10dp"
+        android:background="@drawable/corner"
+        android:text="@string/SubmitComment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_15sp" />
+</LinearLayout>

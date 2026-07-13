@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/MultiVendor_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@color/darker_gray"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1.0"
+
+                >
+
+                <TextView
+                    android:id="@+id/MultiVendor_addnewproduct"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight=".85"
+                    android:background="@color/AppTheme"
+                    android:gravity="start|center"
+                    android:paddingStart="@dimen/pad_10dp"
+                    android:text="@string/Viewbid"
+                    android:textAllCaps="false"
+                    android:textColor="@color/TextColor" />
+
+                <LinearLayout
+                    android:id="@+id/MultiVendor_filtersection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight=".15"
+                    android:background="@color/whitebackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/pad_5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="2dp"
+                        android:src="@drawable/filtericon" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/ebebebe" />
+
+            <TextView
+                android:id="@+id/MultiVendor_countsproducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whitebackground"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:text="Showings 5 products"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/list_bid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="magentoegypt.locafy">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.REAL_GET_TASKS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- START Added for GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="magentoegypt.locafy.vendor_notification.app.MyApplication"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme">
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.ConfigAttributeSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name="magentoegypt.locafy.gallary.GalleryActivity"
+            android:exported="false" />
+        <activity
+            android:name="magentoegypt.locafy.addons.AdvanceReport"
+            android:exported="false" />
+        <activity
+            android:name="magentoegypt.locafy.addons.inventory.OutOfStockActivity"
+            android:exported="true" />
+        <activity
+            android:name="magentoegypt.locafy.addons.inventory.SaveInventory"
+            android:exported="false" />
+        <activity
+            android:name="magentoegypt.locafy.addons.inventory.LowStock"
+            android:exported="false" />
+        <activity
+            android:name="magentoegypt.locafy.addons.faq.AddNewFAQ"
+            android:exported="false" />
+        <activity
+            android:name="magentoegypt.locafy.addons.faq.FaqListScreen"
+            android:exported="false" />
+        <activity android:name="magentoegypt.locafy.addons.vendor_pincode_checker.AssignedPincode.mvp_AssignedPincodeList" />
+        <activity android:name="magentoegypt.locafy.addons.vendor_pincode_checker.PincodeList.mvp_PincodeListing" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="@string/fb_login_protocol_scheme"
+                    tools:ignore="ManifestResource" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="magentoegypt.locafy.base_app.Ced_MultiVendor_VendorSplash"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="magentoegypt.locafy.base_app.StoreSelection"
+            android:exported="true" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_login_section.Ced_MultiVendorBase_VendorLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_login_section.Ced_MultiVendor_ForgotPassWord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.api_request_response_section.network_error_handling.Ced_MultiVendor_NoInternetconnection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.api_request_response_section.network_error_handling.Ced_MultiVendor_UnAuthourizedRequestError"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_registration_section.new_registration.Ced_MultiVendor_VendorApprovalRequired"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.navigation_drawer.Activity.Ced_MultiVendor_NavigationActivity"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="error" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_OrdersList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_Orderview"
+            android:screenOrientation="portrait" />
+        <!--
+  <activity
+              android:name=".Ced_Multivendor_VendorTransaction.Ced_MultiVendor_RequestPayment"
+              android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name="magentoegypt.locafy.vendor_transaction.Ced_MultiVendor_ViewTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_reports_section.Ced_MultiVendor_OrderReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_reports_section.Ced_MultiVendor_OrderReport_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_reports_section.Ced_MultiVendor_ProductReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_reports_section.Ced_MultiVendor_ProductReport_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.base_app.Ced_MultiVendor_VendorOrderMarkersMap"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_profile_section.Ced_MultiVendor_VendorProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_profile_section.Ced_MultiVendor_EditVendorProfileSection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_ManageProducts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_AddVendorProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_CreateProductWithType"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_UpdateProduct"
+            android:screenOrientation="portrait" />
+        <!--
+ <activity
+             android:name=".VendorNotification.gcm.ReceiverActivity"
+             android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name="magentoegypt.locafy.manage_attribute.Ced_MultiVendor_VendorProductAttribute"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_attribute.Ced_MultiVendor_CreateProductAttributeSet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_attribute.Ced_MultiVendor_VendorProductAttributeSet_Edit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_settings.Ced_MultiVendor_Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_registration_section.customer_as_vendor_registration.Ced_MultiVendor_CustomerAsVendorRegistration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_profile_section.Ced_MultiVendor_ProfileStatus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_notification.Notification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_attribute.Ced_MultiVendor_CreateProductAttribute"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_attribute.Ced_MultiVendor_EditProductAttribute"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_attribute.Ced_MultiVendor_VendorProductAttributeSet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_InvoiceListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_ShipmentListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CreditMemoListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_InvoiceView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_ShipmentView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CreditMemoView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CreateComment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CreateCreditMemo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_ManageOrdersList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_Information_View"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_Invoice_Information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CreditMemo_Information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_Shipment_Information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CommentsHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CreateInvoice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_CreateShipment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_select_n_sell.Add_Product_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_select_n_sell.Ced_MultiVendor_Sell_This_Product"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_select_n_sell.Ced_MultiVendor_Venor_View_Selling_Product"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_select_n_sell.Product_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_rma.Ced_MultiVendor_Viewall_Chat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_rma.Ced_MultiVendor_ManageRMARequest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_rma.Ced_MultiVendor_RMA_RequestView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_deals.Ced_MultiVendor_Deal_Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_deals.Ced_MultiVendor_Create_and_Edit_deal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_deals.Ced_MultiVendor_Create_Deal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.dashboard_enhancements.Ced_Multivendor_bussiness_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.dashboard_enhancements.Ced_Multivendor_bank_detials"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_deals.Ced_MultiVendor_Deal_Listing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_orders.Ced_MultiVendor_ManageOrderview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.dashboard_enhancements.Ced_Multivendor_store_details"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!--
+          <receiver
+              android:name="com.google.android.gms.gcm.GcmReceiver"
+              android:exported="true"
+              android:permission="com.google.android.c2dm.permission.SEND">
+              <intent-filter>
+                  <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                  <category android:name="com.cedcommerce.marketplace.vendor" />
+              </intent-filter>
+          </receiver>
+
+          <service
+              android:name=".VendorNotification.gcm.MyGcmPushReceiver"
+              android:exported="false">
+              <intent-filter>
+                  <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+              </intent-filter>
+          </service>
+          <service
+              android:name=".VendorNotification.gcm.GCMIntentService"
+              android:exported="false">
+              <intent-filter>
+                  <action android:name="com.google.android.gms.iid.InstanceID" />
+              </intent-filter>
+          </service>
+        -->
+        <service
+            android:name="magentoegypt.locafy.vendor_notification.fcm.MageNative_MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="magentoegypt.locafy.vendor_settings.Ced_MultiVendor_ShippingSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_settings.Ced_MultiVendor_ShippingMethod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_CustomOption"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_Related"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_upsell"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_crosssell"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_BundleItems"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_GroupItems"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_Downloadable"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_Configurable"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_ConfigurableAttribute"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_MultiVendor_BundleProductGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_cms.Ced_MultiVendor_Cms.Ced_MultiVendor_CmsListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_cms.Ced_MultiVendor_StaticBlock.Ced_MultiVendor_BlockListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_cms.Ced_MultiVendor_StaticBlock.Ced_MultiVendor_NewBlock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_cms.Ced_MultiVendor_Cms.Ced_MultiVendor_NewCms"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_cms.Ced_MultiVendor_StaticBlock.Ced_MultiVendor_UpdateBlock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_cms.Ced_MultiVendor_Cms.Ced_MultiVendor_UpdateCms"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_store_pickup.Ced_MultiVendor_StoreListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_store_pickup.Ced_MultiVendor_UpdateStore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_store_pickup.Ced_MultiVendor_NewStore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.advance_transactions.Ced_MultiVendor_TransactionListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_transaction.Ced_MultiVendor_Requestpayment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.advance_transactions.Ced_MultiVendor_TransactionView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.advance_transactions.Ced_MultiVendor_OrderView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_settings.Ced_MultiVendor_ShippingMethodsZ"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_dashboard.Ced_MultiVendor_VendorDashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_registration_section.new_registration.Ced_MultiVendor_VendorRegistration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.Ced_Multivendor_Category_Mapping"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_login_section.Ced_Multivendor_New_Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_profile_section.Ced_MultiVendor_EditVendorProfileDynamic"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_transaction.Ced_MultiVendor_ListTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_settings.ShippingMethodNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.ProductCreationNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.manage_products_section.EditProductDynamic"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_transaction.RequestPaymentNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.vendor_registration_section.new_registration.Ced_MultiVendor_Registration_step2"
+            android:screenOrientation="portrait" />
+        <activity android:name="magentoegypt.locafy.manage_ticket.Manage_Ticket" />
+        <activity android:name="magentoegypt.locafy.manage_ticket.Create_New_Ticket" />
+        <activity android:name="magentoegypt.locafy.manage_ticket.Reply_Ticket_ChatView" />
+        <activity android:name="magentoegypt.locafy.addons.messaging.admin_inbox.Admin_Inbox" />
+        <activity android:name="magentoegypt.locafy.addons.messaging.admin_inbox.Admin_Inbox_ChatView" />
+        <activity android:name="magentoegypt.locafy.addons.messaging.admin_inbox.Admin_Inbox_ComposeView" />
+        <activity android:name="magentoegypt.locafy.addons.messaging.customer_inbox.Customer_Inbox" />
+        <activity android:name="magentoegypt.locafy.addons.messaging.customer_inbox.Customer_Inbox_ChatView" />
+        <activity android:name="magentoegypt.locafy.addons.messaging.customer_inbox.Customer_Inbox_ComposeView" />
+        <activity android:name="magentoegypt.locafy.addons.advance_transactions.MVP_AdvReqPayments" />
+        <activity
+            android:name="magentoegypt.locafy.addons.advance_Report.AdvanceReportHomeActivity"
+            android:theme="@style/AppThemeWithActionBar" />
+        <activity android:name="magentoegypt.locafy.addons.advance_Report.activity.OutOfStockProductActivity" />
+        <activity android:name="magentoegypt.locafy.vendor_transaction.mvp_adv_req_payments" />
+        <activity android:name="magentoegypt.locafy.vendor_registration_section.new_registration.RegistrationDynamic" />
+        <activity android:name="magentoegypt.locafy.vendor_product_review_and_rating.ManageRating.ManageProductRating" />
+        <activity android:name="magentoegypt.locafy.vendor_product_review_and_rating.ManageRating.RatingItemView" />
+        <activity android:name="magentoegypt.locafy.vendor_product_review_and_rating.ManageReview.ReviewItemView" />
+        <activity android:name="magentoegypt.locafy.vendor_product_review_and_rating.ManageReview.ManageProductReview" />
+        <activity android:name="magentoegypt.locafy.addons.vendor_member_ship_plans.Ced_Multivendor_Membership_Plan" />
+        <activity android:name="magentoegypt.locafy.addons.vendor_member_ship_plans.Ced_Multivendor_Plan_History" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_Auction.Ced_Multivendor_Add_Auction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_Auction.Ced_Multivendor_Edit_Auction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_Auction.Ced_Multivendor_List_Auction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.ced_multi_vendor_auction_new.manageauction.activity.Ced_Multivendor_ManageAuction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.ced_multi_vendor_auction_new.manageauction.activity.ManageAuction_ItemView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.ced_multi_vendor_auction_new.manageauction.activity.AddAuction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.ced_multi_vendor_auction_new.auctionwinner.Ced_Multivendor_AuctionWinners"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_member_ship_plans.Ced_Weblink"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_member_ship_plans.Ced_MultiVendor_Membership_View"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="magentoegypt.locafy.addons.vendor_store_pickup.Ced_MapActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="magentoegypt.locafy.addons.mvp_RequestForQuote.Ced_MultiVendor_Vendor_Po_list_view" />
+        <activity android:name="magentoegypt.locafy.addons.mvp_RequestForQuote.Ced_MultiVendor_Vendor_Submit_PO" />
+        <activity android:name="magentoegypt.locafy.addons.mvp_RequestForQuote.Ced_MultiVendor_Vendor_ViewPO_List" />
+        <activity android:name="magentoegypt.locafy.addons.mvp_RequestForQuote.Ced_MultiVendor_VendorQuote_View" />
+        <activity android:name="magentoegypt.locafy.addons.mvp_RequestForQuote.Ced_MultiVendor_VendorQuoteManagement" />
+        <activity android:name="magentoegypt.locafy.addons.mvp_RequestForQuote.MessageActivity" />
+        <activity android:name="magentoegypt.locafy.addons.mvp_RequestForQuote.mvp_RFQ_Setting" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="magentoegypt.locafy.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_icon" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
+    </application>
+
+</manifest>

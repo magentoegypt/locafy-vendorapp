@@ -1,0 +1,58 @@
+/*
+ *
+ *   Copyright/* *
+ *             * CedCommerce
+ *             *
+ *             * NOTICE OF LICENSE
+ *             *
+ *             * This source file is subject to the End User License Agreement (EULA)
+ *             * that is bundled with this package in the file LICENSE.txt.
+ *             * It is also available through the world-wide-web at this URL:
+ *             * http://cedcommerce.com/license-agreement.txt
+ *             *
+ *             * @category  Ced
+ *             * @package   MultiVendor
+ *             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+ *             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+ *             * @license   http://cedcommerce.com/license-agreement.txt
+ *
+ *
+ *
+ */
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0'
+        // classpath 'com.android.tools.build:gradle:3.4.3'
+        // classpath 'com.google.gms:google-services:1.5.0-beta2'
+        classpath 'com.google.gms:google-services:4.4.2'
+        classpath 'com.android.tools.build:gradle:8.1.4'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+        }
+        maven { url "https://jitpack.io" }
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

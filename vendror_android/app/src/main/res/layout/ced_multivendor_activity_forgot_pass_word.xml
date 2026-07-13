@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@color/loginback"
+    app:ignore="NamespaceTypo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@color/loginback"
+        android:gravity="center_horizontal|center_vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@+id/MultiVendor_forgotpasstag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textStyle="bold"
+                    android:text="@string/forgotpas"
+                    android:textColor="@color/AppTheme"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/MultiVendor_linebelowemailsendtag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/MultiVendor_forgotpasstag"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/ebebebe"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/MultiVendor_retrievetag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_linebelowemailsendtag"
+                    android:layout_marginStart="15dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+
+                    android:text="@string/retrieve"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/MultiVendor_emailsendtag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_retrievetag"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/emailretievetag"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <RadioGroup
+                    android:id="@+id/radiosForgot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/MultiVendor_emailsendtag"
+                    android:inputType="text"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/forgot_with_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="4dp"
+                        android:layoutDirection="ltr"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:text="@string/mobile_number"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/forgot_with_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_margin="4dp"
+                        android:layoutDirection="ltr"
+                        android:checked="true"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:text="@string/emailhint"
+                        android:textSize="14sp" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/countryCodelin"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/radiosForgot"
+                    android:layoutDirection="ltr"
+                    android:background="@drawable/spinner_border"
+                    >
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryPicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:ccp_autoDetectCountry="true"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        app:ccp_showFlag="true"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showFullName="false"/>
+                    <EditText
+                        android:id="@+id/MultiVendor_forgotemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@null"
+                        android:hint="@string/email_mobile_number"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/TextHintColor" />
+                </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/MultiVendor_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/countryCodelin"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/corner"
+                    android:text="@string/submittext"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
+

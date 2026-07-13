@@ -1,0 +1,75 @@
+
+/* Class = "UILabel"; text = " Select and Sell Products"; ObjectID = "1zy-8b-E7F"; */
+"1zy-8b-E7F.text" = " Select and Sell Products";
+
+/* Class = "UILabel"; text = "Product Price"; ObjectID = "5bB-DG-Acu"; */
+"5bB-DG-Acu.text" = "Product Price";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "6XE-4v-KhC"; */
+"6XE-4v-KhC.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "  Select and Sell Product List"; ObjectID = "Adq-Jx-XKi"; */
+"Adq-Jx-XKi.text" = "  Select and Sell Product List";
+
+/* Class = "UILabel"; text = "Stock"; ObjectID = "Fqs-hM-9sK"; */
+"Fqs-hM-9sK.text" = "Stock";
+
+/* Class = "UILabel"; text = "Stock Availability"; ObjectID = "H7o-5X-YWc"; */
+"H7o-5X-YWc.text" = "Stock Availability";
+
+/* Class = "UILabel"; text = "SKU"; ObjectID = "NtC-ow-zoc"; */
+"NtC-ow-zoc.text" = "SKU";
+
+/* Class = "UILabel"; text = "Product Price"; ObjectID = "O5T-k9-yLB"; */
+"O5T-k9-yLB.text" = "Product Price";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "PGv-M7-qrw"; */
+"PGv-M7-qrw.text" = "Product Name";
+
+/* Class = "UILabel"; text = "Product Price"; ObjectID = "Pr3-Wa-c7F"; */
+"Pr3-Wa-c7F.text" = "Product Price";
+
+/* Class = "UILabel"; text = "SKU"; ObjectID = "Q6f-gD-xXc"; */
+"Q6f-gD-xXc.text" = "SKU";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "RDR-b8-tfB"; */
+"RDR-b8-tfB.text" = "Status";
+
+/* Class = "UIButton"; normalTitle = "Select "; ObjectID = "SQL-pc-Bwf"; */
+"SQL-pc-Bwf.normalTitle" = "Select ";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Ve8-QM-Ztt"; */
+"Ve8-QM-Ztt.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "SKU"; ObjectID = "Vtr-9A-faf"; */
+"Vtr-9A-faf.text" = "SKU";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "Z1O-nM-d6I"; */
+"Z1O-nM-d6I.normalTitle" = "Edit";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "bLV-VQ-uXU"; */
+"bLV-VQ-uXU.text" = "Price";
+
+/* Class = "UILabel"; text = "Product Id"; ObjectID = "gM8-NU-ThY"; */
+"gM8-NU-ThY.text" = "Product Id";
+
+/* Class = "UILabel"; text = "Main Website"; ObjectID = "jVH-Oe-cXU"; */
+"jVH-Oe-cXU.text" = "Main Website";
+
+/* Class = "UILabel"; text = "Product Id"; ObjectID = "kGh-bl-Abw"; */
+"kGh-bl-Abw.text" = "Product Id";
+
+/* Class = "UIButton"; normalTitle = "Select "; ObjectID = "mAa-Hj-cMH"; */
+"mAa-Hj-cMH.normalTitle" = "Select ";
+
+/* Class = "UILabel"; text = "Product Name"; ObjectID = "nb0-b6-I9T"; */
+"nb0-b6-I9T.text" = "Product Name";
+
+/* Class = "UIButton"; normalTitle = "Sell This Product"; ObjectID = "w9z-1x-l79"; */
+"w9z-1x-l79.normalTitle" = "Sell This Product";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "x7o-Fj-Mhw"; */
+"x7o-Fj-Mhw.text" = "Status";
+
+/* Class = "UILabel"; text = "WebSite"; ObjectID = "y1J-Dj-kdz"; */
+"y1J-Dj-kdz.text" = "WebSite";

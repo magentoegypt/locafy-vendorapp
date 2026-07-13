@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Button_View_Combo_View" customModule="Sell_on_Pushmycart" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="QNc-wy-rxe" id="fsO-BE-Gv9"/>
+                <outlet property="topButton" destination="rMW-NH-f5t" id="iM9-98-T2O"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nRT-Ks-FTE">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMW-NH-f5t">
+                    <rect key="frame" x="10" y="0.0" width="381" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.2217681849" blue="0.24511582009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="f4m-Io-I0M"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNc-wy-rxe">
+                    <rect key="frame" x="10" y="35" width="381" height="125"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rMW-NH-f5t" firstAttribute="leading" secondItem="nRT-Ks-FTE" secondAttribute="leading" constant="10" id="86L-sl-F7i"/>
+                <constraint firstAttribute="trailing" secondItem="rMW-NH-f5t" secondAttribute="trailing" constant="10" id="8bi-po-2uj"/>
+                <constraint firstItem="QNc-wy-rxe" firstAttribute="top" secondItem="rMW-NH-f5t" secondAttribute="bottom" constant="5" id="8kI-Lv-ngB"/>
+                <constraint firstAttribute="trailing" secondItem="QNc-wy-rxe" secondAttribute="trailing" constant="10" id="BJt-Pi-gH9"/>
+                <constraint firstItem="QNc-wy-rxe" firstAttribute="leading" secondItem="nRT-Ks-FTE" secondAttribute="leading" constant="10" id="YuZ-PL-06a"/>
+                <constraint firstItem="rMW-NH-f5t" firstAttribute="top" secondItem="nRT-Ks-FTE" secondAttribute="top" id="p5T-rv-CH7"/>
+                <constraint firstAttribute="bottom" secondItem="QNc-wy-rxe" secondAttribute="bottom" id="wGP-WR-JOO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="298.5" y="227"/>
+        </view>
+    </objects>
+</document>

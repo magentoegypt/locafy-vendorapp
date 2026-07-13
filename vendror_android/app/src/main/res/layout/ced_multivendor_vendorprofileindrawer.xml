@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/AppTheme">
+<!--
+
+    <ImageView
+        android:id="@+id/MultiVendor_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/guest" />
+
+    <TextView
+        android:id="@+id/MultiVendor_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/MultiVendor_icon"
+        android:layout_toRightOf="@id/MultiVendor_icon"
+        android:text="@string/hellovendortext"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/MultiVendor_approvedtag"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/MultiVendor_title"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/MultiVendor_icon"
+        android:layout_toRightOf="@+id/MultiVendor_icon"
+        android:background="@drawable/circle_approved" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/MultiVendor_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/MultiVendor_approvedtag"
+        android:layout_toRightOf="@+id/MultiVendor_approvedtag"
+        android:text="@string/approved"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@color/AppTheme"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/pad_10dp"
+        android:paddingTop="30dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/MultiVendor_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#F7F5F5"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/MultiVendor_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

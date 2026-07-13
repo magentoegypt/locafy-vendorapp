@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<!--<Spinner style="@style/SpinnerTheme"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MultiVendor_settingspinner"
+    android:layout_marginLeft="2dp"
+    android:login_background="@color/white"
+    style="@android:style/Widget.Spinner.DropDown"
+    xmlns:android="http://schemas.android.com/apk/res/android" />-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/editext_border"
+    android:gravity="center">
+
+    <Spinner
+        android:id="@+id/MultiVendor_settingspinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/AppTheme"
+        android:spinnerMode="dropdown" />
+</LinearLayout>
+<!--
+<Spinner xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MultiVendor_settingspinner"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/backgroundg_spinner"
+    android:gravity="center"
+    android:padding="@dimen/pad_5dp" />-->

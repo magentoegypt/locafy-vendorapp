@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<resources>
+    <color name="fb_color">#425DAD</color>
+    <!-- Background drawable that can be used for a transparent activity to
+         be able to display a dark UI: this darkens its login_background to make
+         a dark (default theme) UI more visible. -->
+    <!-- Background drawable that can be used for a transparent activity to
+         be able to display a light UI: this lightens its login_background to make
+         a light UI more visible. -->
+    <color name="white">#ffffffff</color>
+    <color name="ebebebe">#EBEBEB</color>
+    <color name="black">#000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="background_dark">#ff000000</color>
+    <color name="merchantcolor">#F3F3DF</color>
+    <color name="vendorcolor">#E9967A</color>
+
+    <color name="contrastgreen">#449D44</color>
+    <!-- For date picker widget -->
+    <!-- For settings framework -->
+    <color name="lighter_gray">#ddd</color>
+    <color name="darker_gray">#f1f1f1</color>
+    <!-- For security permissions -->
+    <color name="shadow">#cc222222</color>
+
+
+    <color name="Red_700">#ffc53929</color>
+    <item name="blue" type="color">#FF33B5E5</item>
+    <item name="green" type="color">#FF99CC00</item>
+    <item name="orange" type="color">#FFFFBB33</item>
+    <item name="red" type="color">#FFFF4444</item>
+    <item name="darkorange" type="color">#FFFF8800</item>
+
+
+    <color name="AppTheme">#002f63</color>
+    <color name="purple_200">#002248</color>
+    <color name="background_grey">#6BF1EFEF</color>
+    <color name="status_bar_color">@color/purple_200</color>
+    <color name="secondary_color">#002f63</color>
+    <color name="AppTheme_light">#f0f0f0</color>
+
+    <color name="TextColor">#ffffff</color>
+    <color name="TextHintColor">#a9a9a9</color>
+    <color name="background">#ebebeb</color>
+    <color name="textcolor">#434343</color>
+    <color name="default_slice_color">#88FF0000</color>
+    <color name="default_line_color">#88FFFFFF</color>
+
+    <color name="main_color_gray_lt">#dddddd</color>
+    <color name="main_color_gray">#7d7d7d</color>
+
+    <color name="bg8">#f6730a</color>
+    <color name="loginback">#222D32</color>
+    <color name="pending">#00ACAC</color>
+    <color name="approved">#047FC5</color>
+    <color name="disapproved">#D9534F</color>
+    <color name="header_color">#F5F5F5</color>
+    <color name="holded">#de5b1b</color>
+    <color name="closedback">#DF8918</color>
+    <color name="processingback">#3792d6</color>
+    <color name="completeback">#00A74F</color>
+    <color name="saveprofile_button">#12a782</color>
+    <color name="saveprofile_button_onclick">#5FE05F</color>
+    <color name="button_delete_color">#D35C59</color>
+    <color name="button_delete_color_click">#FB6F6C</color>
+    <color name="cancledback">#b9051e</color>
+    <color name="pendingcard">#D9534F</color>
+    <color name="earnedcard">#5CB85C</color>
+    <color name="ordercard">#F0AD4E</color>
+    <color name="soldcard">#337AB7</color>
+    <color name="listing_back_color">#f8f8f8</color>
+    <color name="yellow_bg">#F4B04F</color>
+    <color name="green_bg">#4d994d</color>
+    <color name="badge">#41362F</color>
+    <color name="fromvendor">#B8E1F3</color>
+    <color name="tovendor">#E0EFCC</color>
+    <color name="red_republichub">#E05181</color>
+    <color name="whitebackground">#ffffff</color>
+    <color name="ratingbar">#DB701B</color>
+    <color name="gray_light">#e8e8e8</color>
+    <color name="white_smoke">#f7f7f7</color>
+    <color name="textColoSecondry">#B5AFAF</color>
+    <color name="grey">#C5C3C3</color>
+    <color name="transaction_color">#DBE2F1</color>
+
+</resources>

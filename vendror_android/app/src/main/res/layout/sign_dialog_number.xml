@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/countryCodelin"
+        android:layout_marginBottom="10dp"
+        android:layoutDirection="ltr"
+        android:background="@drawable/spinner_border"
+        >
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:ccp_autoDetectCountry="true"
+            android:gravity="center"
+            app:ccp_showFlag="true"
+            app:ccp_showNameCode="false"
+            app:ccp_showFullName="false"/>
+        <EditText
+            android:id="@+id/edtUserNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="@string/_1234567890"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/TextHintColor" />
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/edtUserOtp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/spinner_border"
+        android:gravity="center"
+        android:hint="@string/enter_otp"
+        android:inputType="number"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/TextHintColor"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_resendotp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:backgroundTint="@color/AppTheme"
+            android:text="@string/resend"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/green"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

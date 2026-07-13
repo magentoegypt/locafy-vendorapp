@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewStatePickerView" customModule="Multivendor_Vendor_App_For_Magento_2" customModuleProvider="target">
+            <connections>
+                <outlet property="dropDownButton" destination="Wyw-rM-awC" id="gaa-xZ-s7S"/>
+                <outlet property="entityNameLabel" destination="Nht-oM-j7R" id="o07-GS-xXx"/>
+                <outlet property="textValue" destination="8xw-RN-7QG" id="f7q-V3-DIx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="O8a-xK-uwt">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="65"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-oM-j7R">
+                    <rect key="frame" x="5" y="0.0" width="396" height="25"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="lBs-W2-6an"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyw-rM-awC">
+                    <rect key="frame" x="5" y="30" width="391" height="30"/>
+                    <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="bPb-DM-Oxx"/>
+                        <constraint firstAttribute="height" constant="40" id="ePo-II-868"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Browse" backgroundImage="dropdown">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ePo-II-868"/>
+                        </mask>
+                    </variation>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8xw-RN-7QG">
+                    <rect key="frame" x="5" y="30" width="391" height="30"/>
+                    <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="c5k-gd-nh9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Wyw-rM-awC" firstAttribute="leading" secondItem="Nht-oM-j7R" secondAttribute="leading" id="87a-JV-RNy"/>
+                <constraint firstItem="Wyw-rM-awC" firstAttribute="top" secondItem="Nht-oM-j7R" secondAttribute="bottom" constant="5" id="91s-Yk-f8x"/>
+                <constraint firstItem="8xw-RN-7QG" firstAttribute="top" secondItem="Nht-oM-j7R" secondAttribute="bottom" constant="5" id="A3R-R8-AIg"/>
+                <constraint firstItem="Nht-oM-j7R" firstAttribute="top" secondItem="O8a-xK-uwt" secondAttribute="top" id="Agv-Gl-8tJ"/>
+                <constraint firstItem="Nht-oM-j7R" firstAttribute="leading" secondItem="O8a-xK-uwt" secondAttribute="leading" constant="5" id="As0-bH-4S4"/>
+                <constraint firstAttribute="trailing" secondItem="Nht-oM-j7R" secondAttribute="trailing" id="KLV-gR-luM"/>
+                <constraint firstAttribute="trailing" secondItem="8xw-RN-7QG" secondAttribute="trailing" constant="5" id="Vaf-bx-ZzV"/>
+                <constraint firstItem="Wyw-rM-awC" firstAttribute="trailing" secondItem="Nht-oM-j7R" secondAttribute="trailing" constant="-5" id="WEv-d3-FtX"/>
+                <constraint firstItem="8xw-RN-7QG" firstAttribute="leading" secondItem="O8a-xK-uwt" secondAttribute="leading" constant="5" id="aZx-bt-6Tv"/>
+                <constraint firstAttribute="bottom" secondItem="Wyw-rM-awC" secondAttribute="bottom" id="biM-jo-u4e"/>
+                <constraint firstAttribute="bottom" secondItem="8xw-RN-7QG" secondAttribute="bottom" constant="5" id="vYK-sg-PSJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="biM-jo-u4e"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-42" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dropdown" width="539" height="77"/>
+    </resources>
+</document>

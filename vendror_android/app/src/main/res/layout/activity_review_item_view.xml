@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:padding="@dimen/pad_5dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/head"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_apptheme"
+            android:text="@string/edit_review"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/Product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/head"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/Product"
+            android:textSize="@dimen/txt_15sp"
+            app:layout_constraintStart_toEndOf="@+id/product_title"
+            app:layout_constraintTop_toBottomOf="@+id/head"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/author"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/author"
+            android:visibility="gone"
+            android:textSize="@dimen/txt_15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/summaryrating_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/summary_rating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/summaryrating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:progressBackgroundTint="@color/black"
+            android:progressTint="@color/ratingbar"
+            android:text="@string/author"
+            app:layout_constraintStart_toEndOf="@+id/summaryrating_title"
+            app:layout_constraintTop_toBottomOf="@+id/author" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/situation_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/Status"
+            app:layout_constraintBottom_toBottomOf="@+id/situation_frame"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/situation_frame"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <FrameLayout
+            android:id="@+id/situation_frame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:background="@drawable/editext_border"
+            android:padding="5dp"
+            app:layout_constraintStart_toEndOf="@+id/situation_title"
+            app:layout_constraintTop_toBottomOf="@+id/summaryrating"
+            app:layout_constraintWidth_percent="0.5">
+
+<!--            android:entries="@array/review_status"-->
+            <Spinner
+                android:id="@+id/situation_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/AppTheme" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/surname_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/nickname"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/situation_frame"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/surname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:background="@drawable/editext_border"
+            android:padding="5dp"
+            android:text="@string/nickname"
+            android:visibility="gone"
+            android:textSize="@dimen/txt_15sp"
+            app:layout_constraintStart_toEndOf="@+id/surname_title"
+            app:layout_constraintTop_toBottomOf="@+id/situation_frame"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/summary_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/summary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/evolutionsummary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:background="@drawable/editext_border"
+            android:padding="5dp"
+            android:text="@string/summary"
+            android:textSize="@dimen/txt_15sp"
+            app:layout_constraintStart_toEndOf="@+id/summary_title"
+            app:layout_constraintTop_toBottomOf="@+id/surname"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/assessment_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/review"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/evolutionsummary"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/assessment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:background="@drawable/editext_border"
+            android:padding="5dp"
+            android:text="@string/review"
+            android:textSize="@dimen/txt_15sp"
+            app:layout_constraintStart_toEndOf="@+id/assessment_title"
+            app:layout_constraintTop_toBottomOf="@+id/evolutionsummary"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/detailclassification_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:padding="5dp"
+            android:text="@string/detailclassification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/detailclassification_layout"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/detailclassification_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:minHeight="30dp"
+            android:orientation="vertical"
+            android:paddingStart="0dp"
+            android:paddingEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/detailclassification_title"
+            app:layout_constraintTop_toBottomOf="@+id/assessment"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/visibility_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:text="@string/visiblity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/visibility_frame"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <LinearLayout
+            android:id="@+id/visibility_frame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/visibility_title"
+            app:layout_constraintTop_toBottomOf="@+id/detailclassification_layout"
+            app:layout_constraintWidth_percent="0.5">
+
+            <CheckBox
+                android:id="@+id/MultiVendor_cms_storeviewtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storeview"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:theme="@style/WhiteCheck" />
+
+            <LinearLayout
+                android:id="@+id/MultiVendor_cms_storeview_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/border_button_apptheme"
+            android:backgroundTint="@color/red"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/reset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/visibility_frame" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pad_30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/border_button_apptheme"
+            android:backgroundTint="@color/button_delete_color"
+            android:text="@string/reset"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/save"
+            app:layout_constraintStart_toEndOf="@id/delete"
+            app:layout_constraintTop_toBottomOf="@id/visibility_frame" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/border_button_apptheme"
+            android:backgroundTint="@color/saveprofile_button"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/reset"
+            app:layout_constraintTop_toBottomOf="@id/visibility_frame" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

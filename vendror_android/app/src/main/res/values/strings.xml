@@ -1,0 +1,1492 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<resources>
+
+    <string name="header" translatable="false">mobiconnectsecrethash</string>
+    <string name="facebook_app_id" translatable="false">4575198272598318</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb4575198272598318</string>
+
+    <string name="base_url" translatable="false">https://locafy.market/</string>
+    <!--    <string name="base_url" translatable="false">https://brassandwood.org/</string>-->
+
+
+    <!--    <string name="base_url" translatable="false">https://demo2.cedcommerce.com/magento/client/hassan/pub/</string>-->
+
+    <string name="app_name">Locafy Seller</string>
+    <string name="alert_name">Locafy Seller</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="VendorProfile">Seller Profile</string>
+    <string name="no_location_data_provided">No Location Provider</string>
+    <string name="Products">Products</string>
+    <string name="NewProduct">New Product</string>
+    <string name="ManageProducts">Manage Products</string>
+    <string name="productattribute">Product Attribute</string>
+    <string name="ManageTickets">Manage Tickets</string>
+    <string name="rma">RMA</string>
+    <string name="rmatxt">RMA</string>
+    <string name="managermarequest">Manage RMA Request</string>
+    <string name="ManageAttribute">Manage Attribute</string>
+    <string name="ManageAttributeSet">Manage Attribute Set</string>
+    <string name="manageorders">Manage Orders</string>
+    <string name="ManageOrders">Manage Orders</string>
+    <string name="CancelOrders">Cancel Orders</string>
+    <string name="ManageInvoice">Manage Invoice</string>
+    <string name="ManageShipment">Manage Shipment</string>
+    <string name="ManageCreditMemo">Manage Credit Memo</string>
+    <string name="messaging">Messaging</string>
+    <string name="vendoradmin">Admin Inbox</string>
+    <string name="vendorcustomer">Customer Inbox</string>
+    <string name="membershipplans">MemberShip Plans</string>
+    <string name="promotions">Promotions</string>
+    <string name="vendordeals">Seller Deals</string>
+    <string name="createdeals">Create Deals</string>
+    <string name="listdeals">List Deals</string>
+    <string name="dealsettings">Deal Settings</string>
+    <string name="Transactions">Transactions</string>
+    <string name="Transactions_title">Transactions</string>
+    <string name="RequestPayments">Request Payments</string>
+    <string name="RequestPaymentsMenu">Request Payments</string>
+    <string name="ViewTransactaions">View All Transactions</string>
+    <string name="Reports">Reports</string>
+    <string name="app_title">Advance Report</string>
+    <string name="filter">Filter</string>
+    <string name="OrderReports">Order Reports</string>
+    <string name="ProductReports">Product Reports</string>
+    <string name="Settings">Settings</string>
+    <string name="TransactaionSettings">Transaction Settings</string>
+    <string name="ShippingSettings">Shipping Settings</string>
+    <string name="ShippingMethods">Shipping Methods</string>
+    <string name="storepickup">Store Pick Up</string>
+    <string name="viewstores">View Stores</string>
+    <string name="advancereport">Advance Report</string>
+    <string name="vendorcms">Seller CMS</string>
+    <string name="managevendorcms">Manage Seller CMS</string>
+    <string name="managestaticblocks">Manage Static Blocks</string>
+    <string name="selectandsell">Select And Sell</string>
+    <string name="title_activity_vendor_registration">Seller Registration</string>
+    <string name="VendorLogin">Seller Login</string>
+    <string name="vendorlogintext">If you have a Seller account with us, please log in.</string>
+    <string name="emailhint">Email</string>
+    <string name="Password">Password</string>
+    <string name="logintext">Login</string>
+    <string name="forgotpass">Forgot Your Password ?</string>
+    <string name="Vendorcreateaccount">Create Your Account Here</string>
+    <string name="Persobalinfo">Personal Information *</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="news">Sign Up for Newsletter</string>
+    <string name="vendorinfo">Seller Information *</string>
+    <string name="publicname">PublicName *</string>
+    <string name="shopurl">Shop Url *</string>
+    <string name="shopurlhint">Please enter your Shop URL Key. For example \"my-shop-url\".</string>
+    <string name="vendorlogininfo">Login Information *</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="submittext">Submit</string>
+    <string name="empty">Please Provide Some Value!</string>
+    <string name="invalidemail">Please enter a valid email</string>
+    <string name="requiredemail">Email is required.</string>
+    <string name="shortpass">Please enter password with at least 8 chars.<!--,Contains at least one digit,Contains at least one lower alpha char and one upper alpha char,Contains at least one char within a set of special chars--></string>
+    <string name="passnotmatch">Password and confirm password are not matching</string>
+    <string name="VendorStatus">Seller Status</string>
+    <string name="vendorapplication">Your Seller application is pending.</string>
+    <string name="hellovendortext">Hello</string>
+    <string name="approvaltext">Your seller account is under admin approval.</string>
+    <string name="refresh">Refresh</string>
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="SignOut">Log Out</string>
+    <string name="noti">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="approved">Approved</string>
+    <string name="forgotpas">Forgot Your Password?</string>
+    <string name="retrieve">Retrieve your password here</string>
+    <string name="emailretievetag">Please enter your email below and we will send you a new password.</string>
+    <string name="dashboardtag">Dashboard</string>
+    <string name="pendingamounttag">Total Pending Amount!</string>
+    <string name="earnedamounttag">Total Earned Amount!</string>
+    <string name="eorderplacedtag">Total Orders Placed!</string>
+    <string name="salestag">Sales Analytics</string>
+    <string name="producttag">Products Status</string>
+    <string name="viewdetails">View Details</string>
+    <string name="latestordertag">Latest Orders</string>
+    <string name="orderdid">Order ID</string>
+    <string name="purchasedon">Purchased On</string>
+    <string name="billingname">Billing Name</string>
+    <string name="nerearned">Net Earned</string>
+    <string name="orderstattus">Order Status</string>
+    <string name="CountryWiseOrders">See State Wise Orders Here</string>
+    <string name="editetxt">Edit</string>
+    <string name="VendorProfileView">Seller Profile</string>
+    <string name="generalinfotext">General Information</string>
+    <string name="Created">Created At</string>
+    <string name="Status">Status</string>
+    <string name="PublicName">Public Name</string>
+    <string name="Name">Name</string>
+    <string name="Email">Email</string>
+    <string name="totalproductsold">Total Products Sold!</string>
+    <string name="addresstag">Address</string>
+    <string name="City">City</string>
+    <string name="ZipPostalCode">Zip/Postal Code</string>
+    <string name="Country">Country</string>
+    <string name="comapnylogotag">Company Logo</string>
+    <string name="companybabbertag">Company Banner</string>
+    <string name="Gender">Gender</string>
+    <string name="ContactNumber">Contact Number</string>
+    <string name="StateTag">State</string>
+    <string name="CompanyNametag">Company Name</string>
+    <string name="Abouttag">About</string>
+    <string name="supportnumbertag">Support Number</string>
+    <string name="supportemailtag">Support Email</string>
+    <string name="metakeywordtag">Meta Keywords</string>
+    <string name="MetaDescriptiontag">Meta Description</string>
+    <string name="OrderList">Order List</string>
+    <string name="Order_id">Order Id #</string>
+    <string name="grandTotal">Grand Total:</string>
+    <string name="grandTotalorder">Grand Total:</string>
+    <string name="commission">Commission Fee:</string>
+    <string name="netearned">Net Earned:</string>
+    <string name="orderpaymentstatus">Order Payment Status:</string>
+    <string name="vendorpaymentstatus">Vendor Payment Status:</string>
+    <string name="Filter">Filter</string>
+    <string name="Reset_filter">Reset Filter</string>
+    <string name="OrderInformation">Order Information</string>
+    <string name="OrderDate">Order Date</string>
+    <string name="OrderStatus">Order Status</string>
+    <string name="PurchasedFrom">Purchased From</string>
+    <string name="ShippingAddress">Shipping Address</string>
+    <string name="BillingAddress">Billing Address</string>
+    <string name="ShippingMethod">Shipping Method</string>
+    <string name="PaymentMethod">Payment Method</string>
+    <string name="Subtotal">Subtotal</string>
+    <string name="GrandTotal">Grand Total</string>
+    <string name="GrandTotalEarned">Grand Total</string>
+    <string name="CommissionFee">Commission Fee</string>
+    <string name="NetEarned">Net Earned</string>
+    <string name="Discount">Discount</string>
+    <string name="TaxAmount">Tax Amount</string>
+    <string name="CreditCardType">Credit Card Type:</string>
+    <string name="CreditCardNumber">Credit Card Number:</string>
+    <string name="NameontheCard">Name On The Card</string>
+    <string name="ProductInfo">Product Information</string>
+    <string name="Paymentinfo">Payment Information</string>
+    <string name="PAYMENTSSTATISTICS">PAYMENTS STATISTICS</string>
+    <string name="TotalPendingAmount">Total Pending Amount</string>
+    <string name="TotalPendingAmountTag">Total Pending Amount</string>
+    <string name="TotalRequestedAmount">Total Requested Amount</string>
+    <string name="PENDINGAMOUNT">PENDING AMOUNT(S)</string>
+    <string name="TotalEarnedAmount">Total Earned Amount</string>
+    <string name="TRANSACTIONSSTATISTICS">TRANSACTIONS STATISTICS</string>
+    <string name="PendingTransfers">Pending Transfers</string>
+    <string name="CreatedAt">Created At</string>
+    <string name="PaymentMode">Payment Mode</string>
+    <string name="SinglePaymentMode">Payment Mode</string>
+    <string name="TransactionId">Transaction Id</string>
+    <string name="Amount">Amount</string>
+    <string name="AdjustmentAmount">Adjustment Amount</string>
+    <string name="NetAmount">Net Amount</string>
+    <string name="BenificiaryDetails">BENEFICIARY DETAILS</string>
+    <string name="VendorName">Seller Name</string>
+    <string name="ORDERDETAILS">ORDER DETAILS</string>
+    <string name="EditProfileInformation">Edit Profile</string>
+    <string name="Representative">Representative</string>
+    <string name="profilepictag">Profile Picture</string>
+    <string name="browse">Browse</string>
+    <string name="Location">Location:</string>
+    <string name="finfusonfb">Find us on Facebook</string>
+    <string name="finfusontwitter">Follow us on Twitter</string>
+    <string name="changepass">Change Password:</string>
+    <string name="currentpasstag">Current Password:</string>
+    <string name="newpasstag">New Password:</string>
+    <string name="newpro"> + ADD NEW PRODUCT</string>
+    <string name="from">From</string>
+    <string name="productname">Name</string>
+    <string name="price">Price</string>
+    <string name="qty">Qty</string>
+    <string name="producttype">Type :</string>
+    <string name="product_id">Product ID*</string>
+    <string name="ProductId">Product ID</string>
+    <string name="Type">Type</string>
+    <string name="proName">Name</string>
+    <string name="productStatus">Status</string>
+    <string name="Delete">Delete</string>
+    <string name="selectproducttype">Select Product Type</string>
+    <string name="Continue">Continue</string>
+    <string name="websites">Select Websites</string>
+    <string name="skutag">Sku</string>
+    <string name="back">Back</string>
+    <string name="ProductCreation">Add Product</string>
+    <string name="Description">Description</string>
+    <string name="ShortDescription">Short Description</string>
+    <string name="Stockavailability">Stock Availability</string>
+    <string name="Stock">Stock Availability</string>
+    <string name="taxclasstag">Tax Class</string>
+    <string name="RegularPrice">Price</string>
+    <string name="specialpricetag">Special Price</string>
+    <string name="Category">Select Categories</string>
+    <string name="weighttag">Weight</string>
+    <string name="ADD">Add Product Images</string>
+    <string name="TransactionID">Transaction ID</string>
+    <string name="TRANSACTIONDETAILS">TRANSACTION DETAILS</string>
+    <string name="TransactionDate">Transaction Date</string>
+    <string name="TransactionMode">Transaction Mode</string>
+    <string name="TransactionType">Transaction Type</string>
+    <string name="Notes">Notes</string>
+    <string name="BeneficiaryDetails">Beneficiary Details</string>
+    <string name="Period">Period:</string>
+    <string name="PendingAmount">Pending Amount</string>
+    <string name="Action">Action</string>
+    <string name="ShowReport">Show Report</string>
+    <string name="StartDate">Start Date</string>
+    <string name="EndDate">End Date</string>
+    <string name="SalesItems">Sales Items</string>
+    <string name="ReportSalesItems">Sales Items</string>
+    <string name="TotalSales">Total Sales</string>
+    <string name="TotalCommission">Total Commission</string>
+    <string name="NetSales">Net Sales</string>
+    <string name="product_name">Name*</string>
+    <string name="SKU">SKU</string>
+    <string name="Vendor_SKU">Vendor SKU</string>
+    <string name="RowTotal">Row Total</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Product">Product</string>
+    <string name="prod_SKU">Product SKU</string>
+    <string name="MassRequestPayment">Mass Request Payment</string>
+    <string name="paymentmethodtags">Payment Method Information</string>
+    <string name="yourprofile">Your Profile Is</string>
+    <string name="taptoselect">Tap to select the country</string>
+    <string name="taptoselectstate">Tap to select the state</string>
+    <string name="selectstate">your state</string>
+    <string name="NoTransactionsAvailable">No Transactions Available</string>
+    <string name="NoOrdersToList">You have no more orders to see</string>
+    <string name="NoReortatinthisperiod">No reports during this period</string>
+    <string name="prod_sku">Product Sku</string>
+    <string name="to">To</string>
+    <string name="vendordisapprovedtext">You Are Disapproved By The Admin</string>
+    <string name="AttributeCode">Attribute Code</string>
+    <string name="AttributeLabel">Attribute Label</string>
+    <string name="Required">Required</string>
+    <string name="System">System</string>
+    <string name="Visible">Visible</string>
+    <string name="scope">Scope</string>
+    <string name="Searchable">Searchable</string>
+    <string name="UseInLayeredNavigation">Use In Layered Navigation</string>
+    <string name="Comparable">Comparable</string>
+    <string name="AttributeList">Attribute List</string>
+    <string name="CatalogInputType">Catalog Input Type for Store Owner</string>
+    <string name="DefaultValue">Default Value</string>
+    <string name="UniqueValue">Unique Value</string>
+    <string name="ValuesRequired">Values Required</string>
+    <string name="InputValidation">Input Validation for Store Owner</string>
+    <string name="ApplyTo">Apply To</string>
+    <string name="FrontendProperties">Frontend Properties</string>
+    <string name="QuickSearch">Use in Quick Search</string>
+    <string name="AdvancedSearch">Use in Advanced Search</string>
+    <string name="Front_end">Comparable on Front-end</string>
+    <string name="LayeredNavigation">Use In Layered Navigation</string>
+    <string name="SearchResultsLayeredNavigation">Use In Search Results Layered Navigation</string>
+    <string name="PromoRule">Use for Promo Rule Conditions</string>
+    <string name="Position">Position</string>
+    <string name="HTML_tag">Allow HTML Tags on Frontend</string>
+    <string name="AttributeSet">Include In Attribute Set</string>
+    <string name="ProductviewPage">Visible On Product View Page On Front-End</string>
+    <string name="ProductListing">Used In Product Listing</string>
+    <string name="Sorting_ProductListing">Used For Sorting In Product Listing</string>
+    <string name="WYSIWYG">Enable WYSIWYG</string>
+    <string name="MangeLabels">Manage Label</string>
+    <string name="MangeOptions">Manage Options</string>
+    <string name="Note_manage_label">If you do not specify an option value for a specific store view then the default (Admin) value will be used.</string>
+    <string name="SimpleProduct">Simple Product</string>
+    <string name="GroupedProduct">Grouped Product</string>
+    <string name="ConfigurableProduct">Configurable Product</string>
+    <string name="VirtualProduct">Virtual Product</string>
+    <string name="BundleProduct">Bundle Product</string>
+    <string name="DownloadableProduct">Downloadable Product</string>
+    <string name="AddOption">Add Options +</string>
+    <string name="Admin">Default Value</string>
+    <string name="Default">Default</string>
+    <string name="Pleasefillvalue">Please Fill Some Value</string>
+    <string name="default_value_can_be_one">Default Value Can Only Be One</string>
+    <string name="emptyAttrvalues">Both Attribute Code and Default label are required feilds.</string>
+    <string name="UsetoCreateConfig">Use To Create Configurable Product</string>
+    <string name="purchasedFrom">Purchased From :</string>
+    <string name="title_activity_shipping_setting">Shipping Setting</string>
+    <string name="originaddressdetails">Origin Address Details</string>
+    <string name="invoice_date">Invoice Date :</string>
+    <string name="orderdate">Order Date :</string>
+    <string name="Invoice_id">Invoice Id :</string>
+    <string name="status">Status :</string>
+    <string name="amount">Amount :</string>
+    <string name="Shipment_id">Shipment Id :</string>
+    <string name="shipment_date">Shipment Date :</string>
+    <string name="CreditMemo_id">Credit Memo Id :</string>
+    <string name="CreditMemo_date">Created At :</string>
+    <string name="Refund">Refund :</string>
+    <string name="AccountInformation">Account Information</string>
+    <string name="CustomerName">Customer Name</string>
+    <string name="CustomerGroup">Customer Group</string>
+    <string name="PaymentInformation">Payment Information</string>
+    <string name="CreditMemoTotals">Credit Memo Totals</string>
+    <string name="ShippingAndHandling"><![CDATA[Shipping & Handling]]></string>
+    <string name="InvoiceList">Invoice List</string>
+    <string name="noInvoicetolist">You have no more Invoices to see</string>
+    <string name="ShipmentList">Shipment List</string>
+    <string name="CreditMemoList">Credit Memo List</string>
+    <string name="Invoice_date">Invoice Date</string>
+    <string name="ordered_date">Order Date</string>
+    <string name="Invoiceid">Invoice Id #</string>
+    <string name="invoice_status">Status</string>
+    <string name="PleaseSelectdesiredFilter">Please Select The Desired Filter</string>
+    <string name="CreditMemoid">CreditMemo Id</string>
+    <string name="Refunded">Refunded</string>
+    <string name="Shipmentid">Shipment #</string>
+    <string name="shipmntdate_date">Date Shipped</string>
+    <string name="shippingName">Shipping Name</string>
+    <string name="ItemsInvoiced">Items Ordered</string>
+    <string name="InvoiceTotals">Invoice Totals</string>
+    <string name="NotifyCustomerbyEmail">Notify Customer by Email</string>
+    <string name="VisibleonFrontend">Visible On Frontend</string>
+    <string name="SubmitComment">Submit Comment</string>
+    <string name="plsentercomment">Please Enter Comment Before Submitting</string>
+    <string name="Comments">Comment History</string>
+    <string name="Date">Date</string>
+    <string name="Notified">Notified</string>
+    <string name="Comment">Comment</string>
+    <string name="ItemsShipped">Items Shipped</string>
+    <string name="ItemsRefunded">Items Refunded</string>
+    <string name="ShippingInformation">Shipping Information</string>
+    <string name="add">Add</string>
+    <string name="TrackingNocannotbeEmpty">Tracking No Cannot Be Empty</string>
+    <string name="Carrier">Carrier</string>
+    <string name="title">Title</string>
+    <string name="Number">Number</string>
+    <string name="Information">Information</string>
+    <string name="Invoices">Invoices</string>
+    <string name="Invoicestitle">Invoices</string>
+    <string name="CreditMemo">Credit Memos</string>
+    <string name="Shipments">Shipments</string>
+    <string name="CommentHistory">Comments History</string>
+    <string name="qty_invoiced">Quantity Invoiced</string>
+    <string name="qty_shipped">Quantity Shipped</string>
+    <string name="qty_refunded">Quantity Refunded</string>
+    <string name="qty_canceled">Quantity Canceled</string>
+    <string name="ItemsOrdered">Items Ordered</string>
+    <string name="plsselectstatus">Please Select Status</string>
+    <string name="RefundShipping">Refund Shipping</string>
+    <string name="AdjustmentRefund">Adjustment Refund</string>
+    <string name="AdjustmentFee">Adjustment Fee</string>
+    <string name="AppendComments">Append Comments</string>
+    <string name="emailcopyofcedit">Email Copy Of Credit Memo</string>
+    <string name="RefundOffline">Refund Offline</string>
+    <string name="QuantitytoRefund">Quantity To Refund</string>
+    <string name="ReturnToStock">Return To Stock</string>
+    <string name="UpdateQuantity">Update Quantity</string>
+    <string name="OrderTotal">Order Total</string>
+    <string name="ItemstoRefund">Items To Refund</string>
+    <string name="RefundTotal">Refund Total</string>
+    <string name="plsfillqtyforreturn">Please Fill Quantity to Return</string>
+    <string name="SubmitInvoice">Submit Invoice</string>
+    <string name="SubmitShipment">Submit Shipment</string>
+    <string name="createshippinglabel">Create Shipping Label</string>
+    <string name="ItemstoShip">Items to Ship</string>
+    <string name="ShippingComments">Shipping Comments</string>
+    <string name="add_tracking_no">Add Tracking No</string>
+    <string name="QuantityOrdered">Quantity Ordered</string>
+    <string name="QuantitytoShip">Quantity to Ship</string>
+    <string name="CreateShipment">Create Shipment</string>
+    <string name="qty_ordered">Quantity Ordered</string>
+    <string name="attributeset">Attribute Set :</string>
+    <string name="tittle">Title</string>
+    <string name="inputtype">Input type</string>
+    <string name="isRequired">Is Required</string>
+    <string name="sortorder">Sort Order</string>
+    <string name="Price">Price</string>
+    <string name="price_type">Price Type</string>
+    <string name="maxchar">Max Character</string>
+    <string name="allowfiletype">Allow File type</string>
+    <string name="maximagesizes">Max Image Size</string>
+    <string name="addOption">Add Options</string>
+    <string name="deleteoptions">Delete</string>
+    <string name="Related_Products">Related Products</string>
+    <string name="Cross_Sells">Cross Sells</string>
+    <string name="Productattributeset">Attribute Set</string>
+    <string name="defaultQauntuty">Default Quantity</string>
+    <string name="inventory">Inventory</string>
+    <string name="ShipBundleItems">Ship Bundle Items</string>
+    <string name="skutype">Sku Type</string>
+    <string name="priceType">Price Type</string>
+    <string name="weightType">Weight Type</string>
+    <string name="userDef">User Defined Qty</string>
+    <string name="emailcopyofinvoice">Email Copy of Invoice</string>
+    <string name="emailcopyofshipment">Email Copy of Shipment</string>
+    <string name="ItemstoInvoice">Items To Invoice</string>
+    <string name="InvoiceTotal">Invoice Totals</string>
+    <string name="goback"><![CDATA[Go Back To Save]]></string>
+    <string name="Enable_Log">yes</string>
+    <string name="AttributeSet_list">Attribute Set</string>
+    <string name="NoAttributeSetAvailable">No Atrribute Set Available</string>
+    <string name="BasedOn">Based On</string>
+    <string name="Add_to_column">Add to Column Options</string>
+    <string name="Use_to_filter">Use in filter options</string>
+    <string name="DefaultStoreView">Default Store View</string>
+    <string name="QuantitytoInvoice">Quantity to Invoice</string>
+    <string name="confirm_first">Are You Sure You Want To  Delete This?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="UrlKey">Url Key</string>
+    <string name="specialpricetagFrom">Special Price From : </string>
+    <string name="specialpricetagTo">Special Product To :</string>
+    <string name="DOB">Date Of Birth</string>
+    <string name="taxvat">Tax/VAT number</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="MiddleName">Middle Name</string>
+    <string name="cantconnet">Can’t Connect . Please Check Your Network Connection.</string>
+    <string name="pleaseTryagain">Please Try Again</string>
+    <string name="Orders">Orders</string>
+    <string name="toalOrders">Total Orders</string>
+    <string name="startdate">Start Date</string>
+    <string name="disapprove">Disapprove</string>
+    <string name="Message">Message</string>
+    <string name="Send">Send</string>
+    <string name="createdat">Created At</string>
+    <string name="completelocation">Complete Location</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="SelectNSellProd">Select N Sell Products</string>
+    <string name="website">Website</string>
+    <string name="SellProduct">Sell Product</string>
+    <string name="id">Id</string>
+    <string name="product_price">Product Price</string>
+    <string name="product_qunatity">Product Qty</string>
+    <string name="ItemSKU">Item SKU</string>
+    <string name="QtyforRMA">Qty For RMA</string>
+    <string name="ChatInformation">Chat Information</string>
+    <string name="sendmessage">Send Message</string>
+    <string name="ChatHistoryInformation">Chat History Information</string>
+    <string name="ActivityInformation">Activity Information</string>
+    <string name="EditReturnRequest">Edit Return Request</string>
+    <string name="seeall">View All</string>
+    <string name="Providepermission">Provide Permission</string>
+    <string name="Storagepermissionallow">Storage permission allows us to access data. Please allow in App Settings for additional functionality.</string>
+    <string name="Reason">Reason</string>
+    <string name="PackageCondition">Package Condition</string>
+    <string name="ResolutionRequested">Resolution Requested</string>
+    <string name="CustomerInformation">Customer Information</string>
+    <string name="CustomerEmail">Customer Email</string>
+    <string name="CustomerAddress">Customer Address</string>
+    <string name="ItemInformation">Item Information</string>
+    <string name="ManageReturnRequest">Manage Return Request</string>
+    <string name="purchasedpoint">Purchased Point</string>
+    <string name="rmaid">RMA Id</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customeremail">Customer Email</string>
+    <string name="resolutionrequested">Resolution Requested</string>
+    <string name="updatedat">Updated At</string>
+    <string name="applyfilter">Apply</string>
+    <string name="admin_status">Approved</string>
+    <string name="pricefrom">Price</string>
+    <string name="customer_email">Customer Email</string>
+    <string name="title_msg">Please Confirm The Order</string>
+    <string name="fromm">From</string>
+    <string name="empty_field">Empty Field!!</string>
+    <string name="dateinvalid">Please Enter Deal From Date</string>
+    <string name="update_deal">Update Deal</string>
+    <string name="dealstatus">Deal Status*</string>
+    <string name="deal_from">Deal From*</string>
+    <string name="deal_to">Deal To*</string>
+    <string name="deal_price">Deal Price*</string>
+    <string name="end_date">Ending Date</string>
+    <string name="deal_id">Deal Id</string>
+    <string name="edit_deal">Edit your Deal</string>
+    <string name="adminstatus">Admin Status</string>
+    <string name="deal_message">Deal Message</string>
+    <string name="submit">Submit</string>
+    <string name="end_on">End on</string>
+    <string name="Viewtransactiondetails">View Transaction Details</string>
+    <string name="vendor">Seller</string>
+    <string name="shippingfee">Shipping Fee of order</string>
+    <string name="Orderfeedetail">Fee Details</string>
+    <string name="shippingamount">Shipping Amount</string>
+    <string name="fixedfee">Fixed Fee</string>
+    <string name="collectionfee">Collection Fee</string>
+    <string name="servicetax">Service Tax</string>
+    <string name="totalamount">Total Amount</string>
+    <string name="sent">Sent</string>
+    <string name="isactive">Is Active</string>
+    <string name="pagelayout">Layout</string>
+    <string name="creationtime">Created</string>
+    <string name="updationtime">Last Modified</string>
+    <string name="setasvendorhome">Set as Seller home page</string>
+    <string name="design">Design</string>
+    <string name="layout">Layout*</string>
+    <string name="layoutxml">Layout Update XML</string>
+    <string name="keywords">Keywords</string>
+    <string name="inbox">Inbox</string>
+    <string name="composenewmessage">Compose new message</string>
+    <string name="storemanageremail">Manager email</string>
+    <string name="storemanname">Manager name</string>
+    <string name="url_not_found">URL not found.</string>
+    <string name="pageid">Page Id</string>
+    <string name="emailadmin">Email this message to Admin</string>
+    <string name="emailvendor">Email this message to Seller</string>
+    <string name="readmail">Read mail</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="Start">Start</string>
+    <string name="end">End</string>
+    <string name="interval">Interval</string>
+    <string name="reset">Reset</string>
+    <string name="storebasicinfo">Store Basic Information</string>
+    <string name="storehourinfo">Store Hour Information</string>
+    <string name="storepickupinfo">Store Pickup Information</string>
+    <string name="storename">Store Name</string>
+    <string name="storeaddress">Store Address</string>
+    <string name="picklocation">If Not found location CLICK HERE to get it on map.</string>
+    <!-- <string name="latitude">Store Latitude</string>
+    <string name="longitude">Store Longitude</string>-->
+    <string name="storecity">Store city</string>
+    <string name="storestate">Store state</string>
+    <string name="postalCode">Postal code</string>
+    <string name="shippingprice">Shipping price</string>
+    <string name="storehour">Hour of Operation</string>
+    <string name="totalPayment">Total Payment</string>
+    <string name="identifier">Identifier</string>
+    <string name="createnewblock">Create New Block</string>
+    <string name="blocktitle">Block title</string>
+    <string name="storeview">Store View</string>
+    <string name="content">Content</string>
+    <string name="savepage">Save page</string>
+    <string name="newcmspage">Create New Cms Page</string>
+    <string name="pageinfo">Page Information</string>
+    <string name="pagetitle">Page Title</string>
+    <string name="emptymessage">Message cannot be empty!</string>
+    <string name="emptysubject">Subject cannot be empty!</string>
+    <string name="updated_at">Updated At</string>
+    <string name="deak_status">Deal Status</string>
+    <string name="phone_numberhint">Mobile Number</string>
+    <string name="send">Send OTP</string>
+    <string name="resend">Resend OTP</string>
+    <string name="verify">Verify OTP</string>
+    <string name="otphint">OTP</string>
+    <string name="sellerpolicy">Seller’s Policy</string>
+    <string name="termsconditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="sellerpolicyterms"><![CDATA[Seller Terms Condition & Policy]]></string>
+    <string name="finish">Finish</string>
+    <string name="nodatafound">Data Not Found</string>
+    <string name="brand_namee">Brand Name*</string>
+    <string name="url_key">URL Key</string>
+    <string name="fashion_group">Brand Group*</string>
+    <string name="image">Image</string>
+    <string name="thumbnail">Thumbnail</string>
+    <string name="creationDate">Creation Date</string>
+    <string name="brand_id">Brand_id</string>
+    <string name="brand_name">Brand Name</string>
+    <string name="brand_logo">Brand Logo</string>
+    <string name="brand_thumbnail">Brand Thumbnail</string>
+    <string name="brand_creation">Brand Creation</string>
+    <string name="business_details">Business Details</string>
+    <string name="bank_details">Bank Details</string>
+    <string name="store_details">Store Details</string>
+    <string name="datetovalid">Please enter deal to date</string>
+    <string name="pleaseselectbothdates">Please select both dates</string>
+    <string name="empty_price">Please provide price!</string>
+    <string name="empty_product_name">Please provide product name!</string>
+    <string name="empty_sku">Please provide SKU</string>
+    <string name="empty_desc">Please provide description!</string>
+    <string name="empty_sdesc">Please provide short description!</string>
+    <string name="empty_stock">Please provide stock!</string>
+    <string name="opps">Oops!!</string>
+    <string name="X">[ X ]</string>
+    <string name="providebrand">Please Provide Brand Name.</string>
+    <string name="pleaseentervalidemail">Please enter valid email.</string>
+    <string name="pleaseprovideemail">Please enter your email</string>
+    <string name="pleaseenterpassword">Please enter your password.</string>
+    <string name="passworddontmatch">New and confirm password did\'nt matched</string>
+    <string name="pleaseprovidefirstname">Please provide first name.</string>
+    <string name="pleaseprovidelastname">Please provide last name.</string>
+    <string name="pleaseprovidepublicname">Please provide public name.</string>
+    <string name="pleaseprovideshopurl">Please provide shop url.</string>
+    <string name="validate_mobile">Validate</string>
+    <string name="emptyweight">Please provide value for Weight</string>
+    <string name="productnameastrik">Product Name*</string>
+    <string name="skutagastrik">SKU*</string>
+    <string name="Descriptionastrik">Description*</string>
+    <string name="ShortDescriptionastrik">Short Description*</string>
+    <string name="startsellingonzeo">Start Selling On Brass and Wood</string>
+    <string name="signup">Signup</string>
+    <string name="specialpricetagFromm">Special Price From</string>
+    <string name="specialpricetagToo">Special Price To</string>
+    <string name="crash_toast_text">Application Crashed</string>
+    <string name="emaillogin_validation">Please Enter Email or Mobile Number</string>
+    <string name="terms_condition_text">By Signing Up, you agree to </string>
+    <string name="terms_txt"> Magenative\'s Terms of Use</string>
+    <string name="policy_txt">and Privacy Policy</string>
+    <string name="status_txt">Status</string>
+    <string name="default_label">Default Label</string>
+    <string name="deal_price_validation">Please enter deal price</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="required_field_validation">Please fill all required field</string>
+    <string name="please_enter_mobile_num_validation">Please Enter Mobile Number</string>
+    <string name="requested_amount">Requested Amount</string>
+    <string name="pending_amount">Pending Amount</string>
+    <string name="cancelled_amount">Cancelled Amount</string>
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+    <string name="password_strength_very_strong">Very Strong</string>
+    <string name="permission_granted">Permission Granted</string>
+    <string name="email_mobile_number">Email/Mobile Number</string>
+    <string name="row_total">Row Total</string>
+    <string name="current_location">Your Current Location</string>
+    <string name="current_location_message">Do you want to show your current location</string>
+    <string name="SKUastrik">SKU *</string>
+    <string name="price_astrik">Price *</string>
+    <string name="Stock_astrik">Stock *</string>
+    <string name="updatefreeshipping">Update Free Shipping</string>
+    <string name="select_product">Select products for free shipping</string>
+    <string name="no_orders_available">No Orders Available</string>
+    <string name="no_products_uploaded">Please Create Products To View Analytics</string>
+    <string name="provideurlkey">Please Provide A Url Key</string>
+    <string name="ChoosePickupAddress">Give Your Pickup Address</string>
+    <string name="pincode">Pincode</string>
+    <string name="verify_pincode">Verify</string>
+    <string name="streetAddress">Street Address</string>
+    <string name="GSTIN">GSTIN</string>
+    <string name="PAN">PAN</string>
+    <string name="AccountHolderName">Account Holder Name</string>
+    <string name="AccountNumber">Account Number</string>
+    <string name="IFSCCode">IFSC Code</string>
+    <string name="BankName">Bank Name</string>
+    <string name="BankBranch">Bank Branch</string>
+    <string name="min_char_account_number">Minimm 7 digits required for Account Number</string>
+    <string name="min_char_account_holdername">Minimum 4 characters Required</string>
+    <string name="min_char_account_bankname">Minimum 5 characters Required</string>
+    <string name="invalidpincode">Not a valid pincode.</string>
+    <string name="SelectCategory">Select Category</string>
+    <string name="empty_address">PLease Fill an  Street Address</string>
+    <string name="pleaseselectastate">Please Select State</string>
+    <string name="pleaseselectacity">Please Select a City</string>
+    <string name="pleaseselectcategory">Please Select a Category</string>
+    <string name="pleaseenterGSTIN">Please Enter GSTIN details</string>
+    <string name="pleaseenterPAN">Please Enter PAN Details</string>
+    <string name="pleaseenteAccountHolderName">Please Enter Account Holder Name</string>
+    <string name="pleaseenteAccountNumber">Please Provide An Account Number</string>
+    <string name="pleaseenterIFSC">Please Enter IFSC Code</string>
+    <string name="pleaseenterBankName">Please Enter Bank Name.</string>
+    <string name="pleaseenterBankBranch">Please Provide Bank Branch Name</string>
+    <string name="Chat">Chat</string>
+    <string name="createtime">Create Time</string>
+    <string name="ticketid">Ticket id</string>
+    <string name="Department">Department</string>
+    <string name="numberofmessage">Number of Message</string>
+    <string name="order">Order</string>
+    <string name="priority">Priority</string>
+    <string name="reply">Reply</string>
+    <string name="new_ticket">New Ticket</string>
+    <string name="general_information">General Information</string>
+    <string name="Subject">Subject</string>
+    <string name="nameisrequired">Name is required</string>
+    <string name="emailisrequired">Email is Required.</string>
+    <string name="convesation">Conversation</string>
+    <string name="ticket_created_at">Ticket Created At</string>
+    <string name="apply_signature">Apply Signature</string>
+    <string name="Choosefile">Choose File</string>
+    <string name="permissiondenied">Permission Denied</string>
+    <string name="messagecant">Message can\'t be sent</string>
+    <string name="replymessage">Reply Message</string>
+    <string name="sender">Sender</string>
+    <string name="reciever">Reciever</string>
+    <string name="AdminInbox">Admin Inbox</string>
+    <string name="Admincompose">Admin Compose</string>
+    <string name="notifyrecieverbyemail">Notify reciever by email.</string>
+    <string name="Newmessage">New Message</string>
+    <string name="customerinbox">Customer Inbox</string>
+    <string name="CustomerCompose">Customer Compose</string>
+    <string name="nomoredata">No more data found</string>
+    <string name="transaction_summary">Transaction Summary</string>
+    <string name="signupforgoogle">Google</string>
+    <string name="signupforfacebook">Facebook</string>
+    <string name="loginattemptcancled">Login attempt cancelled.</string>
+    <string name="addproduct">Add Product</string>
+    <string name="productlist">Product List</string>
+    <string name="invoice_comments">Invoice Comments</string>
+    <string name="takephoto">Take Photo</string>
+    <string name="selectwebstore">حدد متجرك:</string>
+    <string name="change_store">Change Store</string>
+    <string name="CreateDeals">Create Deals</string>
+    <string name="VendorProductAttribute">Vendor Product Attribute</string>
+    <string name="completed">% Completed</string>
+    <string name="you_have_txt">You Have</string>
+    <string name="shipment_txt">Shipment</string>
+    <string name="request_txt">Requests</string>
+    <string name="order_in_this_period_txt">Orders in this Period</string>
+    <string name="prod_order_during_this_period">Product orders during this Period</string>
+    <string name="choose_action_txt"><![CDATA[<font color=\'#000000\'>Choose Action </font>]]></string>
+    <string name="original_price">Original Price</string>
+    <string name="item_status">Item Status</string>
+    <string name="tax_percent">Tax Percent</string>
+    <string name="igst">IGST</string>
+    <string name="cgst">CGST</string>
+    <string name="sgst">SGST</string>
+    <string name="igst_rate">IGST Rate</string>
+    <string name="shipping_qty">Shipping Qty</string>
+    <string name="showing_txt">Showing</string>
+    <string name="products_txt">products</string>
+    <string name="bundle_items">Bundle Items</string>
+    <string name="total_products">Total Products </string>
+    <string name="select_txt">--Select--</string>
+    <string name="commentHistory">Comment History</string>
+    <string name="month_txt">Month</string>
+    <string name="week_txt">Week</string>
+    <string name="today_week">Today</string>
+    <string name="year_txt">Year</string>
+    <string name="total_pending_requested_amount">Total Pending Requested Amount</string>
+    <string name="total_paid_amount">Total Paid Amount</string>
+    <string name="requested_transaction">Requested Transaction</string>
+    <string name="last_modified">Last Modified</string>
+    <string name="pending">Pending</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="updatecmsPage">Update CMS Page</string>
+    <string name="update_txt">Update</string>
+    <string name="meta_data_txt">Meta Data</string>
+    <string name="update_cms_block">Update CMS Block</string>
+    <string name="nickname">Nickname</string>
+    <string name="review">Review</string>
+    <string name="Assessment">Assessment</string>
+    <string name="ManageRating">Manage Rating</string>
+    <string name="score_visibility">Score Visibility</string>
+    <string name="default_value">Default Value*</string>
+    <string name="visiblity">Visibility</string>
+    <string name="author">Author</string>
+    <string name="summary_rating">Summary Rating</string>
+    <string name="detailclassification">Detail Classification</string>
+    <string name="summary">Summary</string>
+    <string name="active_txt">Active</string>
+    <string name="ManageReview">Manage Review</string>
+    <string name="days_to_deliver">Days To Deliver</string>
+    <string name="no">No</string>
+    <string name="ProductRatingandreview"><![CDATA[Product Review & Rating]]></string>
+    <string name="pincodeChecker">Pincode Checker</string>
+    <string name="zipcode">Zipcode</string>
+    <string name="can_ship">Can Ship</string>
+    <string name="can_cod">Can COD</string>
+    <string name="assigned_pincode">Assigned Pincode</string>
+    <string name="manage_pincode">Manage Pincode</string>
+    <string name="edit_review">Edit Review</string>
+    <string name="add_new_store">ADD NEW STORE</string>
+    <string name="deallist">Deal List</string>
+    <string name="approval_pending">Approval-Pending</string>
+    <string name="dealPrice">Deal Price</string>
+    <string name="expired">Expired</string>
+    <string name="shipping_zone_txt">Shipping Zone</string>
+    <string name="already_subscribed">Already Subscribed</string>
+    <string name="addtocart">Add To Cart</string>
+    <string name="items_txt"> item(s)</string>
+    <string name="subscribe_this_one">Subscribe This One</string>
+    <string name="allowed_category">Allowed Category</string>
+    <string name="allowed_no_of_products">Allowed Number Of Products</string>
+    <string name="duration_of_package">Duration Of Package</string>
+    <string name="membership_details">Membership Details</string>
+    <string name="vendor_membership_plans">Vendor Membership Plans</string>
+    <string name="runningplan">Seller Running Plans</string>
+    <string name="vendorresources">Seller Resources</string>
+    <string name="productlimit">"Product Limit: "</string>
+    <string name="remainingprod">"Remaining Product: "</string>
+    <string name="subscriptionhistory">Seller Subscription History</string>
+    <string name="yoursubscriptionhistory">Your Subscription History</string>
+    <string name="member_ship_plans">Membership Plans</string>
+    <string name="member_ship_plan">Membership Plan</string>
+    <string name="membershipplan">Membership Plan</string>
+    <string name="planhistory">Plans History</string>
+    <string name="please_provide_store_address">please provide store address</string>
+    <!--    auction string value start-->
+    <string name="auction">Auction</string>
+    <string name="addauction">Add Auction</string>
+    <string name="listauction">List Auction</string>
+    <string name="bid_price">Bid Price</string>
+    <string name="bid_date">Bid Date</string>
+    <string name="bid_time">Bid Time</string>
+    <string name="winner">Winner</string>
+    <string name="save_bid">Save Bid</string>
+    <string name="maxprice">Max Price</string>
+    <string name="editetxtauction">Edit Auction</string>
+    <string name="viewbid">View Bid</string>
+    <string name="product_type">Product Type</string>
+    <string name="add_auction">Add Auction</string>
+    <string name="startingPrice">Starting Price</string>
+    <string name="vendorauctionproductstaus">Auction Prod. Status</string>
+    <string name="tap_to_select_date_from_calendar">Tap to Select Date from Calendar</string>
+    <string name="auctin_lisitng">Auction List</string>
+    <string name="Viewbid">View Bid</string>
+    <string name="customer_id">Customer Id</string>
+    <string name="dateformat">YYYY-MM-DD</string>
+    <string name="auction_price">Auction Price</string>
+    <string name="winning_price">Winning Price</string>
+    <string name="binding_date">Binding Date</string>
+    <string name="manageauction">Manage Auction</string>
+    <string name="auctionwinners">Auction winners</string>
+    <string name="auction_product_list">Auction Product List</string>
+    <string name="Originalproductprice">Original Product Price</string>
+    <string name="edit">Edit</string>
+    <string name="view">View</string>
+    <string name="rating_empty_msg">Please select one of each of the ratings.</string>
+    <string name="faq">Vendor Product FAQ</string>
+    <string name="vendor_inventory">Vendor Inventory</string>
+    <string name="inventory_manage">Inventory Manage</string>
+    <string name="out_of_stock">Out Of Stock Products</string>
+    <string name="out_of_stocktxt">Inventory Out of Stock Products</string>
+    <string name="low_stock_product">Inventory Low Stock Products</string>
+    <string name="add_faq_product">Add Faq</string>
+    <string name="update_faq_product">Update Faq</string>
+    <string name="vendor_advance_report">Vendor Advance Report</string>
+    <string name="vendor_sales_report">Sales Report</string>
+    <string name="product_views">Product Views</string>
+    <string name="product_views_txt">Product Views</string>
+    <string name="payment_report">Payment Report</string>
+    <string name="out_of_stock_products">Out Of Stock Product</string>
+    <string name="return_report">Return Report</string>
+    <string name="sold_products">Sold Products</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="other">Other</string>
+    <string name="change_number">Change Number</string>
+    <string name="enter_otp">enter OTP</string>
+    <string name="re_send_otp">Re send OTP</string>
+    <string name="submit_otp">Submit otp</string>
+    <string name="sending_otp">Sending Otp...</string>
+    <string name="mobile_number_is_empty">Mobile number is empty !!</string>
+    <string name="Login">Login</string>
+    <string name="simple">Simple</string>
+    <string name="virtual">Virtual</string>
+    <string name="grouped">Grouped</string>
+    <string name="bundle">Bundle</string>
+    <string name="configurble">Configurable</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="QuoteIncrementId">QuoteIncrement Id</string>
+    <string name="QuoteRequestedQty">Quote Requested Qty</string>
+    <string name="QuoteUpdatedQty">Quote Updated Qty</string>
+    <string name="QuoteShippingAmount">Quote Shipping Amount</string>
+    <string name="QuoteUpdatedPrice">Quote Updated Price</string>
+    <string name="QuotePrice">Quote Price</string>
+    <string name="QuoteAccountInformation"><![CDATA[Quote & Account Information]]></string>
+    <string name="TotalQuantity">Quoted Total Quantity</string>
+    <string name="QuoteCreatedFrom">Quote Created From</string>
+    <string name="QuotedTotalPrice">Quoted Total Price</string>
+    <string name="ActualPrice">Actual Price</string>
+    <string name="QuotedPrice">Quoted Price</string>
+    <string name="UpdatedUnitPrice">Updated Unit Price</string>
+    <string name="QuotedQty">Quoted Qty</string>
+    <string name="QuantitytoPO">Quantity to PO</string>
+    <string name="QuantityAlreadyPOed">Quantity Already POed</string>
+    <string name="UpdatedQuoteQty">Updated Quote Qty</string>
+    <string name="ItemStock">Item Stock</string>
+    <string name="SaveQuote">Save Quote</string>
+    <string name="CreatePO">Create PO</string>
+    <string name="SubmitPO">Submit PO</string>
+    <string name="TotalDue">Total Due</string>
+    <string name="ManageQuotes">Manage Quotes</string>
+    <string name="ViewPo">View PO</string>
+    <string name="POIncrementId">PO Increment Id</string>
+    <string name="CustomerId">Customer Id</string>
+    <string name="POPrice">PO Price</string>
+    <string name="POQty">PO Qty</string>
+    <string name="PODate">PO Date</string>
+    <string name="POStatus">PO Status</string>
+    <string name="RemainingQty">Remaining Qty</string>
+    <string name="PORowTotal">PO Row Total</string>
+    <string name="POLIst">PO List</string>
+    <string name="VendorQuoteManagement">Seller Quote Management</string>
+    <string name="requested_qty">Resquested Qty</string>
+    <string name="requested_price">Requested Price</string>
+    <string name="requested_unit_price">Requested Unit Price</string>
+    <string name="proposed_qty">Proposed Qty</string>
+    <string name="proposal_created_for_qty">Proposal Created For Qty</string>
+    <string name="proposed_unit_price">Proposed Unit Price</string>
+    <string name="sender_txt">Sender</string>
+    <string name="proposal_total">Proposal Total</string>
+    <string name="rfq_setting">RFQ Setting</string>
+    <string name="manage_proposal">Manage Proposal</string>
+    <string name="quoted_items">Quote Items</string>
+    <string name="quotedate">Quote Date</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+    <string name="assigned_categories">Assigned Categories</string>
+    <string name="requested_product_name">Requested Product Name</string>
+    <string name="category_id">Category ID</string>
+    <string name="estimated_budget_per_quantity">Estimated Budget Per Qty</string>
+    <string name="approved_estimated_budget_per_quantity">Approved Estimated Budget Per Quantity</string>
+    <string name="approved_quantity">Approved Qty</string>
+    <string name="documents_file">Documents File</string>
+    <string name="no_conversations_has_been_done_yet">No Conversation has been done Yet..</string>
+    <string name="category_list">Category List</string>
+    <string name="adressinfotext">Address Information</string>
+    <string name="message_validation">Please enter message</string>
+    <string name="enter_your_message_here">Enter Your Message Here</string>
+    <string name="quotes_total_label">Quote Totals</string>
+    <string name="select_status">Select Status</string>
+    <string name="service_tax">Service Tax</string>
+    <string name="market_fee">Market Fee</string>
+    <string name="blockid">Block Id</string>
+    <string name="trans_date">Transaction Date</string>
+    <string name="vendorpayment">Seller Payment</string>
+    <string name="vendorpaymentorder">Seller Payment:</string>
+    <string name="prod_views">Views</string>
+    <string name="totalamt">Total Amount</string>
+    <string name="courier_name">Courier Name</string>
+    <string name="tracking_num">Tracking Number</string>
+    <string name="store_url">Store Url</string>
+    <string name="item_url">Item Url</string>
+    <string name="offer_status">Offer Status</string>
+    <string name="invoicestatus">Invoice Status</string>
+    <string name="quotation_details">Quotation Details</string>
+    <string name="send_ur_quotation">Send your Quotation</string>
+    <string name="ur_quotation">Your Quotation</string>
+    <string name="unitprice">Unit Price</string>
+    <string name="negotia_section">Negotiation Section</string>
+    <string name="invoice_form_detail">Invoice Form Detail</string>
+    <string name="value_of_invoice">Enter The Value For Invoice</string>
+    <string name="origin">Origin</string>
+    <string name="quality">Quality</string>
+    <string name="packing">Packing</string>
+    <string name="validity">Validity</string>
+    <string name="remark">Remark</string>
+    <string name="favouriteseller">Favourite Seller</string>
+    <string name="send_email_to_followers">Send Email To Followers</string>
+    <string name="select_followers_first">Select followers first</string>
+    <string name="requestforquote">Request For Quotation</string>
+    <string name="managequotes">Manage Quotes</string>
+    <string name="viewpo">View PO</string>
+    <string name="companyinfo">Company Information</string>
+    <string name="Shop">Shop Url</string>
+    <string name="fbtag">Facebook ID</string>
+    <string name="twittertag">Twitter ID</string>
+    <string name="Vendor">Seller Group</string>
+    <string name="supportinfo">Support Information</string>
+    <string name="seoinfo">SEO Information</string>
+    <string name="chooser_title">Open PDF With</string>
+    <string name="quoted_comment">Quoted Comment</string>
+    <string name="purchase_order_total">Purchase Order Total</string>
+    <string name="createproductattribute">Create Product Attribute</string>
+    <string name="customoptions">Custom Options</string>
+    <string name="updsell">UpSells</string>
+    <string name="associatedproducts">Associated Products</string>
+    <string name="Relatedproducts">Related Product</string>
+    <string name="Addproduct">Add Product</string>
+    <string name="add_new_cms">ADD NEW CMS</string>
+    <string name="add_new_block">ADD NEW BLOCK</string>
+    <string name="number">Number</string>
+    <string name="shipment">Shipment # </string>
+    <string name="creditmemo">Creditmemo # </string>
+    <string name="contentheading">Content Heading</string>
+    <string name="orderTotalExclusiveTaxLayout">Grand Total (Excl. Tax)</string>
+    <string name="orderTotalInclTaxLayout">Grand Total (Incl. Tax)</string>
+    <string name="subTotalInclTaxLayout">Sub total (Incl. Tax)</string>
+    <string name="subTotalExclusiveTaxLayout">Sub Total (Excl. Tax)</string>
+    <string name="LatestProducts">Latest Products</string>
+    <string name="Productname">Product Name</string>
+    <string name="TopsellingProducts">Top Selling Products</string>
+    <string name="LatestTransaction">Latest Transaction</string>
+    <string name="paymentid">Payment Id</string>
+
+
+    <string name="includeinattributeset">Include in Attribute Set</string>
+    <string name="sortOrder">Sort Order</string>
+    <string name="AdvancedAttributeProperties">Advanced Attribute Properties</string>
+    <string name="uniquekey">Not shared with other products</string>
+    <string name="onlyoneimagecanbeselected">Only one image can be select</string>
+    <string name="StorefrontProperties">Storefront Properties</string>
+    <string name="use_in_search">Use in Search</string>
+    <string name="comparable_on_storefront">Comparable on Storefront</string>
+    <string name="use_for_promo_rule_conditions">Use for Promo Rule Conditions</string>
+    <string name="allow_html_tags_on_storefront">Allow HTML Tags on Storefront</string>
+    <string name="visible_on_catalog_pages_on_storefront">Visible on Catalog Pages on Storefront</string>
+    <string name="used_in_product_listing">Used in Product Listing</string>
+    <string name="used_for_sorting_in_product_listing">Used for Sorting in Product Listing</string>
+    <string name="add_selection">Add Selection</string>
+    <string name="thisoptionisnotavailableinapp">This option is not available in app.</string>
+    <string name="select">--Select--</string>
+    <string name="fromdaterequired">FROM DATE REQUIRED</string>
+    <string name="login_with_otp">Login With OTP</string>
+    <string name="login_with_password">Login With Password</string>
+    <string name="vendor_payment">Vendor Payment</string>
+    <string name="vendor_price">Price</string>
+    <string name="transaction_pdf">Transaction PDF</string>
+    <string name="view_document">View Document</string>
+    <string name="inventory_minimum_products">Inventory Minimum Products</string>
+    <string name="enter_minimum_numbers">Enter Minimum Numbers</string>
+    <string name="min_price">min price</string>
+    <string name="max_price">max price</string>
+    <string name="amount_description">Amount Description</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="from_price">From Price</string>
+    <string name="to_price">To Price</string>
+    <string name="credit_amount">Credit Amount</string>
+    <string name="order_description">Order Description</string>
+    <string name="from_amount">From Amount</string>
+    <string name="to_amount">To Amount</string>
+    <string name="from_quantity">From Quantity</string>
+    <string name="to_quantity">To Quantity</string>
+    <string name="select_date">Select Date</string>
+    <string name="go">Go</string>
+    <string name="activity_notification">Activity Notification</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="please_fill_both_dates">Please Select Date Range</string>
+    <string name="enter_your_mobile_number_and_verify">Enter your mobile number and verify</string>
+    <string name="otp_is_wrong">OTP is wrong.</string>
+    <string name="_1234567890">1234567890</string>
+    <string name="enter_a_valid_shop_url_example_my_shop_url">Please enter a name consisting of lowercase English letters without spaces or special characters such as </string>
+    <string name="ok">OK</string>
+    <string name="list_of_canceled_orders">List of canceled orders</string>
+    <string name="your_password_must_be_at_least_8_characters_with_at_least_1_number_and_1_special_character">Your password must be at least 8 characters. With at least 1 number and 1 special character</string>
+    <string name="alert">Alert</string>
+    <string name="do_you_really_want_to_delete_this">Do you really want to delete this?</string>
+    <string name="deleting">Deleting</string>
+    <string name="faq_id">FAQ ID</string>
+    <string name="question_number">Question number</string>
+    <string name="evaluation_number">Evaluation number</string>
+    <string name="please_check_these_fields_are_empty">"Please Check these fields are empty "</string>
+    <string name="camera">Camera</string>
+    <string name="you_cannot_select_categories_more_than_3">You cannot select categories more than 3</string>
+    <string name="do_you_want_to_logout">Do you want to logout?</string>
+    <string name="how_to_create_a_merchant_account">How to create a merchant account</string>
+    <string name="you_can_not_select_more_than_10_images_please_deselect_another_image_before_tring_to_select_again">you can not select more than 10 images please deselect another image before tring to select again</string>
+    <string name="image_should_be_less_than_10_mb">Image should be less than 10 MB</string>
+    <string name="gallery">Gallery</string>
+    <string name="done">Done</string>
+    <string name="you_don_t_have_an_account">You don\'t have an account?!</string>
+    <string name="please_enter_the_number_without_0">Please enter the number without 0</string>
+    <string name="jan">Jan</string>
+    <string name="feb">Feb</string>
+    <string name="mar">Mar</string>
+    <string name="apr">Apr</string>
+    <string name="may">May</string>
+    <string name="jun">Jun</string>
+    <string name="jul">Jul</string>
+    <string name="aug">Aug</string>
+    <string name="sep">Sep</string>
+    <string name="oct">Oct</string>
+    <string name="nov">Nov</string>
+    <string name="dec">Dec</string>
+    <string name="the_total_amount_due_but_not_yet_paid">The total amount due but not yet paid.</string>
+    <string name="the_total_amount_you_ordered_is_still_waiting_for_payment">The total amount you ordered is still waiting for payment.</string>
+    <string name="the_total_amount_received_for_sales">The total amount received for sales.</string>
+    <string name="the_payment_request_has_been_canceled_due_to_returned_requests_please_submit_a_new_payment_request">The payment request has been canceled due to returned requests. Please submit a new payment request</string>
+    <string name="default_category">Default Category</string>
+    <string name="please_enter_mobile_number">Please enter the number without 0.</string>
+    <string name="mobile_number_validation">Please Enter Mobile Number</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="do_you_want_to_delete_account">Do you want to delete account?</string>
+    <string name="please_enter_the_valid_number">Please enter the valid number</string>
+    <string name="remove_product">Remove Product</string>
+    <string name="attributes">Attributes</string>
+    <string name="images">Images</string>
+    <string name="apply_single_set_of_images_to_all_skus">Apply single set of images to all SKUs</string>
+    <string name="apply_unique_images_by_attribute_to_each_sku">Apply unique images by attribute to each SKU</string>
+    <string name="skip_image_uploading_at_this_time">Skip image uploading at this time</string>
+    <string name="select_attribute">Select attribute</string>
+    <string name="apply_single_price_to_all_skus">Apply single price to all SKUs</string>
+    <string name="apply_unique_prices_by_attribute_to_each_sku">Apply unique prices by attribute to each SKU</string>
+    <string name="skip_price_at_this_time">Skip price at this time</string>
+    <string name="apply_single_quantity_to_each_skus">Apply single quantity to each SKUs</string>
+    <string name="apply_unique_quantity_by_attribute_to_each_sku">Apply unique quantity by attribute to each SKU</string>
+    <string name="skip_quantity_at_this_time">Skip quantity at this time</string>
+    <string name="please_select_attribute_first">Please Select Attribute First!</string>
+    <string name="step_1_select_attributes">Step 1: Select Attributes</string>
+    <string name="step_2">Step 2: Attribute Values\nSelect values from each attribute to include in this product. Each unique combination of values creates a unigue product SKU.</string>
+    <string name="step_3">Step 3: Bulk Images, Price and Quantity\\nBased on your selections 3 new products will be created. Use this step to customize images and price for your new products.</string>
+    <string name="step_4_summary">Step 4: Summary</string>
+    <string name="create_new_value">Create New Value</string>
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All</string>
+    <string name="please_enter_the_new_value">Please enter the new value.</string>
+    <string name="new_attribute_value">New Attribute Value</string>
+    <string name="configurations">Configurations</string>
+    <string name="ConfigLabel">Configurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).</string>
+    <string name="do_you_want_to_delete_this_image">Do You Want To Delete This Image</string>
+    <string name="next">Next</string>
+    <string name="backbtn">Back</string>
+    <string name="select_store">Select Store</string>
+    <string name="the_full_name_is_incorrect">The full name is incorrect</string>
+
+    <!--***********************************Arrays************************************************-->
+
+    <string-array name="array_name">
+        <item>Today</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string-array name="types">
+        <item>dynamic</item>
+        <item>fixed</item>
+    </string-array>
+    <string-array name="pricetypes">
+        <item>fixed</item>
+        <item>percent</item>
+    </string-array>
+    <string-array name="price_type">
+        <item>Fixed</item>
+        <item>Percent</item>
+    </string-array>
+    <string-array name="required">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="sort">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="shipping_zone_type">
+        <item>Fixed</item>
+        <item>Per / metric</item>
+    </string-array>
+    <string-array name="type">
+        <item>Select Type</item>
+        <item>Simple</item>
+        <item>Virtual</item>
+        <item>Downloadable</item>
+        <item>Grouped</item>
+        <item>Bundle</item>
+        <item>Configurable</item>
+    </string-array>
+    <string-array name="status">
+        <item>Select Status</item>
+        <item>Approved (Enabled)</item>
+        <item>Pending (Disabled)</item>
+        <item>Disapproved</item>
+    </string-array>
+    <string-array name="pro_status">
+        <item>Select Status</item>
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="status_list_rr">
+        <item>Select Status</item>
+        <item>Enabled</item>
+        <item>Disabled</item>
+    </string-array>
+    <string-array name="invoice_status">
+        <item>Select</item>
+        <item>Pending</item>
+        <item>Paid</item>
+        <item>Cancelled</item>
+    </string-array>
+    <string-array name="payment_status">
+        <item>All</item>
+        <item>Pending</item>
+        <item>Paid</item>
+        <item>Refunded</item>
+        <item>Cancelled</item>
+    </string-array>
+    <string-array name="creditmemo_status">
+        <item>Select</item>
+        <item>Pending</item>
+        <item>Refunded</item>
+        <item>Cancelled</item>
+    </string-array>
+    <string-array name="return_order_status">
+        <item>Select</item>
+        <item>Pending</item>
+        <item>Approved</item>
+        <item>Complete</item>
+        <item>Cancelled</item>
+    </string-array>
+    <string-array name="inputtypesbundle">
+        <item>Drop-Down</item>
+        <item>Radio Buttons</item>
+        <item>Checkbox</item>
+        <item>Multiple Select</item>
+    </string-array>
+    <string-array name="spinner_item">
+        <item>Day</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+    <string-array name="selection">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+    <string-array name="scope">
+        <item>Select</item>
+        <item>Store View</item>
+        <item>Website</item>
+        <item>Global</item>
+    </string-array>
+    <string-array name="layered">
+        <item>Select</item>
+        <item>Filterable(with results)</item>
+        <item>Filterable(no results)</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="catalog_input_type">
+        <item>Text Field</item>
+        <item>Text Area</item>
+        <item>Date</item>
+        <item>Yes/No</item>
+        <item>Multiple Select</item>
+        <item>Dropdown</item>
+        <item>Price</item>
+        <item>Media Image</item>
+
+    </string-array>
+    <string-array name="apply_to">
+        <item>All Product Types</item>
+        <item>Selected Product Types</item>
+    </string-array>
+    <string-array name="ShipBundle_Items">
+        <item>Together</item>
+        <item>Separately</item>
+    </string-array>
+    <string-array name="inventoryarray">
+        <item>In Stock</item>
+        <item>Out Of Stock</item>
+    </string-array>
+    <string-array name="input_validation">
+        <item>None</item>
+        <item>Decimal Number</item>
+        <item>Integer Number</item>
+        <item>Email</item>
+        <item>URL</item>
+        <item>Letters</item>
+        <item>Letters (a-z,A-Z) or Numbers(0-9)</item>
+    </string-array>
+    <string-array name="review_status">
+        <item>Approved</item>
+        <item>Pending</item>
+        <item>Not Approved</item>
+    </string-array>
+    <string-array name="stock_availability">
+        <item>Please Select</item>
+        <item>In Stock</item>
+        <item>Out of Stock</item>
+    </string-array>
+    <string-array name="prod_status">
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    <string-array name="deal_status">
+        <item>Select Status</item>
+        <item>Enable</item>
+        <item>Disable</item>
+        <item>Expired</item>
+    </string-array>
+    <string-array name="vendor_deal_status">
+        <item>Select Status</item>
+        <item>Enabled</item>
+        <item>Disabled</item>
+        <item>Expired</item>
+    </string-array>
+    <string-array name="vendor_deal_statuss">
+        <item>Enabled</item>
+        <item>Disabled</item>
+    </string-array>
+    <string-array name="enable_disable">
+        <item>--Select--</item>
+        <item>Disabled</item>
+        <item>Enabled</item>
+    </string-array>
+    <string-array name="yesno">
+        <item>--Select--</item>
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="shipyesno">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="store_enabledis">
+        <item>Disabled</item>
+        <item>Enabled</item>
+    </string-array>
+    <string-array name="spinnertime">
+        <item>00:00</item>
+        <item>00:15</item>
+        <item>00:30</item>
+        <item>00:45</item>
+        <item>01:00</item>
+        <item>01:15</item>
+        <item>01:30</item>
+        <item>01:45</item>
+        <item>02:00</item>
+        <item>02:15</item>
+        <item>02:30</item>
+        <item>02:45</item>
+        <item>03:00</item>
+        <item>03:15</item>
+        <item>03:30</item>
+        <item>03:45</item>
+        <item>04:00</item>
+        <item>04:15</item>
+        <item>04:30</item>
+        <item>04:45</item>
+        <item>05:00</item>
+        <item>05:15</item>
+        <item>05:30</item>
+        <item>05:45</item>
+        <item>06:00</item>
+        <item>06:00</item>
+        <item>06:15</item>
+        <item>06:30</item>
+        <item>06:45</item>
+        <item>07:00</item>
+        <item>07:15</item>
+        <item>07:30</item>
+        <item>07:45</item>
+        <item>08:15</item>
+        <item>08:30</item>
+        <item>08:45</item>
+        <item>09:00</item>
+        <item>09:15</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:15</item>
+        <item>10:30</item>
+        <item>10:45</item>
+        <item>11:00</item>
+        <item>11:15</item>
+        <item>11:30</item>
+        <item>11:45</item>
+        <item>12:00</item>
+        <item>12:15</item>
+        <item>12:30</item>
+        <item>12:45</item>
+        <item>13:00</item>
+        <item>13:15</item>
+        <item>13:30</item>
+        <item>13:45</item>
+        <item>14:00</item>
+        <item>14:15</item>
+        <item>14:30</item>
+        <item>14:45</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>15:45</item>
+        <item>16:00</item>
+        <item>17:15</item>
+        <item>17:30</item>
+        <item>17:45</item>
+        <item>18:00</item>
+        <item>18:15</item>
+        <item>18:30</item>
+        <item>18:45</item>
+        <item>19:00</item>
+        <item>19:15</item>
+        <item>19:30</item>
+        <item>19:45</item>
+        <item>20:00</item>
+        <item>20:15</item>
+        <item>20:30</item>
+        <item>20:45</item>
+        <item>21:00</item>
+        <item>21:15</item>
+        <item>21:30</item>
+        <item>21:45</item>
+        <item>22:00</item>
+        <item>22:15</item>
+        <item>22:30</item>
+        <item>22:45</item>
+        <item>23:00</item>
+        <item>23:15</item>
+        <item>23:30</item>
+        <item>23:45</item>
+        <item>24:00"</item>
+    </string-array>
+    <string-array name="intervaltime">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="auction_sellprod">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="auction_edt_status">
+        <item>Select</item>
+        <item>Processing</item>
+        <item>Cancelled</item>
+        <item>Completed</item>
+        <item>Bid Closed</item>
+        <item>Not Started</item>
+    </string-array>
+    <string-array name="auction_vendor_status">
+        <item>Select</item>
+        <item>Approved</item>
+        <item>Disapproved</item>
+    </string-array>
+    <string-array name="auction_status">
+        <item>Select</item>
+        <item>Processing</item>
+        <item>Canceled</item>
+        <item>Completed</item>
+        <item>Bid Closed</item>
+    </string-array>
+    <string-array name="auction_view_bid_status">
+        <item>Select</item>
+        <item>Approved</item>
+        <item>Disapproved</item>
+    </string-array>
+    <string-array name="store_name">
+        <item>English</item>
+        <item>Arabic</item>
+    </string-array>
+    <string-array name="po_status">
+        <item>Select</item>
+        <item>Pending</item>
+        <item>Confirmed</item>
+        <item>Declined</item>
+        <item>Ordered</item>
+
+    </string-array>
+    <string-array name="rfq_status">
+        <item>Select</item>
+        <item>Pending</item>
+        <item>Approved</item>
+        <item>Cancelled</item>
+        <item>Complete</item>
+    </string-array>
+
+    <!--*************************************Arrays**********************************************-->
+
+
+</resources>

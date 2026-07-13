@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~   Copyright/* *
+  ~             * CedCommerce
+  ~             *
+  ~             * NOTICE OF LICENSE
+  ~             *
+  ~             * This source file is subject to the End User License Agreement (EULA)
+  ~             * that is bundled with this package in the file LICENSE.txt.
+  ~             * It is also available through the world-wide-web at this URL:
+  ~             * http://cedcommerce.com/license-agreement.txt
+  ~             *
+  ~             * @category  Ced
+  ~             * @package   MultiVendor
+  ~             * @author    CedCommerce Core Team <connect@cedcommerce.com >
+  ~             * @copyright Copyright CEDCOMMERCE (http://cedcommerce.com/)
+  ~             * @license   http://cedcommerce.com/license-agreement.txt
+  ~
+  ~
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/pad_10dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MultiVendor_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <Button
+                        android:id="@+id/MultiVendor_order_increment_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.85"
+                        android:background="@color/header_color"
+                        android:clickable="false"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/pad_10dp"
+                        android:textSize="@dimen/txt_15sp" />
+
+                    <ImageView
+                        android:id="@+id/MultiVendor_generate_button"
+                        android:layout_width="0dp"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="0.15"
+                        android:padding="@dimen/pad_5dp"
+                        android:paddingEnd="@dimen/pad_10dp"
+                        android:src="@drawable/filtericon" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/MultiVendor_Information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:background="@drawable/corner"
+                android:text="@string/Information"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/MultiVendor_Invoices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:background="@color/AppTheme"
+                android:text="@string/Invoices"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/MultiVendor_CreditMemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:background="@drawable/corner"
+                android:text="@string/CreditMemo"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/MultiVendor_Shipments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:background="@color/AppTheme"
+                android:text="@string/Shipments"
+                android:textColor="@color/white" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/MultiVendor_CommentHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_10dp"
+                android:background="@drawable/corner"
+                android:text="@string/CommentHistory"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

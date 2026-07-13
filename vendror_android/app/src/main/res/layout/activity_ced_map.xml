@@ -1,0 +1,72 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.ezzyclick.grocerybuyer.mn_location.Ced_MapActivity" />
+
+        <LinearLayout
+            android:id="@+id/locationMarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/locationMarkertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_square"
+                android:gravity="center"
+                android:minWidth="250dp"
+                android:minHeight="50dp"
+                android:padding="@dimen/pad_5dp"
+                android:textColor="@android:color/white" />
+
+            <ImageView
+                android:id="@+id/imageMarker"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/pad_5dp"
+                android:src="@drawable/location_pin_up" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/confirm_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pad_5dp"
+            android:layout_marginRight="@dimen/pad_5dp"
+            android:layout_marginBottom="@dimen/pad_5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/corner"
+            android:minHeight="50dp"
+            android:text="Select"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>
