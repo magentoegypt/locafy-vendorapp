@@ -297,13 +297,33 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="150dp"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
                                 android:hint="@string/Description"
+                                android:inputType="textMultiLine"
                                 android:paddingStart="@dimen/pad_5dp"
                                 android:textColor="@color/black"
                                 android:textSize="11sp"
 
                                 />
+
+                            <TextView
+                                android:id="@+id/MultiVendor_description_preview_toggle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:padding="@dimen/pad_5dp"
+                                android:text="@string/show_media_preview"
+                                android:textColor="@color/vendorcolor"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <WebView
+                                android:id="@+id/MultiVendor_description_preview_web"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:background="@drawable/curve"
+                                android:visibility="gone" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -328,13 +348,33 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="120dp"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
                                 android:hint="@string/ShortDescription"
+                                android:inputType="textMultiLine"
                                 android:paddingStart="@dimen/pad_5dp"
                                 android:textColor="@color/black"
                                 android:textSize="11sp"
 
                                 />
+
+                            <TextView
+                                android:id="@+id/MultiVendor_shortdescription_preview_toggle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:padding="@dimen/pad_5dp"
+                                android:text="@string/show_media_preview"
+                                android:textColor="@color/vendorcolor"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <WebView
+                                android:id="@+id/MultiVendor_shortdescription_preview_web"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:background="@drawable/curve"
+                                android:visibility="gone" />
                         </LinearLayout>
 
                         <LinearLayout

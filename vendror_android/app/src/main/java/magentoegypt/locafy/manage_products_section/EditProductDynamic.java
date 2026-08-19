@@ -38,6 +38,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -996,8 +997,14 @@ public class EditProductDynamic extends Ced_MultiVendor_NavigationActivity imple
                         MultiVendor_label = view.findViewById(R.id.MultiVendor_label);
                         MultiVendor_label.setText(jsonObject.getString("name"));
                         MultiVendor_textattribuite = view.findViewById(R.id.MultiVendor_textattribuite);
-                        Spanned sp = Html.fromHtml( jsonObject.getString("saved_value"));
-                        MultiVendor_textattribuite.setText(sp);
+                        /* Keep the stored markup verbatim. Html.fromHtml() dropped the Page Builder
+                           wrappers plus every <img>/<video> tag, so embedded media never showed and
+                           got wiped from the attribute the moment the product was saved. */
+                        MultiVendor_textattribuite.setText(jsonObject.getString("saved_value"));
+                        DescriptionMediaPreview.bind(MultiVendor_textattribuite,
+                                (TextView) view.findViewById(R.id.MultiVendor_preview_toggle),
+                                (WebView) view.findViewById(R.id.MultiVendor_preview_web),
+                                session.getBase_Url());
                         if (!TextUtils.isEmpty(MultiVendor_textattribuite.getText().toString())) {
                             if (requiredFields.has(jsonObject.getString(POST_FIELD))) {
                                 requiredFields.remove(jsonObject.getString(POST_FIELD));

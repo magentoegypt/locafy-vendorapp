@@ -34,4 +34,25 @@
         android:textColor="@color/black"
         android:textSize="13sp" />
 
+    <TextView
+        android:id="@+id/MultiVendor_preview_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/show_media_preview"
+        android:textColor="@color/vendorcolor"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/MultiVendor_preview_web"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_margin="5dp"
+        android:background="@drawable/edittext_bg"
+        android:visibility="gone" />
+
 </LinearLayout>

@@ -54,6 +54,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -378,6 +379,15 @@ public class Ced_MultiVendor_UpdateProduct extends Ced_MultiVendor_NavigationAct
                 if (object.getJSONObject("data").getJSONObject("productdata").has("short_description")) {
                     shortdescription.setText(object.getJSONObject("data").getJSONObject("productdata").getString("short_description"));
                 }
+                /* Both fields hold raw markup, so give the vendor a way to see the media in it. */
+                DescriptionMediaPreview.bind(description,
+                        (TextView) findViewById(R.id.MultiVendor_description_preview_toggle),
+                        (WebView) findViewById(R.id.MultiVendor_description_preview_web),
+                        session.getBase_Url());
+                DescriptionMediaPreview.bind(shortdescription,
+                        (TextView) findViewById(R.id.MultiVendor_shortdescription_preview_toggle),
+                        (WebView) findViewById(R.id.MultiVendor_shortdescription_preview_web),
+                        session.getBase_Url());
                 url_key.setText(object.getJSONObject("data").getJSONObject("productdata").getString("url_key"));
 
                 if (type.equals("grouped")) {

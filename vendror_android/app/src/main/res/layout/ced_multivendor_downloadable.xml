@@ -212,9 +212,10 @@
                                 android:textSize="11sp"
                                 android:textColor="@color/black"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
 
 
+                                android:inputType="textMultiLine"
                                 />
                         </LinearLayout>
                         <LinearLayout
@@ -240,8 +241,9 @@
                                 android:textSize="11sp"
                                 android:textColor="@color/black"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
 
+                                android:inputType="textMultiLine"
                                 />
                         </LinearLayout>
                         <LinearLayout

@@ -269,9 +269,10 @@
                                 android:textSize="11sp"
                                 android:textColor="@color/black"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
                                 android:paddingStart="@dimen/pad_5dp"
 
+                                android:inputType="textMultiLine"
                                 />
                         </LinearLayout>
                         <LinearLayout
@@ -297,9 +298,10 @@
                                 android:textSize="11sp"
                                 android:textColor="@color/black"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
                                 android:paddingStart="@dimen/pad_5dp"
 
+                                android:inputType="textMultiLine"
                                 />
                         </LinearLayout>
                         <LinearLayout
@@ -991,12 +993,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="150dp"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
                                 android:hint="@string/Description"
                                 android:paddingStart="@dimen/pad_5dp"
                                 android:textColor="@color/black"
                                 android:textSize="11sp"
 
+                                android:inputType="textMultiLine"
                                 />
                         </LinearLayout>
 
@@ -1022,12 +1025,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="120dp"
                                 android:background="@drawable/curve"
-                                android:gravity="start"
+                                android:gravity="start|top"
                                 android:hint="@string/ShortDescription"
                                 android:paddingStart="@dimen/pad_5dp"
                                 android:textColor="@color/black"
                                 android:textSize="11sp"
 
+                                android:inputType="textMultiLine"
                                 />
                         </LinearLayout>
 

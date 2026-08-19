@@ -1488,4 +1488,6 @@
     <string name="select">حدد</string>
     <string name="select_store">حدد متجرك</string>
     <string name="the_full_name_is_incorrect">الاسم الكامل غير صحيح</string>
+    <string name="show_media_preview">عرض معاينة الوسائط</string>
+    <string name="hide_media_preview">إخفاء معاينة الوسائط</string>
 </resources>

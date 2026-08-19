@@ -1485,4 +1485,6 @@
     <!--*************************************Arrays**********************************************-->
 
 
+    <string name="show_media_preview">Show media preview</string>
+    <string name="hide_media_preview">Hide media preview</string>
 </resources>

@@ -16,6 +16,7 @@
  */
 
 import UIKit
+import WebKit
 import RATreeView
 import Combine
 
@@ -27,7 +28,11 @@ class ProductDetailsViewController: ced_VendorBaseClass,UIImagePickerControllerD
     @IBOutlet weak var proceedButton: UIButton!
     @IBOutlet weak var mainScrollView: UIScrollView!
     var weight:UITextField?
-    
+    /// Toggle/WebView pairs rendering the markup of the textarea fields (description, short description).
+    var mediaPreviews = [(toggle: UIButton, webView: WKWebView, textView: UITextView)]()
+    let mediaPreviewHeight: CGFloat = 260
+    let mediaPreviewToggleHeight: CGFloat = 32
+
     var treeView:RATreeView!
     var skuToUseUpload = ""
     var datePickerView = UIDatePicker();
@@ -149,6 +154,7 @@ class ProductDetailsViewController: ced_VendorBaseClass,UIImagePickerControllerD
         }
         // Do any additional setup after loading the view.
         mainHeight.constant = 0;
+        mediaPreviews.removeAll();
         mainWidth.constant = self.view.frame.width;
         
         print("-----configSelected-----");
@@ -548,7 +554,7 @@ class ProductDetailsViewController: ced_VendorBaseClass,UIImagePickerControllerD
                 makeTextFeild(set: index["name"].stringValue, textFeildText: index["saved_value"].stringValue, index: tags, type: index["input_type"].stringValue,fieldIndex: index,isRequired:index["is_required"].stringValue);
                 tags += 1;
             case "textarea":
-                maketextView(set: index["name"].stringValue, textFeildText: index["saved_value"].stringValue.html2String, index: tags,fieldIndex: index, isRequired: index["is_required"].stringValue)
+                maketextView(set: index["name"].stringValue, textFeildText: index["saved_value"].stringValue, index: tags,fieldIndex: index, isRequired: index["is_required"].stringValue)
                 tags += 1;
             case "date":
                 makeDatePickeView(set: index["name"].stringValue, textFeildText: index["saved_value"].stringValue, index: tags,fieldIndex: index, isRequired: index["is_required"].stringValue)
@@ -2228,8 +2234,105 @@ let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
         print("---height---")
         print(mainHeight.constant);
         viewForTextFeild.tag = IndexWithWholeData
+        addMediaPreview(for: viewForTextFeild.entityValueTxtField, value: textFeildText)
     }
-    
+
+    /// Adds an on-demand preview under a textarea field so the images and videos embedded in the
+    /// stored markup are visible while editing. The field itself keeps the markup verbatim, so
+    /// nothing is lost when the product is saved.
+    func addMediaPreview(for textView: UITextView, value: String) {
+        guard value.contains("<") || value.contains("{{") else { return }
+
+        let toggle = UIButton(type: .system)
+        toggle.setTitle("Show media preview".localized, for: .normal)
+        toggle.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
+        toggle.translatesAutoresizingMaskIntoConstraints = false
+        toggle.heightAnchor.constraint(equalToConstant: mediaPreviewToggleHeight).isActive = true
+
+        let webView = WKWebView()
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.heightAnchor.constraint(equalToConstant: mediaPreviewHeight).isActive = true
+        webView.layer.borderWidth = 1.0
+        webView.layer.borderColor = UIColor.lightGray.cgColor
+        webView.isHidden = true
+
+        mainStackView.addArrangedSubview(toggle)
+        mainStackView.addArrangedSubview(webView)
+        mainHeight.constant += mediaPreviewToggleHeight
+
+        mediaPreviews.append((toggle: toggle, webView: webView, textView: textView))
+        toggle.addTarget(self, action: #selector(toggleMediaPreview(_:)), for: .touchUpInside)
+    }
+
+    @objc func toggleMediaPreview(_ sender: UIButton) {
+        guard let preview = mediaPreviews.first(where: { $0.toggle === sender }) else { return }
+        if preview.webView.isHidden {
+            preview.webView.isHidden = false
+            mainHeight.constant += mediaPreviewHeight
+            sender.setTitle("Hide media preview".localized, for: .normal)
+            preview.webView.loadHTMLString(mediaPreviewDocument(for: preview.textView.text ?? ""),
+                                           baseURL: URL(string: baseURL))
+        } else {
+            preview.webView.isHidden = true
+            preview.webView.loadHTMLString("", baseURL: nil)
+            mainHeight.constant -= mediaPreviewHeight
+            sender.setTitle("Show media preview".localized, for: .normal)
+        }
+        view.layoutIfNeeded()
+    }
+
+    private func mediaPreviewDocument(for markup: String) -> String {
+        let head = "<!doctype html><html><head><meta charset=\"utf-8\">"
+            + "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+            + "<style>body{margin:0;padding:8px;font-family:-apple-system,sans-serif;font-size:13px;"
+            + "word-wrap:break-word}img,video,iframe,table{max-width:100%!important;height:auto}</style>"
+            + "</head><body dir=\"auto\">"
+        return head + resolveDirectives(markup) + "</body></html>"
+    }
+
+    /// Expands the `{{media url=...}}` / `{{store url=...}}` directives Magento keeps in WYSIWYG and
+    /// Page Builder content, which stay unresolved outside the storefront renderer.
+    private func resolveDirectives(_ markup: String) -> String {
+        guard markup.contains("{{") else { return markup }
+        let storeBase = baseURL.hasSuffix("/") ? baseURL : baseURL + "/"
+        // Media is served from the host root, not from the store-code path.
+        var mediaBase = storeBase
+        let searchEnd = storeBase.index(before: storeBase.endIndex)
+        if let hostEnd = storeBase.range(of: "://")?.upperBound, hostEnd < searchEnd,
+           let lastSlash = storeBase.range(of: "/", options: .backwards, range: hostEnd..<searchEnd) {
+            mediaBase = String(storeBase[..<lastSlash.upperBound])
+        }
+        mediaBase += "media/"
+
+        var resolved = ""
+        var rest = Substring(markup)
+        while let open = rest.range(of: "{{"), let close = rest.range(of: "}}", range: open.upperBound..<rest.endIndex) {
+            resolved += String(rest[..<open.lowerBound])
+            let directive = rest[open.upperBound..<close.lowerBound].trimmingCharacters(in: .whitespacesAndNewlines)
+            if directive.hasPrefix("media ") {
+                resolved += mediaBase + directiveUrl(directive)
+            } else if directive.hasPrefix("store ") {
+                resolved += storeBase + directiveUrl(directive)
+            } else {
+                resolved += String(rest[open.lowerBound..<close.upperBound])
+            }
+            rest = rest[close.upperBound...]
+        }
+        return resolved + String(rest)
+    }
+
+    /// Pulls the `url=...` value, quoted or not, out of a Magento directive body.
+    private func directiveUrl(_ directive: String) -> String {
+        guard let equals = directive.firstIndex(of: "=") else { return "" }
+        var url = directive[directive.index(after: equals)...]
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        if url.count > 1, let first = url.first, first == url.last, first == "\"" || first == "'" {
+            url = String(url.dropFirst().dropLast())
+        }
+        return url
+    }
+
+
     func makeTextFeild(set labelText:String , textFeildText:String,index IndexWithWholeData :Int, type: String,fieldIndex: JSON,isRequired:String){
         let viewForTextFeild = Label_TextFieldComboView()
         //        viewForTextFeild.backgroundColor = .red

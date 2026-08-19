@@ -854,3 +854,6 @@
 "ConfigLabel" = "Configurable products allow customers to choose options (Ex: shirt color). You need to create a simple product for each configuration (Ex: a product for each color).";
 "Remove Product" = "Remove Product";
 "The full name is incorrect" = "The full name is incorrect";
+
+"Show media preview" = "Show media preview";
+"Hide media preview" = "Hide media preview";
