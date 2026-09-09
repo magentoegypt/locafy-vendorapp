@@ -35,6 +35,12 @@ Two policy problems are open on that listing, and both block the ticket:
    Locafy-branded URL and put that in the Data safety form. This one has the nearer
    deadline and is console + web work, not app work.
 
+   Drafted and ready: [`docs/play-data-safety.md`](docs/play-data-safety.md) has
+   every questionnaire answer with the code evidence behind it, and
+   [`docs/account-deletion.html`](docs/account-deletion.html) is the page to
+   publish. An incomplete Data safety declaration also **blocks the 1.03 release
+   from being submitted at all** - Play's pre-submit check refuses it.
+
 Also worth a decision: the Play listing says "Locafy Marketplace" while the Android
 app label and (now) the iOS display name say "Locafy Seller". Pick one - the seller
 naming is the clearer of the two, and the customer-facing listing

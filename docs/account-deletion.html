@@ -1,0 +1,145 @@
+<!--
+  Account & data deletion page for the Play Data safety "account deletion" field.
+
+  WHY IT LOOKS LIKE THIS: Play rejected the previous link because it "does not
+  hold reference to the entity ... named in the app's Google Play listing". So the
+  page names the app exactly as the listing does (Locafy Marketplace), the app
+  label (Locafy Seller), the package id, and the developer (Clickalize Agency).
+  Do not remove those names.
+
+  WHERE TO HOST IT: a public page on a Locafy-owned domain, reachable without
+  logging in - e.g. https://vendors.magento2.click/account-deletion as a Magento
+  CMS page. Paste that URL into Play Console -> App content -> Data safety ->
+  account deletion URL. It must stay reachable; if it 404s the violation returns.
+
+  REPLACE BEFORE PUBLISHING:
+    {{SUPPORT_EMAIL}}        e.g. support@locafy.example - must be monitored
+    {{COMPANY_LEGAL_NAME}}   the legal entity behind the Play listing
+    {{RETENTION_PERIOD}}     e.g. "7 years", per Egyptian tax/accounting rules
+    {{LAST_UPDATED}}         e.g. 9 September 2026
+  And check the marked sentence in "What we delete" against what
+  rest/V1/vendorapi/deletevendor actually does - delete or deactivate.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your Locafy Marketplace vendor account</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0 auto; padding: 2rem 1.25rem 4rem; max-width: 46rem;
+      font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1a1c1f; background: #fff;
+    }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 .5rem; }
+    h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+    p, li { margin: .5rem 0; }
+    ul, ol { padding-left: 1.25rem; }
+    .meta { color: #5c6169; font-size: .95rem; margin-bottom: 2rem; }
+    .box { border: 1px solid #dfe3e8; border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    code { background: #f3f4f6; padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #dfe3e8; color: #5c6169; font-size: .9rem; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+
+  <h1>Delete your Locafy Marketplace vendor account</h1>
+  <p class="meta">
+    This page explains how to delete your vendor account and associated data from
+    <strong>Locafy Marketplace</strong> (shown on your device as
+    <strong>Locafy Seller</strong>, package <code>magentoegypt.locafy</code>),
+    published on Google Play by <strong>Clickalize Agency</strong> and operated by
+    {{COMPANY_LEGAL_NAME}}.
+  </p>
+
+  <h2>Option 1 - delete your account in the app</h2>
+  <ol>
+    <li>Open <strong>Locafy Seller</strong> and sign in.</li>
+    <li>Open the menu and go to <strong>Profile</strong>.</li>
+    <li>Choose <strong>Delete account</strong>.</li>
+    <li>Confirm when asked. You are signed out immediately and your vendor
+      account is closed.</li>
+  </ol>
+
+  <h2>Option 2 - ask us to delete it</h2>
+  <p>
+    If you cannot sign in, or you no longer have the app installed, email
+    <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> from the address
+    registered to your vendor account, with:
+  </p>
+  <ul>
+    <li>the subject line <strong>Delete my Locafy Marketplace vendor account</strong></li>
+    <li>your vendor/shop name</li>
+    <li>the email address and phone number on the account</li>
+  </ul>
+  <p>
+    We reply to confirm the request, and complete the deletion within
+    <strong>30 days</strong>. We may ask one question to verify you own the
+    account before we act - we will never ask for your password.
+  </p>
+
+  <h2>What we delete</h2>
+  <p>Deleting your account removes:</p>
+  <ul>
+    <li>your vendor profile - name, email address, phone number, address and tax
+      registration number;</li>
+    <li>your payout details, including bank name and branch;</li>
+    <li>your shop's product listings, images and descriptions;</li>
+    <li>your messages, support tickets and reviews you submitted;</li>
+    <li>your saved warehouse and store-pickup locations;</li>
+    <li>the push-notification token for your devices, so we stop contacting you.</li>
+  </ul>
+  <div class="box">
+    <p><strong>Note to publisher - resolve before publishing this page.</strong>
+    Confirm whether the backend removes the vendor record outright or deactivates
+    it, and describe that here accurately. If accounts are deactivated and purged
+    later, say so and give the delay.</p>
+  </div>
+
+  <h2>What we keep, and why</h2>
+  <p>
+    Some records cannot be deleted on request, because we are legally required to
+    keep them:
+  </p>
+  <ul>
+    <li><strong>Completed orders, invoices, credit memos and payout records</strong>
+      - kept for {{RETENTION_PERIOD}} to meet tax, accounting and audit
+      obligations. These stay linked to your shop's historical trading records,
+      not to a usable account.</li>
+    <li><strong>Anonymised or aggregated analytics</strong> - retained without
+      anything that identifies you personally.</li>
+    <li><strong>Records of the deletion request itself</strong> - kept so we can
+      show the request was honoured.</li>
+  </ul>
+  <p>
+    Once the retention period ends, these records are deleted or anonymised.
+  </p>
+
+  <h2>How long it takes</h2>
+  <ul>
+    <li><strong>In-app deletion:</strong> your account is closed immediately and
+      you are signed out.</li>
+    <li><strong>Email request:</strong> completed within 30 days of us verifying
+      the request.</li>
+    <li><strong>Backups:</strong> residual copies in encrypted backups are
+      overwritten within 90 days.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  <p>
+    Email <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>. This page
+    covers the vendor app only; if you shop on Locafy as a customer, your customer
+    account is separate and must be deleted separately.
+  </p>
+
+  <footer>
+    Locafy Marketplace / Locafy Seller - <code>magentoegypt.locafy</code><br>
+    Published on Google Play by Clickalize Agency, operated by {{COMPANY_LEGAL_NAME}}.<br>
+    Last updated {{LAST_UPDATED}}.
+  </footer>
+
+</body>
+</html>
