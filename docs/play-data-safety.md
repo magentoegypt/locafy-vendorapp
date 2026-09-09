@@ -117,19 +117,26 @@ first:
 Firebase (Messaging, Analytics, Auth) and Google Sign-In are Google acting as a
 service provider for you, so they are collection, not sharing.
 
-## Before you submit - five things only you can confirm
+## Determined from the backend / law
 
-1. **Does `rest/V1/vendorapi/deletevendor` hard-delete the vendor, or deactivate
-   it?** The deletion page and this declaration must match what the backend
-   actually does.
-2. **What is retained after deletion, and for how long?** Orders, invoices and
-   payout records normally have to be kept for tax and accounting law - say so
-   explicitly rather than claiming everything disappears.
-3. **Support email address** for the deletion page (the app has a "Support Email"
+- **Deletion is a hard delete.** `Ced\VendorApi\Model\Api\Vendor\Vendor::deleteVendor()`
+  (in `C:\xampp\htdocs\locafy_market`) calls `deleteVendorProducts()`, sends the
+  `VENDOR_DELETED_STATUS` account email, then `$vendor->delete()`. The vendor
+  account and its catalogue are removed; Magento's separate sales records
+  (orders, invoices, credit memos) are not touched and are retained per tax law.
+- **Retention period: 5 years** from the end of the financial year of the
+  transaction - Egypt's tax statute of limitations (Income Tax Law 91/2005, per
+  PwC), matched by the Commercial Code (Law 17/1999) book-retention period. The
+  tax window extends to 6 years for tax evasion. Have Locafy's accountant confirm
+  the start point before publishing.
+
+## Before you submit - three things only you can confirm
+
+1. **Support email address** for the deletion page (the app has a "Support Email"
    field but no address is baked into the app).
-4. **Privacy policy URL.** The public listing shows no privacy policy; Play
+2. **Privacy policy URL.** The public listing shows no privacy policy; Play
    requires one in Store settings, and the Data safety form links to it.
-5. **Is Facebook login staying?** Determines section 3.
+3. **Is Facebook login staying?** Determines section 3.
 
 ## Order of work
 

@@ -15,10 +15,14 @@
   REPLACE BEFORE PUBLISHING:
     {{SUPPORT_EMAIL}}        e.g. support@locafy.example - must be monitored
     {{COMPANY_LEGAL_NAME}}   the legal entity behind the Play listing
-    {{RETENTION_PERIOD}}     e.g. "7 years", per Egyptian tax/accounting rules
     {{LAST_UPDATED}}         e.g. 9 September 2026
   And check the marked sentence in "What we delete" against what
   rest/V1/vendorapi/deletevendor actually does - delete or deactivate.
+
+  Retention period is set to 5 years (the Egyptian tax statute of limitations
+  under Income Tax Law 91/2005, and the Commercial Code 17/1999 book-retention
+  period; the tax window extends to 6 years in cases of tax evasion). Have
+  Locafy's accountant confirm the start point before this goes live.
 -->
 <!doctype html>
 <html lang="en">
@@ -106,9 +110,9 @@
   </p>
   <ul>
     <li><strong>Completed orders, invoices, credit memos and payout records</strong>
-      - kept for {{RETENTION_PERIOD}} to meet tax, accounting and audit
-      obligations. These stay linked to your shop's historical trading records,
-      not to a usable account.</li>
+      - kept for 5 years from the end of the financial year of the transaction, to
+      meet tax, accounting and audit obligations. These stay linked to your shop's
+      historical trading records, not to a usable account.</li>
     <li><strong>Anonymised or aggregated analytics</strong> - retained without
       anything that identifies you personally.</li>
     <li><strong>Records of the deletion request itself</strong> - kept so we can

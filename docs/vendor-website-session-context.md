@@ -49,8 +49,9 @@ Play rejected the previous link because it *"does not hold reference to the enti
   (Content > Pages; URL key `account-deletion`; enabled for all store views).
 - Must be publicly reachable with **no login** and must not 404, ever - if it
   breaks later, the violation returns.
-- Fill the placeholders before publishing: `{{SUPPORT_EMAIL}}`,
-  `{{COMPANY_LEGAL_NAME}}`, `{{RETENTION_PERIOD}}`, `{{LAST_UPDATED}}`.
+- Fill the remaining placeholders before publishing: `{{SUPPORT_EMAIL}}`,
+  `{{COMPANY_LEGAL_NAME}}`, `{{LAST_UPDATED}}`. (Retention is already set to
+  5 years - Egyptian tax statute of limitations; have the accountant confirm.)
 - Then paste the URL into Play Console > App content > Data safety.
 
 **One claim in that page is already verified against this codebase:** deletion is
