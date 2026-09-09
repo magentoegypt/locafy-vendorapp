@@ -12,12 +12,17 @@
   CMS page. Paste that URL into Play Console -> App content -> Data safety ->
   account deletion URL. It must stay reachable; if it 404s the violation returns.
 
-  REPLACE BEFORE PUBLISHING:
-    {{SUPPORT_EMAIL}}        e.g. support@locafy.example - must be monitored
-    {{COMPANY_LEGAL_NAME}}   the legal entity behind the Play listing
-    {{LAST_UPDATED}}         e.g. 9 September 2026
-  And check the marked sentence in "What we delete" against what
-  rest/V1/vendorapi/deletevendor actually does - delete or deactivate.
+  Values filled in (confirm the support mailbox is actually monitored before
+  relying on it): support email v-relations@locafy.market; operating entity
+  Locafy Market (Egyptian LLC, commercial registration 110700700050447).
+
+  Deletion semantics confirmed against the backend (Ced\VendorApi ... deleteVendor):
+  the vendor/seller profile and its attributes (name, contact, address, tax id,
+  bank/payout details) are hard-deleted, and the vendor-product links and login
+  sessions go with them; but the vendor's PRODUCTS are only disabled/unlisted, not
+  erased, and the Magento CUSTOMER (shopper) account is not touched - it survives,
+  so the person can still sign in as a shopper. The page wording below reflects
+  that. Full erasure of the shopper account is via the email request.
 
   Retention period is set to 5 years (the Egyptian tax statute of limitations
   under Income Tax Law 91/2005, and the Commercial Code 17/1999 book-retention
@@ -56,7 +61,8 @@
     <strong>Locafy Marketplace</strong> (shown on your device as
     <strong>Locafy Seller</strong>, package <code>magentoegypt.locafy</code>),
     published on Google Play by <strong>Clickalize Agency</strong> and operated by
-    {{COMPANY_LEGAL_NAME}}.
+    <strong>Locafy Market</strong> (an Egyptian limited liability company,
+    commercial registration 110700700050447, Cairo).
   </p>
 
   <h2>Option 1 - delete your account in the app</h2>
@@ -65,13 +71,14 @@
     <li>Open the menu and go to <strong>Profile</strong>.</li>
     <li>Choose <strong>Delete account</strong>.</li>
     <li>Confirm when asked. You are signed out immediately and your vendor
-      account is closed.</li>
+      (seller) account is closed. If you also shop on Locafy, that separate
+      shopper account is not affected - see Option 2 to remove it too.</li>
   </ol>
 
   <h2>Option 2 - ask us to delete it</h2>
   <p>
     If you cannot sign in, or you no longer have the app installed, email
-    <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> from the address
+    <a href="mailto:v-relations@locafy.market">v-relations@locafy.market</a> from the address
     registered to your vendor account, with:
   </p>
   <ul>
@@ -86,22 +93,28 @@
   </p>
 
   <h2>What we delete</h2>
-  <p>Deleting your account removes:</p>
+  <p>Deleting your seller account in the app removes:</p>
   <ul>
     <li>your vendor profile - name, email address, phone number, address and tax
       registration number;</li>
     <li>your payout details, including bank name and branch;</li>
-    <li>your shop's product listings, images and descriptions;</li>
-    <li>your messages, support tickets and reviews you submitted;</li>
+    <li>the links between your shop and your products, so your products are
+      unlisted from the marketplace;</li>
     <li>your saved warehouse and store-pickup locations;</li>
+    <li>your active sign-in sessions for the seller app;</li>
     <li>the push-notification token for your devices, so we stop contacting you.</li>
   </ul>
-  <div class="box">
-    <p><strong>Note to publisher - resolve before publishing this page.</strong>
-    Confirm whether the backend removes the vendor record outright or deactivates
-    it, and describe that here accurately. If accounts are deactivated and purged
-    later, say so and give the delay.</p>
-  </div>
+  <p>Two things to be aware of:</p>
+  <ul>
+    <li><strong>Your products are unlisted, not permanently erased.</strong> The
+      product entries stay in our catalogue in a disabled state - no longer visible
+      to shoppers and not offered for sale - so that historical orders remain valid.
+      They are not tied to a usable seller account.</li>
+    <li><strong>Your shopper sign-in is separate.</strong> If you also shop on
+      Locafy, that customer account is not affected by deleting your seller account,
+      and you can still sign in as a shopper. To erase that account too, use the
+      email request in Option 2.</li>
+  </ul>
 
   <h2>What we keep, and why</h2>
   <p>
@@ -124,8 +137,8 @@
 
   <h2>How long it takes</h2>
   <ul>
-    <li><strong>In-app deletion:</strong> your account is closed immediately and
-      you are signed out.</li>
+    <li><strong>In-app deletion:</strong> your seller account is closed immediately
+      and you are signed out.</li>
     <li><strong>Email request:</strong> completed within 30 days of us verifying
       the request.</li>
     <li><strong>Backups:</strong> residual copies in encrypted backups are
@@ -134,15 +147,15 @@
 
   <h2>Questions</h2>
   <p>
-    Email <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>. This page
+    Email <a href="mailto:v-relations@locafy.market">v-relations@locafy.market</a>. This page
     covers the vendor app only; if you shop on Locafy as a customer, your customer
     account is separate and must be deleted separately.
   </p>
 
   <footer>
     Locafy Marketplace / Locafy Seller - <code>magentoegypt.locafy</code><br>
-    Published on Google Play by Clickalize Agency, operated by {{COMPANY_LEGAL_NAME}}.<br>
-    Last updated {{LAST_UPDATED}}.
+    Published on Google Play by Clickalize Agency, operated by Locafy Market.<br>
+    Last updated 9 September 2026.
   </footer>
 
 </body>
