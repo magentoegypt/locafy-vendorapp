@@ -1456,6 +1456,7 @@
     <string name="mobile_number_validation">يرجي ادخال الرقم</string>
     <string name="delete_account">حذف الحساب</string>
     <string name="do_you_want_to_delete_account">هل تريد حذف الحساب؟</string>
+    <string name="account_delete_failed">تعذّر حذف حسابك. ربما انتهت صلاحية جلستك — يُرجى تسجيل الدخول مرة أخرى والمحاولة من جديد.</string>
     <string name="please_enter_the_valid_number">رقم هاتف غير صالح</string>
     <string name="remove_product">إزالة المنتج</string>
     <string name="attributes">الصفات</string>

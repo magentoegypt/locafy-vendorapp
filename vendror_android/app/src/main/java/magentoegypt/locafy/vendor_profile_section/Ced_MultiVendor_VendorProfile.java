@@ -328,17 +328,43 @@ public class Ced_MultiVendor_VendorProfile extends Ced_MultiVendor_NavigationAct
         Ced_MultiVendor_ClientRequestResponse request = new Ced_MultiVendor_ClientRequestResponse(new AsyncResponse() {
             @Override
             public void processFinish(Object output) throws JSONException {
-                session.ClearVendorId();
-                session.ClearSubVendor();
-                session.logoutUser();
-                /* FacebookSdk.sdkInitialize(getApplicationContext());*/
-                FacebookSdk.setAutoInitEnabled(true);
-                FacebookSdk.fullyInitialize();
-                LoginManager.getInstance().logOut();
-                overridePendingTransition(R.anim.ced_multivendor_slide_in, R.anim.ced_multivendor_slide_out);
+                // Only clear the session and log out when the server actually
+                // deleted the account. The delete endpoint now requires the login
+                // hash; a missing/expired hash returns 401 ("not authorized"), and
+                // "Vendor not found" returns status:false. In those cases the
+                // account was NOT deleted, so logging the user out would falsely
+                // imply success.
+                boolean deleted = false;
+                String message = null;
+                try {
+                    JSONObject resp = new JSONObject(output.toString());
+                    deleted = resp.optBoolean("status", false);
+                    message = resp.optString("message", null);
+                } catch (Exception e) {
+                    deleted = false;
+                }
+                if (deleted) {
+                    session.ClearVendorId();
+                    session.ClearSubVendor();
+                    session.logoutUser();
+                    /* FacebookSdk.sdkInitialize(getApplicationContext());*/
+                    FacebookSdk.setAutoInitEnabled(true);
+                    FacebookSdk.fullyInitialize();
+                    LoginManager.getInstance().logOut();
+                    overridePendingTransition(R.anim.ced_multivendor_slide_in, R.anim.ced_multivendor_slide_out);
+                } else {
+                    if (message == null || message.isEmpty()) {
+                        message = getString(R.string.account_delete_failed);
+                    }
+                    Toast.makeText(Ced_MultiVendor_VendorProfile.this, message, Toast.LENGTH_LONG).show();
+                }
             }
         }, this, "POST", jsonObject);
-        request.execute(session.getBase_Url() + "rest/V1/vendorapi/deletevendor");
+        // Use the unscoped REST base, not getBase_Url() which prepends the store
+        // locale. A locale prefix of "eg" (produced for the Arabic store) makes the
+        // REST path 404 ("does not match any route"); the unscoped path routes to
+        // the guard for every store, and deletion is not store-specific anyway.
+        request.execute(getResources().getString(R.string.base_url) + "rest/V1/vendorapi/deletevendor");
     }
 
 

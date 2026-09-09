@@ -47,6 +47,7 @@ import magentoegypt.locafy.base_app.Ced_MultiVendor_VendorFunctionalityList;
 import magentoegypt.locafy.base_app.UtilityMethods;
 import magentoegypt.locafy.gallary.Image;
 import magentoegypt.locafy.vendor_registration_section.new_registration.RegistrationDynamic;
+import magentoegypt.locafy.vendor_session.Ced_MultiVendor_VendorSessionManagement;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.auth.UsernamePasswordCredentials;
@@ -400,6 +401,15 @@ public class Ced_MultiVendor_ClientRequestResponse extends AsyncTask<String, Str
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setRequestProperty("Accept", "application/json");
               //  conn.setRequestProperty("Authorization", UtilityMethods.getAuthData());
+                // The delete endpoint now requires the vendor's login session hash.
+                // Without X-Vendor-Hash the server returns 401. This is the same
+                // hashkey the app stores at login and sends on other authenticated
+                // calls; the hash cannot go in the JSON body (the API rejects
+                // undeclared body fields), so it travels as a header.
+                String vendorHash = new Ced_MultiVendor_VendorSessionManagement(c).getHahkey();
+                if (vendorHash != null && !vendorHash.isEmpty()) {
+                    conn.setRequestProperty("X-Vendor-Hash", vendorHash);
+                }
                 OutputStream os = conn.getOutputStream();
                 String data = "{\"parameters\":{\"vendor_id\":\""+params.get("vendor_id")+"\"}}";
                 if (type == 1) {

@@ -1100,6 +1100,7 @@
     <string name="mobile_number_validation">Please Enter Mobile Number</string>
     <string name="delete_account">Delete Account</string>
     <string name="do_you_want_to_delete_account">Do you want to delete account?</string>
+    <string name="account_delete_failed">Couldn\'t delete your account. Your session may have expired — please sign in again and retry.</string>
     <string name="please_enter_the_valid_number">Please enter the valid number</string>
     <string name="remove_product">Remove Product</string>
     <string name="attributes">Attributes</string>
