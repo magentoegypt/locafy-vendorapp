@@ -49,10 +49,40 @@ Play rejected the previous link because it *"does not hold reference to the enti
   (Content > Pages; URL key `account-deletion`; enabled for all store views).
 - Must be publicly reachable with **no login** and must not 404, ever - if it
   breaks later, the violation returns.
-- Fill the remaining placeholders before publishing: `{{SUPPORT_EMAIL}}`,
-  `{{COMPANY_LEGAL_NAME}}`, `{{LAST_UPDATED}}`. (Retention is already set to
-  5 years - Egyptian tax statute of limitations; have the accountant confirm.)
-- Then paste the URL into Play Console > App content > Data safety.
+- Placeholders are now filled in the source doc (support v-relations@locafy.market,
+  entity Locafy Market, CR 110700700050447, retention 5 years).
+- The URL is already pasted into Play Console > App content > Data safety, and the
+  Data safety declaration is complete. The app submission (production 5 / 1.03 +
+  privacy policy + data safety) is **staged and held** pending the blocker below.
+
+### BLOCKER (current) - Google's checker cannot reach the deletion URL
+
+Play's Data safety form validates the deletion link and reports: *"We couldn't
+find the URL that you entered ... your app may be rejected if we can't access the
+URL during a review."* The page itself is fine - a plain fetch of
+`https://vendors.magento2.click/account-deletion` returns **HTTP 200 with the real
+content** - so Google's crawler is being blocked or timing out, not 404ing. Likely
+causes, in order:
+
+- **Bot / User-Agent blocking** (WAF, Cloudflare, or Magento) rejecting Google's
+  crawler while letting browsers through. Allow Googlebot and Google's data-safety
+  fetcher.
+- **Server too slow.** The backend took ~95s to answer the app's first (cold) call
+  on 54.229.19.109; Google's checker will time out on that. The page must respond
+  in a couple of seconds - cache/warm it, or serve it statically.
+- **Redirect.** The bare `/account-deletion` must return 200 directly (not a chain
+  to a store-prefixed URL Google won't follow), with no login or interstitial.
+
+Verify with `curl -A "Googlebot" -sI https://vendors.magento2.click/account-deletion`
+returning a fast `200`. Re-run the URL check in the Data safety form afterwards.
+
+### Re-publish the corrected page content
+
+`docs/account-deletion.html` has since been corrected and must be re-published to
+the live CMS page (the currently-live page has older, less accurate wording):
+placeholders filled, and "what we delete" fixed to match reality - products are
+**disabled/unlisted, not erased**, and the Magento **shopper/customer account
+survives** in-app deletion (only the seller profile is hard-deleted).
 
 **One claim in that page is already verified against this codebase:** deletion is
 a genuine hard delete, so the page's wording is accurate. See
