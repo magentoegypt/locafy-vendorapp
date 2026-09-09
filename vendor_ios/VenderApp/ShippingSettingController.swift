@@ -90,15 +90,10 @@ class ShippingSettingController: ced_VendorBaseClass,UITableViewDataSource,UITab
             
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             
-            if(self.locationManager.responds(to: #selector(CLLocationManager.requestAlwaysAuthorization)))
-            {
-                locationManager.requestAlwaysAuthorization()
-            }
-            else {
-                
-                locationManager.requestLocation()
-                //startUpdatingLocation()
-            }
+            // The warehouse address picker only needs the location while this screen
+            // is open. Asking for "Always" is more access than the app ever uses and
+            // App Review rejects background location without a background use case.
+            locationManager.requestWhenInUseAuthorization()
             
         }
         

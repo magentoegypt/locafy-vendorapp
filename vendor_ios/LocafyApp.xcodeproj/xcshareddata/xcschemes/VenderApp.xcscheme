@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CF5FF4CC1CFC292000E3A012"
-            BuildableName = "Locafy Marketplace.app"
+            BuildableName = "Locafy Seller.app"
             BlueprintName = "LocafyApp"
             ReferencedContainer = "container:LocafyApp.xcodeproj">
          </BuildableReference>

@@ -22,8 +22,17 @@
 
 package magentoegypt.locafy.vendor_notification.app;
 
+import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
@@ -75,7 +84,59 @@ public class MyApplication extends MultiDexApplication {
         ACRA.init(this);
         ACRA.setConfig(config);
         mInstance = this;
+        applySystemBarInsets();
 
+    }
+
+    /**
+     * Android 16 enforces edge-to-edge for apps targeting API 36 and ignores
+     * windowOptOutEdgeToEdgeEnforcement, so without this every screen would draw
+     * underneath the status and navigation bars. Padding the content view by the
+     * system bar insets once, application-wide, keeps the existing layouts intact,
+     * and painting the strips with status_bar_color reproduces the bar colour the
+     * theme used to get from colorPrimaryDark.
+     */
+    private void applySystemBarInsets() {
+        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+            @Override
+            public void onActivityCreated(@NonNull Activity activity, @Nullable Bundle savedInstanceState) {
+                final View content = activity.findViewById(android.R.id.content);
+                if (content == null) {
+                    return;
+                }
+                content.setBackgroundColor(ContextCompat.getColor(activity, R.color.status_bar_color));
+                ViewCompat.setOnApplyWindowInsetsListener(content, (view, windowInsets) -> {
+                    Insets bars = windowInsets.getInsets(
+                            WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+                    view.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+                    return WindowInsetsCompat.CONSUMED;
+                });
+            }
+
+            @Override
+            public void onActivityStarted(@NonNull Activity activity) {
+            }
+
+            @Override
+            public void onActivityResumed(@NonNull Activity activity) {
+            }
+
+            @Override
+            public void onActivityPaused(@NonNull Activity activity) {
+            }
+
+            @Override
+            public void onActivityStopped(@NonNull Activity activity) {
+            }
+
+            @Override
+            public void onActivitySaveInstanceState(@NonNull Activity activity, @NonNull Bundle outState) {
+            }
+
+            @Override
+            public void onActivityDestroyed(@NonNull Activity activity) {
+            }
+        });
     }
 
     @Override

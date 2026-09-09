@@ -33,6 +33,10 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
+    <!-- Targeting API 36 turns predictive back on by default and makes Android 16
+         ignore the manifest's orientation / resizability limits on large screens.
+         Both opt-outs below are still honoured on Android 16 and hold the current
+         behaviour until those screens are reworked. -->
     <application
         android:name="magentoegypt.locafy.vendor_notification.app.MyApplication"
         android:hardwareAccelerated="false"
@@ -44,7 +48,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
+        android:enableOnBackInvokedCallback="false"
         tools:replace="android:theme">
+
+        <property
+            android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
+            android:value="true" />
         <activity
             android:name="magentoegypt.locafy.manage_products_section.ConfigAttributeSelectionActivity"
             android:exported="false" />

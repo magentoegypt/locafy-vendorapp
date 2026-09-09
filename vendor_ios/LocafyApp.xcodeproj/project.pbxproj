@@ -1016,7 +1016,7 @@
 		CF5F7C1621E0A30F0093A1B1 /* collectionView_Label.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = collectionView_Label.xib; path = xib/collectionView_Label.xib; sourceTree = "<group>"; };
 		CF5F7C1921E0A3530093A1B1 /* MultiSelectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MultiSelectCollectionViewCell.xib; path = xib/MultiSelectCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF5F7C1A21E0A3530093A1B1 /* MultiSelectCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultiSelectCollectionViewCell.swift; path = xib/MultiSelectCollectionViewCell.swift; sourceTree = "<group>"; };
-		CF5FF4CD1CFC292000E3A012 /* Locafy Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Locafy Marketplace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5FF4CD1CFC292000E3A012 /* Locafy Seller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Locafy Seller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5FF4D01CFC292000E3A012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5FF4D21CFC292000E3A012 /* ced_vendorLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ced_vendorLogin.swift; sourceTree = "<group>"; };
 		CF5FF4D81CFC292000E3A012 /* VenderApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenderApp.xcdatamodel; sourceTree = "<group>"; };
@@ -2572,7 +2572,7 @@
 		CF5FF4CE1CFC292000E3A012 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF5FF4CD1CFC292000E3A012 /* Locafy Marketplace.app */,
+				CF5FF4CD1CFC292000E3A012 /* Locafy Seller.app */,
 				CF5FF4E41CFC292000E3A012 /* LocafyAppTests.xctest */,
 				CF5FF4EF1CFC292000E3A012 /* LocafyAppUITests.xctest */,
 			);
@@ -3203,7 +3203,7 @@
 			);
 			name = LocafyApp;
 			productName = VenderApp;
-			productReference = CF5FF4CD1CFC292000E3A012 /* Locafy Marketplace.app */;
+			productReference = CF5FF4CD1CFC292000E3A012 /* Locafy Seller.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CF5FF4E31CFC292000E3A012 /* LocafyAppTests */ = {
@@ -4324,13 +4324,13 @@
 					"$(PROJECT_DIR)/VenderApp/ChartsRealm/ThirdParty/Realm/tvos",
 				);
 				INFOPLIST_FILE = VenderApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Locafy Marketplace";
+				INFOPLIST_KEY_CFBundleDisplayName = "Locafy Seller";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = magentoegypt.locafy;
-				PRODUCT_NAME = "Locafy Marketplace";
+				PRODUCT_NAME = "Locafy Seller";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "VenderApp/VenderApp-Bridging-Header.h";
@@ -4364,13 +4364,13 @@
 					"$(PROJECT_DIR)/VenderApp/ChartsRealm/ThirdParty/Realm/tvos",
 				);
 				INFOPLIST_FILE = VenderApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Locafy Marketplace";
+				INFOPLIST_KEY_CFBundleDisplayName = "Locafy Seller";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = magentoegypt.locafy;
-				PRODUCT_NAME = "Locafy Marketplace";
+				PRODUCT_NAME = "Locafy Seller";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = locafy_adhoc;

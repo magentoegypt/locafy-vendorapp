@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>BGTaskSchedulerPermittedIdentifiers</key>
-	<array>
-		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -56,6 +52,11 @@
 	<string>4575198272598318</string>
 	<key>FacebookClientToken</key>
 	<string></string>
+	<!-- The app only uses standard HTTPS/TLS, which is exempt from export
+	     compliance. Declaring it here stops App Store Connect asking on
+	     every upload. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -78,19 +79,23 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>magento2.click</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
 	</dict>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>NEED PERMISSION</string>
 	<key>NSCameraUsageDescription</key>
-	<string>NEED PERMISSION</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Allow App To Access Current Location For Warehouse Address</string>
+	<string>Locafy Seller uses the camera so you can photograph your products and attach images to orders, messages and support tickets.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow App To Access Current Location For Warehouse Address</string>
+	<string>Locafy Seller uses your location to fill in your warehouse and store pickup address while you are editing your shipping settings.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access photos</string>
+	<string>Locafy Seller needs access to your photo library so you can attach existing images to your products, orders, messages and support tickets.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Bold.ttf</string>
@@ -100,9 +105,7 @@
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>processing</string>
 		<string>remote-notification</string>
-		<string>fetch</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -110,7 +113,7 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7</string>
+		<string>arm64</string>
 	</array>
 	<key>UIRequiresFullScreen</key>
 	<true/>

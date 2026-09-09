@@ -9,12 +9,19 @@ on:
 
 jobs:
   # ---------------------------------------------------------------------------
-  # Android — builds a debug APK (no signing secrets required).
-  # For a signed release APK, wire a signingConfig in app/build.gradle and add
-  # the keystore + passwords as GitHub secrets, then run :app:assembleRelease.
+  # Android — always builds a debug APK, and additionally builds the SIGNED
+  # release .aab (the format Google Play requires for a new app) when signing
+  # secrets are configured.
+  #
+  # Required secrets for the release bundle (Settings > Secrets and variables >
+  # Actions):
+  #   ANDROID_KEYSTORE_BASE64     base64 of the upload keystore (.jks)
+  #   ANDROID_KEYSTORE_PASSWORD   keystore password
+  #   ANDROID_KEY_ALIAS           key alias inside the keystore
+  #   ANDROID_KEY_PASSWORD        password for that key
   # ---------------------------------------------------------------------------
   android:
-    name: Build Android APK
+    name: Build Android APK & AAB
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -32,10 +39,24 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Install required SDK packages
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
 
       - name: Make gradlew executable
         run: chmod +x gradlew
+
+      # Build the release bundle only when the keystore secret is configured.
+      - name: Detect signing secrets
+        id: signing
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "Signing secrets present -> building a SIGNED release AAB."
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "No signing secrets -> debug APK only."
+          fi
 
       - name: Build debug APK
         run: ./gradlew :app:assembleDebug --stacktrace --no-daemon
@@ -46,6 +67,30 @@ jobs:
           name: app-debug-apk
           path: vendror_android/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+      - name: Build signed release AAB
+        if: steps.signing.outputs.enabled == 'true'
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          LOCAFY_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          LOCAFY_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          LOCAFY_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          echo -n "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/upload.jks"
+          export LOCAFY_KEYSTORE_FILE="$RUNNER_TEMP/upload.jks"
+          ./gradlew :app:bundleRelease --stacktrace --no-daemon
+
+      - name: Upload AAB
+        if: steps.signing.outputs.enabled == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release-aab
+          path: vendror_android/app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
+
+      - name: Remove keystore from the runner
+        if: ${{ always() && steps.signing.outputs.enabled == 'true' }}
+        run: rm -f "$RUNNER_TEMP/upload.jks"
 
   # ---------------------------------------------------------------------------
   # iOS — builds a SIGNED .ipa when signing secrets are configured, otherwise

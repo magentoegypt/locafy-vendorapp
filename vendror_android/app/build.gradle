@@ -22,25 +22,53 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'org.jetbrains.kotlin.android'
+
+// Release signing. Credentials never live in the repo: put them in
+// vendror_android/keystore.properties (git-ignored) for a local release build,
+// or export LOCAFY_KEYSTORE_* in the environment (CI). With neither present the
+// release build is simply left unsigned, so debug and CI builds still work.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+}
+def keystoreSetting = { String key, String env ->
+    keystoreProperties.getProperty(key) ?: System.getenv(env)
+}
+def releaseStoreFile = keystoreSetting("storeFile", "LOCAFY_KEYSTORE_FILE")
+
 android {
     //noinspection GradleCompatible
-    compileSdk 35
+    compileSdk 36
     namespace "magentoegypt.locafy"
     defaultConfig {
         applicationId "magentoegypt.locafy"
         minSdkVersion 24
-        targetSdk 35
-        versionCode 2
-        versionName "1.01"
+        targetSdk 36
+        versionCode 4
+        versionName "1.03"
         multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            if (releaseStoreFile != null) {
+                storeFile file(releaseStoreFile)
+                storePassword keystoreSetting("storePassword", "LOCAFY_KEYSTORE_PASSWORD")
+                keyAlias keystoreSetting("keyAlias", "LOCAFY_KEY_ALIAS")
+                keyPassword keystoreSetting("keyPassword", "LOCAFY_KEY_PASSWORD")
+            }
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (releaseStoreFile != null) {
+                signingConfig signingConfigs.release
+            }
         }
     }
-    lintOptions {
+    lint {
         checkReleaseBuilds false
     }
     compileOptions {
@@ -57,12 +85,8 @@ android {
         viewBinding true
     }
 
-    dexOptions {
-        incremental true
-        javaMaxHeapSize "4g"
-    }
     useLibrary 'org.apache.http.legacy'
-    buildToolsVersion '35.0.0'
+    buildToolsVersion '36.0.0'
 }
 
 dependencies {

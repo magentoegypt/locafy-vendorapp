@@ -98,6 +98,12 @@ shipping settings.
 
 ## Notes
 
+- **Releasing:** see [`RELEASE.md`](RELEASE.md) for the store-submission runbook -
+  how to build the signed AAB/IPA, what App Review and Play policy items were fixed,
+  and what still needs console access.
 - **Signing secrets:** the Android signing keystore and its password were committed to
-  history early on. These should be removed from version control and rotated.
+  history early on. These should be removed from version control and rotated. Release
+  builds now read their credentials from a git-ignored
+  `vendror_android/keystore.properties` or from `LOCAFY_KEYSTORE_*` environment
+  variables instead.
 - `local.properties` (Android) and Xcode `xcuserdata`/`.DS_Store` (iOS) are git-ignored.
