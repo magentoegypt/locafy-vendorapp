@@ -133,6 +133,16 @@ public class Ced_Multivendor_New_Login extends AppCompatActivity implements Goog
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_ced__multivendor__new__login);
 
+        // Social sign-in (Google / Facebook) is removed for this release: sign-in is
+        // username/password + OTP only. The container is already gone in the layout;
+        // hiding it here as well guarantees the buttons never appear. Facebook login
+        // in particular used a template app id and did not work, and Google sign-in
+        // would need the Play app-signing SHA-1 registered.
+        View socialLoginContainer = findViewById(R.id.MultiVendor_social_login_linear);
+        if (socialLoginContainer != null) {
+            socialLoginContainer.setVisibility(View.GONE);
+        }
+
         givePermission();
 
         vendor_name = findViewById(R.id.email);
