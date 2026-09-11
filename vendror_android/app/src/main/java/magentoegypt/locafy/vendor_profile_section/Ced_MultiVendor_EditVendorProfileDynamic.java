@@ -23,7 +23,6 @@
 package magentoegypt.locafy.vendor_profile_section;
 
 import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_MEDIA_IMAGES;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -655,7 +654,7 @@ public class Ced_MultiVendor_EditVendorProfileDynamic extends Ced_MultiVendor_Na
                                 }).onSameThread().check();
                     }else{
                         Dexter.withActivity(Ced_MultiVendor_EditVendorProfileDynamic.this)
-                                .withPermissions(CAMERA,READ_MEDIA_IMAGES).
+                                .withPermissions(CAMERA).
                                 withListener(new MultiplePermissionsListener() {
                                     @Override
                                     public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -936,7 +935,7 @@ public class Ced_MultiVendor_EditVendorProfileDynamic extends Ced_MultiVendor_Na
                                 }).onSameThread().check();
                     }else{
                         Dexter.withActivity(Ced_MultiVendor_EditVendorProfileDynamic.this)
-                                .withPermissions(CAMERA,READ_MEDIA_IMAGES).
+                                .withPermissions(CAMERA).
                                 withListener(new MultiplePermissionsListener() {
                                     @Override
                                     public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -1242,18 +1241,8 @@ public class Ced_MultiVendor_EditVendorProfileDynamic extends Ced_MultiVendor_Na
     }
 
     public String getRealPathFromURI(Context context, Uri contentUri) {
-        Cursor cursor = null;
-        try {
-            String[] proj = {MediaStore.Images.Media.DATA};
-            cursor = context.getContentResolver().query(contentUri, proj, null, null, null);
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            return cursor.getString(column_index);
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
-        }
+        // No MediaStore.DATA (needs READ_MEDIA_IMAGES); stream to cache instead.
+        return magentoegypt.locafy_constant.FileUtils.copyUriToCache(context, contentUri);
     }
 
     private String encodeImage(Bitmap bm) {

@@ -112,17 +112,27 @@ public class UtilityMethods {
     }
 
     public static String getRealPathFromURI(Context context, Uri contentUri) {
-        Cursor cursor = null;
+        if (contentUri == null) return null;
+        if ("file".equalsIgnoreCase(contentUri.getScheme())) return contentUri.getPath();
+        // Copy the picked content:// item to app cache instead of querying
+        // MediaStore.Images.Media.DATA, so no READ_MEDIA_IMAGES is required.
         try {
-            String[] proj = {MediaStore.Images.Media.DATA};
-            cursor = context.getContentResolver().query(contentUri, proj, null, null, null);
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            return cursor.getString(column_index);
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
+            String mime = context.getContentResolver().getType(contentUri);
+            String ext = android.webkit.MimeTypeMap.getSingleton().getExtensionFromMimeType(mime);
+            java.io.File out = new java.io.File(context.getCacheDir(),
+                    "pick_" + System.currentTimeMillis() + (ext != null ? "." + ext : ".jpg"));
+            java.io.InputStream in = context.getContentResolver().openInputStream(contentUri);
+            if (in == null) return null;
+            java.io.OutputStream os = new java.io.FileOutputStream(out);
+            byte[] buf = new byte[8192];
+            int n;
+            while ((n = in.read(buf)) > 0) os.write(buf, 0, n);
+            os.flush();
+            os.close();
+            in.close();
+            return out.getAbsolutePath();
+        } catch (Exception e) {
+            return null;
         }
     }
 

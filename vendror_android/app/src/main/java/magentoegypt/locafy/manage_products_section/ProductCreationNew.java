@@ -2,9 +2,6 @@ package magentoegypt.locafy.manage_products_section;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.Manifest.permission.READ_MEDIA_AUDIO;
-import static android.Manifest.permission.READ_MEDIA_IMAGES;
-import static android.Manifest.permission.READ_MEDIA_VIDEO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static magentoegypt.locafy_constant.AppConstant.KEY_is_required;
 
@@ -1347,7 +1344,7 @@ public class ProductCreationNew extends Ced_MultiVendor_NavigationActivity imple
 //        ... */}
 //                    }).check();
             click_product_image.setOnClickListener(view -> Dexter.withActivity(ProductCreationNew.this)
-                    .withPermissions(CAMERA,READ_MEDIA_IMAGES).
+                    .withPermissions(CAMERA).
                     withListener(new MultiplePermissionsListener() {
                         @Override
                         public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -1445,26 +1442,13 @@ public class ProductCreationNew extends Ced_MultiVendor_NavigationActivity imple
                         }
                     }).onSameThread().check());
         }else{
-            browse_product_image.setOnClickListener(view -> Dexter.withActivity(ProductCreationNew.this)
-                    .withPermissions(READ_MEDIA_IMAGES).
-                    withListener(new MultiplePermissionsListener() {
-                        @Override
-                        public void onPermissionsChecked(MultiplePermissionsReport report) {
-                            if (report.areAllPermissionsGranted()) {
-                                selectImage_position = Integer.parseInt(remove_image.getTag().toString());
-                                product_image = layout.findViewById(R.id.MultiVendor_productimage);
-                                image_id = remove_image.getTag().toString();
-                                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-                                photoPickerIntent.setType("image/*");
-                                startActivityForResult(photoPickerIntent, galerry_code);
-                            }
-                        }
-
-                        @Override
-                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                            token.continuePermissionRequest();
-                        }
-                    }).onSameThread().check());
+            browse_product_image.setOnClickListener(view -> {
+                // Android photo picker needs no storage/media permission.
+                selectImage_position = Integer.parseInt(remove_image.getTag().toString());
+                product_image = layout.findViewById(R.id.MultiVendor_productimage);
+                image_id = remove_image.getTag().toString();
+                startActivityForResult(magentoegypt.locafy_constant.FileUtils.imagePickIntent(), galerry_code);
+            });
         }
 
     }
@@ -2175,18 +2159,8 @@ public class ProductCreationNew extends Ced_MultiVendor_NavigationActivity imple
     }
 
     public String getRealPathFromURI(Context context, Uri contentUri) {
-        Cursor cursor = null;
-        try {
-            String[] proj = {MediaStore.Images.Media.DATA};
-            cursor = context.getContentResolver().query(contentUri, proj, null, null, null);
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            return cursor.getString(column_index);
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
-        }
+        // No MediaStore.DATA (needs READ_MEDIA_IMAGES); stream to cache instead.
+        return magentoegypt.locafy_constant.FileUtils.copyUriToCache(context, contentUri);
     }
 
 }

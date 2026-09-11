@@ -212,7 +212,7 @@ public class Customer_Inbox_ComposeView extends Ced_MultiVendor_NavigationActivi
     }
 
     private void imageBrowse() {
-        Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        Intent galleryIntent = magentoegypt.locafy_constant.FileUtils.imagePickIntent();
         startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST);
     }
 

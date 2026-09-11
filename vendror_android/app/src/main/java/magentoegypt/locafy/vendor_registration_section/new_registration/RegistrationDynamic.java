@@ -1,7 +1,6 @@
 package magentoegypt.locafy.vendor_registration_section.new_registration;
 
 import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_MEDIA_IMAGES;
 import static magentoegypt.locafy.base_app.UtilityMethods.getFileName;
 import static magentoegypt.locafy.base_app.UtilityMethods.getMimeType;
 import static magentoegypt.locafy.base_app.UtilityMethods.getRealPathFromURI;
@@ -73,8 +72,6 @@ import magentoegypt.locafy_constant.FileUtils;
 import magentoegypt.locafy.base_app.Ced_MultiVendor_VendorFunctionalityList;
 import magentoegypt.locafy.databinding.ActivityRegistrationDynamicBinding;
 import magentoegypt.locafy.base_app.UtilityMethods;
-import magentoegypt.locafy.gallary.GalleryActivity;
-import magentoegypt.locafy.gallary.Image;
 import magentoegypt.locafy.manage_products_section.Ced_MultiVendor_UpdateProduct;
 import magentoegypt.locafy.manage_products_section.EditProductDynamic;
 import magentoegypt.locafy.manage_products_section.ProductCreationNew;
@@ -148,6 +145,9 @@ public class RegistrationDynamic extends AppCompatActivity {
     List<Uri> allImages = new ArrayList<>();
     List<Uri> allVideo = new ArrayList<>();
     List<Uri> alldocuments = new ArrayList<>();
+    // Count of images added to the registration form (max 10). Replaces the old
+    // custom-gallery image counter now that the custom gallery is gone.
+    int selectedImageCount = 0;
     Uri imageToUploadUri;
     String imagePath = "";
     ActivityRegistrationDynamicBinding binding;
@@ -157,7 +157,7 @@ public class RegistrationDynamic extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_dynamic);
-        GalleryActivity.limitImage = 0;
+        selectedImageCount = 0;
         viewContainer = findViewById(R.id.viewContainer);
         findViewById(R.id.weblink).setOnClickListener(view -> {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vendors.magento2.click/global/create-vendor-account"));
@@ -584,7 +584,7 @@ public class RegistrationDynamic extends AppCompatActivity {
             viewContainer.removeView(layout);
             if(filetype.equalsIgnoreCase("images"))
               allImages.remove(mUri);
-            GalleryActivity.limitImage -= 1;
+            selectedImageCount -= 1;
         });
         ImageView imageView = layout.findViewById(R.id.MultiVendor_productimage);
         imageView.setImageURI(mUri);
@@ -616,38 +616,8 @@ public class RegistrationDynamic extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 file_value = browse_picture1.getTag().toString();
-
-                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-                    Dexter.withActivity(RegistrationDynamic.this)
-                            .withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE).
-                            withListener(new MultiplePermissionsListener() {
-                                @Override
-                                public void onPermissionsChecked(MultiplePermissionsReport report) {
-                                    if (report.areAllPermissionsGranted()) {
-                                        showImageOptionDialog();
-                                    }
-                                }
-                                @Override
-                                public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                                    token.continuePermissionRequest();
-                                }
-                            }).onSameThread().check();
-                }else{
-                    Dexter.withActivity(RegistrationDynamic.this)
-                            .withPermissions(CAMERA,READ_MEDIA_IMAGES).
-                            withListener(new MultiplePermissionsListener() {
-                                @Override
-                                public void onPermissionsChecked(MultiplePermissionsReport report) {
-                                    if (report.areAllPermissionsGranted()) {
-                                        showImageOptionDialog();
-                                    }
-                                }
-                                @Override
-                                public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                                    token.continuePermissionRequest();
-                                }
-                            }).onSameThread().check();
-                }
+                // Android photo picker needs no storage/media permission.
+                showImageOptionDialog();
             }
         });
 
@@ -674,7 +644,7 @@ public class RegistrationDynamic extends AppCompatActivity {
                                             // Uri photoURI = FileProvider.getUriForFile(this, "com.beenfix.sellerapp.provider", photoFile);
                                             imageToUploadUri = FileProvider.getUriForFile(RegistrationDynamic.this, "magentoegypt.locafy.provider", photoFile);
                                             pictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageToUploadUri);
-                                            if(GalleryActivity.limitImage < 10) {
+                                            if(selectedImageCount < 10) {
                                                 startActivityForResult(pictureIntent, 3);
                                             }else{
                                                 Toast.makeText(RegistrationDynamic.this, getString(R.string.you_can_not_select_more_than_10_images_please_deselect_another_image_before_tring_to_select_again), Toast.LENGTH_SHORT).show();
@@ -689,7 +659,7 @@ public class RegistrationDynamic extends AppCompatActivity {
                             }).onSameThread().check();
                 }else{
                     Dexter.withActivity(RegistrationDynamic.this)
-                            .withPermissions(CAMERA,READ_MEDIA_IMAGES).
+                            .withPermissions(CAMERA).
                             withListener(new MultiplePermissionsListener() {
                                 @Override
                                 public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -706,7 +676,7 @@ public class RegistrationDynamic extends AppCompatActivity {
                                             // Uri photoURI = FileProvider.getUriForFile(this, "com.beenfix.sellerapp.provider", photoFile);
                                             imageToUploadUri = FileProvider.getUriForFile(RegistrationDynamic.this, "magentoegypt.locafy.provider", photoFile);
                                             pictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageToUploadUri);
-                                            if(GalleryActivity.limitImage < 10) {
+                                            if(selectedImageCount < 10) {
                                                 startActivityForResult(pictureIntent, 3);
                                             }else{
                                                 Toast.makeText(RegistrationDynamic.this, getString(R.string.you_can_not_select_more_than_10_images_please_deselect_another_image_before_tring_to_select_again), Toast.LENGTH_SHORT).show();
@@ -731,50 +701,14 @@ public class RegistrationDynamic extends AppCompatActivity {
     }
 
     void showImageOptionDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(RegistrationDynamic.this);
-        builder.setTitle("Option to select");
-        builder.setItems(new CharSequence[]
-                        {"Select images", "Select video", "Select documents file", "Cancel"},
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // The 'which' argument contains the index position
-                        // of the selected item
-                        switch (which) {
-                            case 0:
-                                Intent intent = new Intent(RegistrationDynamic.this, GalleryActivity.class);
-                                startActivityForResult(intent,4);
-                                break;
-                            case 1:
-                                Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
-                                photoPickerIntent.setType("video/*");
-                                photoPickerIntent.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
-                                startActivityForResult(photoPickerIntent, 3);
-                                break;
-                            case 2:
-                                // Intent photoPickerIntent1 = new Intent(Intent.ACTION_GET_CONTENT);
-                                /*   photoPickerIntent.setType("image/*");*/
-                                // photoPickerIntent1.setType("application/*");
-                                //
-                                // photoPickerIntent.setType("application/pdf");
-                                Intent photoPickerIntent1 = new Intent();
-                                photoPickerIntent1.setAction(Intent.ACTION_OPEN_DOCUMENT);
-                                photoPickerIntent1.addCategory(Intent.CATEGORY_OPENABLE);
-                                photoPickerIntent1.setType("*/*");
-                                String[] extraMimeTypes = {"application/pdf","application/docx","application/xlsx","application/pptx","application/pptx","application/txt", "text/comma-separated-values","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.ms-excel"};
-                                photoPickerIntent1.putExtra(Intent.EXTRA_MIME_TYPES, extraMimeTypes);
-                                photoPickerIntent1.putExtra(Intent.EXTRA_LOCAL_ONLY, true);
-                                // photoPickerIntent1.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-                                startActivityForResult(photoPickerIntent1, 3);
-                                break;
-                            case 3:
-                                //    Toast.makeText(context, "clicked 4", Toast.LENGTH_SHORT).show();
-                                break;
-                        }
-                    }
-                });
-        // builder.create().show();
-        Intent intent = new Intent(RegistrationDynamic.this, GalleryActivity.class);
-        startActivityForResult(intent,4);
+        // Multi-image selection via the Android photo picker (no storage/media
+        // permission). Replaces the old custom GalleryActivity multi-select.
+        int remaining = 10 - selectedImageCount;
+        if (remaining <= 0) {
+            Toast.makeText(RegistrationDynamic.this, getString(R.string.you_can_not_select_more_than_10_images_please_deselect_another_image_before_tring_to_select_again), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        startActivityForResult(FileUtils.imagePickMultipleIntent(remaining), 4);
     }
 
     public File createImageFile() throws IOException {
@@ -805,41 +739,8 @@ public class RegistrationDynamic extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 pictureField = imageView;
-                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-                    Dexter.withActivity(RegistrationDynamic.this)
-                            .withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE).
-                            withListener(new MultiplePermissionsListener() {
-                                @Override
-                                public void onPermissionsChecked(MultiplePermissionsReport report) {
-                                    if (report.areAllPermissionsGranted()) {
-                                        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-                                        photoPickerIntent.setType("image/*");
-                                        startActivityForResult(photoPickerIntent, 2);
-                                    }
-                                }
-                                @Override
-                                public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                                    token.continuePermissionRequest();
-                                }
-                            }).onSameThread().check();
-                }else{
-                    Dexter.withActivity(RegistrationDynamic.this)
-                            .withPermissions(CAMERA,READ_MEDIA_IMAGES).
-                            withListener(new MultiplePermissionsListener() {
-                                @Override
-                                public void onPermissionsChecked(MultiplePermissionsReport report) {
-                                    if (report.areAllPermissionsGranted()) {
-                                        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-                                        photoPickerIntent.setType("image/*");
-                                        startActivityForResult(photoPickerIntent, 2);
-                                    }
-                                }
-                                @Override
-                                public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                                    token.continuePermissionRequest();
-                                }
-                            }).onSameThread().check();
-                }
+                // Android photo picker needs no storage/media permission.
+                startActivityForResult(FileUtils.imagePickIntent(), 2);
             }
         });
         if (view != null)
@@ -1648,7 +1549,7 @@ public class RegistrationDynamic extends AppCompatActivity {
             if (requestCode == 3) {
                 if (resultCode == RESULT_OK && imageToUploadUri != null) {
                     try {
-                        GalleryActivity.limitImage += 1;
+                        selectedImageCount += 1;
                         BitmapFactory.Options bmOptions = new BitmapFactory.Options();
                         Bitmap photo = BitmapFactory.decodeFile(imagePath, bmOptions);
                         String pathfile = MediaStore.Images.Media.insertImage(getContentResolver(), photo, generateRandomChars(10), null);
@@ -1720,10 +1621,22 @@ public class RegistrationDynamic extends AppCompatActivity {
                     }
                 }
             }else if (requestCode == 4) {
-                if (resultCode == RESULT_OK) {
+                if (resultCode == RESULT_OK && imageReturnedIntent != null) {
                     try {
-                        for(Image image:GalleryActivity.mSelectedImages){
-                            addImageView(image.mUri,"images");
+                        // Photo picker returns multiple items in ClipData, or a single
+                        // item in getData(). Cap the total at 10 images.
+                        if (imageReturnedIntent.getClipData() != null) {
+                            android.content.ClipData clip = imageReturnedIntent.getClipData();
+                            for (int i = 0; i < clip.getItemCount() && selectedImageCount < 10; i++) {
+                                Uri uri = clip.getItemAt(i).getUri();
+                                if (uri != null) {
+                                    selectedImageCount += 1;
+                                    addImageView(uri, "images");
+                                }
+                            }
+                        } else if (imageReturnedIntent.getData() != null && selectedImageCount < 10) {
+                            selectedImageCount += 1;
+                            addImageView(imageReturnedIntent.getData(), "images");
                         }
                     } catch (Exception e) {
                         Toast.makeText(this, "Not allowed from this location", Toast.LENGTH_SHORT).show();

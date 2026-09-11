@@ -23,7 +23,6 @@
 package magentoegypt.locafy.navigation_drawer.Activity;
 
 import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_MEDIA_IMAGES;
 import static magentoegypt.locafy.addons.advance_Report.appBase.AppConstant.ACTIVITY_NAME;
 import static magentoegypt.locafy.addons.advance_Report.appBase.AppConstant.OUT_OF_STOCK_PRODUCT_ACTIVITY;
 import static magentoegypt.locafy.addons.advance_Report.appBase.AppConstant.PAYMENT_REPORT_ACTIVITY;
@@ -1212,7 +1211,7 @@ public class Ced_MultiVendor_NavigationActivity extends AppCompatActivity {
                     }).onSameThread().check();
         }else{
             Dexter.withActivity(Ced_MultiVendor_NavigationActivity.this)
-                    .withPermissions(CAMERA,READ_MEDIA_IMAGES).
+                    .withPermissions(CAMERA).
                     withListener(new MultiplePermissionsListener() {
                         @Override
                         public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -1257,14 +1256,8 @@ public class Ced_MultiVendor_NavigationActivity extends AppCompatActivity {
     }
 
     public String getPath(Uri contentUri) {
-        String[] proj = {MediaStore.Images.Media.DATA};
-        CursorLoader loader = new CursorLoader(getApplicationContext(), contentUri, proj, null, null, null);
-        Cursor cursor = loader.loadInBackground();
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        cursor.moveToFirst();
-        String result = cursor.getString(column_index);
-        cursor.close();
-        return result;
+        // No MediaStore.DATA (needs READ_MEDIA_IMAGES); stream to cache instead.
+        return magentoegypt.locafy_constant.FileUtils.copyUriToCache(this, contentUri);
     }
 
     public static String encodeImage(Bitmap bm, String origin) {

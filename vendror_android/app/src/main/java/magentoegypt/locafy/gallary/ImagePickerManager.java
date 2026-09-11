@@ -14,6 +14,8 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.widget.Toast;
+
+import magentoegypt.locafy_constant.FileUtils;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
@@ -45,8 +47,7 @@ public class ImagePickerManager {
             activity.startActivityForResult(cameraIntent, REQUEST_CAMERA);
         }else if(caseNumber == 2){
             // Gallery
-            Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-            galleryIntent.setType("image/*");
+            Intent galleryIntent = FileUtils.imagePickIntent();
             activity.startActivityForResult(galleryIntent, REQUEST_GALLERY);
         }else {
             AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -65,8 +66,7 @@ public class ImagePickerManager {
                                 activity.startActivityForResult(cameraIntent, REQUEST_CAMERA);
                             } else {
                                 // Gallery
-                                Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                                galleryIntent.setType("image/*");
+                                Intent galleryIntent = FileUtils.imagePickIntent();
                                 activity.startActivityForResult(galleryIntent, REQUEST_GALLERY);
                             }
                         }
@@ -130,13 +130,7 @@ public class ImagePickerManager {
         }
     }
     public static String getPath(Uri contentUri, final Activity activity) {
-        String[] proj = {MediaStore.Images.Media.DATA};
-        CursorLoader loader = new CursorLoader(activity, contentUri, proj, null, null, null);
-        Cursor cursor = loader.loadInBackground();
-        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-        cursor.moveToFirst();
-        String result = cursor.getString(column_index);
-        cursor.close();
-        return result;
+        // No MediaStore.DATA query (needs READ_MEDIA_IMAGES); copy to app cache instead.
+        return FileUtils.copyUriToCache(activity, contentUri);
     }
 }

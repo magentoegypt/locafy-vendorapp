@@ -1,7 +1,5 @@
 package magentoegypt.locafy.vendor_login_section;
 
-import static android.Manifest.permission.READ_MEDIA_IMAGES;
-
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -627,10 +625,7 @@ public class Ced_Multivendor_New_Login extends AppCompatActivity implements Goog
                 }
             }).onSameThread().check();
         }else{
-            Dexter.withActivity(this).withPermissions( Manifest.permission.READ_MEDIA_IMAGES,
-                    Manifest.permission.READ_MEDIA_VIDEO,
-                    Manifest.permission.READ_MEDIA_AUDIO,
-                    Manifest.permission.ACCESS_FINE_LOCATION,
+            Dexter.withActivity(this).withPermissions( Manifest.permission.ACCESS_FINE_LOCATION,
                     Manifest.permission.CAMERA).withListener(new MultiplePermissionsListener() {
                 @Override
                 public void onPermissionsChecked(MultiplePermissionsReport report) {

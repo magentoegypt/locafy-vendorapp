@@ -326,17 +326,23 @@ public class Ced_MultiVendor_ClientRequestResponse extends AsyncTask<String, Str
             request =  new DataOutputStream(httpConn.getOutputStream());
 
             for(Uri uri:allFileUri) {
-                String filePath = uri.getPath();//getRealPathFromURI(c, uri);
-                System.out.println(uri.getPath());
-                File uploadFile = new File(filePath);
                 String filname =  getFileName(uri, c);
                 String type = getMimeType(uri,c);
                 request.writeBytes(twoHyphens + boundary + crlf);
                 request.writeBytes("Content-Disposition: form-data; name=\"file[]\";filename=\"" +filname+ "\"" + crlf);
                 request.writeBytes("Content-Type: "+type+crlf);
                 request.writeBytes(crlf);
-                byte[] bytes = Files.readAllBytes(uploadFile.toPath());
-                request.write(bytes);
+                // Stream bytes straight from the content resolver so photo-picker
+                // content:// Uris upload too (uri.getPath() is not a real file path).
+                InputStream fileIn = c.getContentResolver().openInputStream(uri);
+                if (fileIn != null) {
+                    byte[] buf = new byte[8192];
+                    int len;
+                    while ((len = fileIn.read(buf)) > 0) {
+                        request.write(buf, 0, len);
+                    }
+                    fileIn.close();
+                }
                 request.writeBytes(crlf);
             }
             request.writeBytes(twoHyphens + boundary +

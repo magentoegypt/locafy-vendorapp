@@ -15,7 +15,6 @@
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -24,7 +23,6 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.GET_TASKS" /> <!-- START Added for GCM -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission
         android:name="com.google.android.gms.permission.AD_ID"
         tools:node="remove" />
@@ -56,9 +54,6 @@
             android:value="true" />
         <activity
             android:name="magentoegypt.locafy.manage_products_section.ConfigAttributeSelectionActivity"
-            android:exported="false" />
-        <activity
-            android:name="magentoegypt.locafy.gallary.GalleryActivity"
             android:exported="false" />
         <activity
             android:name="magentoegypt.locafy.addons.AdvanceReport"
