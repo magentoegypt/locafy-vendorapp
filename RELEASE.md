@@ -73,7 +73,7 @@ naming is the clearer of the two, and the customer-facing listing
 |---|---|---|
 | Identifier | `magentoegypt.locafy` | `magentoegypt.locafy` |
 | Store / home-screen name | Locafy Seller | Locafy Seller |
-| Version | `versionName 1.04`, `versionCode 6` (submitted; store is on 1.02 / 3) | `MARKETING_VERSION 1.02`, build `2` (on TestFlight) |
+| Version | `versionName 1.04`, `versionCode 6` (submitted; store is on 1.02 / 3) | `MARKETING_VERSION 1.02`, build `25` (submitted for App Store review; store is on 1.01) |
 | Min OS | Android 7.0 (API 24) | iOS 15.6 (Release config) |
 | Target | API 36 (AGP 8.9.3 / Gradle 8.11.1 / Kotlin 2.1.0) | Xcode 16 / latest SDK |
 | Devices | phones + tablets | iPhone **and iPad** (`TARGETED_DEVICE_FAMILY = "1,2"`) |
@@ -276,6 +276,19 @@ section above. Order of work: clear the account-deletion violation (deadline
 - Countries: Egypt at minimum; add others if vendors operate there.
 
 ## App Store submission
+
+> **Update - 11 Sep 2026: 1.02 submitted for App Store review.** Version **1.02
+> (build 25)** was sent for review (App Information -> Add for Review -> Submit for
+> Review); status is now **Waiting for Review**, and Apple emails on completion (up
+> to 48h). The **2025 age-ratings questionnaire** - the 7-step form Apple now
+> requires before *any* submission, which blocked "Add for Review" until answered -
+> was completed: every content row None/No, **User-Generated Content = No** and
+> **Messaging and Chat = No** (the vendor-customer inbox declared as
+> private/transactional, at the owner's direction), no rating override -> computed
+> **4+**, matching the live 1.01. The demo vendor account was already set under App
+> Review Information. Live on the App Store stays **1.01** (released 13 Aug 2025)
+> until this review is approved. The rest of this section predates the submission
+> and is kept for history.
 
 - App Store Connect > new app, bundle id `magentoegypt.locafy`, SKU, primary
   language, **Business** category.
