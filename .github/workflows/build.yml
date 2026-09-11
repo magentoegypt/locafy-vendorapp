@@ -193,6 +193,7 @@ jobs:
           PROFILE_NAME: ${{ steps.signing_assets.outputs.profile_name }}
           EXPORT_METHOD: ${{ vars.IOS_EXPORT_METHOD || 'app-store' }}
           SIGN_IDENTITY: ${{ vars.IOS_SIGN_IDENTITY || 'Apple Distribution' }}
+          BUILD_NUMBER: ${{ github.run_number }}
         run: |
           ARCHIVE="$RUNNER_TEMP/LocafyApp.xcarchive"
           # Only DEVELOPMENT_TEAM is passed globally; the app target's own build
@@ -205,7 +206,8 @@ jobs:
             -sdk iphoneos \
             -archivePath "$ARCHIVE" \
             archive \
-            DEVELOPMENT_TEAM="$APPLE_TEAM_ID"
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER"
 
           BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :ApplicationProperties:CFBundleIdentifier" "$ARCHIVE/Info.plist")
           echo "Exporting bundle $BUNDLE_ID with profile '$PROFILE_NAME' (method: $EXPORT_METHOD)"

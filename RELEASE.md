@@ -136,10 +136,13 @@ Two rules learned the hard way:
   archive (`<Pod> does not support provisioning profiles`). Only `DEVELOPMENT_TEAM`
   is passed on the command line; the app target's own build settings carry manual
   signing + the `Locafy_AppStore_Profile`.
-- **Bump the version before every push.** `CURRENT_PROJECT_VERSION` (build number)
-  must be unique per version, and `MARKETING_VERSION` must climb past a closed
-  train. Apple normalises `1.01` to `1.1`, and that train is closed (already
-  approved), so the app is now on `MARKETING_VERSION 1.02` / `CURRENT_PROJECT_VERSION 2`.
+- **The build number is auto-incremented by CI.** `CURRENT_PROJECT_VERSION` is
+  overridden at archive time with the GitHub Actions run number, so every CI build
+  gets a unique, higher `CFBundleVersion` with no manual bump. You only bump
+  **`MARKETING_VERSION`** when Apple closes a version train - it normalises `1.01`
+  to `1.1`, and that train is closed (already approved), so the app is on
+  `MARKETING_VERSION 1.02`. (Local `Product > Archive` still uses the
+  `CURRENT_PROJECT_VERSION` in the project, currently `2`.)
 
 Locally: `pod install`, open `LocafyApp.xcworkspace`, scheme `VenderApp`,
 Product > Archive.
