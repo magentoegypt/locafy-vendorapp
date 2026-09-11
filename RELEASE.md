@@ -73,7 +73,7 @@ naming is the clearer of the two, and the customer-facing listing
 |---|---|---|
 | Identifier | `magentoegypt.locafy` | `magentoegypt.locafy` |
 | Store / home-screen name | Locafy Seller | Locafy Seller |
-| Version | `versionName 1.03`, `versionCode 4` (store is on 1.02 / 3) | `MARKETING_VERSION 1.01`, build `1` |
+| Version | `versionName 1.04`, `versionCode 6` (submitted; store is on 1.02 / 3) | `MARKETING_VERSION 1.02`, build `2` (on TestFlight) |
 | Min OS | Android 7.0 (API 24) | iOS 15.6 (Release config) |
 | Target | API 36 (AGP 8.9.3 / Gradle 8.11.1 / Kotlin 2.1.0) | Xcode 16 / latest SDK |
 | Devices | phones + tablets | iPhone **and iPad** (`TARGETED_DEVICE_FAMILY = "1,2"`) |
@@ -111,12 +111,38 @@ CI does the same: add the four `ANDROID_*` repository secrets listed in
 `.github/workflows/build.yml` and every push to `main` uploads a signed
 `app-release-aab` artifact alongside the debug APK.
 
-**iOS (IPA)**
+**iOS (IPA + TestFlight)** - working as of 11 Sep 2026; the first CI TestFlight
+build (`1.02`, build 2) is up and distributed to the internal testers.
 
-CI builds a signed IPA once `BUILD_CERTIFICATE_BASE64`, `P12_PASSWORD`,
-`BUILD_PROVISION_PROFILE_BASE64`, `KEYCHAIN_PASSWORD` and `APPLE_TEAM_ID` are set;
-without them it produces an unsigned IPA so the pipeline stays green. Locally:
-`pod install`, open `LocafyApp.xcworkspace`, scheme `VenderApp`, Product > Archive.
+CI builds a **signed** IPA and **uploads it to TestFlight** on every push to
+`main`, in two conditional stages:
+
+- **Signed IPA** when the five signing secrets are set: `BUILD_CERTIFICATE_BASE64`
+  (the distribution `.p12`, cert + private key), `P12_PASSWORD`,
+  `BUILD_PROVISION_PROFILE_BASE64` (an **App Store** profile - *not* ad-hoc; ad-hoc
+  is rejected by TestFlight), `KEYCHAIN_PASSWORD` (any string), `APPLE_TEAM_ID`
+  (`544Y9RU66L`). Without them CI falls back to an unsigned IPA so the pipeline
+  stays green.
+- **TestFlight upload** (`xcrun altool`) additionally needs an App Store Connect
+  API key: `APP_STORE_CONNECT_KEY_ID`, `APP_STORE_CONNECT_ISSUER_ID`
+  (`3cdd5691-e172-44c5-b932-4cec6f4773f6`) and `APP_STORE_CONNECT_API_KEY_BASE64`
+  (base64 of the `AuthKey_*.p8`). The upload step is skipped if the key is absent.
+
+Two rules learned the hard way:
+
+- **Signing is scoped to the app target only.** Passing
+  `PROVISIONING_PROFILE_SPECIFIER`/`CODE_SIGN_IDENTITY` globally to
+  `xcodebuild archive` forces the profile onto every CocoaPods target and fails the
+  archive (`<Pod> does not support provisioning profiles`). Only `DEVELOPMENT_TEAM`
+  is passed on the command line; the app target's own build settings carry manual
+  signing + the `Locafy_AppStore_Profile`.
+- **Bump the version before every push.** `CURRENT_PROJECT_VERSION` (build number)
+  must be unique per version, and `MARKETING_VERSION` must climb past a closed
+  train. Apple normalises `1.01` to `1.1`, and that train is closed (already
+  approved), so the app is now on `MARKETING_VERSION 1.02` / `CURRENT_PROJECT_VERSION 2`.
+
+Locally: `pod install`, open `LocafyApp.xcworkspace`, scheme `VenderApp`,
+Product > Archive.
 
 ## Targeting API 36 - what changed and what QA must check
 
