@@ -267,7 +267,9 @@ jobs:
           echo -n "$ASC_KEY_BASE64" | base64 --decode > "$KEYDIR/AuthKey_${ASC_KEY_ID}.p8"
           xcrun altool --upload-app --type ios --file "$IPA" \
             --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+          rc=$?
           rm -f "$KEYDIR/AuthKey_${ASC_KEY_ID}.p8"
+          exit $rc
 
       - name: Clean up keychain
         if: ${{ always() && steps.signing.outputs.enabled == 'true' }}
