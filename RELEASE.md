@@ -7,6 +7,27 @@ Related QA: ClickUp [CL034-TC19] / test run TR01 / bug QA01.
 
 ## Where this stands on Google Play (checked 9 Sep 2026)
 
+> **Update - 11 Sep 2026: submitted for review.** Production release **6
+> (versionName 1.04, versionCode 6)** at full rollout, plus the **Data safety**
+> declaration and the **Privacy policy** URL, were sent for Google review
+> (Publishing overview -> "Send 3 changes for review"). Managed publishing is off,
+> so the release auto-rolls-out on approval. This addresses both open violations:
+>
+> - **Photo and Video Permissions** ("update rejected", Photo/Video policy) - all
+>   image selection was migrated to the Android system photo picker and
+>   `READ_MEDIA_IMAGES` removed (the custom `GalleryActivity` is deleted; the
+>   multipart upload now streams `content://` Uris). Verified on a device that the
+>   picker launches, returns and displays with no permission request. Image *upload*
+>   to the backend is code-verified but not runtime-tested (login/OTP-gated).
+> - **Account Deletion** (Sep 21 deadline) - the Data safety form was re-submitted
+>   with the deletion URL `https://vendors.magento2.click/account-deletion`,
+>   confirmed reachable and entity-referencing. Submitted 10 days before the deadline.
+>
+> Live production stays **1.02 / versionCode 3** until this review is approved. The
+> rejected **1.03 / versionCode 5** was never rolled out; **versionCode 4 and 5 are
+> both burned**, hence the jump to 6. The rest of this section predates the
+> submission and is kept for history.
+
 The Android app **is already published**. Play Console account *Clickalize Agency*
 (`8055350750928047183`), app id `4972999203685551923`:
 
