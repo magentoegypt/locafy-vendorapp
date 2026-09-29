@@ -218,6 +218,38 @@ jobs:
           echo "profile_name=$PROFILE_NAME" >> "$GITHUB_OUTPUT"
           echo "Installed provisioning profile: $PROFILE_NAME ($PROFILE_UUID)"
 
+      # Loadly (tester install links) needs an ad-hoc IPA: an App Store IPA won't
+      # install from a link. Optional secret:
+      #   BUILD_PROVISION_PROFILE_ADHOC_BASE64  base64 of an Ad Hoc profile for
+      #   the same bundle id + distribution certificate, listing the testers'
+      #   device UDIDs (only those devices can install).
+      - name: Install ad-hoc provisioning profile for Loadly
+        id: adhoc
+        if: ${{ steps.signing.outputs.enabled == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        env:
+          ADHOC_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_ADHOC_BASE64 }}
+        run: |
+          if [ -z "$ADHOC_PROFILE_BASE64" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "No BUILD_PROVISION_PROFILE_ADHOC_BASE64 secret -> no iOS build for Loadly."
+            exit 0
+          fi
+          PP_PATH="$RUNNER_TEMP/adhoc.mobileprovision"
+          echo -n "$ADHOC_PROFILE_BASE64" | base64 --decode -o "$PP_PATH"
+          security cms -D -i "$PP_PATH" > "$RUNNER_TEMP/adhoc.plist"
+          if ! /usr/libexec/PlistBuddy -c "Print :ProvisionedDevices" "$RUNNER_TEMP/adhoc.plist" > /dev/null 2>&1; then
+            echo "::error::BUILD_PROVISION_PROFILE_ADHOC_BASE64 is not an Ad Hoc profile (it lists no devices)."
+            exit 1
+          fi
+          PROFILE_NAME=$(/usr/libexec/PlistBuddy -c "Print :Name" "$RUNNER_TEMP/adhoc.plist")
+          PROFILE_UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" "$RUNNER_TEMP/adhoc.plist")
+          DEVICES=$(/usr/libexec/PlistBuddy -c "Print :ProvisionedDevices" "$RUNNER_TEMP/adhoc.plist" | grep -c '^ ')
+          mkdir -p "$HOME/Library/MobileDevice/Provisioning Profiles"
+          cp "$PP_PATH" "$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
+          echo "profile_name=$PROFILE_NAME" >> "$GITHUB_OUTPUT"
+          echo "Installed ad-hoc profile: $PROFILE_NAME ($PROFILE_UUID), $DEVICES device(s)"
+
       - name: Install CocoaPods dependencies
         run: pod install --repo-update
 
@@ -314,12 +346,14 @@ jobs:
           rm -f "$KEYDIR/AuthKey_${ASC_KEY_ID}.p8"
           exit $rc
 
-      # Loadly can only install ad-hoc / development / enterprise IPAs; an
-      # app-store export (the default, which goes to TestFlight) would upload
-      # but never install. Set the IOS_EXPORT_METHOD variable to enable this.
-      - name: Upload IPA to Loadly
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.signing.outputs.enabled == 'true' && (vars.IOS_EXPORT_METHOD || 'app-store') != 'app-store' }}
+      # Second export of the same archive, signed ad hoc, for Loadly. The App
+      # Store IPA above still goes to TestFlight unchanged.
+      - name: Export ad-hoc IPA and upload to Loadly
+        if: ${{ steps.adhoc.outputs.enabled == 'true' }}
         env:
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          PROFILE_NAME: ${{ steps.adhoc.outputs.profile_name }}
+          SIGN_IDENTITY: ${{ vars.IOS_SIGN_IDENTITY || 'Apple Distribution' }}
           LOADLY_API_KEY: ${{ secrets.LOADLY_API_KEY }}
           LOADLY_BUILD_PASSWORD: ${{ secrets.LOADLY_BUILD_PASSWORD }}
           COMMIT_MSG: ${{ github.event.head_commit.message }}
@@ -328,7 +362,27 @@ jobs:
             echo "No LOADLY_API_KEY secret -> skipping Loadly upload."
             exit 0
           fi
-          IPA=$(ls "$RUNNER_TEMP/output/"*.ipa | head -1)
+          ARCHIVE="$RUNNER_TEMP/LocafyApp.xcarchive"
+          BUNDLE_ID=$(/usr/libexec/PlistBuddy -c "Print :ApplicationProperties:CFBundleIdentifier" "$ARCHIVE/Info.plist")
+          printf '%s\n' \
+            '<?xml version="1.0" encoding="UTF-8"?>' \
+            '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">' \
+            '<plist version="1.0"><dict>' \
+            '<key>method</key><string>ad-hoc</string>' \
+            "<key>teamID</key><string>${APPLE_TEAM_ID}</string>" \
+            '<key>signingStyle</key><string>manual</string>' \
+            "<key>signingCertificate</key><string>${SIGN_IDENTITY}</string>" \
+            '<key>stripSwiftSymbols</key><true/>' \
+            '<key>compileBitcode</key><false/>' \
+            '<key>thinning</key><string>&lt;none&gt;</string>' \
+            '<key>provisioningProfiles</key><dict>' \
+            "<key>${BUNDLE_ID}</key><string>${PROFILE_NAME}</string>" \
+            '</dict></dict></plist>' > "$RUNNER_TEMP/ExportOptions-adhoc.plist"
+          xcodebuild -exportArchive \
+            -archivePath "$ARCHIVE" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions-adhoc.plist" \
+            -exportPath "$RUNNER_TEMP/adhoc"
+          IPA=$(ls "$RUNNER_TEMP/adhoc/"*.ipa | head -1)
           bash ../.github/scripts/loadly-upload.sh "$IPA" "iOS"
 
       - name: Clean up keychain

@@ -117,9 +117,15 @@ install link and QR code appear in the Actions run summary. It uploads a release
 APK signed with the upload key, so testers can install each new build over the
 last one (CI debug APKs get a fresh debug key per runner and would not update in
 place). Needs the `LOADLY_API_KEY` secret; an optional `LOADLY_BUILD_PASSWORD`
-secret password-protects the install page. iOS is uploaded too only when the
-`IOS_EXPORT_METHOD` variable is `ad-hoc`/`development`/`enterprise` - the default
-App Store export cannot be installed from a link.
+secret password-protects the install page.
+
+iOS goes to Loadly as a **second, ad-hoc export** of the same archive (the App
+Store IPA still goes to TestFlight). It needs the `BUILD_PROVISION_PROFILE_ADHOC_BASE64`
+secret: base64 of an **Ad Hoc** provisioning profile for `magentoegypt.locafy`,
+made with the same Apple Distribution certificate, listing every tester's iPhone
+UDID. Only those devices can install; to add a tester, register their UDID in
+Apple Developer > Devices, regenerate the profile and update the secret. Without
+the secret the iOS Loadly step is skipped.
 
 **iOS (IPA + TestFlight)** - working as of 11 Sep 2026; the first CI TestFlight
 build (`1.02`, build 2) is up and distributed to the internal testers.
