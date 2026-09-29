@@ -77,7 +77,7 @@ naming is the clearer of the two, and the customer-facing listing
 | Min OS | Android 7.0 (API 24) | iOS 15.6 (Release config) |
 | Target | API 36 (AGP 8.9.3 / Gradle 8.11.1 / Kotlin 2.1.0) | Xcode 16 / latest SDK |
 | Devices | phones + tablets | iPhone **and iPad** (`TARGETED_DEVICE_FAMILY = "1,2"`) |
-| Backend | `https://vendors.magento2.click/` | same |
+| Backend | `https://styleya.net/` | same |
 
 The customer app is a separate project (`com.magentoegyptpro.ajstore` /
 `com.magentoegypt.ajstore`), so there is no identifier collision between the two
@@ -302,7 +302,7 @@ section above. Order of work: clear the account-deletion violation (deadline
 
 ```
 Locafy Seller is the vendor-side companion app for the Locafy marketplace
-(https://vendors.magento2.click). Approved marketplace sellers use it to manage
+(https://styleya.net). Approved marketplace sellers use it to manage
 their shop: products, orders, shipments, invoices, payouts, reviews and support
 tickets.
 
@@ -330,7 +330,7 @@ Shoppers use our separate customer app; this listing is the seller counterpart.
 - [ ] Camera and photo-library prompts show the new purpose strings.
 - [ ] Location prompt appears on shipping settings and is the "while using the app"
       variant.
-- [ ] Requests go to `https://vendors.magento2.click/` - no staging host, no
+- [ ] Requests go to `https://styleya.net/` - no staging host, no
       localhost.
 - [ ] Arabic and English both render correctly, RTL included.
 

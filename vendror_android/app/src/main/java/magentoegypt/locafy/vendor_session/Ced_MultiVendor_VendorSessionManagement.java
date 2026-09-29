@@ -335,9 +335,9 @@ public class Ced_MultiVendor_VendorSessionManagement {
 
     public String getBase_Url() {
         if (getStoreLocale() != null){
-            return  "https://vendors.magento2.click/"+getStoreLocale()+"/";
+            return  "https://styleya.net/"+getStoreLocale()+"/";
         }else{
-            return  "https://vendors.magento2.click/eg/";
+            return  "https://styleya.net/eg/";
         }
       //  return pref.getString(Base_Url, con.getResources().getString(R.string.base_url));
     }

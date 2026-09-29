@@ -6,7 +6,7 @@ the **CedCommerce Multi-Vendor Marketplace (MVM)** extension, letting vendors ma
 their shop — products, orders, shipments, payments, reviews, and more — from a phone.
 
 The apps are bilingual (**English + Arabic**) and talk to the store's REST API at
-**`https://vendors.magento2.click/`**.
+**`https://styleya.net/`**.
 
 > The apps are white-labeled from CedCommerce's "MageNative" vendor-app template
 > (classes are prefixed `Ced_MultiVendor_*`). The source is covered by CedCommerce's
@@ -25,7 +25,7 @@ _(Note: the Android folder name is spelled `vendror_android`.)_
 
 Both apps target the same Magento 2 + CedCommerce MVM backend:
 
-- **Base URL:** `https://vendors.magento2.click/`
+- **Base URL:** `https://styleya.net/` (was `vendors.magento2.click`, which now 301-redirects here)
 - **REST base:** `<base>/rest/V1/…`; some legacy endpoints use `<base>/vendorapi/…`
 - **Store-scoped paths:** requests are store-view scoped, e.g. `…/eg/` (default) and
   `…/<storeCode>/` / `…/eg-en/`. ⚠️ The Magento instance **must** have store views with

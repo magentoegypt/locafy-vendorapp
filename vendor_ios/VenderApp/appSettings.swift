@@ -9,7 +9,7 @@ import Foundation
 
 struct settings{
     static var baseUrl: String {
-        var url = "https://vendors.magento2.click/"
+        var url = "https://styleya.net/"
             url     +=   UserDefaults.standard.value(forKey: "storeCode") as? String ?? ""
             return url
     }

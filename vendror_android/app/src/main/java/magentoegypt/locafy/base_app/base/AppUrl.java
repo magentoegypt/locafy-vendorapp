@@ -4,7 +4,7 @@ import magentoegypt.locafy.vendor_notification.app.MyApplication;
 import magentoegypt.locafy.vendor_session.Ced_MultiVendor_VendorSessionManagement;
 
 public class AppUrl {
-    public static String BASE_URL = "https://vendors.magento2.click/";
+    public static String BASE_URL = "https://styleya.net/";
 
 
     public static String getBaseUrl() {
