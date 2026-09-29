@@ -945,8 +945,8 @@ public class Ced_Multivendor_New_Login extends AppCompatActivity implements Goog
                 startActivity(intent);
                 overridePendingTransition(R.anim.ced_multivendor_slide_in, R.anim.ced_multivendor_slide_out);
             }
-            String email = "v-relations@locafy.market";
-            String new_email = "v\u2060-\u2060relations@\u2060locafy.\u2060market";
+            String email = "v-relations@styleya.net";
+            String new_email = "v\u2060-\u2060relations@\u2060styleya.\u2060net";
             String message = login_array.getJSONObject(0).getString("message");
             try {
                 message = message.replace(email,new_email);

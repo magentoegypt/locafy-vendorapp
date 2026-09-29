@@ -430,8 +430,8 @@ class ced_vendorLogin: UIViewController, UITextFieldDelegate {
 //                            
 //                        }
                         var message = json["data"]["customer"][0]["message"].stringValue
-                        let email = "v-relations@locafy.market"
-                        let newEmail = "v\u{2060}-\u{2060}relations@\u{2060}locafy.\u{2060}market"
+                        let email = "v-relations@styleya.net"
+                        let newEmail = "v\u{2060}-\u{2060}relations@\u{2060}styleya.\u{2060}net"
                         message = message.replacingOccurrences(of: email, with: newEmail)
                         Alert_File.showOkAlert(self, "Message".localized, message) { index in
                             self.modalPresentationStyle = .fullScreen

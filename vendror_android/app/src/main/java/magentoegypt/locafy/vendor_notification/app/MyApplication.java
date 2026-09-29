@@ -76,11 +76,11 @@ public class MyApplication extends MultiDexApplication {
         final ACRAConfiguration config = ACRA.getNewDefaultConfig(this);
         try {
             config.setMode(ReportingInteractionMode.TOAST);
-            // Crash reports go to Locafy, not to a third party. This previously
+            // Crash reports go to Styleya, not to a third party. This previously
             // pointed at a former developer's personal Gmail, which made the reports
             // "shared with a third party" for the Data safety declaration. (A dedicated
             // crash mailbox or Firebase Crashlytics would be a better long-term home.)
-            config.setMailTo("v-relations@locafy.market");
+            config.setMailTo("v-relations@styleya.net");
             config.setResToastText(R.string.crash_toast_text);
         } catch (ACRAConfigurationException e) {
             e.printStackTrace();
