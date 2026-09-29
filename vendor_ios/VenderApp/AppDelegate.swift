@@ -116,7 +116,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             UITextView.appearance().textAlignment = .left
         }else {
             UserDefaults.standard.removeObject(forKey: "AppleLanguages")
-            UserDefaults.standard.setValue("eg/", forKey: "storeCode")
+            UserDefaults.standard.setValue("eg-ar/", forKey: "storeCode")
             UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
             UserDefaults.standard.set(["ar"], forKey: "SelectLanguages")
             UserDefaults.standard.set("ar", forKey: "i18n_language")

@@ -360,10 +360,8 @@ public class Ced_MultiVendor_VendorProfile extends Ced_MultiVendor_NavigationAct
                 }
             }
         }, this, "POST", jsonObject);
-        // Use the unscoped REST base, not getBase_Url() which prepends the store
-        // locale. A locale prefix of "eg" (produced for the Arabic store) makes the
-        // REST path 404 ("does not match any route"); the unscoped path routes to
-        // the guard for every store, and deletion is not store-specific anyway.
+        // Use the unscoped REST base: deletion is not store-specific, and the
+        // unscoped path routes for every store view.
         request.execute(getResources().getString(R.string.base_url) + "rest/V1/vendorapi/deletevendor");
     }
 

@@ -39,7 +39,7 @@ public class StoreSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ced_sessionManagement = new Ced_MultiVendor_VendorSessionManagement(getApplicationContext());
 //        getUrl = getResources().getString(R.string.base_url) + "rest/V1/getStores";
-        getUrl = getResources().getString(R.string.base_url) + "ar/rest/V1/vendorapi/stores/storelist";
+        getUrl = getResources().getString(R.string.base_url) + "eg-ar/rest/V1/vendorapi/stores/storelist";
         storename = new ArrayList<>();
         cedLoad_language = new Ced_Load_Language();
         storeid = new ArrayList<>();

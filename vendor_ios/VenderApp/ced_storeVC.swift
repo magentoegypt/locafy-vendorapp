@@ -94,7 +94,7 @@ class ced_storeVC: ced_VendorBaseClass {
             UITextView.appearance().textAlignment = .left
         }else if (store == "ar" || store == "eg_ar"){
             UserDefaults.standard.removeObject(forKey: "AppleLanguages")
-            UserDefaults.standard.setValue("eg/", forKey: "storeCode")
+            UserDefaults.standard.setValue("eg-ar/", forKey: "storeCode")
             UserDefaults.standard.set(["ar"], forKey: "AppleLanguages")
             UserDefaults.standard.set(["ar"], forKey: "SelectLanguages")
             UserDefaults.standard.set("ar", forKey: "i18n_language")

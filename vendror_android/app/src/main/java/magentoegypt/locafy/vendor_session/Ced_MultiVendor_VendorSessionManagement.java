@@ -333,12 +333,15 @@ public class Ced_MultiVendor_VendorSessionManagement {
         editor.commit();
     }
 
+    // The saved locale doubles as the language flag ("eg" = Arabic, see
+    // Ced_Load_Language), so map it to the store view's URL path here: the
+    // Arabic store view is /eg-ar/. /eg/ 302s to the English store over http,
+    // which serves English data and drops POST bodies.
     public String getBase_Url() {
-        if (getStoreLocale() != null){
-            return  "https://styleya.net/"+getStoreLocale()+"/";
-        }else{
-            return  "https://styleya.net/eg/";
-        }
+        String locale = getStoreLocale();
+        boolean english = "eg-en".equalsIgnoreCase(locale) || "eg_en".equalsIgnoreCase(locale)
+                || "en".equalsIgnoreCase(locale);
+        return "https://styleya.net/" + (english ? "eg-en" : "eg-ar") + "/";
       //  return pref.getString(Base_Url, con.getResources().getString(R.string.base_url));
     }
 
