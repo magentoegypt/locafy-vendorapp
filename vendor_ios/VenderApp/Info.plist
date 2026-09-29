@@ -10,8 +10,10 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Styleya Seller</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>Styleya Seller</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -91,11 +93,11 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Locafy Seller uses the camera so you can photograph your products and attach images to orders, messages and support tickets.</string>
+	<string>Styleya Seller uses the camera so you can photograph your products and attach images to orders, messages and support tickets.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Locafy Seller uses your location to fill in your warehouse and store pickup address while you are editing your shipping settings.</string>
+	<string>Styleya Seller uses your location to fill in your warehouse and store pickup address while you are editing your shipping settings.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Locafy Seller needs access to your photo library so you can attach existing images to your products, orders, messages and support tickets.</string>
+	<string>Styleya Seller needs access to your photo library so you can attach existing images to your products, orders, messages and support tickets.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Bold.ttf</string>

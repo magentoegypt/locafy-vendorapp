@@ -85,7 +85,7 @@ public class NotificationUtils {
         if (TextUtils.isEmpty(message))
             return;
 
-        final int icon = R.drawable.hassan_logo;
+        final int icon = R.drawable.styleya_mark;
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         final PendingIntent resultPendingIntent =
                 PendingIntent.getActivity(

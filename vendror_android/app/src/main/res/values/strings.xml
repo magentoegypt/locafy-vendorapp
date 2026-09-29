@@ -28,8 +28,8 @@
 
     <string name="base_url" translatable="false">https://styleya.net/</string>
 
-    <string name="app_name">Locafy Seller</string>
-    <string name="alert_name">Locafy Seller</string>
+    <string name="app_name">Styleya Seller</string>
+    <string name="alert_name">Styleya Seller</string>
     <string name="dashboard">Dashboard</string>
     <string name="VendorProfile">Seller Profile</string>
     <string name="no_location_data_provided">No Location Provider</string>

@@ -1,4 +1,4 @@
-# Release runbook - Locafy Seller (vendor apps)
+# Release runbook - Styleya Seller (vendor apps, formerly Locafy Seller)
 
 How to get the vendor apps onto Google Play and the App Store, what is already
 prepared in the repo, and what still needs a human with console access.
@@ -72,7 +72,7 @@ naming is the clearer of the two, and the customer-facing listing
 | | Android | iOS |
 |---|---|---|
 | Identifier | `magentoegypt.locafy` | `magentoegypt.locafy` |
-| Store / home-screen name | Locafy Seller | Locafy Seller |
+| Store / home-screen name | Styleya Seller (store listing still to rename) | Styleya Seller (store listing still to rename) |
 | Version | `versionName 1.04`, `versionCode 6` (submitted; store is on 1.02 / 3) | `MARKETING_VERSION 1.02`, build `25` (submitted for App Store review; store is on 1.01) |
 | Min OS | Android 7.0 (API 24) | iOS 15.6 (Release config) |
 | Target | API 36 (AGP 8.9.3 / Gradle 8.11.1 / Kotlin 2.1.0) | Xcode 16 / latest SDK |
@@ -301,13 +301,13 @@ section above. Order of work: clear the account-deletion violation (deadline
 ### Review notes template
 
 ```
-Locafy Seller is the vendor-side companion app for the Locafy marketplace
+Styleya Seller is the vendor-side companion app for the Styleya marketplace
 (https://styleya.net). Approved marketplace sellers use it to manage
 their shop: products, orders, shipments, invoices, payouts, reviews and support
 tickets.
 
 The app is not intended for shoppers and offers no self-registration to the general
-public - vendor accounts are approved by Locafy staff before they can sign in.
+public - vendor accounts are approved by Styleya staff before they can sign in.
 Please use the demo vendor account below; it is preloaded with products and orders
 so every screen can be exercised.
 

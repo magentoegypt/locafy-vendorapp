@@ -1,6 +1,6 @@
-# Locafy Seller — Vendor Apps
+# Styleya Seller — Vendor Apps
 
-Native **iOS** and **Android** seller/vendor apps for **Locafy**, an Egypt-based
+Native **iOS** and **Android** seller/vendor apps for **Styleya** (formerly Locafy), an Egypt-based
 online marketplace. They are the mobile companion for a **Magento 2** store running
 the **CedCommerce Multi-Vendor Marketplace (MVM)** extension, letting vendors manage
 their shop — products, orders, shipments, payments, reviews, and more — from a phone.
@@ -25,6 +25,11 @@ _(Note: the Android folder name is spelled `vendror_android`.)_
 
 Both apps target the same Magento 2 + CedCommerce MVM backend:
 
+- **Brand vs identifiers:** user-facing branding is Styleya (app name, icons, in-app
+  logos). Internal identifiers still say Locafy on purpose - package/bundle id
+  `magentoegypt.locafy`, the `LocafyApp` Xcode project/scheme, `PRODUCT_NAME`
+  ("Locafy Seller", which is also the Swift module name) and the `LOCAFY_KEYSTORE_*`
+  CI secrets - because renaming them breaks store identity, storyboards or CI.
 - **Base URL:** `https://styleya.net/` (was `vendors.magento2.click`, which now 301-redirects here)
 - **REST base:** `<base>/rest/V1/…`; some legacy endpoints use `<base>/vendorapi/…`
 - **Store-scoped paths:** requests are store-view scoped, e.g. `…/eg/` (default) and
@@ -61,7 +66,7 @@ Where the base URL lives, if it ever changes again:
    ```
    Output: `app/build/outputs/apk/debug/app-debug.apk`
 
-- **Package:** `magentoegypt.locafy` · **label:** "Locafy Seller"
+- **Package:** `magentoegypt.locafy` · **label:** "Styleya Seller"
 - `compileSdk 35`, `minSdk 24`, `targetSdk 35`
 - Uses Firebase (Messaging/Auth/Analytics), Google Play Services/Maps, Retrofit, Glide
 
