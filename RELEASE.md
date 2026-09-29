@@ -111,6 +111,16 @@ CI does the same: add the four `ANDROID_*` repository secrets listed in
 `.github/workflows/build.yml` and every push to `main` uploads a signed
 `app-release-aab` artifact alongside the debug APK.
 
+**Loadly (tester install links)** - every push to `main` also uploads the Android
+build to [Loadly](https://loadly.io) (`.github/scripts/loadly-upload.sh`); the
+install link and QR code appear in the Actions run summary. It uploads a release
+APK signed with the upload key, so testers can install each new build over the
+last one (CI debug APKs get a fresh debug key per runner and would not update in
+place). Needs the `LOADLY_API_KEY` secret; an optional `LOADLY_BUILD_PASSWORD`
+secret password-protects the install page. iOS is uploaded too only when the
+`IOS_EXPORT_METHOD` variable is `ad-hoc`/`development`/`enterprise` - the default
+App Store export cannot be installed from a link.
+
 **iOS (IPA + TestFlight)** - working as of 11 Sep 2026; the first CI TestFlight
 build (`1.02`, build 2) is up and distributed to the internal testers.
 

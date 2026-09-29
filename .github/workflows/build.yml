@@ -94,6 +94,37 @@ jobs:
           path: vendror_android/app/build/outputs/bundle/release/*.aab
           if-no-files-found: error
 
+      # Loadly needs an APK. Use a release APK signed with the upload key so each
+      # build installs over the last one: a debug APK gets a fresh debug key on
+      # every runner, which forces testers to uninstall between builds.
+      - name: Build signed release APK for Loadly
+        if: ${{ steps.signing.outputs.enabled == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        env:
+          LOCAFY_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          LOCAFY_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          LOCAFY_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          export LOCAFY_KEYSTORE_FILE="$RUNNER_TEMP/upload.jks"
+          ./gradlew :app:assembleRelease --stacktrace --no-daemon
+
+      # Share every push to main on Loadly (install link + QR code in the job
+      # summary). Needs the LOADLY_API_KEY secret; the optional
+      # LOADLY_BUILD_PASSWORD secret password-protects the install page.
+      - name: Upload APK to Loadly
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        env:
+          LOADLY_API_KEY: ${{ secrets.LOADLY_API_KEY }}
+          LOADLY_BUILD_PASSWORD: ${{ secrets.LOADLY_BUILD_PASSWORD }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if [ -z "$LOADLY_API_KEY" ]; then
+            echo "No LOADLY_API_KEY secret -> skipping Loadly upload."
+            exit 0
+          fi
+          APK=$(ls app/build/outputs/apk/release/*.apk 2>/dev/null | head -1 || true)
+          [ -n "$APK" ] || APK=$(ls app/build/outputs/apk/debug/*.apk | head -1)
+          bash ../.github/scripts/loadly-upload.sh "$APK" "Android"
+
       - name: Remove keystore from the runner
         if: ${{ always() && steps.signing.outputs.enabled == 'true' }}
         run: rm -f "$RUNNER_TEMP/upload.jks"
@@ -278,6 +309,23 @@ jobs:
           rc=$?
           rm -f "$KEYDIR/AuthKey_${ASC_KEY_ID}.p8"
           exit $rc
+
+      # Loadly can only install ad-hoc / development / enterprise IPAs; an
+      # app-store export (the default, which goes to TestFlight) would upload
+      # but never install. Set the IOS_EXPORT_METHOD variable to enable this.
+      - name: Upload IPA to Loadly
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.signing.outputs.enabled == 'true' && (vars.IOS_EXPORT_METHOD || 'app-store') != 'app-store' }}
+        env:
+          LOADLY_API_KEY: ${{ secrets.LOADLY_API_KEY }}
+          LOADLY_BUILD_PASSWORD: ${{ secrets.LOADLY_BUILD_PASSWORD }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if [ -z "$LOADLY_API_KEY" ]; then
+            echo "No LOADLY_API_KEY secret -> skipping Loadly upload."
+            exit 0
+          fi
+          IPA=$(ls "$RUNNER_TEMP/output/"*.ipa | head -1)
+          bash ../.github/scripts/loadly-upload.sh "$IPA" "iOS"
 
       - name: Clean up keychain
         if: ${{ always() && steps.signing.outputs.enabled == 'true' }}
