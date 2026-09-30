@@ -34,11 +34,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oxi-YY-3TA">
                                         <rect key="frame" x="0.0" y="10" width="428" height="733"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="zDg-65-aKd">
-                                                <rect key="frame" x="114" y="8" width="200" height="60"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLogoFull" translatesAutoresizingMaskIntoConstraints="NO" id="zDg-65-aKd">
+                                                <rect key="frame" x="94" y="8" width="240" height="84"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="rNK-ve-Tes"/>
-                                                    <constraint firstAttribute="width" constant="200" id="v76-YK-s7K"/>
+                                                    <constraint firstAttribute="height" constant="84" id="rNK-ve-Tes"/>
+                                                    <constraint firstAttribute="width" constant="240" id="v76-YK-s7K"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have a vendor account with us, please log in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I40-8n-CLt">
@@ -1284,7 +1284,7 @@
     <resources>
         <image name="bottomlogin" width="640" height="625"/>
         <image name="eye_hide" width="64" height="64"/>
-        <image name="header" width="833" height="142"/>
+        <image name="loginLogoFull" width="909" height="317"/>
         <image name="ic_vendor_login_back" width="496" height="417"/>
         <image name="underreview" width="1300" height="1300"/>
         <image name="vendor_registration_back" width="640" height="1136"/>

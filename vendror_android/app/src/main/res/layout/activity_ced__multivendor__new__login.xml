@@ -36,13 +36,11 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/companyLogo"
-                    android:layout_width="@dimen/_200sdp"
-                    android:layout_height="60dp"
-                    android:paddingStart="20dp"
+                    android:layout_width="240dp"
+                    android:layout_height="84dp"
                     android:paddingTop="3dp"
-                    android:paddingEnd="20dp"
                     android:paddingBottom="3dp"
-                    android:src="@drawable/hassan_logo"
+                    android:src="@drawable/styleya_logo_full"
                     android:layout_centerHorizontal="true"
                     android:visibility="visible" />
 
