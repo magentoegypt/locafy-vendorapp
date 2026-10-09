@@ -22,6 +22,10 @@ Related QA: ClickUp [CL034-TC19] / test run TR01 / bug QA01.
 > - **Account Deletion** (Sep 21 deadline) - the Data safety form was re-submitted
 >   with the deletion URL `https://vendors.magento2.click/account-deletion`,
 >   confirmed reachable and entity-referencing. Submitted 10 days before the deadline.
+>   **Domain move:** the site is now `https://styleya.net/` and the old host only
+>   301-redirects there. Publish the same page at
+>   `https://styleya.net/account-deletion` and switch the Data safety deletion URL
+>   to it, so the link Play checks does not depend on the old domain staying up.
 >
 > Live production stays **1.02 / versionCode 3** until this review is approved. The
 > rejected **1.03 / versionCode 5** was never rolled out; **versionCode 4 and 5 are
@@ -213,7 +217,8 @@ These were live problems in the submission path and are fixed in the repo:
 - `UIRequiredDeviceCapabilities` `armv7` -> `arm64`. The binary is 64-bit only, and
   the stale armv7 capability fails App Store Connect bundle validation.
 - App Transport Security: blanket `NSAllowsArbitraryLoads` replaced with a scoped
-  exception for `magento2.click`. Every request the app makes is built from the
+  exception for the backend domain (`styleya.net` since the domain move; it was
+  `magento2.click`). Every request the app makes is built from the
   HTTPS base URL; the exception only covers media the Magento instance might still
   serve over HTTP.
 - iOS product and display name changed from "Locafy Marketplace" to "Locafy

@@ -23,7 +23,7 @@ Play's definitions, which the answers below follow:
 | Question | Answer | Basis |
 |---|---|---|
 | Does your app collect or share any of the required user data types? | **Yes** | See section 2 |
-| Is all of the user data collected by your app encrypted in transit? | **Yes** | `AppUrl.BASE_URL` and `vendorappData.plist` are `https://vendors.magento2.click/`; all REST calls derive from it. **Tighten first:** the manifest still sets `usesCleartextTraffic="true"` and `network_security_config` permits cleartext for all domains, so this answer is only honest once that is narrowed (open item 6 in RELEASE.md) |
+| Is all of the user data collected by your app encrypted in transit? | **Yes** | `AppUrl.BASE_URL` and `vendorappData.plist` are `https://styleya.net/` (was `vendors.magento2.click`, which now 301-redirects there); all REST calls derive from it. **Tighten first:** the manifest still sets `usesCleartextTraffic="true"` and `network_security_config` permits cleartext for all domains, so this answer is only honest once that is narrowed (open item 6 in RELEASE.md) |
 | Do you provide a way for users to request that their data is deleted? | **Yes** | In-app: Profile -> delete account -> `POST rest/V1/vendorapi/deletevendor`, plus the web page in `docs/account-deletion.html` |
 | Have you committed to follow the Families policy? | **No** | Business app for approved vendors, 18+ |
 | Has your app been independently validated against a security standard? | **No** | No such review has been done |
